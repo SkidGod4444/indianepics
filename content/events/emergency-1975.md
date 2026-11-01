@@ -7,6 +7,7 @@ chapter: republic
 date: { start: 1975, end: 1977 }
 location: { lat: 28.6143, lng: 77.1994, name: "Rashtrapati Bhavan, New Delhi" }
 tags: [political]
+image: emergency-1975
 summary: Two weeks after a court voids her election, Indira Gandhi has a national emergency proclaimed on 25 June 1975; civil liberties are suspended for 21 months.
 summary_hi: अदालत द्वारा उनका चुनाव रद्द होने के दो सप्ताह बाद इंदिरा गांधी की सलाह पर 25 जून 1975 को आपातकाल घोषित हुआ; 21 महीने तक नागरिक स्वतंत्रताएँ निलंबित रहीं।
 sources:

@@ -7,6 +7,7 @@ chapter: mughal
 date: { start: 1613, end: 1613 }
 location: { lat: 21.17, lng: 72.83, name: "Surat, Gujarat" }
 tags: [trade, colonial]
+image: surat-factory
 summary: After an English victory over the Portuguese off Swally, Jahangir confirms the East India Company's right to trade at Surat.
 summary_hi: स्वाली के पास पुर्तगालियों पर अंग्रेज़ों की जीत के बाद जहाँगीर ने ईस्ट इंडिया कंपनी को सूरत में व्यापार का अधिकार दिया।
 sources:

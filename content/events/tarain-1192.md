@@ -7,6 +7,7 @@ chapter: medieval
 date: { start: 1191, end: 1192 }
 location: { lat: 29.78, lng: 76.94, name: "Taraori, Karnal, Haryana" }
 tags: [war, political]
+image: tarain-1192
 summary: Prithviraj Chauhan beats Muhammad of Ghur at Tarain in 1191 and loses to him on the same field in 1192, opening the Ganga plain to the Ghurids.
 summary_hi: 1191 में पृथ्वीराज चौहान ने तराइन में ग़ोर के मुहम्मद को हराया, पर 1192 में उसी मैदान पर हार गए; इससे ग़ोरियों के लिए गंगा का मैदान खुल गया।
 sources:

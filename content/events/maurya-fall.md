@@ -7,6 +7,7 @@ chapter: maurya
 date: { start: -185, end: -185, uncertainty: 5 }
 location: { lat: 25.61, lng: 85.14, name: "Pataliputra (Patna), Bihar" }
 tags: [political]
+image: maurya-fall
 summary: The general Pushyamitra kills the last Maurya, Brihadratha, at a review of the army and founds the Shunga dynasty.
 summary_hi: सेनापति पुष्यमित्र ने सेना के निरीक्षण के दौरान अंतिम मौर्य राजा बृहद्रथ को मारकर शुंग वंश की स्थापना की।
 sources:

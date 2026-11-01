@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={cn("h-full antialiased font-sans", fraunces.variable, inter.variable, devanagari.variable)}>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <LangProvider>
           <TooltipProvider delayDuration={200}>{children}</TooltipProvider>
         </LangProvider>

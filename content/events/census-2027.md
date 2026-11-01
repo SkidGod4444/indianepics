@@ -7,6 +7,7 @@ chapter: republic
 date: { start: 2026, end: 2027 }
 location: { lat: 28.605, lng: 77.222, name: "Office of the Registrar General, Mansingh Road, New Delhi" }
 tags: [political, state-formation]
+image: census-2027
 summary: "India's first census since 2011 opens with houselisting on 1 April 2026; it is the first digital count, and its second phase will also record caste."
 summary_hi: "2011 के बाद भारत की पहली जनगणना 1 अप्रैल 2026 को मकान-सूचीकरण से शुरू हुई; यह पहली डिजिटल गणना है और इसके दूसरे चरण में जाति भी दर्ज होगी।"
 sources:

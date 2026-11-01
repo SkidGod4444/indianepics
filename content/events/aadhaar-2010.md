@@ -7,6 +7,7 @@ chapter: republic
 date: { start: 2010, end: 2018 }
 location: { lat: 21.567, lng: 74.500, name: "Tembhli, Nandurbar, Maharashtra" }
 tags: [science, political]
+image: aadhaar-2010
 summary: Ranjana Sonawane of Tembhli receives the first Aadhaar number on 29 September 2010; by April 2016 a billion of the biometric IDs have been issued.
 summary_hi: 29 सितंबर 2010 को टेंभली की रंजना सोनावणे को पहला आधार नंबर मिला; अप्रैल 2016 तक एक अरब बायोमेट्रिक पहचान संख्याएँ जारी हो चुकी थीं।
 sources:

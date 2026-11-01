@@ -1084,5 +1084,195 @@
     "source": "https://commons.wikimedia.org/wiki/File%3AMaster-da_Surya_Sen_Uploaded_by_Rahtat.jpg",
     "width": 1800,
     "height": 2225
+  },
+  "tarain-1192": {
+    "key": "tarain-1192",
+    "file": "tarain-1192.jpg",
+    "title": "Prithviraj Chauhan painting",
+    "author": "Orang srang17",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3APrithviraj_Chauhan_painting.jpg",
+    "width": 1800,
+    "height": 1800
+  },
+  "permanent-settlement-1793": {
+    "key": "permanent-settlement-1793",
+    "file": "permanent-settlement-1793.jpg",
+    "title": "Charles Cornwallis, 1st Marquess Cornwallis",
+    "author": "Thomas Gainsborough",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File%3ALord_Cornwallis.jpg",
+    "width": 1800,
+    "height": 2192
+  },
+  "barrackpore-1857": {
+    "key": "barrackpore-1857",
+    "file": "barrackpore-1857.jpg",
+    "title": "Mangal pandey gimp",
+    "author": "IndianCow at English Wikipedia",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File%3AMangal_pandey_gimp.jpg",
+    "width": 1800,
+    "height": 2829
+  },
+  "phadke-chapekar": {
+    "key": "phadke-chapekar",
+    "file": "phadke-chapekar.jpg",
+    "title": "VasudevBalwantPhadkebust",
+    "author": "No machine-readable author provided. Nichalp assumed (based on copyright claims).",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File%3AVasudevBalwantPhadkebust.jpg",
+    "width": 1800,
+    "height": 2048
+  },
+  "lucknow-pact-1916": {
+    "key": "lucknow-pact-1916",
+    "file": "lucknow-pact-1916.jpg",
+    "title": "Bal Gangadhar Tilak",
+    "author": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File%3ABal_Gangadhar_Tilak.jpg",
+    "width": 1800,
+    "height": 2965
+  },
+  "bardoli-1928": {
+    "key": "bardoli-1928",
+    "file": "bardoli-1928.jpg",
+    "title": "Sardar patel (cropped)",
+    "author": "Government of India work",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File%3ASardar_patel_(cropped).jpg",
+    "width": 1800,
+    "height": 2442
+  },
+  "rin-mutiny-1946": {
+    "key": "rin-mutiny-1946",
+    "file": "rin-mutiny-1946.jpg",
+    "title": "HMIS Hindustan SLV Green",
+    "author": "Allan C. Green 1878 - 1954",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File%3AHMIS_Hindustan_SLV_Green.jpg",
+    "width": 1800,
+    "height": 1091
+  },
+  "dominion-plan-1947": {
+    "key": "dominion-plan-1947",
+    "file": "dominion-plan-1947.jpg",
+    "title": "Partition of India Collage",
+    "author": "Captain AmericanBurger1775",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File%3APartition_of_India_Collage.jpg",
+    "width": 1800,
+    "height": 1800
+  },
+  "emergency-1975": {
+    "key": "emergency-1975",
+    "file": "emergency-1975.jpg",
+    "title": "Indira Gandhi (portrait, 1997)",
+    "author": "Edward Knapczyk",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AIndira_Gandhi_(portrait%2C_1997).jpg",
+    "width": 1800,
+    "height": 2468
+  },
+  "aadhaar-2010": {
+    "key": "aadhaar-2010",
+    "file": "aadhaar-2010.jpg",
+    "title": "Aadhaar Seva Kendra, Bhopal",
+    "author": "Suyash.dwivedi",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AAadhaar_Seva_Kendra%2C_Bhopal.jpg",
+    "width": 1800,
+    "height": 1350
+  },
+  "galwan-2020": {
+    "key": "galwan-2020",
+    "file": "galwan-2020.jpg",
+    "title": "Map of Tibet and Pangong Lake in 1873 from Hindutagh-pass-aksai-chin-center2-1873 (cropped)",
+    "author": "Henry Trotter",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File%3AMap_of_Tibet_and_Pangong_Lake_in_1873_from_Hindutagh-pass-aksai-chin-center2-1873_(cropped).jpg",
+    "width": 1800,
+    "height": 1802
+  },
+  "doctrine-of-lapse": {
+    "key": "doctrine-of-lapse",
+    "file": "doctrine-of-lapse.jpg",
+    "title": "Marquess of Dalhousie",
+    "author": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File%3AMarquess_of_Dalhousie.JPG",
+    "width": 1800,
+    "height": 2327
+  },
+  "census-2027": {
+    "key": "census-2027",
+    "file": "census-2027.jpg",
+    "title": "Census, TamilNadu-219 (year-2011)",
+    "author": "தகவலுழவன்",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ACensus%2C_TamilNadu-219_(year-2011).jpg",
+    "width": 1800,
+    "height": 2336
+  },
+  "pokhran-tests": {
+    "key": "pokhran-tests",
+    "file": "pokhran-tests.jpg",
+    "title": "Pokhran Fort",
+    "author": "Archan dave",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3APokhran_Fort.JPG",
+    "width": 1800,
+    "height": 1350
+  },
+  "seleucid-treaty": {
+    "key": "seleucid-treaty",
+    "file": "seleucid-treaty.jpg",
+    "title": "Seleuco I Nicatore",
+    "author": "Unknown",
+    "license": "CC BY-SA 2.0 it",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/it/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File%3ASeleuco_I_Nicatore.JPG",
+    "width": 1800,
+    "height": 2400
+  },
+  "maurya-fall": {
+    "key": "maurya-fall",
+    "file": "maurya-fall.jpg",
+    "title": "Gajalaxmi - Medallion - 2nd Century BCE - Red Sand Stone - Bharhut Stupa Railing Pillar - Madhya Pradesh - Indian Museum - Kolkata 2012-11-16 1837 Cropped",
+    "author": "Biswarup Ganguly",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AGajalaxmi_-_Medallion_-_2nd_Century_BCE_-_Red_Sand_Stone_-_Bharhut_Stupa_Railing_Pillar_-_Madhya_Pradesh_-_Indian_Museum_-_Kolkata_2012-11-16_1837_Cropped.JPG",
+    "width": 1800,
+    "height": 1800
+  },
+  "surat-factory": {
+    "key": "surat-factory",
+    "file": "surat-factory.jpg",
+    "title": "Surat castleE",
+    "author": "Carmichael, John (Around 1751); Grose, John Henry (Around 1750-1783)",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File%3ASurat_castleE.jpg",
+    "width": 1800,
+    "height": 1048
+  },
+  "liberalisation-1991": {
+    "key": "liberalisation-1991",
+    "file": "liberalisation-1991.jpg",
+    "title": "Prime Minister Manmohan Singh in WEF ,2009",
+    "author": "World Economic Forum",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3APrime_Minister_Manmohan_Singh_in_WEF_%2C2009.jpg",
+    "width": 1800,
+    "height": 2731
   }
 }

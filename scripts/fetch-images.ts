@@ -124,6 +124,26 @@ const WANTED: Record<string, string> = {
   "bose-ina": "Subhas Chandra Bose Indian National Army",
   "simla-conference-1945": "Simla Conference 1945",
   "calcutta-riots-1946": "Calcutta riots 1946",
+  // second attempt for events that had no clean hit on the first query
+  "tarain-1192": "Prithviraj Chauhan painting",
+  "permanent-settlement-1793": "Lord Cornwallis portrait Governor-General",
+  "doctrine-of-lapse": "James Broun-Ramsay 1st Marquess of Dalhousie",
+  "barrackpore-1857": "Mangal Pandey",
+  "phadke-chapekar": "Vasudev Balwant Phadke",
+  "lucknow-pact-1916": "Bal Gangadhar Tilak portrait",
+  "bardoli-1928": "Vallabhbhai Patel portrait",
+  "rin-mutiny-1946": "HMIS Hindustan sloop",
+  "dominion-plan-1947": "Mountbatten Nehru Jinnah June 1947",
+  "pokhran-tests": "Pokhran",
+  "emergency-1975": "Indira Gandhi portrait",
+  "aadhaar-2010": "Aadhaar logo",
+  "galwan-2020": "Galwan River valley Ladakh",
+  "census-2027": "Census of India 2011",
+  "seleucid-treaty": "Seleucus I Nicator bust",
+  "maurya-fall": "Bharhut stupa railing",
+  "surat-factory": "Surat castle",
+  "liberalisation-1991": "Manmohan Singh",
+  "chandrayaan-3": "Chandrayaan-3",
 };
 
 const OK_LICENSE = /^(public domain|pd|cc0|cc[- ]by(?:[- ]sa)?(?:[- ]\d(?:\.\d)?)?(?:[- ][a-z]{2})?)$/i;

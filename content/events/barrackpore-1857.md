@@ -7,6 +7,7 @@ chapter: company
 date: { start: 1857, month: 3, end: 1857 }
 location: { lat: 22.760, lng: 88.370, name: "Barrackpore, West Bengal" }
 tags: [war, colonial]
+image: barrackpore-1857
 summary: On 29 March sepoy Mangal Pandey of the 34th Bengal Native Infantry attacks his officers on parade; he is hanged on 8 April and his regiment disbanded.
 summary_hi: 29 मार्च को 34वीं बंगाल नेटिव इन्फ़ैंट्री के सिपाही मंगल पांडे ने परेड मैदान पर अपने अफ़सरों पर हमला किया; 8 अप्रैल को उन्हें फाँसी दी गई और पलटन भंग कर दी गई।
 sources:

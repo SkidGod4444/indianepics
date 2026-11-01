@@ -14,6 +14,7 @@ import { Scrubber } from "./Scrubber";
 import { ChapterTitle } from "./ChapterTitle";
 import { EventCallout } from "./EventCallout";
 import { DetailOverlay } from "./DetailOverlay";
+import { Intro } from "./Intro";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Button } from "@/components/ui/button";
 import { Pause, Play, SkipBack, SkipForward } from "lucide-react";
@@ -226,7 +227,7 @@ export function Stage({ chapters: allChapters, events, polities }: Props) {
     <LayoutGroup>
       {/* The stage: a centred map that stays put while the page scrolls underneath. */}
       <div
-        className={`fixed inset-0 z-0 transition-opacity duration-700 ${inStory ? "opacity-100" : "opacity-40"}`}
+        className={`fixed inset-0 z-0 transition-opacity duration-700 ${inStory ? "opacity-100" : "opacity-0"}`}
         aria-hidden={!inStory}
       >
         <div className="grain era-pattern relative h-full w-full">
@@ -290,7 +291,7 @@ export function Stage({ chapters: allChapters, events, polities }: Props) {
       </div>
 
       {/* Play controls: the story can run itself. */}
-      <div className="fixed bottom-[84px] right-4 z-10 flex items-center gap-1 rounded-full border border-hair bg-paper/90 p-1 shadow-sm backdrop-blur-md lg:bottom-[92px] lg:right-6">
+      <div className={`fixed bottom-[84px] right-4 z-10 flex items-center gap-1 rounded-full border border-hair bg-paper/90 p-1 shadow-sm backdrop-blur-md transition-opacity duration-500 lg:bottom-[92px] lg:right-6 ${inStory ? "opacity-100" : "pointer-events-none opacity-0"}`}>
         <Button size="icon-sm" variant="ghost" onClick={() => skip(-1)} aria-label="Previous" disabled={!inStory} className="rounded-full">
           <SkipBack />
         </Button>
@@ -316,6 +317,9 @@ export function Stage({ chapters: allChapters, events, polities }: Props) {
         {inStory && active && !open ? <EventCallout key={active.id} ev={active} pin={pin} frac={frac} viewport={viewport} onOpen={openEvent} /> : null}
       </AnimatePresence>
       <AnimatePresence>{open ? <DetailOverlay key={`d-${open.id}`} ev={open} onClose={closeEvent} /> : null}</AnimatePresence>
+
+      {/* The hero sits in the flow above the clock. */}
+      <Intro chapters={chapters} eventCount={events.length} onPlay={togglePlay} onSeek={(c) => seek({ chapter: c, progress: 0.001 }, true)} />
 
       {/* Invisible spacers: one slot of scroll per title and per event. They are the clock. */}
       <div className="relative z-[1]" aria-hidden>

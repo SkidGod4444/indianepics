@@ -7,6 +7,7 @@ chapter: raj
 date: { start: 1879, end: 1899 }
 location: { lat: 18.540, lng: 73.836, name: "Ganeshkhind Road, Pune" }
 tags: [political, colonial]
+image: phadke-chapekar
 summary: Vasudev Balwant Phadke's armed band raids the country around Pune in 1879; in 1897 the Chapekar brothers shoot plague commissioner Rand.
 summary_hi: 1879 में वासुदेव बलवंत फड़के के सशस्त्र दल ने पुणे के आसपास छापे मारे; 1897 में चापेकर बंधुओं ने प्लेग कमिश्नर रैंड को गोली मारी।
 sources:

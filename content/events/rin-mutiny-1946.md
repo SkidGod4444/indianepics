@@ -7,6 +7,7 @@ chapter: raj
 date: { start: 1945, month: 11, end: 1946 }
 location: { lat: 18.905, lng: 72.812, name: "HMIS Talwar, Colaba, Bombay" }
 tags: [political, war]
+image: rin-mutiny-1946
 summary: The Red Fort trials of three INA officers stir protest in 1945; in February 1946 ratings of the Royal Indian Navy mutiny at Bombay and Karachi.
 summary_hi: 1945 में आज़ाद हिंद फ़ौज के तीन अधिकारियों पर लाल क़िले के मुक़दमों से विरोध भड़का; फ़रवरी 1946 में बंबई और कराची में रॉयल इंडियन नेवी के नाविकों ने विद्रोह किया।
 sources:

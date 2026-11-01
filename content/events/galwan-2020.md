@@ -7,6 +7,7 @@ chapter: republic
 date: { start: 2020, end: 2020 }
 location: { lat: 34.767, lng: 78.217, name: "Galwan valley, near Patrolling Point 14, Ladakh" }
 tags: [war, political]
+image: galwan-2020
 summary: Indian and Chinese troops fight with clubs and stones on the night of 15 June 2020; twenty Indian soldiers die, the first border deaths in 45 years.
 summary_hi: 15 जून 2020 की रात भारतीय और चीनी सैनिकों के बीच लाठियों और पत्थरों से झड़प; बीस भारतीय सैनिक मारे गए, 45 वर्षों में सीमा पर पहली मौतें।
 sources:

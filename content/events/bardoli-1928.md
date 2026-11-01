@@ -7,6 +7,7 @@ chapter: raj
 date: { start: 1928, month: 2, end: 1928 }
 location: { lat: 21.12, lng: 73.12, name: "Bardoli, Surat district" }
 tags: [political, colonial]
+image: bardoli-1928
 summary: Bardoli's farmers refuse a 22 per cent rise in land revenue in 1928; an inquiry cuts it to about 6 per cent, and Vallabhbhai Patel becomes Sardar.
 summary_hi: 1928 में बारडोली के किसानों ने लगान में 22 प्रतिशत वृद्धि देने से इनकार किया; जाँच ने इसे घटाकर लगभग 6 प्रतिशत किया और वल्लभभाई पटेल 'सरदार' कहलाए।
 sources:

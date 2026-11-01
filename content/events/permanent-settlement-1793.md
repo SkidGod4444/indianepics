@@ -7,6 +7,7 @@ chapter: company
 date: { start: 1793, end: 1793 }
 location: { lat: 22.572, lng: 88.364, name: "Calcutta, Bengal" }
 tags: [colonial, political]
+image: permanent-settlement-1793
 summary: Cornwallis fixes Bengal's land revenue in perpetuity and makes the zamindars owners of the land, whose estates are sold if they fall behind.
 summary_hi: कॉर्नवालिस ने बंगाल का भू-राजस्व सदा के लिए तय किया और ज़मींदारों को भूमि का स्वामी बनाया; बकाया होने पर उनकी ज़मींदारी नीलाम होती थी।
 sources:

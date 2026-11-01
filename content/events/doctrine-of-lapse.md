@@ -7,6 +7,7 @@ chapter: company
 date: { start: 1848, end: 1856 }
 location: { lat: 21.146, lng: 79.088, name: "Nagpur, Maharashtra" }
 tags: [colonial, political]
+image: doctrine-of-lapse
 summary: Dalhousie annexes states whose rulers die without a natural heir, from Satara in 1848 to Jhansi and Nagpur in 1854, and takes Awadh in 1856.
 summary_hi: डलहौज़ी ने बिना प्राकृतिक उत्तराधिकारी वाले राज्यों को हड़प लिया, 1848 में सतारा से 1854 में झाँसी और नागपुर तक, और 1856 में अवध भी ले लिया।
 sources:

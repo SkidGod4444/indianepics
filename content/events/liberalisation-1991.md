@@ -7,6 +7,7 @@ chapter: republic
 date: { start: 1991, end: 1991 }
 location: { lat: 28.614, lng: 77.212, name: "North Block, New Delhi" }
 tags: [trade, political]
+image: liberalisation-1991
 summary: Facing a balance-of-payments crisis, the Rao government devalues the rupee, scraps most industrial licensing and opens trade.
 summary_hi: भुगतान संतुलन संकट के बीच राव सरकार ने रुपये का अवमूल्यन किया, अधिकांश औद्योगिक लाइसेंस व्यवस्था समाप्त की और व्यापार खोला।
 sources:

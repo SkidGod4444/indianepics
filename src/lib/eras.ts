@@ -26,6 +26,9 @@ const PATTERNS = {
   jaali: svg(
     `<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'><g fill='none' stroke='#2f5d50' stroke-opacity='0.08' stroke-width='1'><path d='M24 2 L46 24 L24 46 L2 24 Z'/><circle cx='24' cy='24' r='9'/><path d='M24 0v48M0 24h48'/></g></svg>`,
   ),
+  ripples: svg(
+    `<svg xmlns='http://www.w3.org/2000/svg' width='160' height='80'><g fill='none' stroke='#2f416d' stroke-opacity='0.07'><path d='M0 20c20-10 40-10 60 0s40 10 60 0 40-10 60 0M0 60c20-10 40-10 60 0s40 10 60 0 40-10 60 0'/></g></svg>`,
+  ),
   brick: svg(
     `<svg xmlns='http://www.w3.org/2000/svg' width='40' height='20'><g fill='none' stroke='#7a3f22' stroke-opacity='0.12' stroke-width='1'><path d='M0 10h40M0 20h40M20 0v10M0 10v10M40 10v10'/></g></svg>`,
   ),
@@ -45,26 +48,26 @@ const PATTERNS = {
 };
 
 export const ERAS: Record<string, Era> = {
-  // Night sky over the Sarayu: indigo paper, old gold accent, star dust.
+  // Dawn on the Sarayu: pale saffron paper, old gold, indigo for the told time, ripples under it.
   itihasa: {
     id: "itihasa",
     vars: {
-      "--paper": "#1b1f33",
-      "--paper-2": "#232842",
-      "--paper-3": "#2e3452",
-      "--ink": "#f3e9cf",
-      "--ink-2": "#cfc4a6",
-      "--ink-3": "#8f8870",
-      "--hair": "#394064",
-      "--evidence": "#e0a64a",
-      "--evidence-soft": "#5a4420",
-      "--tradition": "#8fa3e6",
-      "--tradition-soft": "#2b3660",
-      "--water": "#151a2c",
-      "--land": "#222741",
-      "--land-stroke": "#3a4166",
+      "--paper": "#f7eedb",
+      "--paper-2": "#efe3c8",
+      "--paper-3": "#e3d3ae",
+      "--ink": "#2a211c",
+      "--ink-2": "#5c4f44",
+      "--ink-3": "#8c7f6f",
+      "--hair": "#d8c8a4",
+      "--evidence": "#a8741a",
+      "--evidence-soft": "#eedbb0",
+      "--tradition": "#2f416d",
+      "--tradition-soft": "#c6cde3",
+      "--water": "#e9e4d3",
+      "--land": "#f1e7d0",
+      "--land-stroke": "#cfc09c",
     },
-    pattern: PATTERNS.stars,
+    pattern: PATTERNS.ripples,
     display: { opsz: 144, soft: 100, weight: 400 },
   },
   // Fired brick and river silt: the Indus cities, Vedic fire, the first iron.

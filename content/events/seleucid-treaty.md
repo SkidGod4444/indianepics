@@ -7,6 +7,7 @@ chapter: maurya
 date: { start: -305, end: -303, uncertainty: 2 }
 location: { lat: 34.52, lng: 69.18, name: "Kabul valley (Paropamisadae)" }
 tags: [political, war]
+image: seleucid-treaty
 summary: Seleucus Nicator gives Chandragupta lands along the Indus under a marriage pact and receives five hundred war elephants.
 summary_hi: सेल्यूकस निकेटर ने वैवाहिक संधि के तहत सिंधु के किनारे के प्रदेश चंद्रगुप्त को दिए और बदले में पाँच सौ युद्ध-हाथी पाए।
 sources:
