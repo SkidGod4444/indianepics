@@ -25,7 +25,11 @@ export function DotGlyph({ name, size = 56, className = "", progress }: { name: 
         `@media (prefers-reduced-motion:reduce){.${p}l{animation:none;opacity:0.45;}}`
       : revealCss(`${p}l`, g.period, KEYFRAMES, EASE);
   return (
-    <svg ref={ref} viewBox={`0 0 ${SIZE} ${SIZE}`} width={size} height={size} role="img" aria-label={g.title} className={className}>
+    <svg ref={ref} viewBox={`0 0 ${SIZE} ${SIZE}`} width={size} height={size} role="img"
+      aria-label={g.title}
+      className={className}
+      style={progress === undefined ? undefined : ({ "--p": Math.max(0, Math.min(1, progress)) } as React.CSSProperties)}
+    >
       <title>{g.title}</title>
       <style>{css}</style>
       {g.base.map((d, i) => (

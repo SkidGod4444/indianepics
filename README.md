@@ -60,7 +60,7 @@ Two kinds of image:
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Good first issues: trace the Maurya and Mughal outlines from Schwartzberg's atlas, add a chapter, translate titles to Hindi.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Good first issues: trace the six approximate outlines (Maurya, Gupta, Tughlaq, Mughal, Company 1805, Raj 1909) from Schwartzberg's atlas, settle a claim from the backlog in `content/VERIFICATION.md`, add a chapter.
 
 ## Licences
 

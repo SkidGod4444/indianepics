@@ -4,7 +4,7 @@ title: Rani Lakshmibai and Tatya Tope
 title_hi: रानी लक्ष्मीबाई और तात्या टोपे
 track: evidence
 chapter: company
-date: { start: 1858, end: 1859 }
+date: { start: 1858, month: 6, end: 1859 }
 location: { lat: 25.458, lng: 78.575, name: "Jhansi Fort, Uttar Pradesh" }
 tags: [war, colonial]
 summary: Hugh Rose storms Jhansi in April 1858; the Rani and Tatya Tope seize Gwalior, where she dies fighting in June; Tope is hanged in 1859.

@@ -4,7 +4,7 @@ title: The Salt March
 title_hi: दांडी यात्रा
 track: evidence
 chapter: raj
-date: { start: 1930, end: 1931 }
+date: { start: 1930, month: 3, end: 1931 }
 location: { lat: 20.8865, lng: 72.8009, name: "Dandi, Navsari" }
 tags: [political, colonial]
 summary: Gandhi and 78 marchers walk about 390 km from Sabarmati to Dandi and break the salt law on 6 April 1930, opening civil disobedience.

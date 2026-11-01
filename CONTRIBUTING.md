@@ -40,7 +40,7 @@ Create `content/chapters/NN-id.md` with `order`, `track`, `years` (evidence) or 
 
 ## Boundaries
 
-`content/polities/*.json` holds one outer ring per slice as `[lng, lat]` pairs. The Maurya and Mughal rings are hand-drawn approximations and flagged `approximate: true`. The best contribution right now is to trace them properly from Schwartzberg's *Historical Atlas of South Asia* (free at DSAL, University of Chicago) and from Wikimedia Commons historical maps, keeping the flag honest. Keep rings to one polygon with no holes so the morph stays simple.
+`content/polities/*.json` holds one outer ring per slice as `[lng, lat]` pairs. Six rings (Maurya, Gupta, Tughlaq, Mughal, Company 1805, Raj 1909) are hand-drawn approximations and flagged `approximate: true`. The best contribution right now is to trace them properly from Schwartzberg's *Historical Atlas of South Asia* (free at DSAL, University of Chicago) and from Wikimedia Commons historical maps, keeping the flag honest. Keep rings to one polygon with no holes so the morph stays simple.
 
 Modern boundaries come from Natural Earth's India point-of-view edition. Anything published for an Indian audience should respect Indian law on map boundaries.
 

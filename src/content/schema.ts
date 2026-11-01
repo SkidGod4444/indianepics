@@ -28,6 +28,8 @@ export const YearRange = z
     end: z.number().int(),
     /** +/- years. 0 means documented to the year. */
     uncertainty: z.number().int().min(0).default(0),
+    /** Month of `start` (1-12), only to order events that share a year. */
+    month: z.number().int().min(1).max(12).optional(),
   })
   .refine((d) => d.end >= d.start, { message: "date.end must be >= date.start" });
 

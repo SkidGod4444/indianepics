@@ -4,7 +4,7 @@ title: Simon go back, and Bhagat Singh
 title_hi: "'साइमन वापस जाओ' और भगत सिंह"
 track: evidence
 chapter: raj
-date: { start: 1928, end: 1931 }
+date: { start: 1928, month: 12, end: 1931 }
 location: { lat: 31.540, lng: 74.329, name: "Shadman Chowk, Lahore" }
 tags: [political, colonial]
 summary: Lajpat Rai dies after a police beating at Lahore's Simon protest in 1928; Bhagat Singh, Rajguru and Sukhdev are hanged in Lahore jail in March 1931.

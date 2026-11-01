@@ -4,7 +4,7 @@ title: Meerut to Delhi
 title_hi: मेरठ से दिल्ली
 track: evidence
 chapter: company
-date: { start: 1857, end: 1858 }
+date: { start: 1857, month: 5, end: 1858 }
 location: { lat: 28.990, lng: 77.700, name: "Meerut Cantonment, Uttar Pradesh" }
 tags: [war, colonial, political]
 summary: Sepoys rise at Meerut on 10 May and ride to Delhi to proclaim Bahadur Shah Zafar; the British retake the city in September and exile him to Rangoon.

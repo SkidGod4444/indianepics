@@ -4,7 +4,7 @@ title: Lucknow and Begum Hazrat Mahal
 title_hi: लखनऊ और बेगम हज़रत महल
 track: evidence
 chapter: company
-date: { start: 1857, end: 1858 }
+date: { start: 1857, month: 7, end: 1858 }
 location: { lat: 26.8606, lng: 80.9264, name: "The Residency, Lucknow" }
 tags: [war, colonial, political]
 summary: Awadh rises; the British are besieged in the Residency for nearly five months while Begum Hazrat Mahal rules in her son's name until March 1858.

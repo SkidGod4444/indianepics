@@ -4,7 +4,7 @@ title: The Bengal famine
 title_hi: बंगाल का अकाल
 track: evidence
 chapter: raj
-date: { start: 1943, end: 1944 }
+date: { start: 1943, month: 3, end: 1944 }
 location: { lat: 22.5726, lng: 88.3639, name: "Calcutta" }
 tags: [colonial, war]
 summary: Wartime Bengal starves in 1943; the 1945 inquiry counts about 1.5 million dead, later estimates run to 3 million, and the causes are still argued.

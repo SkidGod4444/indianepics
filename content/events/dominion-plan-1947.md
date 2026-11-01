@@ -4,7 +4,7 @@ title: Mountbatten's 3 June plan
 title_hi: माउंटबेटन की 3 जून योजना
 track: evidence
 chapter: raj
-date: { start: 1947, end: 1947 }
+date: { start: 1947, month: 6, end: 1947 }
 location: { lat: 28.6144, lng: 77.1997, name: "Viceroy's House (Rashtrapati Bhavan), New Delhi" }
 tags: [political, colonial]
 summary: On 3 June 1947 Mountbatten announces that British India will be partitioned; the handover is brought forward to August and Parliament passes the act in July.

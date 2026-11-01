@@ -4,7 +4,7 @@ title: Kanpur, 1857
 title_hi: कानपुर, 1857
 track: evidence
 chapter: company
-date: { start: 1857, end: 1857 }
+date: { start: 1857, month: 6, end: 1857 }
 location: { lat: 26.4607, lng: 80.3334, name: "Kanpur, Uttar Pradesh" }
 tags: [war, colonial]
 summary: Nana Sahib's forces besiege Wheeler's entrenchment; the survivors are killed at Satichaura Ghat and the Bibighar, and Havelock retakes the city in July.

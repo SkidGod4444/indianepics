@@ -17,7 +17,7 @@ export function DotScene({ name, progress = 1, className = "", style }: { name: 
     ref.current?.style.setProperty("--p", String(Math.max(0, Math.min(1, progress))));
   }, [progress]);
   return (
-    <svg ref={ref} viewBox={`0 0 ${SCENE_W} ${SCENE_H}`} role="img" aria-label={sc.title} className={className} style={style}>
+    <svg ref={ref} viewBox={`0 0 ${SCENE_W} ${SCENE_H}`} role="img" aria-label={sc.title} className={className} style={{ ...style, "--p": Math.max(0, Math.min(1, progress)) } as React.CSSProperties}>
       <title>{sc.title}</title>
       <style>{revealCss(cls, sc.period, SCENE_KEYFRAMES, EASE)}</style>
       {sc.base.map((d, i) => (

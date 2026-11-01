@@ -4,7 +4,7 @@ title: Mangal Pandey at Barrackpore
 title_hi: बैरकपुर में मंगल पांडे
 track: evidence
 chapter: company
-date: { start: 1857, end: 1857 }
+date: { start: 1857, month: 3, end: 1857 }
 location: { lat: 22.760, lng: 88.370, name: "Barrackpore, West Bengal" }
 tags: [war, colonial]
 summary: On 29 March sepoy Mangal Pandey of the 34th Bengal Native Infantry attacks his officers on parade; he is hanged on 8 April and his regiment disbanded.

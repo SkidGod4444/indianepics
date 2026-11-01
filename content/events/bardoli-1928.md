@@ -4,7 +4,7 @@ title: The Bardoli satyagraha
 title_hi: बारडोली सत्याग्रह
 track: evidence
 chapter: raj
-date: { start: 1928, end: 1928 }
+date: { start: 1928, month: 2, end: 1928 }
 location: { lat: 21.12, lng: 73.12, name: "Bardoli, Surat district" }
 tags: [political, colonial]
 summary: Bardoli's farmers refuse a 22 per cent rise in land revenue in 1928; an inquiry cuts it to about 6 per cent, and Vallabhbhai Patel becomes Sardar.

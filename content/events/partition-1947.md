@@ -4,7 +4,7 @@ title: Partition and the Radcliffe Line
 title_hi: विभाजन और रैडक्लिफ़ रेखा
 track: evidence
 chapter: republic
-date: { start: 1947, end: 1948 }
+date: { start: 1947, month: 8, end: 1948 }
 location: { lat: 31.605, lng: 74.573, name: "Attari-Wagah crossing, Punjab" }
 tags: [political, war]
 summary: The Radcliffe award, published two days after independence, splits Punjab and Bengal; about 14.5 million people cross the new lines.

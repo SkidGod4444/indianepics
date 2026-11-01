@@ -4,7 +4,7 @@ title: The Crown takes over
 title_hi: कंपनी से ताज तक
 track: evidence
 chapter: raj
-date: { start: 1858, end: 1858 }
+date: { start: 1858, month: 11, end: 1858 }
 location: { lat: 25.4321, lng: 81.8618, name: "Minto Park, Allahabad" }
 tags: [political, colonial]
 summary: On 1 November 1858 Canning reads the Queen's Proclamation at Allahabad; the Company's rule ends and India passes to the Crown.

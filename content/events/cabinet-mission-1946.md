@@ -4,7 +4,7 @@ title: Simla and the Cabinet Mission
 title_hi: शिमला सम्मेलन और कैबिनेट मिशन
 track: evidence
 chapter: raj
-date: { start: 1945, end: 1946 }
+date: { start: 1945, month: 6, end: 1946 }
 location: { lat: 31.1037, lng: 77.1418, name: "Viceregal Lodge, Shimla" }
 tags: [political]
 summary: Talks at Simla in 1945 and the Cabinet Mission plan of May 1946 try to keep India united in a loose federation; both founder on Congress–League mistrust.

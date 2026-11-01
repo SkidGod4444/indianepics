@@ -4,7 +4,7 @@ title: The INA trials and the naval mutiny
 title_hi: आज़ाद हिंद फ़ौज के मुक़दमे और नौसेना विद्रोह
 track: evidence
 chapter: raj
-date: { start: 1945, end: 1946 }
+date: { start: 1945, month: 11, end: 1946 }
 location: { lat: 18.905, lng: 72.812, name: "HMIS Talwar, Colaba, Bombay" }
 tags: [political, war]
 summary: The Red Fort trials of three INA officers stir protest in 1945; in February 1946 ratings of the Royal Indian Navy mutiny at Bombay and Karachi.

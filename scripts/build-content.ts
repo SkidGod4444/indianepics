@@ -62,7 +62,12 @@ for (const { file, data } of readMd(join(contentDir, "events"))) {
 // Evidence events sort by date. Tradition events sort by their era's place in the chapter's stops, then file order.
 const stopsOf = new Map(chapters.map((c) => [c.id, c.stops ?? []]));
 const sortKey = new Map(
-  events.map((e, i) => [e.id, e.date?.start ?? -1e9 + ((stopsOf.get(e.chapter)?.indexOf(e.era ?? "") ?? -1) + 1) * 1000 + i]),
+  events.map((e, i) => [
+    e.id,
+    e.date
+      ? e.date.start + ((e.date.month ?? 1) - 1) / 12
+      : -1e9 + ((stopsOf.get(e.chapter)?.indexOf(e.era ?? "") ?? -1) + 1) * 1000 + i,
+  ]),
 );
 events.sort((a, b) => (sortKey.get(a.id) ?? 0) - (sortKey.get(b.id) ?? 0));
 

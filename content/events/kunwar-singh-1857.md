@@ -4,7 +4,7 @@ title: Kunwar Singh of Jagdishpur
 title_hi: जगदीशपुर के कुँवर सिंह
 track: evidence
 chapter: company
-date: { start: 1857, end: 1858 }
+date: { start: 1857, month: 8, end: 1858 }
 location: { lat: 25.468, lng: 84.420, name: "Jagdishpur, Bhojpur, Bihar" }
 tags: [war, colonial]
 summary: The aged zamindar of Jagdishpur leads the Danapur mutineers, besieges Arrah, fights across north India and dies at home in April 1858.

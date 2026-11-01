@@ -1,3 +1,5 @@
+> **Expansion notes, 2026-11-01 to 2026-11-02.** Working report of the historian-editor agent (`.claude/agents/content-verifier.md`) as it ran, kept verbatim. Scratchpad paths and "not committed" remarks refer to that session. The "could not fully verify" lists are the open backlog: each item names the source that would settle it. Good first issues.
+
 # indianepics content expansion report
 
 Final build: `✓ 9 chapters, 120 events, 7 polities → src/data` (was 4 chapters, 28 events, 2 polities).

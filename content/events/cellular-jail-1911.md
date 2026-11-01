@@ -4,7 +4,7 @@ title: Savarkar and the Cellular Jail
 title_hi: सावरकर और सेल्युलर जेल
 track: evidence
 chapter: raj
-date: { start: 1911, end: 1921 }
+date: { start: 1911, month: 7, end: 1921 }
 location: { lat: 11.675, lng: 92.748, name: "Cellular Jail, Port Blair" }
 tags: [political, colonial]
 summary: V. D. Savarkar reaches Port Blair's Cellular Jail in 1911 with two life sentences; he and his brother are moved to mainland jails in 1921.
