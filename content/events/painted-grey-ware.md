@@ -9,6 +9,14 @@ location: { lat: 29.16, lng: 78.01, name: "Hastinapur, Meerut district, Uttar Pr
 tags: [state-formation]
 summary: Fine grey pottery painted in black marks the farming villages of the later Vedic Ganga-Yamuna doab; Hastinapur is its key excavated site.
 summary_hi: काले रंग से चित्रित महीन धूसर मृद्भांड उत्तर वैदिक गंगा-यमुना दोआब के कृषक गाँवों की पहचान हैं; हस्तिनापुर इसका प्रमुख उत्खनित स्थल है।
+voice: >-
+  The Vedic world moves east, into the Kuru and Panchala lands.
+  Its villages leave fine grey pottery painted in black at more than a thousand sites, often with iron tools.
+  At Hastinapur the Ganga cut away part of the village. The Puranas tell of a king who left after a flood. The dig cannot say if it was the same one.
+voice_hi: >-
+  वैदिक संसार पूरब की ओर, कुरु और पांचाल की धरती में बढ़ता है।
+  इसके गाँव काले रंग से चित्रित महीन स्लेटी बर्तन छोड़ जाते हैं, एक हज़ार से ज़्यादा जगहों पर, अक्सर लोहे के औज़ारों के साथ।
+  हस्तिनापुर में गंगा ने कभी बस्ती का एक हिस्सा काट दिया था। पुराण एक राजा की बात करते हैं, जो बाढ़ के बाद नगर छोड़ गया। वह वही बाढ़ थी या नहीं, खुदाई नहीं बता सकती।
 image: painted-grey-ware
 sources:
   - { title: "Lal, B. B., 'Excavation at Hastinapura and other explorations in the Upper Ganga and Sutlej basins, 1950-52', Ancient India 10-11 (1954-55)", url: "https://archive.org/details/ancientindianumb0000unse_j8r7" }

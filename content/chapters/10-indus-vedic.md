@@ -4,6 +4,18 @@ order: 10
 title: Indus and Veda
 title_hi: सिंधु और वेद
 kicker: c. 2600 to 400 BCE
+voice: >-
+  Around 2600 BCE, on the Indus and the Ghaggar-Hakra, towns become cities.
+  Baked-brick houses line planned streets over covered drains, and their traders reach from Afghanistan to the Gulf.
+  After 1900 BCE the great cities empty.
+  Then comes a different voice, the hymns of the Rigveda, the oldest Indian words that can still be read.
+  Iron spreads across the Ganga plain, and by the fifth century BCE sixteen great realms contest the north.
+voice_hi: >-
+  लगभग 2600 ईसा पूर्व, सिंधु और घग्गर-हकरा के किनारे कस्बे नगर बन जाते हैं।
+  पकी ईंटों के घर, योजना से बनी सड़कें, नीचे ढकी हुई नालियाँ, और व्यापारी जो अफ़ग़ानिस्तान से खाड़ी तक जाते हैं।
+  1900 ईसा पूर्व के बाद बड़े नगर ख़ाली हो जाते हैं।
+  फिर एक अलग आवाज़ सुनाई देती है, ऋग्वेद के सूक्त, भारत के सबसे पुराने शब्द जो आज भी पढ़े जा सकते हैं।
+  लोहा गंगा के मैदान में फैलता है, और ईसा पूर्व पाँचवीं सदी तक उत्तर में सोलह महाजनपद आपस में होड़ करते हैं।
 track: evidence
 years: { start: -2600, end: -400 }
 image: indus-unicorn-seal

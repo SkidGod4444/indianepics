@@ -63,6 +63,10 @@ export const EventSchema = z.object({
   /** Key into public/images/commons/manifest.json */
   image: z.string().optional(),
   sources: z.array(Source).min(1, "every event needs at least one source"),
+  /** Narration read aloud in Play mode: a short cinematic voice-over, English. Plain prose, no markup. */
+  voice: z.string().optional(),
+  /** The same in Hindi, Devanagari script only. */
+  voice_hi: z.string().optional(),
   /** Markdown body (compiled from the file body). */
   body: z.string().default(""),
 }).superRefine((e, ctx) => {
@@ -92,6 +96,9 @@ export const ChapterSchema = z.object({
   image: z.string().optional(),
   /** Optional layered art for parallax: back-to-front. Keys into the manifest. */
   layers: z.array(z.object({ image: z.string(), depth: z.number().min(0).max(1) })).optional(),
+  /** Narration for the chapter opener in Play mode, English; `voice_hi` is the Hindi twin. */
+  voice: z.string().optional(),
+  voice_hi: z.string().optional(),
   body: z.string().default(""),
 }).superRefine((c, ctx) => {
   if (c.track === "evidence" && !c.years) {
@@ -129,3 +136,10 @@ export const ImageEntry = z.object({
 });
 export const ImageManifest = z.record(z.string(), ImageEntry);
 export type ImageManifest = z.infer<typeof ImageManifest>;
+
+/** The spoken prologue that plays over the hero when the reader presses Play. */
+export const PrologueSchema = z.object({
+  voice: z.string().min(1),
+  voice_hi: z.string().optional(),
+});
+export type Prologue = z.infer<typeof PrologueSchema>;

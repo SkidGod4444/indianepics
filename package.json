@@ -10,7 +10,9 @@
     "content": "bun scripts/build-content.ts && bun scripts/build-llms.ts",
     "images": "bun scripts/fetch-images.ts",
     "typecheck": "tsc --noEmit",
-    "icons": "bun scripts/gen-icons.ts"
+    "icons": "bun scripts/gen-icons.ts",
+    "voice": "bun scripts/build-content.ts && bun scripts/build-voice.ts",
+    "voice:scan": "bun scripts/build-voice.ts --scan"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

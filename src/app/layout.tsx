@@ -28,7 +28,7 @@ const devanagari = Noto_Serif_Devanagari({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: "indianepics · a scroll-driven atlas of the Indian subcontinent", template: "%s · indianepics" },
+  title: { default: "indianepics · The history of the Indian subcontinent on one map", template: "%s · indianepics" },
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
   keywords: ["Indian history", "historical atlas", "map", "timeline", "Itihasa", "Maurya", "Mughal", "British Raj", "freedom struggle", "Republic of India", "open data"],

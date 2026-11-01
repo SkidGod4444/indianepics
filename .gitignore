@@ -48,3 +48,6 @@ next-env.d.ts
 /public/llms-full.txt
 /public/event/
 /public/chapter/
+
+# narrator auditions, never shipped
+/public/audio/samples/

@@ -15,7 +15,7 @@ export function SiteIndex() {
             </h2>
           </div>
           <p className="max-w-[46ch] text-[12.5px] leading-snug text-ink-3">
-            Each page is also available as Markdown for agents and offline readers:{" "}
+            Plain-text editions for offline reading and machine use:{" "}
             <a href="/llms.txt" className="underline decoration-hair underline-offset-2 hover:text-ink">
               llms.txt
             </a>
@@ -67,10 +67,12 @@ export function SiteIndex() {
           })}
         </div>
         <p className="mt-14 text-[11.5px] text-ink-3">
-          Code MIT · content CC BY-SA 4.0 · photographs carry their own licences, credited where shown · boundaries approximate unless marked traced ·{" "}
+          The code is released under the MIT licence and the text under CC BY-SA 4.0. Photographs carry their own licences and are credited where they appear.
+          Boundaries are approximate unless marked as traced.{" "}
           <a href="https://github.com/SkidGod4444/indianepics" className="underline decoration-hair underline-offset-2 hover:text-ink">
-            source on GitHub
+            Source on GitHub
           </a>
+          .
         </p>
       </div>
     </section>

@@ -220,6 +220,25 @@ html {
   border-color: var(--hair);
 }
 
+/* Three little bars that breathe while the narrator speaks. */
+.voice-bar {
+  display: block;
+  width: 2px;
+  height: 100%;
+  border-radius: 1px;
+  background: var(--evidence);
+  transform-origin: bottom;
+  animation: voice-bar 700ms ease-in-out infinite alternate;
+}
+@keyframes voice-bar {
+  from {
+    transform: scaleY(0.3);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
 /* Fine paper grain, so flat colour never reads as a screen. */
 .grain::before {
   content: "";

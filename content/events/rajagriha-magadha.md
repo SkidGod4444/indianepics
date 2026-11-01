@@ -9,6 +9,14 @@ location: { lat: 25.03, lng: 85.42, name: "Rajgir (Rajagriha), Nalanda district,
 tags: [state-formation, political, religion]
 summary: Magadha's hill-ringed capital rises among sixteen rival kingdoms and republics; the Buddha and Mahavira both teach here.
 summary_hi: सोलह प्रतिद्वंद्वी राज्यों और गणराज्यों के बीच पहाड़ियों से घिरी मगध की राजधानी; बुद्ध और महावीर दोनों ने यहाँ उपदेश दिए।
+voice: >-
+  Sixteen great realms divide the north. Some have kings. Others, like the Vajjis of Vaishali, by assemblies of clans.
+  Magadha has iron in its hills and the Ganga at its door, and it swallows its neighbours one by one.
+  Its capital, Rajagriha, sits in a ring of five hills. Here the Buddha spends many rainy seasons.
+voice_hi: >-
+  उत्तर भारत सोलह महाजनपदों में बँटा है। कुछ पर राजा राज करते हैं। कुछ, जैसे वैशाली के वज्जि, कुलों की सभाओं से चलते हैं।
+  मगध की पहाड़ियों में लोहा है और दरवाज़े पर गंगा, और वह एक-एक कर अपने पड़ोसियों को निगल जाता है।
+  उसकी राजधानी राजगृह पाँच पहाड़ियों के घेरे में है। यहाँ बुद्ध कई वर्षावास बिताते हैं।
 image: rajgir-cyclopean-wall
 sources:
   - { title: "Chakrabarti, D. K., The Archaeology of Ancient Indian Cities (1995)" }

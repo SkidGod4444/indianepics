@@ -9,6 +9,14 @@ location: { lat: 31.6, lng: 74.28, name: "Ravi (Parushni) river near Lahore, Pun
 tags: [language, religion]
 summary: Hymns in Vedic Sanskrit are composed in the greater Punjab; the pin is the Ravi, where Rigveda 7.18 sets the battle of the ten kings.
 summary_hi: वैदिक संस्कृत के सूक्त बृहत्तर पंजाब में रचे गए; पिन रावी (परुष्णी) पर है, जहाँ ऋग्वेद 7.18 दस राजाओं का युद्ध बताता है।
+voice: >-
+  In the land of seven rivers, poets compose hymns that will pass from memory to memory for centuries before anyone writes them down.
+  One hymn names the rivers from the Ganga to the Kabul. Another sings of King Sudas, victor over ten kings on the Ravi.
+  The hymns know cattle and clans. They describe no cities.
+voice_hi: >-
+  सात नदियों की धरती पर कवि ऐसे सूक्त रचते हैं, जो लिखे जाने से पहले सदियों तक स्मृति से स्मृति तक चलते रहेंगे।
+  एक सूक्त गंगा से काबुल तक की नदियों के नाम गिनाता है। दूसरा राजा सुदास का गीत है, जो रावी के तट पर दस राजाओं को हराता है।
+  इन सूक्तों में गायें हैं, कबीले हैं। नगर एक भी नहीं।
 image: rigveda-manuscript
 sources:
   - { title: "Jamison, S. W. and Brereton, J. P. (trans.), The Rigveda: The Earliest Religious Poetry of India (2014), introduction" }

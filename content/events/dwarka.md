@@ -10,6 +10,14 @@ location: { lat: 22.24, lng: 68.97, name: "Dwarka, Gujarat" }
 tags: [religion, trade]
 summary: Krishna's capital on the Saurashtra coast, which the Mahabharata says the sea swallowed after his death.
 summary_hi: सौराष्ट्र तट पर कृष्ण की राजधानी, जिसे महाभारत के अनुसार उनके देहावसान के बाद समुद्र ने निगल लिया।
+voice: >-
+  Krishna leaves Mathura and builds a city where the land meets the western sea.
+  The Mahabharata tells how it ends. The Yadavas destroy one another, and after Krishna's death the sea takes Dwarka back.
+  Stone anchors lie offshore. Later surveys date them to historical times, and the story is older still.
+voice_hi: >-
+  कृष्ण मथुरा छोड़ते हैं और पश्चिमी समुद्र के किनारे एक नगर बसाते हैं।
+  महाभारत उसका अंत भी सुनाता है। यादव आपस में लड़कर मिट जाते हैं, और कृष्ण के जाने के बाद समुद्र द्वारका को वापस ले लेता है।
+  तट के पास पत्थर के लंगर मिले हैं। बाद के सर्वेक्षण उन्हें ऐतिहासिक काल का बताते हैं। कथा उनसे भी पुरानी है।
 image: dwarkadhish-temple
 sources:
   - { title: "Harivamsa, Vishnu Parva", note: "Founding of Dvaraka" }

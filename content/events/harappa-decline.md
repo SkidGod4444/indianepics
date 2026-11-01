@@ -9,6 +9,14 @@ location: { lat: 30.629, lng: 72.864, name: "Harappa, Sahiwal district, Punjab (
 tags: [state-formation, trade]
 summary: From about 1900 BCE the big Indus cities shrink and empty, and at Harappa a smaller settlement buries its dead in a new style, called Cemetery H.
 summary_hi: लगभग 1900 ई.पू. से सिंधु के बड़े नगर सिकुड़ने और उजड़ने लगे, और हड़प्पा की छोटी बस्ती अपने मृतकों को एक नई रीति से दफ़नाने लगी, जिसे 'कब्रिस्तान एच' कहा जाता है।
+voice: >-
+  After 1900 BCE the seals, the weights and the script fall out of use. Harappa shrinks, and buries some of its dead in painted urns.
+  The invaders of the old story were dropped for lack of evidence. Historians weigh a failing monsoon, shifting rivers and lost trade instead.
+  And villages multiply to the east.
+voice_hi: >-
+  1900 ईसा पूर्व के बाद मुहरें, बाट और लिपि, सब छूट जाते हैं। हड़प्पा सिकुड़ता है, और अपने कुछ मृतकों को रंगे हुए कलशों में दफ़नाता है।
+  आक्रमणकारियों की पुरानी कहानी सबूत न मिलने से छोड़ दी गई। इतिहासकार अब कमज़ोर मानसून, रास्ता बदलती नदियों और टूटते व्यापार को तौलते हैं।
+  इसी बीच, पूरब में गाँव बढ़ते जाते हैं।
 image: harappa-ruins
 sources:
   - { title: "Giosan, L. et al., 'Fluvial landscapes of the Harappan civilization', PNAS 109 (2012)", url: "https://doi.org/10.1073/pnas.1112743109" }

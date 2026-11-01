@@ -79,3 +79,16 @@ Every page also has a Markdown twin for agents and offline readers, built by `sc
 | `/event/<id>/` | `/event/<id>.md` |
 
 Each HTML page links its twin with `<link rel="alternate" type="text/markdown">`, and the index at the foot of the home page lists every `.md`. Set `NEXT_PUBLIC_SITE_URL` (see `.env.example`) so canonical URLs, the sitemap and the Markdown links point at your deployment.
+
+## Narration
+
+Press Play and a narrator reads the story: a prologue over the hero, then one line per chapter opener and per event, in English or Hindi (the speaker icon next to the play controls switches, or turns it off). Lines live in each content file as `voice` and `voice_hi`, and `content/prologue.md` holds the opening. While a line is being read the autoplay paces itself to it; slots without a clip fall back to timed scrolling, and the site works with no audio at all.
+
+Clips are spoken by Sarvam AI (bulbul:v4-flash) and stored in `public/audio/<lang>/<key>.mp3` with `public/audio/manifest.json`:
+
+```sh
+SARVAM_API_KEY=... bun run voice        # synthesise what changed (hash of text + voice + model)
+bun run voice:scan                      # no API: rebuild the manifest from the mp3s on disk
+```
+
+Voices come from `SARVAM_VOICE_EN` and `SARVAM_VOICE_HI` (see `.env.example`); audition at indus.sarvam.ai. Sarvam's text rules apply to the lines: Devanagari for Hindi, `।` to end Hindi sentences, Indian commas in large numbers, short sentences.

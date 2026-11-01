@@ -8,7 +8,7 @@ import { join, resolve } from "node:path";
 import matter from "gray-matter";
 import { feature } from "topojson-client";
 import type { Topology, GeometryCollection } from "topojson-specification";
-import { ChapterSchema, EventSchema, PolitySchema, type Chapter, type EpicEvent, type Polity } from "../src/content/schema";
+import { ChapterSchema, EventSchema, PolitySchema, PrologueSchema, type Chapter, type EpicEvent, type Polity } from "../src/content/schema";
 
 const root = resolve(import.meta.dirname, "..");
 const contentDir = resolve(process.argv[2] ?? join(root, "content"));
@@ -125,4 +125,19 @@ mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, "chapters.json"), JSON.stringify(chapters, null, 2));
 writeFileSync(join(outDir, "events.json"), JSON.stringify(events, null, 2));
 writeFileSync(join(outDir, "polities.json"), JSON.stringify(polities, null, 2));
+
+// Prologue: spoken over the hero when Play is pressed. Optional file; the build never fails on it.
+{
+  const file = join(root, "content/prologue.md");
+  let prologue: { voice: string; voice_hi?: string } | null = null;
+  if (existsSync(file)) {
+    const r = PrologueSchema.safeParse(matter(readFileSync(file, "utf8")).data);
+    if (!r.success) {
+      console.error(`✗ content/prologue.md: ${r.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`).join("; ")}`);
+      process.exit(1);
+    }
+    prologue = r.data;
+  }
+  writeFileSync(join(outDir, "prologue.json"), JSON.stringify(prologue, null, 2));
+}
 console.log(`✓ ${chapters.length} chapters, ${events.length} events, ${polities.length} polities → ${outDir}`);

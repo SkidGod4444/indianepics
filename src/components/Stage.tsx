@@ -18,6 +18,8 @@ import { Intro } from "./Intro";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Button } from "@/components/ui/button";
 import { Pause, Play, SkipBack, SkipForward } from "lucide-react";
+import { Narrator, VOICE_PREF_KEY, loadVoiceManifest, type VoicePref } from "@/lib/narration";
+import { VoiceMenu } from "./VoiceMenu";
 
 type Props = { chapters: Chapter[]; events: EpicEvent[]; polities: Polity[] };
 type TrackFilter = "both" | Track;
@@ -26,8 +28,12 @@ type TrackFilter = "both" | Track;
 const ANCHOR = 0.5;
 /** Scroll length of one slot (a chapter title or one event), in vh. One number to tune the pacing. */
 const SLOT_VH = 80;
-/** Autoplay: milliseconds to scroll through one slot. */
+/** Autoplay: milliseconds to scroll through one slot when nothing is being read aloud. */
 const PLAY_MS = 5200;
+/** Silence after a narrated line before the next slot begins. */
+const TAIL_MS = 900;
+/** Narrated slots never scroll faster than this, so a short line still lets the card open. */
+const MIN_SLOT_MS = 3800;
 
 export function Stage({ chapters: allChapters, events, polities }: Props) {
   const { lang } = useLang();
@@ -37,8 +43,45 @@ export function Stage({ chapters: allChapters, events, polities }: Props) {
   const [open, setOpen] = useState<EpicEvent | null>(null);
   const [viewport, setViewport] = useState({ w: 1200, h: 800 });
   const [playing, setPlaying] = useState(false);
+  /** Narration choice: a language, "off", or null to follow the page language. */
+  const [voicePref, setVoicePref] = useState<VoicePref | null>(null);
+  const [voiceReady, setVoiceReady] = useState(false);
+  const [narrating, setNarrating] = useState(false);
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
   const pushedRef = useRef(false);
+  const narratorRef = useRef<Narrator | null>(null);
+  const voiceLang = voicePref === "off" ? null : (voicePref ?? lang);
+  const voiceOn = voiceLang !== null;
+  const langRef = useRef(lang);
+  const voiceOnRef = useRef(false);
+  useEffect(() => {
+    langRef.current = voiceLang ?? lang;
+    voiceOnRef.current = voiceOn;
+  }, [voiceLang, voiceOn, lang]);
+  /** True while the prologue is being read over the hero; the scroll waits for it. */
+  const prologueRef = useRef(false);
+
+  // The narrator: clips from public/audio, if `bun run voice` has been run. Silent otherwise.
+  useEffect(() => {
+    const n = (narratorRef.current ??= new Narrator());
+    n.onState = () => setNarrating(n.playing);
+    loadVoiceManifest().then((m) => {
+      try {
+        const v = window.localStorage.getItem(VOICE_PREF_KEY);
+        if (v === "en" || v === "hi" || v === "off") setVoicePref(v);
+      } catch {}
+      n.setManifest(m);
+      setVoiceReady(n.available);
+    });
+  }, []);
+  const chooseVoice = (v: VoicePref) => {
+    setVoicePref(v);
+    try {
+      window.localStorage.setItem(VOICE_PREF_KEY, v);
+    } catch {}
+    // A new language restarts the current line in that language; off stops it.
+    narratorRef.current?.stop();
+  };
 
   const chapters = useMemo(
     () => allChapters.filter((c) => trackFilter === "both" || c.track === trackFilter),
@@ -77,6 +120,19 @@ export function Stage({ chapters: allChapters, events, polities }: Props) {
         ];
     return geoMercator().fitExtent(extent, FRAME);
   }, [viewport]);
+
+  /** Where the anchor line is, in the spacer sections: chapter index, progress, and that section's page box. */
+  const locate = useCallback(() => {
+    const anchor = window.innerHeight * ANCHOR;
+    const els = sectionRefs.current.filter(Boolean) as HTMLElement[];
+    let hit: { i: number; progress: number; top: number; height: number } | null = null;
+    for (let i = 0; i < els.length; i++) {
+      const r = els[i].getBoundingClientRect();
+      if (anchor < r.top) break;
+      hit = { i, progress: clamp01((anchor - r.top) / r.height), top: r.top + window.scrollY, height: r.height };
+    }
+    return hit;
+  }, []);
 
   // Scroll → position, measured from the invisible spacer sections.
   useEffect(() => {
@@ -119,19 +175,68 @@ export function Stage({ chapters: allChapters, events, polities }: Props) {
     window.scrollTo({ top, behavior: smooth ? "smooth" : "auto" });
   }, []);
 
-  // Autoplay: a steady scroll, one slot per PLAY_MS. Any wheel, touch or key from the reader pauses it.
+  // Autoplay. With narration: each slot lasts as long as its line, plus a breath; the scroll is paced to land
+  // at the slot's end as the voice finishes. Without: a steady PLAY_MS per slot. Any wheel, touch or key pauses.
   useEffect(() => {
     if (!playing) return;
+    const n = narratorRef.current;
     let raf = 0;
     let last = performance.now();
     let carry = 0;
+    let lastKey: string | null = null;
+    const keyAt = (i: number, slot: number) => {
+      const c = chapters[i];
+      if (!c) return null;
+      const evs = eventsByChapter[c.id] ?? [];
+      return slot === 0 ? c.id : evs[slot - 1]?.id ?? null;
+    };
+    const slotsOf = (i: number) => (eventsByChapter[chapters[i]?.id]?.length ?? 0) + 1;
     const tick = (now: number) => {
       const dt = Math.min(64, now - last);
       last = now;
-      const speed = (window.innerHeight * SLOT_VH) / 100 / PLAY_MS;
-      carry += speed * dt;
-      const dy = Math.floor(carry);
-      carry -= dy;
+      const lang = langRef.current;
+      const voice = voiceOnRef.current && !!n;
+      // The prologue plays over the hero; the page waits for it.
+      if (prologueRef.current) {
+        raf = requestAnimationFrame(tick);
+        return;
+      }
+      const here = locate();
+      const slotPx = (window.innerHeight * SLOT_VH) / 100;
+      let dy = 0;
+      if (here && voice) {
+        const slots = slotsOf(here.i);
+        const slot = Math.min(slots - 1, Math.floor(here.progress * slots));
+        const key = keyAt(here.i, slot);
+        const anchorAbs = window.scrollY + window.innerHeight * ANCHOR;
+        const slotEnd = here.top + ((slot + 1) * here.height) / slots;
+        if (key && key !== lastKey) {
+          lastKey = key;
+          if (!n.play(key, lang)) n.stop();
+          // Preload what comes next so its length is known before we need it.
+          const nk = slot + 1 < slots ? keyAt(here.i, slot + 1) : keyAt(here.i + 1, 0);
+          if (nk) n.preload(nk, lang);
+        }
+        const spoken = key && n.current === key && n.has(key, lang);
+        if (spoken) {
+          const total = Math.max(MIN_SLOT_MS, n.durationMs(key, lang) + TAIL_MS);
+          const remaining = Math.max(250, total - n.elapsedMs(key) - (n.playing ? 0 : 0));
+          const speed = Math.max(0, slotEnd - anchorAbs) / remaining;
+          carry += speed * dt;
+          dy = Math.floor(carry);
+          carry -= dy;
+          // Never leave a slot while its line is still being read.
+          if (n.playing && anchorAbs + dy > slotEnd - 1) dy = Math.max(0, Math.floor(slotEnd - 1 - anchorAbs));
+        } else {
+          carry += (slotPx / PLAY_MS) * dt;
+          dy = Math.floor(carry);
+          carry -= dy;
+        }
+      } else {
+        carry += (slotPx / PLAY_MS) * dt;
+        dy = Math.floor(carry);
+        carry -= dy;
+      }
       if (dy) window.scrollBy(0, dy);
       // Stop where the story ends, before the index: the last spacer's bottom passing the anchor.
       const lastEl = sectionRefs.current[sectionRefs.current.length - 1];
@@ -146,16 +251,23 @@ export function Stage({ chapters: allChapters, events, polities }: Props) {
     const onKey = (e: KeyboardEvent) => {
       if (e.key !== " ") pause();
     };
+    const onHide = () => {
+      if (document.hidden) pause();
+    };
     window.addEventListener("wheel", pause, { passive: true });
     window.addEventListener("touchstart", pause, { passive: true });
     window.addEventListener("keydown", onKey);
+    document.addEventListener("visibilitychange", onHide);
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener("wheel", pause);
       window.removeEventListener("touchstart", pause);
       window.removeEventListener("keydown", onKey);
+      document.removeEventListener("visibilitychange", onHide);
+      n?.pause();
+      prologueRef.current = false;
     };
-  }, [playing]);
+  }, [playing, chapters, eventsByChapter, locate]);
 
   // Space toggles play when nothing else has focus.
   useEffect(() => {
@@ -211,7 +323,22 @@ export function Stage({ chapters: allChapters, events, polities }: Props) {
   const showTitle = inStory && slot === 0;
 
   const togglePlay = () => {
-    if (!playing && !inStory) seek({ chapter: 0, progress: 0 });
+    const n = narratorRef.current;
+    n?.unlock();
+    if (!playing && !inStory) {
+      // From the hero: the prologue is read over the breathing map; the scroll starts when it ends.
+      if (voiceOn && n?.has("prologue", voiceLang)) {
+        prologueRef.current = true;
+        n.onEnded = (k) => {
+          if (k !== "prologue") return;
+          prologueRef.current = false;
+          seek({ chapter: 0, progress: 0 }, true);
+        };
+        n.play("prologue", voiceLang);
+      } else {
+        seek({ chapter: 0, progress: 0 });
+      }
+    }
     setPlaying(!playing);
   };
   /** Jump to the middle of the previous/next slot, across chapter boundaries. */
@@ -334,6 +461,7 @@ export function Stage({ chapters: allChapters, events, polities }: Props) {
           <Button size="icon-sm" variant="ghost" onClick={() => skip(1)} aria-label="Next" className="rounded-full">
             <SkipForward />
           </Button>
+          {voiceReady ? <VoiceMenu value={voicePref ?? lang} narrating={narrating && voiceOn} onChange={chooseVoice} /> : null}
         </div>
 
         {/* What pops on the map */}
@@ -350,7 +478,7 @@ export function Stage({ chapters: allChapters, events, polities }: Props) {
         />
 
         {/* The hero sits in the flow above the clock. */}
-        <Intro chapters={chapters} eventCount={events.length} onPlay={togglePlay} onSeek={(c) => seek({ chapter: c, progress: 0.001 }, true)} />
+        <Intro chapters={chapters} onPlay={togglePlay} onSeek={(c) => seek({ chapter: c, progress: 0.001 }, true)} />
 
         {/* Invisible spacers: one slot of scroll per title and per event. They are the clock. */}
         <div className="relative z-[1]" aria-hidden>

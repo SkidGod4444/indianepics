@@ -1,0 +1,25 @@
+{
+  "model": "bulbul:v4-flash",
+  "voices": {
+    "en": "varun_en_suspense",
+    "hi": "anand_hi_documentary"
+  },
+  "clips": {
+    "prologue": {
+      "en": {
+        "file": "en/prologue.mp3",
+        "hash": "e70739ef1e4e",
+        "chars": 217,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash"
+      },
+      "hi": {
+        "file": "hi/prologue.mp3",
+        "hash": "23eb1e0346ad",
+        "chars": 165,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash"
+      }
+    }
+  }
+}

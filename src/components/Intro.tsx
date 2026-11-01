@@ -14,13 +14,12 @@ import { DotIndia } from "./DotIndia";
 
 type Props = {
   chapters: Chapter[];
-  eventCount: number;
   onPlay: () => void;
   onSeek: (chapter: number) => void;
 };
 
 /** The hero: the subcontinent in breathing dots, the promise in one line, and two ways in. */
-export function Intro({ chapters, eventCount, onPlay, onSeek }: Props) {
+export function Intro({ chapters, onPlay, onSeek }: Props) {
   const { lang } = useLang();
   const hi = lang === "hi";
   // Fade with the hero's own bottom edge: fully read while it is on screen, gone exactly when the stage
@@ -37,8 +36,7 @@ export function Intro({ chapters, eventCount, onPlay, onSeek }: Props) {
         <div className="grid flex-1 items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-4">
           <div className="relative z-10">
             <motion.p {...rise} transition={{ duration: 0.5 }} className={`mb-5 font-medium text-ink-3 ${hi ? "font-hi text-[12.5px]" : "text-[11px] uppercase tracking-[0.2em]"}`}>
-              {hi ? "एक स्क्रॉल-चालित एटलस" : "A scroll-driven atlas"} · {chapters.length} {hi ? "अध्याय" : "chapters"} · {eventCount} {hi ? "पिन" : "pins"} ·{" "}
-              {hi ? "खुला डेटा" : "open data"}
+              {hi ? "उपमहाद्वीप का इतिहास, एक नक़्शे पर" : "A history of the subcontinent, on one map"}
             </motion.p>
             <motion.h1
               {...rise}

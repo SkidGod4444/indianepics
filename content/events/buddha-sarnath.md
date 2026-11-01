@@ -9,6 +9,14 @@ location: { lat: 25.381, lng: 83.024, name: "Sarnath, near Varanasi, Uttar Prade
 tags: [religion]
 summary: In the deer park near Varanasi the Buddha preaches his first sermon to five ascetics; its date depends on which chronology of his life is right.
 summary_hi: वाराणसी के पास मृगदाव में बुद्ध ने पाँच तपस्वियों को पहला उपदेश दिया; इसकी तिथि इस पर निर्भर है कि उनके जीवन का कौन-सा कालक्रम सही है।
+voice: >-
+  After his awakening at Bodh Gaya, the Buddha walks to a deer park near Varanasi and speaks to five old companions.
+  Tradition says the wheel of the dhamma begins to turn here.
+  Two or three centuries later Ashoka raises a pillar on this ground, crowned with lions. In 1950 India takes those lions as its emblem.
+voice_hi: >-
+  बोधगया में ज्ञान पाने के बाद बुद्ध वाराणसी के पास एक मृगदाव तक पैदल जाते हैं, और अपने पाँच पुराने साथियों से बात करते हैं।
+  परंपरा कहती है कि धम्म का चक्र यहीं से घूमना शुरू हुआ।
+  दो-तीन सदियों बाद अशोक इसी धरती पर एक स्तंभ खड़ा करते हैं, जिसके शिखर पर सिंह हैं। 1950 में भारत उन्हीं सिंहों को अपना राजचिह्न बनाता है।
 image: dhamek-stupa
 sources:
   - { title: "Bechert, H. (ed.), When Did the Buddha Live? The Controversy on the Dating of the Historical Buddha (1995)" }

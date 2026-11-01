@@ -6,7 +6,7 @@ import { formatRange, formatYear, getImage } from "./content";
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://indianepics.online").replace(/\/$/, "");
 export const SITE_NAME = "indianepics";
 export const SITE_DESCRIPTION =
-  "A scroll-driven historical atlas of the Indian subcontinent from the Itihasa to 2026: 9 chapters, 120 dated and sourced events, two tracks (tradition and evidence), bilingual, open data.";
+  "The history of the Indian subcontinent on one map, from the Itihasa to the present day. Every event is dated, placed and sourced, and told in English and Hindi.";
 
 export const abs = (path: string) => `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
 export const eventPath = (id: string) => `/event/${id}/`;

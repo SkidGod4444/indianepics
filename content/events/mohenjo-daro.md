@@ -9,6 +9,14 @@ location: { lat: 27.329, lng: 68.138, name: "Mohenjo-daro, Larkana, Sindh (Pakis
 tags: [state-formation, trade]
 summary: "One of the largest Harappan cities rises on the Indus: baked-brick houses, covered drains, a citadel with the Great Bath, and no palace or temple yet found."
 summary_hi: "सिंधु के तट पर सबसे बड़े हड़प्पा नगरों में से एक: पकी ईंटों के घर, ढकी नालियाँ, महास्नानागार वाला दुर्ग, पर अब तक कोई महल या मंदिर नहीं मिला।"
+voice: >-
+  Mohenjo-daro rises in blocks beside the Indus, its bricks cut to the same proportions as Harappa's, nearly 600 kilometres away.
+  On the citadel lies the Great Bath, a brick tank sealed with bitumen.
+  No palace has been found here, and no temple. Who ruled this city, no one knows.
+voice_hi: >-
+  मोहनजोदड़ो सिंधु के किनारे खंडों में बसा है। इसकी ईंटें उसी नाप की हैं जैसी लगभग 600 किलोमीटर दूर हड़प्पा की।
+  दुर्ग पर महास्नानागार है, ईंटों का एक कुंड, जिसे डामर से इस तरह जोड़ा गया कि पानी न रिसे।
+  यहाँ न कोई महल मिला है, न कोई मंदिर। इस नगर पर किसका राज था, कोई नहीं जानता।
 image: mohenjo-daro
 sources:
   - { title: "Marshall, J. (ed.), Mohenjo-daro and the Indus Civilization (1931)", url: "https://archive.org/details/dli.ministry.17386" }
