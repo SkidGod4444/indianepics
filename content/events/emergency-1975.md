@@ -10,6 +10,14 @@ tags: [political]
 image: emergency-1975
 summary: Two weeks after a court voids her election, Indira Gandhi has a national emergency proclaimed on 25 June 1975; civil liberties are suspended for 21 months.
 summary_hi: अदालत द्वारा उनका चुनाव रद्द होने के दो सप्ताह बाद इंदिरा गांधी की सलाह पर 25 जून 1975 को आपातकाल घोषित हुआ; 21 महीने तक नागरिक स्वतंत्रताएँ निलंबित रहीं।
+voice: >-
+  On 12 June 1975 a court sets aside Indira Gandhi's election. On the night of 25 June, an emergency is proclaimed.
+  Opposition leaders are jailed and the press is censored. A commission will later document forced sterilisations.
+  After twenty-one months, the voters bring the Janata Party to power, and the emergency ends.
+voice_hi: >-
+  12 जून 1975 को एक अदालत इंदिरा गांधी का चुनाव रद्द कर देती है। 25 जून की रात देश में आपातकाल घोषित होता है।
+  विपक्ष के नेता जेल में डाल दिए जाते हैं, और अख़बारों पर सेंसर लग जाता है। बाद में एक आयोग ज़बरन नसबंदी के मामले दर्ज करेगा।
+  इक्कीस महीने बाद मतदाता जनता पार्टी को सत्ता में लाते हैं, और आपातकाल ख़त्म होता है।
 sources:
   - { title: "Shah Commission of Inquiry, Third and Final Report (1978)", url: "https://archive.org/details/ShahCommissionOfInquiry3rdFinalReport" }
   - { title: "Austin, Working a Democratic Constitution (1999)" }

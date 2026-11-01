@@ -9,6 +9,12 @@ location: { lat: 31.537, lng: 78.254, name: "Kalpa (Chini), Kinnaur, Himachal Pr
 tags: [political]
 summary: The first votes are cast in snowbound Chini on 25 October 1951; by February 1952 an electorate of 173 million has chosen the first Lok Sabha.
 summary_hi: 25 अक्टूबर 1951 को बर्फ़ से घिरे चीनी में पहले वोट पड़े; फ़रवरी 1952 तक 17.3 करोड़ मतदाताओं वाले देश ने पहली लोकसभा चुन ली।
+voice: >-
+  The Republic's first votes are cast in October 1951 in snowbound Chini, in the Himalaya, before winter closes it off. A schoolteacher, Shyam Saran Negi, is remembered as the first voter.
+  Most voters cannot read, so every party gets a symbol. An electorate of 173 million chooses its first Lok Sabha.
+voice_hi: >-
+  गणराज्य के पहले वोट अक्टूबर 1951 में किन्नौर के बर्फ़ीले कल्पा इलाक़े में पड़ते हैं, इससे पहले कि सर्दी रास्ते बंद कर दे। एक स्कूल शिक्षक, श्याम सरन नेगी, पहले मतदाता के रूप में याद किए जाते हैं।
+  ज़्यादातर मतदाता पढ़ नहीं सकते, इसलिए हर पार्टी को एक चुनाव चिह्न मिलता है। सत्रह करोड़ तीस लाख मतदाता अपनी पहली लोकसभा चुनते हैं।
 image: ballot-boxes-1952
 sources:
   - { title: "Election Commission of India, Report on the First General Elections in India 1951-52, vol. II (Statistical)", url: "https://archive.org/details/in.ernet.dli.2015.449149" }

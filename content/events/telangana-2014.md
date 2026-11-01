@@ -9,6 +9,14 @@ location: { lat: 17.385, lng: 78.487, name: "Hyderabad, Telangana" }
 tags: [state-formation, political]
 summary: After a movement going back to 1969, Andhra Pradesh is split on 2 June; Hyderabad serves as joint capital for up to ten years.
 summary_hi: 1969 से चले आ रहे आंदोलन के बाद 2 जून को आंध्र प्रदेश का विभाजन; हैदराबाद अधिकतम दस वर्षों तक दोनों राज्यों की संयुक्त राजधानी।
+voice: >-
+  The demand for a Telangana state goes back to 1969.
+  In January 2014 the Andhra Pradesh assembly rejects the bill to divide it. Under the Constitution its view is sought, not obeyed, and Parliament passes the bill the next month.
+  On 2 June 2014 Telangana becomes India's twenty-ninth state.
+voice_hi: >-
+  अलग तेलंगाना राज्य की माँग 1969 से चली आ रही है।
+  जनवरी 2014 में आंध्र प्रदेश विधानसभा बँटवारे का विधेयक ठुकरा देती है। संविधान के तहत उसकी राय ली जाती है, पर वह बाध्यकारी नहीं, और अगले महीने संसद विधेयक पास कर देती है।
+  2 जून 2014 को तेलंगाना भारत का उनतीसवाँ राज्य बनता है।
 image: charminar
 sources:
   - { title: "Andhra Pradesh Reorganisation Act, 2014 (Act 6 of 2014)", note: "Enacted 1 March 2014; appointed day 2 June 2014" }

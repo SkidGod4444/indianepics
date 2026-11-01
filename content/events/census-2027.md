@@ -10,6 +10,14 @@ tags: [political, state-formation]
 image: census-2027
 summary: "India's first census since 2011 opens with houselisting on 1 April 2026; it is the first digital count, and its second phase will also record caste."
 summary_hi: "2011 के बाद भारत की पहली जनगणना 1 अप्रैल 2026 को मकान-सूचीकरण से शुरू हुई; यह पहली डिजिटल गणना है और इसके दूसरे चरण में जाति भी दर्ज होगी।"
+voice: >-
+  On 1 April 2026 India begins its first census since 2011, the first counted on phones, and one that will also record caste.
+  When its figures are published, the Lok Sabha seats, frozen among the states since 1971, are expected to be shared out again.
+  The map is still being drawn.
+voice_hi: >-
+  1 अप्रैल 2026 को भारत 2011 के बाद अपनी पहली जनगणना शुरू करता है, पहली बार फ़ोन पर, और इस बार जाति भी गिनी जाएगी।
+  जब इसके आँकड़े छपेंगे, तो 1971 से राज्यों में जमी संसद की सीटें फिर से बाँटी जाने की उम्मीद है।
+  नक्शा अब भी बन रहा है।
 sources:
   - { title: "PIB, Census 2027: World's largest census exercise begins with Houselisting and Housing Census, 1 April 2026", url: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2248021" }
   - { title: "PIB, Registrar General and Census Commissioner of India addresses press conference on Census-2027, 30 March 2026", url: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2246847" }

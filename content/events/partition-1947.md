@@ -9,6 +9,14 @@ location: { lat: 31.605, lng: 74.573, name: "Attari-Wagah crossing, Punjab" }
 tags: [political, war]
 summary: The Radcliffe award, published two days after independence, splits Punjab and Bengal; about 14.5 million people cross the new lines.
 summary_hi: स्वतंत्रता के दो दिन बाद प्रकाशित रैडक्लिफ़ निर्णय ने पंजाब और बंगाल को बाँटा; लगभग 1.45 करोड़ लोगों ने नई सीमाएँ पार कीं।
+voice: >-
+  The Radcliffe line is published on 17 August, two days after independence.
+  In both directions, people cross the new borders. About fourteen and a half million arrive. Nearly eighteen million leave. More than three million are never accounted for.
+  Estimates of the dead run from two hundred thousand to two million.
+voice_hi: >-
+  रैडक्लिफ़ रेखा आज़ादी के दो दिन बाद, 17 अगस्त को छपती है।
+  दोनों दिशाओं में लोग नई सीमाएँ पार करते हैं। लगभग एक करोड़ पैंतालीस लाख पहुँचते हैं। लगभग एक करोड़ अस्सी लाख निकलते हैं। तीस लाख से ज़्यादा का कोई हिसाब नहीं मिलता।
+  मरने वालों के अनुमान दो लाख से बीस लाख तक हैं।
 image: wagah-border
 sources:
   - { title: "Khan, The Great Partition (2007)" }

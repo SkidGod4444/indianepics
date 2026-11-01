@@ -9,6 +9,14 @@ location: { lat: 26.7956, lng: 82.1943, name: "Ram Janmabhoomi and Babri Masjid 
 tags: [religion, political]
 summary: Kar sevaks demolish the Babri Masjid on 6 December 1992; after a 2019 Supreme Court verdict, a Ram temple on the site is consecrated on 22 January 2024.
 summary_hi: 6 दिसंबर 1992 को कारसेवकों ने बाबरी मस्जिद ढहा दी; 2019 के सर्वोच्च न्यायालय के फ़ैसले के बाद उसी स्थल पर बने राम मंदिर में 22 जनवरी 2024 को प्राण प्रतिष्ठा हुई।
+voice: >-
+  On 6 December 1992 a crowd tears down the Babri Masjid, where many Hindus believe Rama was born. Riots kill some two thousand.
+  In 2019 the Supreme Court gives the site to a temple, calls the demolition an egregious violation of the rule of law, and grants land for a mosque.
+  In January 2024 the temple is consecrated.
+voice_hi: >-
+  6 दिसंबर 1992 को एक भीड़ बाबरी मस्जिद गिरा देती है, उस जगह पर जिसे बहुत से हिंदू राम की जन्मभूमि मानते हैं। दंगों में लगभग दो हज़ार लोग मारे जाते हैं।
+  2019 में सर्वोच्च न्यायालय वह जगह मंदिर को देता है, मस्जिद गिराने को क़ानून के राज का घोर उल्लंघन कहता है, और मस्जिद के लिए अलग ज़मीन देता है।
+  जनवरी 2024 में मंदिर की प्राण-प्रतिष्ठा होती है।
 image: ram-mandir-ayodhya
 sources:
   - { title: "Supreme Court of India, M Siddiq (D) Thr Lrs v. Mahant Suresh Das & Ors, judgment of 9 November 2019", url: "https://api.sci.gov.in/supremecourt/2010/36350/36350_2010_1_1502_18205_Judgement_09-Nov-2019.pdf" }

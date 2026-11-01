@@ -9,6 +9,14 @@ location: { lat: 23.733, lng: 90.398, name: "Suhrawardy Udyan (Ramna Race Course
 tags: [war, state-formation]
 summary: After nine months of civil war and ten million refugees, Indian troops and the Mukti Bahini reach Dhaka; Pakistan's eastern command surrenders on 16 December.
 summary_hi: नौ महीने के गृहयुद्ध और लगभग एक करोड़ शरणार्थियों के बाद भारतीय सेना और मुक्ति वाहिनी ढाका पहुँचीं; 16 दिसंबर को पाकिस्तान की पूर्वी कमान ने आत्मसमर्पण किया।
+voice: >-
+  From March 1971 the Pakistani army's crackdown in East Pakistan drives some ten million refugees into India.
+  Open war comes on 3 December. On the sixteenth, in Dhaka, General Niazi surrenders to General Aurora. About ninety-three thousand become prisoners.
+  A new nation is born. How many died has never been settled.
+voice_hi: >-
+  मार्च 1971 से पूर्वी पाकिस्तान में पाकिस्तानी सेना की कार्रवाई लगभग एक करोड़ शरणार्थियों को भारत की ओर धकेल देती है।
+  3 दिसंबर को खुला युद्ध शुरू होता है। 16 तारीख़ को ढाका में जनरल नियाज़ी, जनरल अरोड़ा के सामने आत्मसमर्पण पर दस्तख़त करते हैं। लगभग तिरानवे हज़ार लोग युद्धबंदी बनते हैं।
+  एक नया देश जन्म लेता है। कितने लोग मारे गए, यह कभी तय नहीं हुआ।
 image: surrender-dhaka-1971
 sources:
   - { title: "Simla Agreement, 2 July 1972 (Ministry of External Affairs)", url: "https://www.mea.gov.in/bilateral-documents.htm?dtl/5541/Simla+Agreement" }

@@ -355,6 +355,14 @@
         "voice": "varun_en_suspense",
         "model": "bulbul:v4-flash",
         "seconds": 22.99
+      },
+      "hi": {
+        "file": "hi/taxila-learning.mp3",
+        "hash": "998d1472058b",
+        "chars": 341,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash",
+        "seconds": 24.79
       }
     },
     "chandragupta-magadha": {
@@ -365,6 +373,14 @@
         "voice": "varun_en_suspense",
         "model": "bulbul:v4-flash",
         "seconds": 20.5
+      },
+      "hi": {
+        "file": "hi/chandragupta-magadha.mp3",
+        "hash": "8902b16789e1",
+        "chars": 317,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash",
+        "seconds": 20.62
       }
     },
     "seleucid-treaty": {
@@ -375,6 +391,14 @@
         "voice": "varun_en_suspense",
         "model": "bulbul:v4-flash",
         "seconds": 17.62
+      },
+      "hi": {
+        "file": "hi/seleucid-treaty.mp3",
+        "hash": "ea5232f2a91f",
+        "chars": 299,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash",
+        "seconds": 20.5
       }
     },
     "sanchi-stupa": {
@@ -385,6 +409,14 @@
         "voice": "varun_en_suspense",
         "model": "bulbul:v4-flash",
         "seconds": 22.54
+      },
+      "hi": {
+        "file": "hi/sanchi-stupa.mp3",
+        "hash": "a29b3c57803f",
+        "chars": 324,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.98
       }
     },
     "kalinga-war": {
@@ -395,6 +427,14 @@
         "voice": "varun_en_suspense",
         "model": "bulbul:v4-flash",
         "seconds": 18.77
+      },
+      "hi": {
+        "file": "hi/kalinga-war.mp3",
+        "hash": "4ebebcc0948d",
+        "chars": 281,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash",
+        "seconds": 20.98
       }
     },
     "ashoka-edicts": {
@@ -405,6 +445,14 @@
         "voice": "varun_en_suspense",
         "model": "bulbul:v4-flash",
         "seconds": 21.43
+      },
+      "hi": {
+        "file": "hi/ashoka-edicts.mp3",
+        "hash": "3427018f82ce",
+        "chars": 284,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.05
       }
     },
     "maurya-fall": {
@@ -415,6 +463,14 @@
         "voice": "varun_en_suspense",
         "model": "bulbul:v4-flash",
         "seconds": 19.08
+      },
+      "hi": {
+        "file": "hi/maurya-fall.mp3",
+        "hash": "c61e5fc7187d",
+        "chars": 284,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash",
+        "seconds": 20.14
       }
     },
     "sangam-madurai": {
@@ -425,6 +481,14 @@
         "voice": "varun_en_suspense",
         "model": "bulbul:v4-flash",
         "seconds": 20.26
+      },
+      "hi": {
+        "file": "hi/sangam-madurai.mp3",
+        "hash": "dfcebdf7b447",
+        "chars": 293,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.84
       }
     },
     "satavahana-nashik": {
@@ -435,6 +499,14 @@
         "voice": "varun_en_suspense",
         "model": "bulbul:v4-flash",
         "seconds": 19.8
+      },
+      "hi": {
+        "file": "hi/satavahana-nashik.mp3",
+        "hash": "919410e2bd26",
+        "chars": 289,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash",
+        "seconds": 18.65
       }
     },
     "kanishka-mathura": {
@@ -445,6 +517,280 @@
         "voice": "varun_en_suspense",
         "model": "bulbul:v4-flash",
         "seconds": 21.86
+      },
+      "hi": {
+        "file": "hi/kanishka-mathura.mp3",
+        "hash": "1ca7bd489382",
+        "chars": 305,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.53
+      }
+    },
+    "gupta-era-320": {
+      "en": {
+        "file": "en/gupta-era-320.mp3",
+        "hash": "3ebd2f68bfd3",
+        "chars": 319,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.17
+      },
+      "hi": {
+        "file": "hi/gupta-era-320.mp3",
+        "hash": "f0ca3ba3ccf5",
+        "chars": 331,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash",
+        "seconds": 24.12
+      }
+    },
+    "allahabad-pillar": {
+      "en": {
+        "file": "en/allahabad-pillar.mp3",
+        "hash": "bde8035866ec",
+        "chars": 292,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 20.18
+      },
+      "hi": {
+        "file": "hi/allahabad-pillar.mp3",
+        "hash": "0b755f565221",
+        "chars": 314,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash",
+        "seconds": 22.99
+      }
+    },
+    "nalanda": {
+      "en": {
+        "file": "en/nalanda.mp3",
+        "hash": "b4b4ca1f334d",
+        "chars": 293,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 20.57
+      },
+      "hi": {
+        "file": "hi/nalanda.mp3",
+        "hash": "d506d78ef3c7",
+        "chars": 301,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.19
+      }
+    },
+    "ajanta-caves": {
+      "en": {
+        "file": "en/ajanta-caves.mp3",
+        "hash": "4b6aa48a6def",
+        "chars": 288,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 19.37
+      },
+      "hi": {
+        "file": "hi/ajanta-caves.mp3",
+        "hash": "bc1598e41572",
+        "chars": 297,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash",
+        "seconds": 22.3
+      }
+    },
+    "aryabhata-499": {
+      "en": {
+        "file": "en/aryabhata-499.mp3",
+        "hash": "468648dd50e7",
+        "chars": 289,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 25.2
+      },
+      "hi": {
+        "file": "hi/aryabhata-499.mp3",
+        "hash": "24a27d105d75",
+        "chars": 250,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.43
+      }
+    },
+    "harsha-kannauj": {
+      "en": {
+        "file": "en/harsha-kannauj.mp3",
+        "hash": "62cd14a4263a",
+        "chars": 316,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 22.39
+      },
+      "hi": {
+        "file": "hi/harsha-kannauj.mp3",
+        "hash": "4401bf64d3a1",
+        "chars": 315,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash",
+        "seconds": 20.81
+      }
+    },
+    "mamallapuram": {
+      "en": {
+        "file": "en/mamallapuram.mp3",
+        "hash": "1216404db983",
+        "chars": 309,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 23.11
+      },
+      "hi": {
+        "file": "hi/mamallapuram.mp3",
+        "hash": "2b2c1260278e",
+        "chars": 355,
+        "voice": "anand_hi_documentary",
+        "model": "bulbul:v4-flash",
+        "seconds": 26.38
+      }
+    },
+    "khajuraho": {
+      "en": {
+        "file": "en/khajuraho.mp3",
+        "hash": "1e1eb72c6c09",
+        "chars": 310,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.5
+      }
+    },
+    "rajaraja-thanjavur-1010": {
+      "en": {
+        "file": "en/rajaraja-thanjavur-1010.mp3",
+        "hash": "a7fc23cf4954",
+        "chars": 283,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 19.18
+      }
+    },
+    "rajendra-gangaikonda": {
+      "en": {
+        "file": "en/rajendra-gangaikonda.mp3",
+        "hash": "11ef6f65986a",
+        "chars": 307,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.14
+      }
+    },
+    "somnath-1026": {
+      "en": {
+        "file": "en/somnath-1026.mp3",
+        "hash": "f856b69af236",
+        "chars": 290,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 18.74
+      }
+    },
+    "tarain-1192": {
+      "en": {
+        "file": "en/tarain-1192.mp3",
+        "hash": "48a29296a243",
+        "chars": 270,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 18.34
+      }
+    },
+    "qutb-minar": {
+      "en": {
+        "file": "en/qutb-minar.mp3",
+        "hash": "069e1030be6c",
+        "chars": 297,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 19.7
+      }
+    },
+    "alauddin-chittor-1303": {
+      "en": {
+        "file": "en/alauddin-chittor-1303.mp3",
+        "hash": "a2242e24a9aa",
+        "chars": 304,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 19.73
+      }
+    },
+    "daulatabad-1327": {
+      "en": {
+        "file": "en/daulatabad-1327.mp3",
+        "hash": "b3c750751747",
+        "chars": 320,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 22.37
+      }
+    },
+    "vijayanagara-1336": {
+      "en": {
+        "file": "en/vijayanagara-1336.mp3",
+        "hash": "4cbdc529b58a",
+        "chars": 300,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.53
+      }
+    },
+    "bahmani-1347": {
+      "en": {
+        "file": "en/bahmani-1347.mp3",
+        "hash": "e6eaf2d2c628",
+        "chars": 315,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.89
+      }
+    },
+    "timur-delhi-1398": {
+      "en": {
+        "file": "en/timur-delhi-1398.mp3",
+        "hash": "833e8eeba7b7",
+        "chars": 316,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.7
+      }
+    },
+    "panipat-1526": {
+      "en": {
+        "file": "en/panipat-1526.mp3",
+        "hash": "a3c22de304ef",
+        "chars": 314,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 23.71
+      }
+    },
+    "fatehpur-sikri": {
+      "en": {
+        "file": "en/fatehpur-sikri.mp3",
+        "hash": "6a332febd6de",
+        "chars": 299,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.86
+      }
+    },
+    "surat-factory": {
+      "en": {
+        "file": "en/surat-factory.mp3",
+        "hash": "9155f6a31435",
+        "chars": 288,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 19.1
       }
     }
   }

@@ -176,6 +176,26 @@ if (scan) {
   const missing = items.flatMap((i) => (["en", "hi"] as Lang[]).filter((l) => (l === "hi" ? i.voice_hi : i.voice) && !clips[i.key]?.[l]).map((l) => `${l}/${i.key}`));
   console.log(`✓ manifest: ${found} clips on disk, ${missing.length} lines still without audio${missing.length ? `: ${missing.slice(0, 8).join(", ")}${missing.length > 8 ? "…" : ""}` : ""}`);
   if (stale.length) console.log(`  ${stale.length} stale (text changed since spoken): ${stale.join(", ")}`);
+  // A local review page: every clip with its words and a player, so a human can listen for names the lint cannot check.
+  const esc = (t: string) => t.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
+  const rows = items
+    .map((item) => {
+      const cells = (["en", "hi"] as Lang[])
+        .map((lang) => {
+          const c = clips[item.key]?.[lang];
+          const text = (lang === "hi" ? item.voice_hi : item.voice)?.trim() ?? "";
+          if (!c) return `<td class="miss">${text ? "no clip yet" : "no line"}</td>`;
+          return `<td><audio controls preload="none" src="/audio/${c.file}"></audio><div class="meta">${c.seconds ?? "?"} s · ${(c.chars / (c.seconds || 1)).toFixed(1)} ch/s</div><p${lang === "hi" ? ' lang="hi"' : ""}>${esc(text)}</p></td>`;
+        })
+        .join("");
+      return `<tr><th>${esc(item.key)}</th>${cells}</tr>`;
+    })
+    .join("\n");
+  writeFileSync(
+    join(out, "review.html"),
+    `<!doctype html><meta charset="utf-8"><title>Narration review</title><style>body{font:14px/1.5 system-ui;margin:24px;color:#1c1915;background:#f4efe5}table{border-collapse:collapse;width:100%}th,td{vertical-align:top;padding:10px;border-top:1px solid #d6cdb8;text-align:left}th{width:160px;font-weight:600}td{width:45%}audio{width:100%}.meta{font-size:12px;color:#8a8275}.miss{color:#8a8275;font-style:italic}p{margin:6px 0 0}</style><h1>Narration review</h1><p>Listen for names and Sanskrit terms. Note the key of anything mispronounced.</p><table><tr><th></th><th>English</th><th>हिन्दी</th></tr>${rows}</table>`,
+  );
+  console.log("  review page: /audio/review.html (local only)");
   // Pace: characters per second per language, and the clips that stray from the median by more than a quarter.
   for (const lang of ["en", "hi"] as Lang[]) {
     const rows = Object.entries(clips).flatMap(([k, v]) => (v[lang]?.seconds ? [{ k, cps: v[lang]!.chars / v[lang]!.seconds!, s: v[lang]!.seconds! }] : []));

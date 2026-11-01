@@ -9,6 +9,14 @@ location: { lat: 34.767, lng: 78.217, name: "Galwan valley, near Patrolling Poin
 tags: [war, political]
 summary: Indian and Chinese troops fight with clubs and stones on the night of 15 June 2020; twenty Indian soldiers die, the first border deaths in 45 years.
 summary_hi: 15 जून 2020 की रात भारतीय और चीनी सैनिकों के बीच लाठियों और पत्थरों से झड़प; बीस भारतीय सैनिक मारे गए, 45 वर्षों में सीमा पर पहली मौतें।
+voice: >-
+  On the night of 15 June 2020, in the Galwan valley, Indian and Chinese soldiers fight with clubs and stones. By old agreement, no one fires.
+  Twenty Indian soldiers die, the first deaths on that border in forty-five years. China later admits four dead.
+  In Ladakh, the line on the ground is not the line on the map.
+voice_hi: >-
+  15 जून 2020 की रात गलवान घाटी में भारतीय और चीनी सैनिक डंडों और पत्थरों से लड़ते हैं। पुराने समझौते गोली चलाने से रोकते हैं।
+  बीस भारतीय सैनिकों की जान जाती है, पैंतालीस साल में उस सीमा पर पहली मौतें। चीन बाद में अपने चार सैनिकों की मौत मानता है।
+  लद्दाख में ज़मीन पर खिंची रेखा और नक्शे की रेखा एक नहीं हैं।
 sources:
   - { title: "Ministry of External Affairs, Official Spokesperson's response on the situation in the western sector of the India-China border, 16 June 2020", url: "https://www.mea.gov.in/response-to-queries.htm?dtl/32761/official+spokespersons+response+to+media+queries+on+the+situation+in+the+western+sector+of+the+indiachina+border" }
   - { title: "Ministry of External Affairs, Rajya Sabha Question 1199 on the 21 October 2024 patrolling agreement", url: "https://www.mea.gov.in/rajya-sabha?dtl/38689/QUESTION+NO+1199+RECENTLY+SIGNED+BORDER+AGREEMENTS+WITH+CHINA" }

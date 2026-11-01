@@ -10,6 +10,14 @@ tags: [science, political]
 image: aadhaar-2010
 summary: Ranjana Sonawane of Tembhli receives the first Aadhaar number on 29 September 2010; by April 2016 a billion of the biometric IDs have been issued.
 summary_hi: 29 सितंबर 2010 को टेंभली की रंजना सोनावणे को पहला आधार नंबर मिला; अप्रैल 2016 तक एक अरब बायोमेट्रिक पहचान संख्याएँ जारी हो चुकी थीं।
+voice: >-
+  On 29 September 2010, in Tembhli, Ranjana Sonawane receives the first Aadhaar number, twelve digits tied to her fingerprints and irises.
+  By April 2016 there are a billion, and money begins to move by phone.
+  In 2017 the Supreme Court declares privacy a fundamental right. The argument over who is left out goes on.
+voice_hi: >-
+  29 सितंबर 2010 को टेंभली गाँव में रंजना सोनावणे को पहला आधार नंबर मिलता है, बारह अंक, उनकी उँगलियों के निशान और आँखों की पुतलियों से जुड़े।
+  अप्रैल 2016 तक ऐसे सौ करोड़ नंबर बन चुके हैं, और पैसा फ़ोन से चलने लगता है।
+  2017 में सर्वोच्च न्यायालय निजता को मौलिक अधिकार घोषित करता है। कौन छूट जाता है, इस पर बहस जारी है।
 sources:
   - { title: "The Aadhaar (Targeted Delivery of Financial and Other Subsidies, Benefits and Services) Act, 2016", url: "https://uidai.gov.in/images/Aadhaar_Act_2016_as_amended.pdf" }
   - { title: "Justice K. S. Puttaswamy (Retd) v. Union of India, Supreme Court, 2017 and 2018" }

@@ -9,6 +9,14 @@ location: { lat: 34.557, lng: 76.126, name: "Kargil, Ladakh" }
 tags: [war]
 summary: Pakistani troops occupy heights on India's side of the Line of Control above Kargil; by 26 July 1999 the Indian Army has retaken them.
 summary_hi: पाकिस्तानी सैनिकों ने कारगिल के ऊपर नियंत्रण रेखा के भारतीय ओर की चोटियों पर कब्ज़ा किया; 26 जुलाई 1999 तक भारतीय सेना ने उन्हें वापस ले लिया।
+voice: >-
+  In May 1999 Pakistani troops are found on the heights above Kargil, on India's side of the Line of Control, overlooking the road to Leh.
+  The army retakes Tololing in June, Tiger Hill in July. By 26 July the heights are India's again. At least 527 soldiers do not come home.
+  The map does not change. That was the point.
+voice_hi: >-
+  मई 1999 में करगिल के ऊपर की चोटियों पर, नियंत्रण रेखा के भारतीय हिस्से में, पाकिस्तानी सैनिक मिलते हैं, जो लेह जाने वाली सड़क पर नज़र गड़ाए हैं।
+  जून में सेना तोलोलिंग वापस लेती है, और जुलाई में टाइगर हिल। 26 जुलाई तक चोटियाँ फिर भारत की हैं। कम से कम 527 सैनिक घर नहीं लौटते।
+  नक्शा नहीं बदलता। यही तो मक़सद था।
 image: kargil-war-memorial
 sources:
   - { title: "PIB, Kargil Vijay Diwas 2025 (backgrounder)", url: "https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=154940&reg=48&lang=2" }

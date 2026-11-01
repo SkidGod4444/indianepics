@@ -9,6 +9,14 @@ location: { lat: 34.003, lng: 75.334, name: "Baisaran meadow, Pahalgam, Jammu an
 tags: [war, political]
 summary: Gunmen kill 26 people near Pahalgam on 22 April 2025; India strikes nine sites in Pakistan and Pakistan-administered Kashmir on 7 May; firing stops on 10 May.
 summary_hi: 22 अप्रैल 2025 को पहलगाम के पास बंदूकधारियों ने 26 लोगों की हत्या की; 7 मई को भारत ने पाकिस्तान और पाकिस्तान-प्रशासित कश्मीर में नौ ठिकानों पर हमला किया; 10 मई को गोलीबारी रुकी।
+voice: >-
+  On 22 April 2025 gunmen kill 26 people at Baisaran, near Pahalgam. India blames militants from Pakistan, which denies any part.
+  On 7 May India strikes nine sites across the border. Pakistan answers with drones and missiles, and India hits its air bases.
+  On 10 May the firing stops. The Line of Control has not moved.
+voice_hi: >-
+  22 अप्रैल 2025 को पहलगाम के पास बैसरन में बंदूकधारी छब्बीस लोगों को मार डालते हैं। भारत पाकिस्तान में बसे चरमपंथियों को दोषी ठहराता है, पाकिस्तान किसी भी भूमिका से इनकार करता है।
+  7 मई को भारत सीमा पार नौ ठिकानों पर हमला करता है। पाकिस्तान ड्रोन और मिसाइलों से जवाब देता है, और भारत उसके हवाई अड्डों पर वार करता है।
+  10 मई को गोलीबारी रुकती है। नियंत्रण रेखा अपनी जगह पर है।
 image: pahalgam-valley
 sources:
   - { title: "Ministry of External Affairs, Statement by Foreign Secretary on the decisions of the Cabinet Committee on Security, 23 April 2025", url: "https://www.mea.gov.in/speeches-statements?dtl/39442" }

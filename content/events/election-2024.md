@@ -9,6 +9,14 @@ location: { lat: 28.6175, lng: 77.2085, name: "Parliament House, New Delhi" }
 tags: [political]
 summary: Some 640 million people vote in seven phases; the BJP wins 240 seats, short of a majority, and Narendra Modi begins a third term at the head of the NDA.
 summary_hi: सात चरणों में लगभग 64 करोड़ लोगों ने मतदान किया; भाजपा को 240 सीटें मिलीं, बहुमत से कम, और नरेंद्र मोदी ने एनडीए के नेता के रूप में तीसरा कार्यकाल शुरू किया।
+voice: >-
+  From April to June 2024, in seven phases, some 640 million Indians vote.
+  The Bharatiya Janata Party wins 240 seats, short of a majority on its own. With its allies, Narendra Modi begins a third term.
+  They vote on constituencies drawn from the 2001 census, with each state's share of seats frozen since 1971.
+voice_hi: >-
+  अप्रैल से जून 2024 तक, सात चरणों में, लगभग चौंसठ करोड़ भारतीय वोट डालते हैं।
+  भाजपा 240 सीटें जीतती है, अपने दम पर बहुमत से कम। सहयोगियों के साथ नरेंद्र मोदी तीसरा कार्यकाल शुरू करते हैं।
+  जिन निर्वाचन क्षेत्रों में वोट पड़ते हैं, वे 2001 की जनगणना पर खींचे गए हैं, और हर राज्य की सीटें 1971 से जमी हुई हैं।
 image: parliament-house-delhi
 sources:
   - { title: "Election Commission of India, Voter turnout, General Elections 2024", url: "https://elections24.eci.gov.in/docs/BnS4hhbvK9.pdf" }
