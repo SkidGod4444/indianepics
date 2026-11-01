@@ -9,6 +9,14 @@ location: { lat: 18.5646, lng: 73.8897, name: "Yerwada Central Jail, Pune" }
 tags: [political, religion]
 summary: Gandhi fasts in Yerwada jail against separate electorates for the depressed classes; on 24 September 1932 Ambedkar accepts reserved seats instead.
 summary_hi: गांधी ने दलित वर्गों के लिए पृथक निर्वाचन के विरुद्ध यरवदा जेल में अनशन किया; 24 सितंबर 1932 को आंबेडकर ने उसके बदले आरक्षित सीटें स्वीकार कीं।
+voice: >-
+  Britain grants the depressed classes separate electorates. In Yerwada jail, Gandhi fasts unto death against it.
+  After four days, Ambedkar signs. Instead of 78 separate seats, 148 reserved seats in joint electorates.
+  Ambedkar will call the fast the worst form of coercion against a helpless people.
+voice_hi: >-
+  ब्रिटेन दलित वर्गों को पृथक निर्वाचन देता है। यरवदा जेल में गांधी इसके ख़िलाफ़ आमरण अनशन शुरू करते हैं।
+  चार दिन बाद आंबेडकर दस्तख़त करते हैं। अठहत्तर अलग सीटों की जगह एक सौ अड़तालीस आरक्षित सीटें, संयुक्त निर्वाचन में।
+  आंबेडकर इस अनशन को असहाय लोगों पर दबाव का सबसे बुरा रूप कहेंगे।
 image: poona-pact-1932
 sources:
   - { title: "Ambedkar, What Congress and Gandhi Have Done to the Untouchables (1946 ed.)", url: "https://archive.org/details/whatcongressgand00bram" }

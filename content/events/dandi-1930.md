@@ -9,6 +9,14 @@ location: { lat: 20.8865, lng: 72.8009, name: "Dandi, Navsari" }
 tags: [political, colonial]
 summary: Gandhi and 78 marchers walk about 390 km from Sabarmati to Dandi and break the salt law on 6 April 1930, opening civil disobedience.
 summary_hi: गांधी और 78 सत्याग्रही साबरमती से लगभग 390 किमी चलकर दांडी पहुँचे और 6 अप्रैल 1930 को नमक क़ानून तोड़कर सविनय अवज्ञा आंदोलन शुरू किया।
+voice: >-
+  Gandhi chooses salt, because the tax falls on everyone, and salt lies free on the shore.
+  On 12 March 1930 he leaves Sabarmati with seventy-eight men, walks twenty-four days to Dandi, and picks up a lump of salt from the mud.
+  India makes salt and fills the jails. At Dharasana, marchers walk in ranks into police clubs.
+voice_hi: >-
+  गांधी नमक को चुनते हैं, क्योंकि उसका कर हर किसी पर पड़ता है, और नमक किनारे पर मुफ़्त पड़ा है।
+  12 मार्च 1930 को वे अठहत्तर साथियों के साथ साबरमती से निकलते हैं। चौबीस दिन चलने के बाद, दांडी में, वे कीचड़ से नमक का एक ढेला उठा लेते हैं।
+  देश भर में लोग नमक बनाते हैं और जेलें भर देते हैं। धरासना में सत्याग्रही क़तारों में बढ़ते हैं, और लाठियाँ खाकर गिरते हैं।
 image: salt-march
 sources:
   - { title: "Webb Miller, I Found No Peace (1936), on Dharasana" }

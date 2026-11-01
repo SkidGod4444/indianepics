@@ -10,6 +10,14 @@ tags: [political, colonial]
 image: bardoli-1928
 summary: Bardoli's farmers refuse a 22 per cent rise in land revenue in 1928; an inquiry cuts it to about 6 per cent, and Vallabhbhai Patel becomes Sardar.
 summary_hi: 1928 में बारडोली के किसानों ने लगान में 22 प्रतिशत वृद्धि देने से इनकार किया; जाँच ने इसे घटाकर लगभग 6 प्रतिशत किया और वल्लभभाई पटेल 'सरदार' कहलाए।
+voice: >-
+  In 1928 Bardoli's farmers, led by Vallabhbhai Patel, refuse a rise of about twenty-two per cent in land revenue.
+  The government seizes buffaloes and sells land for a pittance. The villagers lock their doors.
+  An inquiry cuts the rise to about six per cent. The women of Bardoli, it is said, give Patel a title. Sardar.
+voice_hi: >-
+  1928 में बारडोली के किसान भू-राजस्व में लगभग बाईस प्रतिशत की बढ़ोतरी चुकाने से इनकार कर देते हैं, और वल्लभभाई पटेल उनकी अगुवाई करते हैं।
+  सरकार भैंसें ज़ब्त करती है और ज़मीनें कौड़ियों के दाम बेचती है। गाँव वाले घरों पर ताले लगा देते हैं।
+  जाँच बढ़ोतरी को घटाकर लगभग छह प्रतिशत कर देती है। कहते हैं, बारडोली की औरतें पटेल को एक उपाधि देती हैं। सरदार।
 sources:
   - { title: "Desai, The Story of Bardoli (1929)", url: "https://archive.org/details/in.ernet.dli.2015.207935" }
   - { title: "The Indian Annual Register 1929, vol. 1, 'The Bardoli Agitation'", url: "https://archive.org/details/in.ernet.dli.2015.45785" }

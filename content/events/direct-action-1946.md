@@ -9,6 +9,14 @@ location: { lat: 22.5629, lng: 88.3492, name: "Ochterlony Monument (Shaheed Mina
 tags: [political, religion]
 summary: The League's Direct Action Day on 16 August 1946 becomes days of killing in Calcutta; more than 4,000 die, and violence spreads to Noakhali and Bihar.
 summary_hi: 16 अगस्त 1946 को लीग का प्रत्यक्ष कार्रवाई दिवस कलकत्ता में कई दिनों के क़त्लेआम में बदल गया; 4,000 से अधिक लोग मरे और हिंसा नोआखाली और बिहार तक फैली।
+voice: >-
+  On 16 August 1946, the League's Direct Action Day, Calcutta turns on itself. In three days more than four thousand die.
+  In Noakhali, Hindus are killed and forcibly converted, and Gandhi walks village to village. In Bihar, Muslims are massacred in thousands.
+  Many on both sides now believe partition cannot be avoided.
+voice_hi: >-
+  16 अगस्त 1946, लीग का सीधी कार्रवाई दिवस। कलकत्ता अपने ही ख़िलाफ़ हो जाता है। तीन दिन में चार हज़ार से ज़्यादा लोग मारे जाते हैं।
+  नोआखाली में हिंदुओं को मारा जाता है और ज़बरन धर्म बदलवाया जाता है, और गांधी गाँव-गाँव पैदल चलते हैं। बिहार में हज़ारों मुसलमानों का क़त्लेआम होता है।
+  अब दोनों ओर के बहुत से नेता मानने लगते हैं कि बँटवारा टाला नहीं जा सकता।
 image: calcutta-riots-1946
 sources:
   - { title: "Das, Communal Riots in Bengal, 1905–1947 (1991)" }

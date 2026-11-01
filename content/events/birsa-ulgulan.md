@@ -9,6 +9,14 @@ location: { lat: 22.975, lng: 85.491, name: "Ulihatu, Khunti" }
 tags: [political, colonial, religion]
 summary: Birsa Munda leads the Munda rising of 1899 to 1900 against landlords, missions and the Raj; he dies in Ranchi jail aged about 25.
 summary_hi: बिरसा मुंडा ने 1899–1900 में ज़मींदारों, मिशनों और अंग्रेज़ी राज के विरुद्ध मुंडा विद्रोह का नेतृत्व किया; लगभग 25 वर्ष की आयु में राँची जेल में उनकी मृत्यु हुई।
+voice: >-
+  His followers call him Dharti Aba, father of the earth. Birsa Munda preaches Munda rule over Munda land.
+  The ulgulan begins on Christmas Eve 1899. On 9 January troops storm Sail Rakab. The official count is ten dead. The Munda count, two hundred or more.
+  In June 1900 Birsa dies in Ranchi jail, aged about twenty-five.
+voice_hi: >-
+  उनके अनुयायी उन्हें धरती आबा कहते हैं, धरती के पिता। बिरसा मुंडा मुंडा धरती पर मुंडा राज का संदेश देते हैं।
+  1899 की क्रिसमस की पूर्व संध्या पर उलगुलान शुरू होता है। 9 जनवरी को सैनिक सैल रकब पहाड़ी पर धावा बोलते हैं। सरकारी गिनती दस मौतें बताती है। मुंडा गिनती, दो सौ या उससे ज़्यादा।
+  जून 1900 में, लगभग पच्चीस साल की उम्र में, बिरसा राँची जेल में दम तोड़ देते हैं।
 image: birsa-munda-statue
 sources:
   - { title: "Roy, The Mundas and Their Country (1912)", url: "https://archive.org/details/dli.csl.5314" }

@@ -9,6 +9,14 @@ location: { lat: 31.540, lng: 74.329, name: "Shadman Chowk, Lahore" }
 tags: [political, colonial]
 summary: Lajpat Rai dies after a police beating at Lahore's Simon protest in 1928; Bhagat Singh, Rajguru and Sukhdev are hanged in Lahore jail in March 1931.
 summary_hi: 1928 में लाहौर में साइमन-विरोधी प्रदर्शन पर पुलिस की लाठियों के बाद लाजपत राय की मृत्यु हुई; मार्च 1931 में भगत सिंह, राजगुरु और सुखदेव को लाहौर जेल में फाँसी दी गई।
+voice: >-
+  At Lahore in 1928 police beat Lala Lajpat Rai, and he dies. Bhagat Singh and Rajguru set out to kill the officer responsible, and shoot the wrong man.
+  In 1929 he throws bombs built not to kill into the Assembly, shouts Inquilab Zindabad, and waits.
+  On 23 March 1931, hours early, he is hanged with Rajguru and Sukhdev.
+voice_hi: >-
+  1928 में लाहौर में पुलिस की लाठियों के बाद लाला लाजपत राय की मौत हो जाती है। भगत सिंह और राजगुरु ज़िम्मेदार अफ़सर को मारने निकलते हैं, और ग़लती से किसी और को मार देते हैं।
+  1929 में वे असेंबली में ऐसे बम फेंकते हैं जो मारने के लिए नहीं बने, इंक़लाब ज़िंदाबाद पुकारते हैं, और वहीं खड़े रहते हैं।
+  23 मार्च 1931 को, समय से पहले, उन्हें राजगुरु और सुखदेव के साथ फाँसी दे दी जाती है।
 image: bhagat-singh
 sources:
   - { title: "Report of the Indian Statutory Commission, vol. 1 (1930)", url: "https://archive.org/details/in.ernet.dli.2015.81808" }

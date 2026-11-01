@@ -10,6 +10,14 @@ tags: [political, colonial]
 image: phadke-chapekar
 summary: Vasudev Balwant Phadke's armed band raids the country around Pune in 1879; in 1897 the Chapekar brothers shoot plague commissioner Rand.
 summary_hi: 1879 में वासुदेव बलवंत फड़के के सशस्त्र दल ने पुणे के आसपास छापे मारे; 1897 में चापेकर बंधुओं ने प्लेग कमिश्नर रैंड को गोली मारी।
+voice: >-
+  After the famine, Vasudev Balwant Phadke raises an armed band to raid moneylenders and feed hungry villages. He dies a prisoner in Aden.
+  In 1897 comes plague. Soldiers search homes and burn belongings.
+  On the night of the Diamond Jubilee, the Chapekar brothers shoot the plague commissioner, Rand. All three will hang.
+voice_hi: >-
+  अकाल के बाद वासुदेव बलवंत फड़के एक हथियारबंद दल खड़ा करते हैं, जो साहूकारों को लूटकर भूखे गाँवों का पेट भरता है। उनकी मौत अदन में क़ैद में होती है।
+  1897 में प्लेग आता है। सैनिक घरों में घुसकर तलाशी लेते हैं और सामान जलाते हैं।
+  महारानी की हीरक जयंती की रात चापेकर भाई प्लेग कमिश्नर रैंड को गोली मार देते हैं। तीनों भाइयों को फाँसी होगी।
 sources:
   - { title: "PIB, Vasudev Balwant Phadke (2016)", url: "https://www.pib.gov.in/newsite/printrelease.aspx?relid=148384" }
   - { title: "Sedition Committee 1918, Report (Rowlatt report), chapter on Bombay", url: "https://archive.org/details/in.ernet.dli.2015.285698" }

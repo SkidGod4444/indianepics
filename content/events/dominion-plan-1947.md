@@ -10,6 +10,14 @@ tags: [political, colonial]
 image: dominion-plan-1947
 summary: On 3 June 1947 Mountbatten announces that British India will be partitioned; the handover is brought forward to August and Parliament passes the act in July.
 summary_hi: 3 जून 1947 को माउंटबेटन ने ब्रिटिश भारत के विभाजन की घोषणा की; सत्ता-हस्तांतरण अगस्त तक आगे लाया गया और संसद ने जुलाई में अधिनियम पारित किया।
+voice: >-
+  On 3 June 1947, Mountbatten, Nehru, Jinnah and Baldev Singh speak on All India Radio. British India will be divided into two dominions.
+  The next day Mountbatten names the date, 15 August. Britain had meant to leave by June 1948. Now there are ten weeks.
+  Cyril Radcliffe begins to draw the line.
+voice_hi: >-
+  3 जून 1947 को माउंटबेटन, नेहरू, जिन्ना और बलदेव सिंह ऑल इंडिया रेडियो पर बोलते हैं। ब्रिटिश भारत दो डोमिनियनों में बँटेगा।
+  अगले दिन माउंटबेटन तारीख़ बताते हैं, 15 अगस्त। ब्रिटेन जून 1948 तक जाने वाला था। अब सिर्फ़ दस हफ़्ते हैं।
+  सिरिल रैडक्लिफ़ लकीर खींचना शुरू करते हैं।
 sources:
   - { title: "Menon, The Transfer of Power in India (1957)", url: "https://archive.org/details/dli.csl.6473" }
   - { title: "Indian Independence Act 1947", url: "https://www.legislation.gov.uk/ukpga/1947/30/contents" }

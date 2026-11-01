@@ -9,6 +9,14 @@ location: { lat: 18.083, lng: 73.417, name: "Chavdar Tale, Mahad" }
 tags: [political, religion]
 summary: On 20 March 1927 Ambedkar leads Dalits to drink from Mahad's Chavdar tank, open to all by law; that December the Manusmriti is burned there.
 summary_hi: 20 मार्च 1927 को आंबेडकर ने दलितों के साथ महाड के चवदार तालाब से पानी पिया, जो क़ानूनन सबके लिए खुला था; उसी दिसंबर वहाँ मनुस्मृति जलाई गई।
+voice: >-
+  By law, the Chavdar tank at Mahad is open to all. By custom, Dalits are still kept away.
+  On 20 March 1927 B. R. Ambedkar leads thousands of delegates to the tank, and they drink. Afterwards Brahmins purify it with cow dung, urine, milk and curd.
+  That December, at Mahad, the Manusmriti is burned.
+voice_hi: >-
+  क़ानून के अनुसार महाड का चवदार तालाब सबके लिए खुला है। रिवाज के अनुसार दलितों को अब भी उससे दूर रखा जाता है।
+  20 मार्च 1927 को भीमराव आंबेडकर हज़ारों प्रतिनिधियों के साथ तालाब तक जाते हैं, और वे उसका पानी पीते हैं। बाद में ब्राह्मण गोबर, गोमूत्र, दूध और दही से तालाब का शुद्धिकरण करते हैं।
+  उसी दिसंबर, महाड में, मनुस्मृति जलाई जाती है।
 image: mahad-krantibhoomi
 sources:
   - { title: "Keer, Dr. Ambedkar: Life and Mission (1954)", url: "https://archive.org/details/dli.csl.6522" }

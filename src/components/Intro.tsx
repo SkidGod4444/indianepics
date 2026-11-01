@@ -11,6 +11,7 @@ import { BASE_ERA } from "@/lib/eras";
 import { Button } from "@/components/ui/button";
 import { DotGlyph } from "./DotGlyph";
 import { DotPlate, type Plate } from "./DotPlate";
+import { Seal } from "./Seal";
 
 type Props = {
   chapters: Chapter[];
@@ -50,9 +51,18 @@ export function Intro({ chapters, plates = [], onPlay, onSeek, playing = false }
       <motion.div style={{ opacity: fade, y: lift }} className="mx-auto flex min-h-[calc(100svh-7.5rem)] max-w-[1280px] flex-col">
         <div className="grid flex-1 items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-4">
           <div className="relative z-10">
-            <motion.p {...rise} transition={{ duration: 0.5 }} className={`mb-5 font-medium text-ink-3 ${hi ? "font-hi text-[12.5px]" : "text-[11px] uppercase tracking-[0.2em]"}`}>
-              {hi ? "उपमहाद्वीप का इतिहास, एक नक़्शे पर" : "A history of the subcontinent, on one map"}
-            </motion.p>
+            <motion.div {...rise} transition={{ duration: 0.5 }} className="mb-7 flex items-center gap-4">
+              <Seal size={76} />
+              <div className="leading-tight">
+                <p className="font-display text-[22px] text-ink">
+                  indian<span className="text-evidence">epics</span>
+                  <span className="text-ink-3">.online</span>
+                </p>
+                <p className={`mt-1 text-ink-3 ${hi ? "font-hi text-[12.5px]" : "text-[11px] uppercase tracking-[0.18em]"}`}>
+                  {hi ? "भारत का इतिहास, एक नक़्शे पर" : "The history of India, on one map"}
+                </p>
+              </div>
+            </motion.div>
             <motion.h1
               {...rise}
               transition={{ duration: 0.6, delay: 0.08 }}
@@ -68,10 +78,12 @@ export function Intro({ chapters, plates = [], onPlay, onSeek, playing = false }
               className={`${hi ? "font-hi" : "font-display"} text-[clamp(2.8rem,6.4vw,6rem)] leading-[0.95] tracking-[-0.02em] text-ink [text-wrap:balance]`}
             >
               {hi ? (
-                <>सतयुग से आज की सुबह तक।</>
+                <>
+                  महाकाव्य तो <span className="whitespace-nowrap">बस शुरुआत</span> थे।
+                </>
               ) : (
                 <>
-                  From the <span className="whitespace-nowrap">Satya Yuga</span> to this morning.
+                  The epics were <em className="font-light italic">only</em> the beginning.
                 </>
               )}
             </motion.h1>
@@ -81,17 +93,24 @@ export function Intro({ chapters, plates = [], onPlay, onSeek, playing = false }
               className={`mt-6 max-w-[52ch] text-[16px] leading-relaxed text-ink-2 lg:text-[17px] ${hi ? "font-hi" : ""}`}
             >
               {hi
-                ? "एक नक़्शा, दो धाराएँ। इतिहास-पुराण की परंपरा और पुरातत्व के प्रमाण एक ही स्क्रॉल पर चलते हैं, पर एक ही पैमाने पर नहीं। हर अध्याय अपना रंग, अपनी बनावट और अपने चित्र लाता है।"
-                : "One map, two tracks. The Itihasa-Purana tradition and the archaeological record share a scroll, never a scale. Every chapter brings its own paper, its own light and its own drawings; the pins, the empires and the year follow as you go."}
+                ? "सतयुग से आज की सुबह तक, एक ही नक़्शे पर। रामायण और महाभारत का कहा हुआ समय, और मुहरों, शिलालेखों, संधियों और चुनावों का दिनांकित इतिहास, साथ-साथ। हर अध्याय में काग़ज़ बदलता है, रोशनी बदलती है, और एक आवाज़ कहानी सुनाती है।"
+                : "From the Satya Yuga to this morning, on a single map. The told time of the Ramayana and the Mahabharata runs beside the dated record of seals, edicts, treaties and elections. Each chapter changes the paper and the light, and a voice tells the story as the map moves."}
             </motion.p>
             <motion.div {...rise} transition={{ duration: 0.5, delay: 0.3 }} className="mt-8 flex flex-wrap items-center gap-3">
-              <Button size="lg" onClick={onPlay} aria-pressed={playing} className="rounded-full px-6">
-                {playing ? <Pause data-icon="inline-start" /> : <Play data-icon="inline-start" />}
-                {playing ? (hi ? "रोकें" : "Pause") : hi ? "कहानी चलाएँ" : "Play the story"}
+              <Button size="lg" onClick={onPlay} aria-pressed={playing} className="group h-12 rounded-full pl-5 pr-6 text-[15px]">
+                <span className="relative mr-1 grid h-6 w-6 place-items-center rounded-full bg-paper/15">
+                  {playing ? <Pause className="size-3.5" /> : <Play className="size-3.5 translate-x-px" />}
+                </span>
+                <span className="flex flex-col items-start leading-none">
+                  <span>{playing ? (hi ? "रोकें" : "Pause") : hi ? "कहानी सुनें" : "Play the story"}</span>
+                  <span className={`mt-1 text-[10.5px] font-normal text-paper/70 ${hi ? "font-hi" : "uppercase tracking-[0.14em]"}`}>
+                    {hi ? "कथन के साथ" : "Narrated"}
+                  </span>
+                </span>
               </Button>
-              <Button size="lg" variant="outline" onClick={() => onSeek(0)} className="rounded-full bg-paper/70 px-6 backdrop-blur-sm">
+              <Button size="lg" variant="outline" onClick={() => onSeek(0)} className="h-12 rounded-full bg-paper/70 px-6 text-[15px] backdrop-blur-sm">
                 <ArrowDown data-icon="inline-start" />
-                {hi ? "शुरू से पढ़ें" : "Start at the beginning"}
+                {hi ? "अपनी गति से पढ़ें" : "Read at your own pace"}
               </Button>
             </motion.div>
             <motion.div {...rise} transition={{ duration: 0.5, delay: 0.42 }} className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[12.5px] text-ink-2">

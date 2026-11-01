@@ -9,6 +9,14 @@ location: { lat: 31.1037, lng: 77.1418, name: "Viceregal Lodge, Shimla" }
 tags: [political]
 summary: Talks at Simla in 1945 and the Cabinet Mission plan of May 1946 try to keep India united in a loose federation; both founder on Congress–League mistrust.
 summary_hi: 1945 की शिमला वार्ता और मई 1946 की कैबिनेट मिशन योजना ने भारत को एक ढीले संघ में एकजुट रखने की कोशिश की; दोनों कांग्रेस और लीग के अविश्वास पर टूट गईं।
+voice: >-
+  In 1946 three British ministers bring a plan for a loose union, to keep India one. The League accepts.
+  In July Nehru tells the press the Congress will be free to change it. Azad will say it changed the course of history. Others say the plan was doomed anyway.
+  The League withdraws, and calls for direct action.
+voice_hi: >-
+  1946 में तीन ब्रिटिश मंत्री भारत को एक रखने की योजना लाते हैं, प्रांतों के समूहों वाला एक ढीला संघ। लीग इसे मान लेती है।
+  जुलाई में नेहरू पत्रकारों से कहते हैं कि कांग्रेस इसे बदलने के लिए स्वतंत्र होगी। आज़ाद कहेंगे कि इसने इतिहास की दिशा बदल दी। दूसरे मानते हैं कि योजना वैसे भी डूबनी थी।
+  लीग पीछे हट जाती है, और सीधी कार्रवाई का आह्वान करती है।
 image: simla-conference-1945
 sources:
   - { title: "Papers Relating to the Cabinet Mission to India, 1946", url: "https://archive.org/details/in.ernet.dli.2015.35896" }

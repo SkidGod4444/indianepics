@@ -9,6 +9,14 @@ location: { lat: 26.1225, lng: 85.3906, name: "Muzaffarpur, Bihar" }
 tags: [political, colonial]
 summary: A bomb meant for a magistrate kills two Englishwomen at Muzaffarpur; Khudiram Bose is hanged, and Tilak is sent to Mandalay for his articles on it.
 summary_hi: मुज़फ़्फ़रपुर में एक मजिस्ट्रेट के लिए फेंके गए बम से दो अंग्रेज़ महिलाओं की मौत हुई; खुदीराम बोस को फाँसी हुई और तिलक को इस पर लिखे लेखों के लिए मांडले भेजा गया।
+voice: >-
+  On 30 April 1908 at Muzaffarpur, two young men bomb a carriage they think holds a harsh magistrate. It holds Mrs Kennedy and her daughter. Both are killed.
+  Prafulla Chaki shoots himself when cornered. Khudiram Bose, eighteen, is hanged that August.
+  Within months, Bengal is singing his name.
+voice_hi: >-
+  30 अप्रैल 1908 को मुज़फ़्फ़रपुर में दो युवक एक बग्घी पर बम फेंकते हैं, यह सोचकर कि उसमें एक कठोर मजिस्ट्रेट है। उसमें श्रीमती कैनेडी और उनकी बेटी हैं। दोनों मारी जाती हैं।
+  घिर जाने पर प्रफुल्ल चाकी ख़ुद को गोली मार लेते हैं। अठारह साल के खुदीराम बोस को अगस्त में फाँसी दी जाती है।
+  कुछ ही महीनों में बंगाल उनके गीत गाने लगता है।
 image: khudiram-bose
 sources:
   - { title: "Full and Authentic Report of the Tilak Trial (1908)", url: "https://archive.org/details/fullauthenticre01tilagoog" }

@@ -9,6 +9,14 @@ location: { lat: 18.9618, lng: 72.8112, name: "Gokuldas Tejpal Sanskrit College,
 tags: [political, colonial]
 summary: After the European outcry against the Ilbert Bill, 72 delegates meet in Bombay on 28 December 1885 as the first Indian National Congress.
 summary_hi: इल्बर्ट बिल के विरुद्ध यूरोपीय विरोध के बाद 28 दिसंबर 1885 को बंबई में 72 प्रतिनिधि पहली भारतीय राष्ट्रीय कांग्रेस के रूप में जुटे।
+voice: >-
+  In 1883 a bill would let Indian judges try Europeans. The European planters and merchants of Calcutta campaign against it, and the government gives way.
+  Educated Indians learn the lesson. On 28 December 1885, seventy-two delegates meet in a Sanskrit college in Bombay.
+  It is the first Indian National Congress.
+voice_hi: >-
+  1883 में एक विधेयक भारतीय न्यायाधीशों को यूरोपीय लोगों पर मुक़दमा चलाने का अधिकार देना चाहता है। कलकत्ता के यूरोपीय बागान-मालिक और व्यापारी इसके विरुद्ध अभियान छेड़ते हैं, और सरकार झुक जाती है।
+  पढ़े-लिखे भारतीय सबक़ लेते हैं। 28 दिसंबर 1885 को बंबई के एक संस्कृत कॉलेज में बहत्तर प्रतिनिधि जुटते हैं।
+  यह पहली भारतीय राष्ट्रीय कांग्रेस है।
 image: congress-1885
 sources:
   - { title: "Hirschmann, 'White Mutiny': The Ilbert Bill Crisis in India and Genesis of the Indian National Congress (1980)" }

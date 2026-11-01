@@ -9,6 +9,14 @@ location: { lat: 22.5726, lng: 88.3639, name: "Calcutta" }
 tags: [colonial, war]
 summary: Wartime Bengal starves in 1943; the 1945 inquiry counts about 1.5 million dead, later estimates run to 3 million, and the causes are still argued.
 summary_hi: 1943 में युद्धकालीन बंगाल भूख से तड़प उठा; 1945 की जाँच ने लगभग 15 लाख मौतें गिनीं, बाद के अनुमान 30 लाख तक हैं, और कारणों पर बहस आज भी जारी है।
+voice: >-
+  Burma has fallen, and its rice is gone. Fearing invasion, the government strips the coast of boats and surplus rice. Prices soar.
+  By mid-1943 people are dying in Calcutta's streets, and officials still avoid the word famine.
+  An inquiry counts about one and a half million dead. Later estimates reach three million.
+voice_hi: >-
+  बर्मा गिर चुका है, और वहाँ का चावल आना बंद है। हमले के डर से सरकार तट से नावें और बचा हुआ चावल हटा लेती है। दाम आसमान छूने लगते हैं।
+  1943 की गर्मियों तक कलकत्ता की सड़कों पर लोग मर रहे हैं, और अधिकारी अब भी अकाल शब्द से बचते हैं।
+  एक जाँच आयोग लगभग पंद्रह लाख मौतें गिनता है। बाद के अनुमान तीस लाख तक जाते हैं।
 image: bengal-famine-1943
 sources:
   - { title: "Famine Inquiry Commission, Report on Bengal (1945)", url: "https://archive.org/details/dli.ernet.26318" }

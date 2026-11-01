@@ -9,6 +9,14 @@ location: { lat: 17.6727, lng: 82.3789, name: "Krishnadevipeta, Visakhapatnam Ag
 tags: [political, colonial]
 summary: Alluri Sitarama Raju leads the hill peoples of the Godavari agency against forest laws, raiding police stations in 1922; he is killed in May 1924.
 summary_hi: अल्लूरी सीताराम राजू ने वन क़ानूनों के विरुद्ध गोदावरी एजेंसी के पहाड़ी लोगों का नेतृत्व किया और 1922 में थानों पर छापे मारे; मई 1924 में वे मारे गए।
+voice: >-
+  Forest laws shut the Koya and Konda Dora out of their own hills.
+  In August 1922 a young sannyasi, Alluri Sitarama Raju, leads them to raid police stations for guns. For two years they fight in the hills.
+  In May 1924 he is captured, and shot dead the same day. The police say he was escaping.
+voice_hi: >-
+  वन क़ानून कोया और कोंडा डोरा लोगों के लिए उनके अपने पहाड़ बंद कर देते हैं।
+  अगस्त 1922 में एक युवा संन्यासी, अल्लूरी सीताराम राजू, उन्हें लेकर हथियारों के लिए थानों पर धावा बोलते हैं। दो साल तक वे पहाड़ों में लड़ते हैं।
+  मई 1924 में वे पकड़े जाते हैं, और उसी दिन गोली मार दी जाती है। पुलिस कहती है वे भाग रहे थे।
 image: alluri-statue
 sources:
   - { title: "PIB, Alluri Seetha Rama Raju: A Folk Hero of Rampa Rebellion (2016)", url: "https://www.pib.gov.in/newsite/printrelease.aspx?relid=148563" }

@@ -10,6 +10,14 @@ tags: [political]
 image: lucknow-pact-1916
 summary: Tilak and Annie Besant launch Home Rule leagues in 1916; at Lucknow that December the Congress and the Muslim League agree a joint scheme.
 summary_hi: 1916 में तिलक और एनी बेसेंट ने होम रूल लीगें शुरू कीं; उसी दिसंबर लखनऊ में कांग्रेस और मुस्लिम लीग ने एक साझा योजना पर सहमति जताई।
+voice: >-
+  Tilak, back from Mandalay, and Annie Besant carry Home Rule into small-town reading rooms.
+  At Lucknow in December 1916, the Congress and the League, with Jinnah prominent in both, agree on one scheme.
+  It is the high point of their partnership, and the moment the Congress accepts separate electorates.
+voice_hi: >-
+  मांडले से लौटे तिलक और एनी बेसेंट होम रूल की माँग को छोटे कस्बों के वाचनालयों तक ले जाते हैं।
+  दिसंबर 1916 में लखनऊ में कांग्रेस और लीग, जिन दोनों में जिन्ना आगे हैं, एक साझा योजना पर सहमत होती हैं।
+  यह दोनों की साझेदारी का शिखर है, और वह क्षण भी, जब कांग्रेस पृथक निर्वाचन को मान लेती है।
 sources:
   - { title: "Sastri, The Congress-League Scheme: An Exposition (1917)", url: "https://archive.org/details/in.ernet.dli.2015.71644" }
   - { title: "Natesan (ed.), The Indian Demands: A Symposium on the Memorandum of the Nineteen and Speeches at the Congress and Moslem League (1917)", url: "https://archive.org/details/indiandemandssym00gana" }

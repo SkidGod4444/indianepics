@@ -9,6 +9,14 @@ location: { lat: 11.675, lng: 92.748, name: "Cellular Jail, Port Blair" }
 tags: [political, colonial]
 summary: V. D. Savarkar reaches Port Blair's Cellular Jail in 1911 with two life sentences; he and his brother are moved to mainland jails in 1921.
 summary_hi: 1911 में वि. दा. सावरकर दो आजीवन सज़ाओं के साथ पोर्ट ब्लेयर की सेल्युलर जेल पहुँचे; 1921 में उन्हें और उनके भाई को मुख्य भूमि की जेलों में भेजा गया।
+voice: >-
+  At Port Blair stands a jail of nearly seven hundred solitary cells, built so no prisoner can see or speak to another.
+  In July 1911 Savarkar arrives with two life sentences. He once slipped out through a ship's porthole at Marseilles.
+  His petitions for clemency are the most argued part of his life.
+voice_hi: >-
+  पोर्ट ब्लेयर में लगभग सात सौ एकांत कोठरियों वाली एक जेल है, ऐसी बनी कि कोई क़ैदी दूसरे को न देख सके, न उससे बात कर सके।
+  जुलाई 1911 में विनायक सावरकर दो उम्रक़ैदों के साथ यहाँ पहुँचते हैं। कभी वे मार्सेई में जहाज़ की खिड़की से निकल भागे थे।
+  उनकी माफ़ी की अर्ज़ियाँ उनके जीवन का सबसे विवादित हिस्सा हैं।
 image: cellular-jail
 sources:
   - { title: "Savarkar, My Transportation for Life (Marathi original 1927; English translation)" }

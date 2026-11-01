@@ -220,6 +220,17 @@ html {
   border-color: var(--hair);
 }
 
+/* The colophon's ring turns once a minute. */
+.seal-ring {
+  animation: seal-turn 60s linear infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes seal-turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* Three little bars that breathe while the narrator speaks. */
 .voice-bar {
   display: block;

@@ -9,6 +9,14 @@ location: { lat: 9.7499, lng: 76.3960, name: "Vaikom Mahadeva temple, Travancore
 tags: [religion, political]
 summary: From March 1924 volunteers court arrest on the roads around Vaikom temple, barred to Ezhavas and Dalits; three of the four roads open in 1925.
 summary_hi: मार्च 1924 से स्वयंसेवकों ने वैकोम मंदिर के आसपास की उन सड़कों पर गिरफ़्तारियाँ दीं जो एझवा और दलितों के लिए बंद थीं; 1925 में चार में से तीन सड़कें खुलीं।
+voice: >-
+  Around the temple at Vaikom, some castes may not even walk the public roads.
+  On 30 March 1924 three men walk toward the barrier together, a Pulaya, an Ezhava and a Nair, and are arrested. Others follow day after day, standing at the barriers through the summer floods.
+  In November 1925 three of the four roads open.
+voice_hi: >-
+  वैकोम के मंदिर के आसपास की सार्वजनिक सड़कों पर कुछ जातियों के लोग चल तक नहीं सकते।
+  30 मार्च 1924 को तीन लोग साथ-साथ बैरिकेड की ओर बढ़ते हैं, एक पुलया, एक एझवा और एक नायर, और गिरफ़्तार कर लिए जाते हैं। फिर रोज़ और लोग आते हैं, और गर्मियों की बाढ़ में भी बैरिकेड के सामने खड़े रहते हैं।
+  नवंबर 1925 में चार में से तीन सड़कें सबके लिए खुल जाती हैं।
 image: vaikom-temple
 sources:
   - { title: "The Hindu, 'Remembering Vaikom Satyagraha: A movement that spearheaded social reforms in two States' (30 March 2023)", url: "https://www.thehindu.com/news/national/tamil-nadu/remembering-vaikom-satyagraha-a-movement-that-spearheaded-social-reforms-in-tn-kerala/article66679378.ece" }

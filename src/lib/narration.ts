@@ -6,7 +6,7 @@
  * scripts/build-voice.ts); a slot with no clip is simply silent and the scroll keeps its own time.
  */
 export type Lang = "en" | "hi";
-type Clip = { file: string; chars: number };
+type Clip = { file: string; chars: number; seconds?: number };
 export type VoiceManifest = { clips: Record<string, Partial<Record<Lang, Clip>>> };
 
 export const VOICE_PREF_KEY = "indianepics:voice";
@@ -75,7 +75,8 @@ export class Narrator {
   estimateMs(key: string, lang: Lang) {
     const c = this.manifest?.clips[key];
     const clip = c?.[lang] ?? c?.en;
-    return clip ? (clip.chars / 14) * 1000 : 0;
+    if (!clip) return 0;
+    return clip.seconds ? clip.seconds * 1000 : (clip.chars / 14) * 1000;
   }
 
   /** Known length in ms once the clip's metadata has loaded, else the estimate. */

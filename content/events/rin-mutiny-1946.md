@@ -10,6 +10,14 @@ tags: [political, war]
 image: rin-mutiny-1946
 summary: The Red Fort trials of three INA officers stir protest in 1945; in February 1946 ratings of the Royal Indian Navy mutiny at Bombay and Karachi.
 summary_hi: 1945 में आज़ाद हिंद फ़ौज के तीन अधिकारियों पर लाल क़िले के मुक़दमों से विरोध भड़का; फ़रवरी 1946 में बंबई और कराची में रॉयल इंडियन नेवी के नाविकों ने विद्रोह किया।
+voice: >-
+  At the Red Fort three of Bose's officers stand trial, a Muslim, a Hindu and a Sikh. Nehru puts on his barrister's gown again for them.
+  In February 1946 naval ratings in Bombay mutiny. Their ships fly the flags of the Congress, the League and the Communists, tied together.
+  In the street fighting, 228 civilians die.
+voice_hi: >-
+  लाल क़िले में बोस के तीन अफ़सरों पर मुक़दमा चलता है, एक मुसलमान, एक हिंदू और एक सिख। नेहरू दशकों बाद फिर वकील का चोग़ा पहनकर उनका बचाव करते हैं।
+  फ़रवरी 1946 में बंबई में नौसेना के नाविक बग़ावत कर देते हैं। उनके जहाज़ों पर कांग्रेस, लीग और कम्युनिस्टों के झंडे एक साथ बँधे लहराते हैं।
+  सड़कों की लड़ाई में 228 नागरिक मारे जाते हैं।
 sources:
   - { title: "Moti Ram (comp.), Two Historic Trials in Red Fort (1946)", url: "https://archive.org/details/dli.ernet.20495" }
   - { title: "Meyer, 'The Royal Indian Navy Mutiny of 1946: Nationalist Competition and Civil-Military Relations in Postwar India', Journal of Imperial and Commonwealth History 45:1 (2017)", url: "https://doi.org/10.1080/03086534.2016.1262645" }

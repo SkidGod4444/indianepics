@@ -9,6 +9,14 @@ location: { lat: 22.5681, lng: 88.345, name: "Town Hall, Calcutta" }
 tags: [political, colonial]
 summary: Curzon splits Bengal in 1905; a Calcutta Town Hall meeting answers with a boycott of British goods, and the partition is reversed in 1911.
 summary_hi: 1905 में कर्ज़न ने बंगाल को बाँटा; कलकत्ता टाउन हॉल की सभा ने विदेशी माल के बहिष्कार से उत्तर दिया, और 1911 में विभाजन रद्द हुआ।
+voice: >-
+  Curzon divides Bengal in 1905. His Home Secretary had written that Bengal united was a power, and Bengal divided would pull several ways.
+  On 16 October Tagore leads processions in which Hindus and Muslims tie rakhis on each other's wrists.
+  Manchester cloth burns in bonfires. Swadeshi has begun.
+voice_hi: >-
+  1905 में कर्ज़न बंगाल को बाँट देते हैं। उनके गृह सचिव लिख चुके थे कि एकजुट बंगाल एक ताक़त है, और बँटा हुआ बंगाल अलग-अलग दिशाओं में खिंचेगा।
+  16 अक्टूबर को टैगोर जुलूसों की अगुवाई करते हैं, जिनमें हिंदू और मुसलमान एक-दूसरे की कलाई पर राखी बाँधते हैं।
+  मैनचेस्टर का कपड़ा अलावों में जलता है। स्वदेशी शुरू हो चुका है।
 image: calcutta-town-hall
 sources:
   - { title: "Sarkar, The Swadeshi Movement in Bengal 1903–1908 (1973)", note: "In copyright; the Digital Library of India scan is not linked." }

@@ -9,6 +9,14 @@ location: { lat: 28.7231, lng: 77.1969, name: "Coronation Park, Delhi" }
 tags: [political, colonial]
 summary: At the 1911 Durbar George V announces that the capital will move from Calcutta to Delhi and Bengal will be reunited; New Delhi opens in 1931.
 summary_hi: 1911 के दरबार में जॉर्ज पंचम ने राजधानी को कलकत्ता से दिल्ली ले जाने और बंगाल को फिर एक करने की घोषणा की; नई दिल्ली 1931 में उद्घाटित हुई।
+voice: >-
+  On 12 December 1911, north of Delhi, the only King-Emperor ever to visit India receives his princes' homage.
+  At the end he announces two secrets. Bengal will be reunited, and the capital will move from Calcutta to Delhi.
+  His marble statue, taken down from India Gate, now stands on that plain among the viceroys.
+voice_hi: >-
+  12 दिसंबर 1911 को दिल्ली के उत्तर के मैदान में भारत आने वाले एकमात्र सम्राट अपने राजाओं का सलाम लेते हैं।
+  अंत में वे दो छिपे हुए फ़ैसले सुनाते हैं। बंगाल फिर एक होगा, और राजधानी कलकत्ता से दिल्ली जाएगी।
+  इंडिया गेट से हटाई गई उनकी संगमरमर की मूर्ति अब उसी मैदान में वायसरायों की मूर्तियों के बीच खड़ी है।
 image: delhi-durbar-1911
 sources:
   - { title: "The Historical Record of the Imperial Visit to India, 1911 (1914)", url: "https://archive.org/details/in.ernet.dli.2015.35773" }

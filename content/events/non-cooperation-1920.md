@@ -9,6 +9,14 @@ location: { lat: 26.651, lng: 83.581, name: "Chauri Chaura, Gorakhpur" }
 tags: [political, religion]
 summary: Congress and the Khilafat committees launch non-cooperation in 1920; after a crowd burns Chauri Chaura police station in 1922, Gandhi calls it off.
 summary_hi: 1920 में कांग्रेस और ख़िलाफ़त समितियों ने असहयोग आंदोलन शुरू किया; 1922 में चौरी चौरा थाने को भीड़ द्वारा जलाए जाने के बाद गांधी ने उसे वापस ले लिया।
+voice: >-
+  Hindus and Muslims join in non-cooperation. Foreign cloth burns, tens of thousands go to jail, and the Congress reaches the villages.
+  At Chauri Chaura in February 1922, police fire on a procession and kill three. The crowd sets the police station alight. Twenty-two policemen die.
+  Gandhi calls the whole movement off.
+voice_hi: >-
+  असहयोग में हिंदू और मुसलमान साथ आते हैं। विदेशी कपड़ा जलता है, दसियों हज़ार लोग जेल जाते हैं, और कांग्रेस गाँव-गाँव पहुँचती है।
+  फ़रवरी 1922 में चौरी चौरा में पुलिस एक जुलूस पर गोली चलाती है, तीन लोग मारे जाते हैं। भीड़ थाने में आग लगा देती है। बाईस पुलिसवाले मारे जाते हैं।
+  गांधी पूरा आंदोलन वापस ले लेते हैं।
 image: chauri-chaura
 sources:
   - { title: "Gandhi, 'The Crime of Chauri Chaura', Young India, 16 February 1922, in Collected Works of Mahatma Gandhi, vol. 22", url: "https://archive.org/details/in.ernet.dli.2015.162031" }

@@ -9,6 +9,14 @@ location: { lat: 26.65, lng: 84.917, name: "Motihari, Champaran" }
 tags: [political, colonial]
 summary: Gandhi defies an order to leave Champaran in April 1917 and takes up the indigo tenants' case; in 1918 he leads Kheda's farmers against revenue.
 summary_hi: अप्रैल 1917 में गांधी ने चंपारण छोड़ने के आदेश की अवहेलना की और नील किसानों का मामला उठाया; 1918 में उन्होंने खेड़ा के किसानों का लगान-विरोध संभाला।
+voice: >-
+  Rajkumar Shukla, an indigo tenant, follows Gandhi from the Lucknow Congress until he agrees to come to Champaran.
+  On 15 April 1917 Gandhi is ordered to leave the district. He tells the magistrate he will disobey, and accept the penalty. The case is withdrawn.
+  His first satyagraha in India has begun.
+voice_hi: >-
+  नील की खेती में पिसते किसान राजकुमार शुक्ल, लखनऊ कांग्रेस से गांधी के पीछे लगे रहते हैं, जब तक वे चंपारण आने को राज़ी नहीं हो जाते।
+  15 अप्रैल 1917 को गांधी को ज़िला छोड़ने का आदेश मिलता है। वे मजिस्ट्रेट से कहते हैं कि वे आदेश नहीं मानेंगे, और सज़ा स्वीकार करेंगे। मुक़दमा वापस ले लिया जाता है।
+  भारत में उनका पहला सत्याग्रह शुरू हो चुका है।
 image: champaran-1917
 sources:
   - { title: "Prasad, Satyagraha in Champaran (1928)", url: "https://archive.org/details/in.ernet.dli.2015.202317" }
