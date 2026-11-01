@@ -52,3 +52,4 @@ next-env.d.ts
 # narrator auditions, never shipped
 /public/audio/samples/
 /public/audio/**/*.txt
+/public/audio/**/*.raw.mp3
