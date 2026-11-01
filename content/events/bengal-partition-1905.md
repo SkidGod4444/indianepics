@@ -11,7 +11,8 @@ summary: Curzon splits Bengal in 1905; a Calcutta Town Hall meeting answers with
 summary_hi: 1905 में कर्ज़न ने बंगाल को बाँटा; कलकत्ता टाउन हॉल की सभा ने विदेशी माल के बहिष्कार से उत्तर दिया, और 1911 में विभाजन रद्द हुआ।
 image: calcutta-town-hall
 sources:
-  - { title: "Sarkar, The Swadeshi Movement in Bengal 1903–1908 (1973)", url: "https://archive.org/details/dli.bengal.10689.13361" }
+  - { title: "Sarkar, The Swadeshi Movement in Bengal 1903–1908 (1973)", note: "In copyright; the Digital Library of India scan is not linked." }
+  - { title: "Banglapedia, 'Partition of Bengal, 1905'", url: "https://en.banglapedia.org/index.php/Partition_of_Bengal,_1905", note: "16 October 1905; Eastern Bengal and Assam with its capital at Dhaka; the 7 August boycott resolution; revocation announced at the Delhi Durbar, effective 1 April 1912." }
 ---
 Curzon's partition, announced in July and in force from 16 October 1905, created the province of Eastern Bengal and Assam, Muslim-majority with its capital at Dacca, and left a western Bengal joined to Bihar and Orissa in which Bengali speakers were a minority. The stated reason was administrative. Officials' own notes show the political one: Home Secretary Herbert Risley wrote in 1904 that Bengal united was a power and Bengal divided would pull several different ways.
 

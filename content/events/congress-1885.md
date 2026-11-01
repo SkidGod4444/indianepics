@@ -13,6 +13,7 @@ image: congress-1885
 sources:
   - { title: "Hirschmann, 'White Mutiny': The Ilbert Bill Crisis in India and Genesis of the Indian National Congress (1980)" }
   - { title: "Proceedings of the First Indian National Congress held at Bombay, 28 to 30 December 1885 (2nd ed., 1905)", url: "https://archive.org/details/FirstIndianNationalCongress" }
+  - { title: "Wedderburn, Allan Octavian Hume, C.B., Father of the Indian National Congress (1913)", url: "https://archive.org/details/allanoctavianhum00wedduoft" }
 ---
 Lytton's Vernacular Press Act of 14 March 1878 let magistrates seize Indian-language papers that printed "seditious" matter; English-language papers were exempt, and the Amrita Bazar Patrika of Calcutta switched to English almost overnight to escape it. Ripon, who succeeded Lytton in 1880, repealed it. In February 1883 his law member, Courtenay Ilbert, introduced a bill to let Indian district magistrates and sessions judges try European defendants. The planters and merchants of Calcutta campaigned against it so hard that in January 1884 the government gave way: a European could demand a jury at least half European.
 

@@ -11,7 +11,7 @@ summary: Lajpat Rai dies after a police beating at Lahore's Simon protest in 192
 summary_hi: 1928 में लाहौर में साइमन-विरोधी प्रदर्शन पर पुलिस की लाठियों के बाद लाजपत राय की मृत्यु हुई; मार्च 1931 में भगत सिंह, राजगुरु और सुखदेव को लाहौर जेल में फाँसी दी गई।
 image: bhagat-singh
 sources:
-  - { title: "Report of the Indian Statutory Commission, vol. 1 (1930)", url: "https://archive.org/details/report-of-the-indian-statutory-commission_1930_1" }
+  - { title: "Report of the Indian Statutory Commission, vol. 1 (1930)", url: "https://archive.org/details/in.ernet.dli.2015.81808" }
   - { title: "Noorani, The Trial of Bhagat Singh: Politics of Justice (1996)" }
 ---
 The Indian Statutory Commission under John Simon, appointed in November 1927 to review the reforms with not one Indian member, was met by black flags and "Simon go back" from its landing at Bombay on 3 February 1928. At Lahore on 30 October police under superintendent James Scott charged the protesters with lathis, and Lala Lajpat Rai, beaten at the front of the crowd, died on 17 November. On 17 December Bhagat Singh and Rajguru of the Hindustan Socialist Republican Association, meaning to kill Scott, shot assistant superintendent John Saunders instead, and Chandrashekhar Azad shot head constable Chanan Singh as he gave chase.
