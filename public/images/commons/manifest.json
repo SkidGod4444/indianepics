@@ -1190,16 +1190,6 @@
     "width": 1800,
     "height": 1350
   },
-  "galwan-2020": {
-    "key": "galwan-2020",
-    "file": "galwan-2020.jpg",
-    "title": "Map of Tibet and Pangong Lake in 1873 from Hindutagh-pass-aksai-chin-center2-1873 (cropped)",
-    "author": "Henry Trotter",
-    "license": "Public domain",
-    "source": "https://commons.wikimedia.org/wiki/File%3AMap_of_Tibet_and_Pangong_Lake_in_1873_from_Hindutagh-pass-aksai-chin-center2-1873_(cropped).jpg",
-    "width": 1800,
-    "height": 1802
-  },
   "doctrine-of-lapse": {
     "key": "doctrine-of-lapse",
     "file": "doctrine-of-lapse.jpg",
@@ -1220,17 +1210,6 @@
     "source": "https://commons.wikimedia.org/wiki/File%3ACensus%2C_TamilNadu-219_(year-2011).jpg",
     "width": 1800,
     "height": 2336
-  },
-  "pokhran-tests": {
-    "key": "pokhran-tests",
-    "file": "pokhran-tests.jpg",
-    "title": "Pokhran Fort",
-    "author": "Archan dave",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "source": "https://commons.wikimedia.org/wiki/File%3APokhran_Fort.JPG",
-    "width": 1800,
-    "height": 1350
   },
   "seleucid-treaty": {
     "key": "seleucid-treaty",

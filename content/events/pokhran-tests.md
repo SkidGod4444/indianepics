@@ -7,7 +7,6 @@ chapter: republic
 date: { start: 1974, end: 1998 }
 location: { lat: 27.08, lng: 71.73, name: "Pokhran Test Range, Rajasthan" }
 tags: [science, political]
-image: pokhran-tests
 summary: India sets off a "peaceful nuclear explosion" on 18 May 1974, then five devices on 11 and 13 May 1998, and declares itself a nuclear weapon state.
 summary_hi: भारत ने 18 मई 1974 को 'शांतिपूर्ण परमाणु विस्फोट' किया, फिर 11 और 13 मई 1998 को पाँच परीक्षण कर स्वयं को परमाणु शस्त्र संपन्न देश घोषित किया।
 sources:

@@ -247,6 +247,13 @@ export function Stage({ chapters: allChapters, events, polities }: Props) {
 
       {/* Chrome over the stage */}
       <div className={`pointer-events-none fixed inset-0 z-10 transition-opacity duration-500 ${inStory ? "opacity-100" : "opacity-0"}`}>
+        {/* Reading progress: a hairline along the top edge. */}
+        <div className="absolute inset-x-0 top-0 h-[2px] bg-hair/60">
+          <div
+            className={`h-full transition-[width] duration-150 ${ch?.track === "tradition" ? "bg-tradition" : "bg-evidence"}`}
+            style={{ width: `${((pos.chapter + clamp01(pos.progress)) / Math.max(1, chapters.length)) * 100}%` }}
+          />
+        </div>
         <div className="pointer-events-auto absolute right-4 top-14 text-right lg:right-6 lg:top-16">
           <div className="font-display text-[clamp(2rem,5vw,4rem)] leading-none text-ink tabular-nums [text-shadow:0_0_18px_var(--paper)]">
             {ch ? readoutAt(ch, chEvents, pos.progress) : ""}
