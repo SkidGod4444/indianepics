@@ -10,6 +10,14 @@ tags: [war, colonial]
 image: barrackpore-1857
 summary: On 29 March sepoy Mangal Pandey of the 34th Bengal Native Infantry attacks his officers on parade; he is hanged on 8 April and his regiment disbanded.
 summary_hi: 29 मार्च को 34वीं बंगाल नेटिव इन्फ़ैंट्री के सिपाही मंगल पांडे ने परेड मैदान पर अपने अफ़सरों पर हमला किया; 8 अप्रैल को उन्हें फाँसी दी गई और पलटन भंग कर दी गई।
+voice: >-
+  The new cartridges, the sepoys say, are greased with cow and pig fat.
+  On 29 March 1857, at Barrackpore, Mangal Pandey calls on his comrades to rise, and wounds his adjutant and a sergeant-major. The guard does not stop him.
+  Cornered, he turns his gun on himself, and survives. On 8 April he is hanged.
+voice_hi: >-
+  सिपाहियों में बात फैली है कि नए कारतूसों पर गाय और सुअर की चर्बी लगी है।
+  29 मार्च 1857 को बैरकपुर के परेड मैदान पर मंगल पांडे अपने साथियों को ललकारते हैं, और अपने एडजुटेंट और एक सार्जेंट-मेजर को घायल कर देते हैं। पहरा उन्हें नहीं रोकता।
+  घिर जाने पर वे ख़ुद पर गोली चला लेते हैं, पर बच जाते हैं। 8 अप्रैल को उन्हें फाँसी दे दी जाती है।
 sources:
   - { title: "Kaye, A History of the Sepoy War in India, 1857-1858, vol. I", url: "https://archive.org/details/in.ernet.dli.2015.1672" }
   - { title: "Appendix to Papers relative to the Mutinies in the East Indies (House of Commons, 1857)", url: "https://archive.org/details/in.ernet.dli.2015.94075" }

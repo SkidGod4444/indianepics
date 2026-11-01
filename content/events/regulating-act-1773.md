@@ -9,6 +9,14 @@ location: { lat: 22.5565, lng: 88.3383, name: "Fort William, Calcutta" }
 tags: [colonial, political]
 summary: Parliament puts the Company's Indian government under a Governor-General at Calcutta; Warren Hastings becomes the first in 1774.
 summary_hi: संसद ने कंपनी के भारतीय शासन को कलकत्ता में एक गवर्नर-जनरल के अधीन किया; 1774 में वॉरेन हेस्टिंग्स पहले गवर्नर-जनरल बने।
+voice: >-
+  Famine in Bengal in 1770, and a Company close to bankruptcy, bring Parliament into the government of India for the first time.
+  A Governor-General now sits at Calcutta, with a council of four and judges sent from England.
+  The first is Warren Hastings. He will be impeached, tried for seven years, and acquitted.
+voice_hi: >-
+  1770 का बंगाल का अकाल, और दिवालिया होने के क़रीब पहुँची कंपनी, पहली बार ब्रिटिश संसद को भारत के शासन में ले आते हैं।
+  अब कलकत्ता में एक गवर्नर-जनरल बैठता है, चार सदस्यों की परिषद और इंग्लैंड से भेजे गए न्यायाधीशों के साथ।
+  पहले गवर्नर-जनरल वॉरेन हेस्टिंग्स हैं। उन पर महाभियोग चलेगा, सात साल मुक़दमा चलेगा, और वे बरी होंगे।
 image: warren-hastings
 sources:
   - { title: "East India Company Act 1772 (Regulating Act), 13 Geo. 3 c. 63, as enacted", url: "https://www.legislation.gov.uk/apgb/Geo3/13/63/contents/enacted" }

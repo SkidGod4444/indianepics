@@ -9,6 +9,14 @@ location: { lat: 25.564, lng: 83.978, name: "Buxar, Bihar" }
 tags: [war, colonial, political]
 summary: Munro's Company army defeats Mir Qasim, Shuja-ud-Daula and Shah Alam II; a year later the emperor grants the Company the diwani of Bengal.
 summary_hi: मुनरो की कंपनी सेना ने मीर क़ासिम, शुजाउद्दौला और शाह आलम द्वितीय को हराया; एक वर्ष बाद बादशाह ने बंगाल की दीवानी कंपनी को सौंप दी।
+voice: >-
+  Plassey was won by conspiracy. Buxar, in October 1764, is won in the field, against two Nawabs and the Mughal emperor himself.
+  The next year Shah Alam grants the Company the diwani of Bengal, Bihar and Orissa.
+  A trading company is now a Mughal revenue officer, with an army of its own.
+voice_hi: >-
+  प्लासी एक साज़िश से जीता गया था। अक्टूबर 1764 में बक्सर मैदान में जीता जाता है, दो नवाबों और ख़ुद मुग़ल बादशाह के विरुद्ध।
+  अगले वर्ष शाह आलम कंपनी को बंगाल, बिहार और उड़ीसा की दीवानी सौंप देते हैं।
+  एक व्यापारिक कंपनी अब मुग़लों की राजस्व अधिकारी है, अपनी सेना के साथ।
 image: hector-munro
 sources:
   - { title: "Dodwell (ed.), The Cambridge History of India, vol. V: British India 1497-1858 (1929)", url: "https://archive.org/details/cambridgehistory0005unse_q9a5" }

@@ -10,6 +10,14 @@ tags: [colonial, political]
 image: doctrine-of-lapse
 summary: Dalhousie annexes states whose rulers die without a natural heir, from Satara in 1848 to Jhansi and Nagpur in 1854, and takes Awadh in 1856.
 summary_hi: डलहौज़ी ने बिना प्राकृतिक उत्तराधिकारी वाले राज्यों को हड़प लिया, 1848 में सतारा से 1854 में झाँसी और नागपुर तक, और 1856 में अवध भी ले लिया।
+voice: >-
+  Hindu law lets a ruler without sons adopt an heir. Dalhousie refuses to recognise those heirs, and state after state lapses to the Company.
+  He stops Nana Sahib's pension. In 1856 he takes Awadh for misgovernment.
+  Each annexation leaves a dispossessed court. Within a year, Jhansi, Bithur and Lucknow will rise.
+voice_hi: >-
+  हिंदू क़ानून बिना बेटे वाले राजा को उत्तराधिकारी गोद लेने देता है। डलहौज़ी ऐसे उत्तराधिकारियों को मानने से इनकार करते हैं, और एक के बाद एक राज्य कंपनी में मिला लिए जाते हैं।
+  वे नाना साहब की पेंशन बंद करते हैं। 1856 में कुशासन के नाम पर अवध ले लेते हैं।
+  हर विलय अपने पीछे एक उजड़ा दरबार छोड़ता है। एक साल के भीतर झाँसी, बिठूर और लखनऊ विद्रोह के केंद्र होंगे।
 sources:
   - { title: "Arnold, The Marquis of Dalhousie's Administration of British India, vol. I (1862)", url: "https://archive.org/details/TheMarquisOfDalhousieSAdministrationOfBritishIndiaVolI" }
 ---

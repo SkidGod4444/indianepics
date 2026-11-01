@@ -4,6 +4,16 @@ order: 60
 title: Company rule
 title_hi: कंपनी राज
 kicker: 1757 to 1858
+voice: >-
+  A trading company becomes the ruler of Bengal.
+  Plassey, then Buxar, then the right to collect Bengal's revenue. From there it fights and annexes its way across the subcontinent. Mysore, the Peshwa's lands, Sindh, the Punjab, Awadh.
+  Where it does not annex, it leaves a prince on his throne and a British Resident at his side.
+  It surveys, it taxes, it lays rail and wire. And in 1857 its own soldiers rise against it.
+voice_hi: >-
+  एक व्यापारिक कंपनी बंगाल की शासक बन जाती है।
+  पहले प्लासी, फिर बक्सर, फिर बंगाल का राजस्व वसूलने का अधिकार। वहाँ से वह लड़ते और हड़पते हुए पूरे उपमहाद्वीप में फैलती है। मैसूर, पेशवा के इलाक़े, सिंध, पंजाब, अवध।
+  जहाँ वह राज्य नहीं हड़पती, वहाँ गद्दी पर राजा को रहने देती है, और उसके बग़ल में एक ब्रिटिश रेज़िडेंट बिठा देती है।
+  वह ज़मीन नापती है, कर वसूलती है, रेल और तार बिछाती है। और 1857 में उसके अपने सिपाही उसके ख़िलाफ़ उठ खड़े होते हैं।
 track: evidence
 years: { start: 1757, end: 1858 }
 polity: british-india-1805

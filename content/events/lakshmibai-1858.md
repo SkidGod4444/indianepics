@@ -9,6 +9,14 @@ location: { lat: 25.458, lng: 78.575, name: "Jhansi Fort, Uttar Pradesh" }
 tags: [war, colonial]
 summary: Hugh Rose storms Jhansi in April 1858; the Rani and Tatya Tope seize Gwalior, where she dies fighting in June; Tope is hanged in 1859.
 summary_hi: अप्रैल 1858 में ह्यू रोज़ ने झाँसी पर धावा बोला; रानी और तात्या टोपे ने ग्वालियर पर क़ब्ज़ा किया, जहाँ जून में रानी लड़ते हुए मारी गईं; 1859 में टोपे को फाँसी दी गई।
+voice: >-
+  Jhansi was taken from her under the doctrine of lapse. In April 1858 Hugh Rose storms it, and Rani Lakshmibai escapes by night.
+  With Tatya Tope she seizes Gwalior. On 17 or 18 June, in a cavalry fight at Kotah-ki-Serai, she is killed.
+  Tope fights on for ten more months, until he is betrayed, captured and hanged.
+voice_hi: >-
+  झाँसी उनसे हड़प नीति के तहत छीनी गई थी। अप्रैल 1858 में ह्यू रोज़ झाँसी पर धावा बोलते हैं, और रानी लक्ष्मीबाई रात में निकल जाती हैं।
+  तात्या टोपे के साथ वे ग्वालियर पर कब्ज़ा करती हैं। 17 या 18 जून को कोटा की सराय में घुड़सवारों की लड़ाई में वे लड़ते हुए मारी जाती हैं।
+  तात्या टोपे दस महीने और लड़ते रहते हैं, फिर धोखे से पकड़े जाते हैं, और उन्हें फाँसी दे दी जाती है।
 image: jhansi-fort
 sources:
   - { title: "Lowe, Central India during the Rebellion of 1857 and 1858 (1860)", url: "https://archive.org/details/centralindiadur00lowegoog" }

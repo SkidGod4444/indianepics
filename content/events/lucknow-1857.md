@@ -9,6 +9,14 @@ location: { lat: 26.8606, lng: 80.9264, name: "The Residency, Lucknow" }
 tags: [war, colonial, political]
 summary: Awadh rises; the British are besieged in the Residency for nearly five months while Begum Hazrat Mahal rules in her son's name until March 1858.
 summary_hi: अवध में विद्रोह; अंग्रेज़ लगभग पाँच महीने रेज़िडेंसी में घिरे रहे, और बेगम हज़रत महल मार्च 1858 तक अपने बेटे के नाम पर शासन करती रहीं।
+voice: >-
+  In Awadh, annexed only fifteen months before, the sepoys rise, and landholders and peasants rise with them.
+  The British hold out in the Residency for nearly five months. In the city, Begum Hazrat Mahal crowns her young son and rules in his name.
+  When Lucknow falls she fights on, and dies in exile in Kathmandu.
+voice_hi: >-
+  अवध को सिर्फ़ पंद्रह महीने पहले हड़पा गया था। यहाँ सिपाही उठते हैं, और उनके साथ तालुक़दार और किसान भी।
+  अंग्रेज़ लगभग पाँच महीने रेज़िडेंसी में घिरे रहते हैं। शहर में बेगम हज़रत महल अपने छोटे बेटे को गद्दी पर बिठाती हैं, और उसके नाम से राज करती हैं।
+  लखनऊ गिरने के बाद भी वे लड़ती रहती हैं, और काठमांडू में निर्वासन में दम तोड़ती हैं।
 image: lucknow-residency
 sources:
   - { title: "Gubbins, An Account of the Mutinies in Oudh and of the Siege of the Lucknow Residency (1858)", url: "https://archive.org/details/dli.ministry.00034" }

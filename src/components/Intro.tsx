@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "motion/react";
+import { useEffect, useRef, useState } from "react";
+import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { Play, ArrowDown, Pause } from "lucide-react";
 import type { Chapter } from "@/content/schema";
 import { useLang } from "@/lib/i18n";
@@ -10,10 +10,11 @@ import { glyphForChapter } from "@/lib/timeline";
 import { BASE_ERA } from "@/lib/eras";
 import { Button } from "@/components/ui/button";
 import { DotGlyph } from "./DotGlyph";
-import { DotIndia } from "./DotIndia";
+import { DotPlate, type Plate } from "./DotPlate";
 
 type Props = {
   chapters: Chapter[];
+  plates?: Plate[];
   onPlay: () => void;
   /** True while the story (or its prologue) is running, so the button reads Pause. */
   playing?: boolean;
@@ -21,7 +22,19 @@ type Props = {
 };
 
 /** The hero: the subcontinent in breathing dots, the promise in one line, and two ways in. */
-export function Intro({ chapters, onPlay, onSeek, playing = false }: Props) {
+export function Intro({ chapters, plates = [], onPlay, onSeek, playing = false }: Props) {
+  const reduce = useReducedMotion();
+  // Which plate the hero shows: the chip under the pointer, else a slow walk through the chapters.
+  const [hovered, setHovered] = useState<number | null>(null);
+  const [auto, setAuto] = useState(() => Math.min(3, Math.max(0, plates.length - 1)));
+  useEffect(() => {
+    if (reduce || hovered !== null || plates.length < 2) return;
+    const id = window.setInterval(() => setAuto((a) => (a + 1) % plates.length), 6500);
+    return () => window.clearInterval(id);
+  }, [reduce, hovered, plates.length]);
+  const plateIdx = hovered ?? auto;
+  const plate = plates[plateIdx];
+  const plateChapter = plate ? chapters.find((c) => c.id === plate.id) : undefined;
   const { lang } = useLang();
   const hi = lang === "hi";
   // Fade with the hero's own bottom edge: fully read while it is on screen, gone exactly when the stage
@@ -99,10 +112,21 @@ export function Intro({ chapters, onPlay, onSeek, playing = false }: Props) {
             className="relative mx-auto w-full max-w-[520px] text-evidence"
           >
             <div className="pointer-events-none absolute inset-[-12%] -z-10 rounded-full bg-[radial-gradient(closest-side,var(--evidence-soft),transparent_72%)] opacity-60" />
-            <DotIndia className="mx-auto block h-[min(560px,56vh)] w-auto max-w-full" />
-            <p className={`mt-2 text-center text-ink-3 ${hi ? "font-hi text-[12px]" : "text-[10.5px] uppercase tracking-[0.18em]"}`}>
-              {hi ? "नैचुरल अर्थ, भारतीय दृष्टिकोण संस्करण" : "Natural Earth, India point-of-view edition"}
-            </p>
+            {plate ? (
+              <figure className="mx-auto w-[min(440px,100%,calc(56vh*0.8))]">
+                <div className="relative rounded-[4px] border border-hair/70 bg-paper-2/40 p-3 shadow-[0_1px_0_var(--hair),0_24px_60px_-30px_rgba(28,25,21,0.35)]">
+                  <DotPlate plates={plates} active={plateIdx} className="block w-full" />
+                </div>
+                <figcaption className="mt-3 flex items-baseline justify-between gap-3 text-ink-3">
+                  <span className={`min-w-0 truncate ${hi ? "font-hi text-[12.5px]" : "text-[11px] uppercase tracking-[0.16em]"}`}>
+                    {plateChapter ? `${String(chapters.indexOf(plateChapter) + 1).padStart(2, "0")} · ${pick(plateChapter, "title", lang)}` : ""}
+                  </span>
+                  <span className="shrink-0 text-[10.5px]" title={`${plate.title}. ${plate.credit}`}>
+                    {plate.credit.split(",")[0]}
+                  </span>
+                </figcaption>
+              </figure>
+            ) : null}
           </motion.div>
         </div>
 
@@ -117,6 +141,10 @@ export function Intro({ chapters, onPlay, onSeek, playing = false }: Props) {
             <button
               key={c.id}
               onClick={() => onSeek(i)}
+              onPointerEnter={() => setHovered(plates.findIndex((p) => p.id === c.id) >= 0 ? plates.findIndex((p) => p.id === c.id) : null)}
+              onPointerLeave={() => setHovered(null)}
+              onFocus={() => setHovered(plates.findIndex((p) => p.id === c.id) >= 0 ? plates.findIndex((p) => p.id === c.id) : null)}
+              onBlur={() => setHovered(null)}
               className={`group flex shrink-0 items-center gap-2 rounded-full border border-hair bg-paper/80 py-1.5 pl-1.5 pr-3 text-left text-[12px] text-ink-2 backdrop-blur-sm transition-colors hover:border-ink hover:text-ink ${
                 hi ? "font-hi" : ""
               }`}

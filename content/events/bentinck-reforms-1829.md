@@ -9,6 +9,14 @@ location: { lat: 22.5697, lng: 88.3487, name: "Government House, Calcutta" }
 tags: [colonial, religion, language]
 summary: Bentinck outlaws sati in Bengal in December 1829; in 1835, after Macaulay's Minute, the Company's education funds go to English-medium teaching.
 summary_hi: दिसंबर 1829 में बेंटिंक ने बंगाल में सती प्रथा को अवैध घोषित किया; 1835 में मैकॉले के शिक्षा संबंधी 'मिनट' के बाद कंपनी का शिक्षा-धन अंग्रेज़ी माध्यम की पढ़ाई को मिला।
+voice: >-
+  In December 1829 burning widows becomes a crime in Bengal. Rammohun Roy has argued against it for over a decade.
+  In 1835 Macaulay dismisses Sanskrit and Arabic learning, and the Company's school money goes to English.
+  One historian argues the sati debate was held over the heads of the women it concerned.
+voice_hi: >-
+  4 दिसंबर 1829 को बंगाल में विधवाओं को जलाना अपराध घोषित होता है। राममोहन राय दस साल से ज़्यादा समय से इसके विरुद्ध लिखते आ रहे हैं।
+  1835 में मैकॉले संस्कृत और अरबी ज्ञान को ख़ारिज करते हैं, और कंपनी का शिक्षा का पैसा अंग्रेज़ी को चला जाता है।
+  एक इतिहासकार का तर्क है कि सती पर पूरी बहस उन स्त्रियों के सिर के ऊपर से हुई, जिनके बारे में वह थी।
 image: rammohun-roy
 sources:
   - { title: "Sharp (ed.), Selections from Educational Records, Part I, 1781-1839 (1920)", url: "https://archive.org/details/apwm_selections-from-educational-records-part-1-by-h.-sharp-1920-calcutta-superintend", note: "Macaulay's Minute of 2 February 1835 and the resolution of 7 March 1835" }

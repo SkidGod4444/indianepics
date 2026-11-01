@@ -9,6 +9,14 @@ location: { lat: 18.940, lng: 72.835, name: "Bori Bunder, Bombay" }
 tags: [science, trade, colonial]
 summary: On 16 April 1853 the first passenger train runs 34 km from Bori Bunder to Thane; by 1856 telegraph wires link Calcutta, Agra, Bombay and Madras.
 summary_hi: 16 अप्रैल 1853 को पहली यात्री रेलगाड़ी बोरी बंदर से ठाणे तक 34 किमी चली; 1856 तक तार लाइनों ने कलकत्ता, आगरा, बंबई और मद्रास को जोड़ दिया।
+voice: >-
+  On the afternoon of 16 April 1853, fourteen carriages and about four hundred passengers leave Bori Bunder behind three locomotives, bound for Thane.
+  Within three years telegraph wire runs from Calcutta to Peshawar.
+  In four years that wire will carry the warning of a rising.
+voice_hi: >-
+  16 अप्रैल 1853 की दोपहर, चौदह डिब्बे और लगभग चार सौ यात्री, तीन इंजनों के पीछे, बोरी बंदर से ठाणे के लिए निकलते हैं।
+  तीन साल के भीतर तार की लाइन कलकत्ता से पेशावर तक पहुँच जाती है।
+  चार साल बाद यही तार एक विद्रोह की ख़बर लेकर दौड़ेगा।
 image: cst-mumbai
 sources:
   - { title: "Danvers, Report to the Secretary of State for India in Council on Railways in India to the end of the year 1859 (1860)", url: "https://archive.org/details/india.history.resource.109260" }

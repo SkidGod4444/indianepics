@@ -9,6 +9,14 @@ location: { lat: 18.5195, lng: 73.8553, name: "Shaniwar Wada, Pune" }
 tags: [war, colonial, political]
 summary: After Khadki and Koregaon, Baji Rao II surrenders in June 1818; the Peshwa's lands are annexed and the Maratha confederacy ends.
 summary_hi: खड़की और कोरेगाँव के बाद जून 1818 में बाजीराव द्वितीय ने आत्मसमर्पण किया; पेशवा के इलाक़े कंपनी में मिला लिए गए और मराठा संघ का अंत हुआ।
+voice: >-
+  In November 1817 the Union Jack rises over the Peshwa's palace at Pune.
+  On New Year's Day 1818, some eight hundred Company sepoys, many of them Mahars, hold Koregaon against a far larger force. Dalits gather there to remember it.
+  Baji Rao surrenders and is sent to Bithur, where his adopted son, Nana Sahib, grows up.
+voice_hi: >-
+  नवंबर 1817 में पुणे में पेशवा के महल पर यूनियन जैक चढ़ जाता है।
+  1818 के पहले दिन कंपनी के लगभग आठ सौ सिपाही, जिनमें बहुत से महार हैं, पेशवा की कहीं बड़ी सेना के सामने कोरेगाँव को थामे रहते हैं। दलित इसे याद करने यहाँ जुटते हैं।
+  बाजीराव आत्मसमर्पण करते हैं और बिठूर भेज दिए जाते हैं, जहाँ उनके दत्तक पुत्र नाना साहब बड़े होंगे।
 image: shaniwar-wada
 sources:
   - { title: "Blacker, Memoir of the Operations of the British Army in India during the Mahratta War of 1817, 1818 and 1819 (1821)", url: "https://archive.org/details/india.history.resource.384" }

@@ -20,8 +20,9 @@ import { Button } from "@/components/ui/button";
 import { Pause, Play, SkipBack, SkipForward } from "lucide-react";
 import { Narrator, VOICE_PREF_KEY, loadVoiceManifest, type VoicePref } from "@/lib/narration";
 import { VoiceMenu } from "./VoiceMenu";
+import type { Plate } from "./DotPlate";
 
-type Props = { chapters: Chapter[]; events: EpicEvent[]; polities: Polity[]; prologue?: Prologue | null };
+type Props = { chapters: Chapter[]; events: EpicEvent[]; polities: Polity[]; prologue?: Prologue | null; plates?: Plate[] };
 type TrackFilter = "both" | Track;
 
 /** The point in the viewport that "is now". */
@@ -35,7 +36,7 @@ const TAIL_MS = 900;
 /** Narrated slots never scroll faster than this, so a short line still lets the card open. */
 const MIN_SLOT_MS = 3800;
 
-export function Stage({ chapters: allChapters, events, polities, prologue }: Props) {
+export function Stage({ chapters: allChapters, events, polities, prologue, plates = [] }: Props) {
   const { lang } = useLang();
   const [trackFilter, setTrackFilter] = useState<TrackFilter>("both");
   const [pos, setPos] = useState<Position>({ chapter: 0, progress: 0 });
@@ -514,7 +515,7 @@ export function Stage({ chapters: allChapters, events, polities, prologue }: Pro
         />
 
         {/* The hero sits in the flow above the clock. */}
-        <Intro chapters={chapters} playing={playing} onPlay={togglePlay} onSeek={(c) => seek({ chapter: c, progress: 0.001 }, true)} />
+        <Intro chapters={chapters} plates={plates} playing={playing} onPlay={togglePlay} onSeek={(c) => seek({ chapter: c, progress: 0.001 }, true)} />
 
         {/* Invisible spacers: one slot of scroll per title and per event. They are the clock. */}
         <div className="relative z-[1]" aria-hidden>
