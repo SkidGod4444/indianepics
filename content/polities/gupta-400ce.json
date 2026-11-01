@@ -1,0 +1,9 @@
+{
+  "id": "gupta-400ce",
+  "name": "Gupta Empire, c. 400 CE",
+  "name_hi": "गुप्त साम्राज्य, लगभग 400 ई.",
+  "year": 400,
+  "approximate": true,
+  "source": "Hand-drawn approximation after Schwartzberg, A Historical Atlas of South Asia (1992), plate III.D.1 (p. 25), 'South Asia in the Gupta-Vakataka Age' (DSAL map group 'The Gupta-Vakataka Age, c. A.D. 300-500'). Shows the zone of direct Gupta rule under Chandragupta II, c. 400-415, including Malwa and Gujarat after the defeat of the western Kshatrapas (Saurashtra may have been taken a few years after 400). Excludes the Vakataka allies, Kamarupa, Nepal, Samatata and the tributary republics of Rajasthan and the Punjab. Good first issue: trace properly from the DSAL scan.",
+  "ring": [[76.5,30.8],[77.8,30.4],[79.5,29.3],[81.5,28.0],[83.5,27.4],[85.0,26.9],[87.0,26.4],[88.5,26.3],[89.8,25.8],[90.0,24.0],[89.6,22.2],[88.1,21.7],[86.8,22.2],[85.5,22.8],[83.5,23.3],[82.0,23.4],[80.0,23.0],[78.5,22.9],[77.0,22.5],[75.5,22.2],[73.0,21.7],[72.15,21.7],[71.0,20.7],[69.6,21.6],[69.0,22.3],[68.4,23.6],[70.0,24.4],[71.5,24.6],[73.5,24.0],[74.8,25.0],[76.0,26.0],[76.5,27.5],[76.2,29.0],[76.5,30.8]]
+}

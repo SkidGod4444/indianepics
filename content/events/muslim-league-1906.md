@@ -1,0 +1,21 @@
+---
+id: muslim-league-1906
+title: The Muslim League and separate electorates
+title_hi: मुस्लिम लीग और पृथक निर्वाचन
+track: evidence
+chapter: raj
+date: { start: 1906, end: 1909 }
+location: { lat: 23.725, lng: 90.400, name: "Dhaka" }
+tags: [political, religion]
+summary: The All-India Muslim League is founded at Dacca on 30 December 1906; the Morley–Minto reforms of 1909 give Muslims separate electorates.
+summary_hi: 30 दिसंबर 1906 को ढाका में अखिल भारतीय मुस्लिम लीग की स्थापना हुई; 1909 के मॉर्ले–मिंटो सुधारों ने मुसलमानों को पृथक निर्वाचक मंडल दिए।
+image: muslim-league-1906
+sources:
+  - { title: "Indian Councils Act 1909 (9 Edw. 7 c. 4)", url: "https://www.legislation.gov.uk/ukpga/Edw7/9/4/contents" }
+  - { title: "Regulations for giving effect to the Indian Councils Act, 1909 (1910)", url: "https://archive.org/details/india.history.resource.117753" }
+---
+On 1 October 1906 a deputation of 35 Muslim notables led by the Aga Khan met the Viceroy, Minto, at Simla and asked that in any elected councils Muslims should choose their own representatives, in numbers reflecting their political importance and not only their share of the population. Minto agreed in principle. Three months later the All-India Muhammadan Educational Conference, meeting in Dacca at the invitation of Nawab Salimullah, founded the All-India Muslim League on 30 December. Accounts place the session at the Nawab's Shahbagh grounds or at Ahsan Manzil; the pin marks the city.
+
+The Indian Councils Act of 1909, the Morley–Minto reforms, enlarged the legislative councils, let some members be elected, and reserved seats for Muslims elected by Muslim voters alone. Satyendra Sinha became the first Indian member of the Viceroy's executive council.
+
+Whether officials arranged the Simla deputation is argued; Mohamed Ali later called it a command performance. Many Indian historians treat separate electorates as the first step on the road to 1947, while others argue that communal identities were already being drawn into politics and the reforms recognised more than they created.

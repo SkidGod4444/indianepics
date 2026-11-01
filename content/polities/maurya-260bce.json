@@ -1,0 +1,9 @@
+{
+  "id": "maurya-260bce",
+  "name": "Mauryan Empire, c. 260 BCE",
+  "name_hi": "मौर्य साम्राज्य, लगभग 260 ई.पू.",
+  "year": -260,
+  "approximate": true,
+  "source": "Hand-drawn approximation after Schwartzberg, A Historical Atlas of South Asia, plate III.B.4. Good first issue: trace properly from the DSAL scan.",
+  "ring": [[62,34],[66,36.5],[71,37.5],[76,36.5],[80,34],[84,30.5],[88,28.5],[92,27.5],[95.5,25],[96,22.5],[92,21],[88,20.5],[86,19],[84,17.5],[81,15],[79,13],[77.5,12.5],[75.5,13.5],[74,15.5],[73,18],[72,20.5],[70,22.5],[67.5,24],[65.5,26],[63,28.5],[61.5,31],[62,34]]
+}

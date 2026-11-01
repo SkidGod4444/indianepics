@@ -1,0 +1,9 @@
+{
+  "id": "mughal-1700",
+  "name": "Mughal Empire, c. 1700",
+  "name_hi": "मुग़ल साम्राज्य, लगभग 1700",
+  "year": 1700,
+  "approximate": true,
+  "source": "Hand-drawn approximation after Schwartzberg, A Historical Atlas of South Asia, plate VI.A.3 (South Asia during the reigns of Jahangir, Shah Jahan and Aurangzib, 1605-1707). Good first issue: trace properly from the DSAL scan.",
+  "ring": [[62,34],[66,36.5],[70,37],[74.5,36.5],[78,35],[80.5,32],[84,29.5],[88,28],[91.5,27],[95,25],[94.5,22.5],[91,21.5],[88,21],[86,19.5],[84,17.5],[82,15.5],[80,13],[78.5,11.5],[77,11],[75.5,12.5],[74.5,15],[73,17.5],[72.2,20.5],[70,22.5],[67.5,24],[64.5,26],[62.5,28.5],[61.5,31],[62,34]]
+}

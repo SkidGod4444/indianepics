@@ -1,0 +1,19 @@
+---
+id: panipat-1526
+title: First Battle of Panipat
+title_hi: पानीपत का पहला युद्ध
+track: evidence
+chapter: mughal
+date: { start: 1526, end: 1526 }
+location: { lat: 29.39, lng: 76.97, name: "Panipat, Haryana" }
+tags: [war, political]
+summary: Babur's field guns and flanking cavalry break Ibrahim Lodi's army; the Delhi Sultanate ends and the Mughal line begins.
+summary_hi: बाबर की तोपों और घुड़सवारों ने इब्राहिम लोदी की सेना तोड़ी; दिल्ली सल्तनत समाप्त, मुग़ल वंश आरंभ।
+image: babur-panipat
+sources:
+  - { title: "Baburnama, tr. Beveridge (1922), vol. 2", url: "https://archive.org/details/baburnamainengli02babuuoft", note: "Friday 8 Rajab 932, given as 20 April 1526" }
+  - { title: "Baburnama, tr. Thackston (1996)" }
+---
+Babur dates the battle to Friday 8 Rajab 932, which Beveridge's translation gives as 20 April 1526; many modern accounts say 21 April. Ibrahim Lodi died on the field. Babur's own figures, about 12,000 men against 100,000, are a victor's numbers; what is clear is that carts lashed into a line sheltered his matchlocks and guns while his cavalry wheeled round the flanks.
+
+He had tried and failed to hold Samarkand; he held Hindustan instead, and set down in his Turki memoir an unsparing list of what it lacked, from good horses and grapes to ice, baths and candles.

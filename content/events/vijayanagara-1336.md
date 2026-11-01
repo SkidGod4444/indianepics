@@ -1,0 +1,22 @@
+---
+id: vijayanagara-1336
+title: Vijayanagara is founded
+title_hi: विजयनगर की स्थापना
+track: evidence
+chapter: medieval
+date: { start: 1336, end: 1346 }
+location: { lat: 15.335, lng: 76.46, name: "Virupaksha temple, Hampi, Karnataka" }
+tags: [state-formation, political]
+summary: Tradition dates to 1336 the kingdom the brothers Harihara and Bukka founded on the Tungabhadra; it would dominate the south for two centuries.
+summary_hi: परंपरा के अनुसार 1336 में हरिहर और बुक्का भाइयों ने तुंगभद्रा तट पर राज्य की नींव रखी, जो दो सदियों तक दक्षिण पर छाया रहा।
+image: hampi-virupaksha
+sources:
+  - { title: "UNESCO World Heritage Centre, Group of Monuments at Hampi", url: "https://whc.unesco.org/en/list/241/" }
+  - { title: "Sewell, A Forgotten Empire (Vijayanagar): A Contribution to the History of India (1900)", url: "https://archive.org/details/a-forgotten-empire" }
+  - { title: "Eaton, A Social History of the Deccan, 1300–1761 (2005)" }
+---
+The year 1336 comes from later tradition. The first secure records of the Sangama brothers as independent rulers are grants of the 1340s, among them a family gathering at the Sringeri monastery in 1346. The city they built around the Virupaksha temple at Hampi became one of the largest in India, described by Persian, Italian and Portuguese visitors, until its army was defeated at Talikota in 1565 and the city sacked.
+
+On the map, Vijayanagara and the Bahmani sultanate to its north divided the Deccan after the Tughluq withdrawal, and fought for two centuries over the Raichur doab between the Krishna and the Tungabhadra.
+
+The founders' origins are disputed. One tradition makes them officers of the Kakatiya king of Warangal who were captured by Muhammad bin Tughluq, converted to Islam, sent back to govern Kampili, and reconverted under the sage Vidyaranya. Many historians reject the conversion story and see them as local commanders in Hoysala service. Since the nineteenth century the question has also been a contest between Telugu and Kannada claims on the empire.

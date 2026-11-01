@@ -1,0 +1,211 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Warm paper, deep ink, one accent per track. shadcn tokens are mapped onto these below. */
+:root {
+  --paper: #f4efe5;
+  --paper-2: #ebe4d4;
+  --paper-3: #dfd5bf;
+  --ink: #1c1915;
+  --ink-2: #57514a;
+  --ink-3: #8a8275;
+  --hair: #d6cdb8;
+  --evidence: #c2561a;
+  --evidence-soft: #efc9b2;
+  --tradition: #2f416d;
+  --tradition-soft: #c6cde3;
+  --water: #e3e6e0;
+  --land: #ece6d8;
+  --land-stroke: #cfc5ad;
+  color-scheme: light;
+
+  /* shadcn/ui semantic tokens → paper palette */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--paper);
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--paper);
+  --secondary: var(--paper-2);
+  --secondary-foreground: var(--ink);
+  --muted: var(--paper-2);
+  --muted-foreground: var(--ink-3);
+  --accent: var(--paper-3);
+  --accent-foreground: var(--ink);
+  --destructive: #b3261e;
+  --border: var(--hair);
+  --input: var(--hair);
+  --ring: var(--evidence);
+  --chart-1: var(--evidence);
+  --chart-2: var(--tradition);
+  --chart-3: var(--ink-2);
+  --chart-4: var(--ink-3);
+  --chart-5: var(--hair);
+  --radius: 0.5rem;
+  --sidebar: var(--paper-2);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--ink);
+  --sidebar-primary-foreground: var(--paper);
+  --sidebar-accent: var(--paper-3);
+  --sidebar-accent-foreground: var(--ink);
+  --sidebar-border: var(--hair);
+  --sidebar-ring: var(--evidence);
+}
+
+/* Light (warm paper) is the default. Dark only by explicit opt-in below; no system-theme switch. */
+
+:root[data-theme="dark"],
+.dark {
+  --paper: #15130f;
+  --paper-2: #1d1a15;
+  --paper-3: #2a251d;
+  --ink: #f1ebdf;
+  --ink-2: #bdb5a6;
+  --ink-3: #7f776a;
+  --hair: #332e25;
+  --evidence: #e07a3c;
+  --evidence-soft: #5a2d14;
+  --tradition: #8ea0d8;
+  --tradition-soft: #27315a;
+  --water: #11100d;
+  --land: #211d17;
+  --land-stroke: #3a3327;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-paper-3: var(--paper-3);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-hair: var(--hair);
+  --color-evidence: var(--evidence);
+  --color-evidence-soft: var(--evidence-soft);
+  --color-tradition: var(--tradition);
+  --color-tradition-soft: var(--tradition-soft);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-hi: var(--font-devanagari), var(--font-fraunces), serif;
+  --font-heading: var(--font-fraunces), Georgia, serif;
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    scroll-behavior: auto;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" var(--display-opsz, 144), "SOFT" var(--display-soft, 30);
+  font-weight: var(--display-weight, 400);
+  transition: font-variation-settings 600ms ease, font-weight 600ms ease;
+}
+
+/* Era changes rewrite the tokens on <html>; let the surfaces glide, not snap. */
+body,
+.era-surface {
+  transition: background-color 700ms ease, color 700ms ease, border-color 700ms ease;
+}
+svg .era-fill {
+  transition: fill 700ms ease, stroke 700ms ease;
+}
+
+/* Per-era texture laid over the stage. */
+.era-pattern::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: var(--era-pattern, none);
+  opacity: 0.9;
+  transition: opacity 700ms ease;
+}
+
+.font-hi {
+  font-family: var(--font-hi);
+}
+
+.hairline {
+  border-color: var(--hair);
+}
+
+/* Fine paper grain, so flat colour never reads as a screen. */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.3 0 0 0 0 0.26 0 0 0 0 0.2 0 0 0 0.12 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
