@@ -9,7 +9,7 @@ import { join, resolve } from "node:path";
 const root = resolve(import.meta.dirname, "..");
 const data = join(root, "src/data");
 const pub = join(root, "public");
-const SITE = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://indianepics.vercel.app").replace(/\/$/, "");
+const SITE = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://indianepics.online").replace(/\/$/, "");
 
 type Ch = { id: string; title: string; title_hi?: string; kicker?: string; track: string; years?: { start: number; end: number }; stops?: string[]; polity?: string; body: string };
 type Ev = {

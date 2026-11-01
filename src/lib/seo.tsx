@@ -3,7 +3,7 @@ import type { ImageManifest } from "@/content/schema";
 import { formatRange, formatYear, getImage } from "./content";
 
 /** Set NEXT_PUBLIC_SITE_URL at build time; canonical URLs, the sitemap and llms.txt all derive from it. */
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://indianepics.vercel.app").replace(/\/$/, "");
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://indianepics.online").replace(/\/$/, "");
 export const SITE_NAME = "indianepics";
 export const SITE_DESCRIPTION =
   "A scroll-driven historical atlas of the Indian subcontinent from the Itihasa to 2026: 9 chapters, 120 dated and sourced events, two tracks (tradition and evidence), bilingual, open data.";
