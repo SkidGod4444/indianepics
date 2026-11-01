@@ -14,7 +14,7 @@ sources:
   - { title: "Government of India Act 1858 (21 & 22 Vict. c. 106)", url: "https://www.legislation.gov.uk/ukpga/Vict/21-22/106/contents" }
   - { title: "Proclamation by the Queen in Council to the Princes, Chiefs, and People of India, 1 November 1858", url: "https://archive.org/details/queens-proclamation" }
 ---
-The Government of India Act of 2 August 1858, passed after the rising of 1857, transferred the East India Company's territories, armies and debts to the Crown. A Secretary of State for India and a council in London replaced the Company's directors, and the Governor-General also became Viceroy. Lord Canning read the Queen's proclamation at a durbar on the riverside ground at Allahabad, later Minto Park and now Madan Mohan Malaviya Park, where a memorial pillar now marks the spot.
+The Government of India Act of 2 August 1858, passed after the rising of 1857, transferred the East India Company's territories, armies and debts to the Crown. A Secretary of State for India and a council in London replaced the Company's directors, and the Governor-General also became Viceroy. Lord Canning read the Queen's proclamation at a durbar on the riverside ground at Allahabad that was later named Minto Park and, after independence, Madan Mohan Malaviya Park. A commemorative pillar marks the spot.
 
 The proclamation promised to honour treaties with the princes, to seek no more territory, to keep out of religious belief, and to admit subjects "of whatever race or creed" to office. Annexation by lapse ended. The princely states, about two-fifths of the subcontinent, stayed in place under British paramountcy, and this patchwork of direct and indirect rule is the map of the Raj until 1947.
 

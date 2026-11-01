@@ -16,4 +16,4 @@ sources:
 ---
 The dispute was over two stretches of frontier: Aksai Chin in Ladakh, where China had built a road linking Xinjiang and Tibet in the 1950s, and the McMahon Line of 1914 in the east, which China rejected. Tawang fell within days of the attack. In November the Chinese broke through at Se La and Bomdila and overran Rezang La in Ladakh. China announced a unilateral ceasefire from 21 November and withdrew in the east, but stayed in Aksai Chin.
 
-The war fixed the shape of India's northern boundary on today's maps: in Ladakh the line India claims and the Line of Actual Control do not coincide. India's own inquiry, the Henderson Brooks-Bhagat report, has never been officially released, and the balance of blame between Nehru's forward policy and Chinese intentions is still argued.
+The war left the Line of Actual Control as the working northern border; in Ladakh it runs well inside the boundary India claims. India's own inquiry, the Henderson Brooks-Bhagat report, had not been officially released by 2026, and the balance of blame between Nehru's forward policy and Chinese intentions has been argued ever since.

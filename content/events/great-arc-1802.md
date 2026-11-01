@@ -17,6 +17,6 @@ sources:
 ---
 Lambton laid his first baseline across the flat ground between St Thomas Mount and Perumbakkam, about 7.5 miles long, measured with a steel chain. From it a chain of triangles was carried across the peninsula and then north along the meridian near 78 degrees east. George Everest, who succeeded him in 1823, extended this Great Arc from Cape Comorin to the foothills of the Himalaya.
 
-Every modern map of India descends from these triangles. The survey fixed positions and heights to a standard no earlier map approached, and turned territory the Company claimed into territory it could measure, tax and defend.
+The Survey of India's maps were built on these triangles for more than a century. The survey fixed positions and heights to a standard no earlier map approached, and turned territory the Company claimed into territory it could measure, tax and defend.
 
 In 1852 computations in the survey's Calcutta office identified Peak XV, on the Nepal-Tibet border, as the highest mountain then known. The work is traditionally credited to the chief computer Radhanath Sikdar, though the well-known story of his announcement is anecdotal. Andrew Waugh published the height, 29,002 feet, in 1856, and the peak was named after Everest, over his own objection, in 1865.

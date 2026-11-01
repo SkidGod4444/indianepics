@@ -12,11 +12,11 @@ summary_hi: लगभग 950 से 1050 के बीच चंदेल रा
 image: kandariya-mahadeva
 sources:
   - { title: "UNESCO World Heritage Centre, Khajuraho Group of Monuments", url: "https://whc.unesco.org/en/list/240/" }
-  - { title: "Epigraphia Indica, vol. I (1892)", url: "https://archive.org/details/in.ernet.dli.2015.69993", note: "Kielhorn's edition of the Khajuraho inscriptions, including the Lakshmana temple inscription of 954 CE" }
+  - { title: "Epigraphia Indica, vol. I (1892)", url: "https://archive.org/details/in.ernet.dli.2015.69993", note: "Kielhorn's edition of the Khajuraho inscriptions, including the Lakshmana temple inscription of Vikrama year 1011 (953–54 CE)" }
   - { title: "Desai, Khajuraho (2000)" }
 ---
-An inscription of 954 CE, in the reign of the Chandela king Dhanga, records that his father Yashovarman built the Lakshmana temple. The Kandariya Mahadeva, the largest, is generally dated to around 1030. The towers rise in clustered peaks meant to suggest a mountain range, and the walls carry hundreds of figures, of which the erotic panels are a small share.
+An inscription dated 953–54 CE, set up under the Chandela king Dhanga, records that his father Yashovarman built a temple to Vishnu as Vaikuntha, the one known as the Lakshmana temple. The Kandariya Mahadeva, the largest temple at the site, is generally dated to around 1030. The towers rise in clustered peaks meant to suggest a mountain range, and the walls carry hundreds of figures, of which the erotic panels are a small share.
 
-The Chandelas ruled Jejakabhukti, the later Bundelkhand, from the forts of Kalinjar and Mahoba. Khajuraho was a temple town, not a stronghold, and it lay off the main roads, which may be why so much of it stood. It was little known beyond the region until a British officer, T. S. Burt, described it in 1838.
+The Chandelas ruled Jejakabhukti, the later Bundelkhand, from the forts of Kalinjar and Mahoba. Khajuraho was a temple town, not a stronghold, and it lay off the main roads, which may be why so much of it stood. It was little known beyond the region until a British officer, T. S. Burt, visited it in 1838.
 
-What the erotic sculpture meant is still debated: tantric ritual, protection for the building, courtly display, or a picture of the world outside the sanctum. No contemporary text explains it.
+What the erotic sculpture meant is debated: tantric ritual, protection for the building, courtly display, or a picture of the world outside the sanctum. No contemporary text explains it.

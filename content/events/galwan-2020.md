@@ -15,4 +15,4 @@ sources:
 ---
 The clash came during a standoff that began in May 2020 at several points along the Line of Actual Control in eastern Ladakh. India's Ministry of External Affairs said the Chinese side had tried to change the status quo unilaterally; China blamed Indian troops. China acknowledged four of its soldiers dead in February 2021; some foreign estimates are higher. No firearms were used, under agreements of 1996 and 2005 on conduct along the line.
 
-Disengagement at Galwan, Pangong Tso and Gogra-Hot Springs between 2020 and 2022 left buffer zones where neither side patrols; an agreement in October 2024 restored patrolling at Depsang and Demchok. The episode shows why the northern boundary on this map is a claim: in Ladakh the line on the ground and the line on the map differ.
+Disengagement at Galwan, Pangong Tso and Gogra-Hot Springs between 2020 and 2022 left buffer zones where neither side was to patrol; an agreement in October 2024 restored patrolling at Depsang and Demchok. The episode shows why the northern boundary on this map is a claim: in Ladakh the line on the ground and the line on the map differ.

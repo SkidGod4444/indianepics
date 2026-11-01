@@ -11,10 +11,11 @@ summary: From March 1924 volunteers court arrest on the roads around Vaikom temp
 summary_hi: मार्च 1924 से स्वयंसेवकों ने वैकोम मंदिर के आसपास की उन सड़कों पर गिरफ़्तारियाँ दीं जो एझवा और दलितों के लिए बंद थीं; 1925 में चार में से तीन सड़कें खुलीं।
 image: vaikom-temple
 sources:
-  - { title: "Kerala Legislative Assembly archive, Vaikom satyagraha, proceedings of 12 June 1924", url: "https://archive.org/details/keralalegislativeassembly.proceedings.876183" }
+  - { title: "The Hindu, 'Remembering Vaikom Satyagraha: A movement that spearheaded social reforms in two States' (30 March 2023)", url: "https://www.thehindu.com/news/national/tamil-nadu/remembering-vaikom-satyagraha-a-movement-that-spearheaded-social-reforms-in-tn-kerala/article66679378.ece" }
+  - { title: "Travancore Legislative Council, question hour on the Vaikom satyagraha, 12 June 1924 (Kerala Legislative Assembly archive)", url: "https://archive.org/details/keralalegislativeassembly.proceedings.876183" }
 ---
 In the princely state of Travancore, Ezhavas, Pulayas and other castes held to be polluting could not walk the public roads around the Vaikom Mahadeva temple. T. K. Madhavan, K. P. Kesava Menon and George Joseph of the Kerala Congress organised a satyagraha with Gandhi's approval. On 30 March 1924 three volunteers, a Pulaya, an Ezhava and a Nair, walked together toward the barrier and were arrested. Others followed day after day, standing at the barriers through the floods that summer.
 
-E. V. Ramasamy, later Periyar, came from Madras and was jailed twice, and Mannathu Padmanabhan led a march of caste Hindus to Thiruvananthapuram that November with a petition to open the roads. Gandhi visited in March 1925 and negotiated with the regent and the temple's priests. When the satyagraha ended on 23 November 1925, the north, south and west roads had been opened to all and the eastern road stayed closed.
+E. V. Ramasamy, later Periyar, came from Erode in the Madras Presidency that April and was jailed twice, and Mannathu Padmanabhan led a march of caste Hindus to Thiruvananthapuram that November with a petition to open the roads. Gandhi visited in March 1925 and negotiated with the regent, Sethu Lakshmi Bayi, and orthodox Brahmin leaders. On 23 November 1925 the north, south and west roads were opened to all, while the eastern road stayed closed, and the satyagraha was called off a week later.
 
 Tamil and Kerala accounts differ over who deserves the credit, Periyar or the Kerala Congress and Gandhi. The Travancore Temple Entry Proclamation of 12 November 1936 finally opened the state's temples themselves to all Hindus.

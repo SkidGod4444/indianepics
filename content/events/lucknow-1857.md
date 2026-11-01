@@ -18,4 +18,4 @@ Awadh had been annexed fifteen months before, and the rising there drew in not o
 
 Begum Hazrat Mahal, a wife of the exiled Wajid Ali Shah, had her young son Birjis Qadr crowned in July and governed in his name. Lucknow fell to Campbell in March 1858. She fought on in the countryside, answered Queen Victoria's proclamation with one of her own, and died in exile in Kathmandu in 1879.
 
-The British kept the ruined Residency as a memorial, its flag never lowered until 1947. Indian historians, Rudrangshu Mukherjee among them, have shown how far the rising in Awadh was a popular revolt rather than a mutiny.
+The British kept the ruined Residency as a memorial, its flag never lowered until 1947. Indian historians, Rudrangshu Mukherjee among them, have argued how far the rising in Awadh was a popular revolt rather than a mutiny.

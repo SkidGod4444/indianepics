@@ -12,10 +12,10 @@ summary_hi: जनवरी 1026 में महमूद ग़ज़नवी
 image: somnath-temple
 sources:
   - { title: "Thapar, Somanatha: The Many Voices of a History (2004)" }
-  - { title: "Elliot and Dowson, The History of India as Told by Its Own Historians, vol. II (1869)", url: "https://archive.org/details/india.history.resource.629", note: "Extracts from Ibn al-Athir's Kamil al-Tawarikh on the Somnath campaign" }
+  - { title: "Elliot and Dowson, The History of India as Told by Its Own Historians, vol. II (1869)", url: "https://archive.org/details/india.history.resource.629", note: "Appendix: Ibn al-Athir's Kamil al-Tawarikh on the Somnath campaign, with later Persian accounts" }
 ---
-Mahmud left Ghazni in the autumn of 1025, crossed the desert from Multan, passed the Chaulukya capital at Anahilavada, and reached Somnath in early January 1026. Persian chroniclers describe the breaking of the idol, the killing of its defenders and a treasure of millions of dinars; he went home through Kutch and Sindh. He held no territory in Gujarat. His state lay in Afghanistan and the Punjab, and raids like this paid for it.
+Mahmud left Ghazni in the autumn of 1025, crossed the desert from Multan, passed the Chaulukya capital at Anahilavada, whose king Bhima fled, and reached Somnath in early January 1026. Ibn al-Athir describes the breaking of the idol, more than fifty thousand dead and a treasure worth over two million dinars; Mahmud went home through Sindh. He held no territory in Gujarat. His state was centred on Ghazni and Khurasan and reached into the Punjab, and raids like this helped pay for it.
 
 On the map Somnath is a raid, not a frontier. The Chaulukya king Bhima I returned once Mahmud had gone, and an inscription of 1169 at Prabhas Patan records the temple's rebuilding under Kumarapala.
 
-How the raid was remembered is contested. Romila Thapar has shown that the Persian accounts grow more elaborate over the centuries, that local Sanskrit and Jain sources say little about it, and that the idea of a lasting Hindu trauma owes much to the colonial debate over the gates of Somnath in 1842 and to the temple's reconstruction after independence.
+How the raid was remembered is contested. Romila Thapar has shown that the Persian accounts grow more elaborate over the centuries, that local Sanskrit and Jain sources say little about it, and that the idea of a lasting Hindu trauma owes much to Lord Ellenborough's 1842 proclamation about the gates of Somnath, the debate it set off in Britain, and the temple's reconstruction after independence.

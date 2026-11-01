@@ -8,7 +8,7 @@ date: { start: 1916, end: 1917 }
 location: { lat: 26.85, lng: 80.95, name: "Lucknow" }
 tags: [political]
 summary: Tilak and Annie Besant launch Home Rule leagues in 1916; at Lucknow that December the Congress and the Muslim League agree a joint scheme.
-summary_hi: 1916 में तिलक और एनी बेसेंट ने होम रूल लीगें शुरू कीं; उसी दिसंबर लखनऊ में कांग्रेस और मुस्लिम लीग ने एक साझा योजना पर सहमति की।
+summary_hi: 1916 में तिलक और एनी बेसेंट ने होम रूल लीगें शुरू कीं; उसी दिसंबर लखनऊ में कांग्रेस और मुस्लिम लीग ने एक साझा योजना पर सहमति जताई।
 sources:
   - { title: "Sastri, The Congress-League Scheme: An Exposition (1917)", url: "https://archive.org/details/in.ernet.dli.2015.71644" }
   - { title: "Natesan (ed.), The Indian Demands: A Symposium on the Memorandum of the Nineteen and Speeches at the Congress and Moslem League (1917)", url: "https://archive.org/details/indiandemandssym00gana" }

@@ -15,6 +15,6 @@ sources:
 ---
 The fourth Anglo-Mysore war was short. Richard Wellesley, the Governor-General, citing Tipu's approaches to the French, sent armies from Madras and Bombay together with the Nizam's contingent. General Harris laid siege to Srirangapatna, on an island in the Kaveri, in April 1799, and the breach was stormed on 4 May. Tipu's body was found that evening near the water gate.
 
-Mysore was divided. The Company took Canara, Coimbatore and the coast; the Nizam took districts in the north, which he ceded to the Company in 1800; and a five-year-old Wodeyar prince was installed at Mysore as a subsidiary ally. After 1799 the Marathas were the last large independent power in the peninsula.
+Mysore was divided. The Company took Canara, Coimbatore and the coast; the Nizam took districts in the north, which he ceded to the Company in 1800; and Krishnaraja Wodeyar III, a boy of nearly five, was installed at Mysore as a subsidiary ally. After 1799 the Marathas were the last large independent power in the peninsula.
 
-Tipu is remembered both as a moderniser who fought the Company to the end and as a ruler whose campaigns in Coorg and Malabar included forced conversions. Both records are documented, and his legacy is still argued over in Karnataka politics.
+Tipu is remembered both as a moderniser who fought the Company to the end and as a ruler whose campaigns in Coorg and Malabar included forced conversions. Both records are documented. Karnataka's official celebration of his birth anniversary, held from 2015 and dropped in 2019, turned that argument into party politics.

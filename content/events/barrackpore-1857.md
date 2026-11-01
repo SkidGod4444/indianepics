@@ -15,6 +15,6 @@ sources:
 ---
 Cartridges for the new Enfield rifle, rumoured to be greased with cow and pig fat, had already caused trouble at Barrackpore and Berhampore early in 1857. On the afternoon of 29 March Mangal Pandey, armed and calling on his comrades to join him, wounded the adjutant and a sergeant-major on the parade ground, while the quarter guard under Jemadar Ishwari Prasad stood by. Pandey shot himself when cornered but survived; he was court-martialled and hanged on 8 April, the jemadar on 21 April, and the 34th was disbanded in May.
 
-Barrackpore was the first violent act of 1857, and it gave the British their name for the rebels, "Pandies". Six weeks later the rising began in earnest at Meerut.
+Barrackpore saw the first armed attack on British officers in 1857, and it gave the British their name for the rebels, "Pandies". Six weeks later the rising began in earnest at Meerut.
 
-What drove him is unclear. British accounts said he was intoxicated; nationalist history since Savarkar's book of 1909 made him the first martyr of a war of independence. The record shows a soldier's protest over the cartridge and the threat to caste, at a station already tense.
+What drove him is unclear. British accounts said he was intoxicated; nationalist history since Savarkar's book of 1909 made him the first martyr of a war of independence.

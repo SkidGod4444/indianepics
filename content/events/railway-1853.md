@@ -13,6 +13,7 @@ image: cst-mumbai
 sources:
   - { title: "Danvers, Report to the Secretary of State for India in Council on Railways in India to the end of the year 1859 (1860)", url: "https://archive.org/details/india.history.resource.109260" }
   - { title: "Arnold, The Marquis of Dalhousie's Administration of British India, vol. I (1862)", url: "https://archive.org/details/TheMarquisOfDalhousieSAdministrationOfBritishIndiaVolI" }
+  - { title: "Shridharani, Story of the Indian Telegraphs: A Century of Progress", url: "https://archive.org/details/in.ernet.dli.2015.242905", note: "Diamond Harbour line 1851; 4,000 miles to Peshawar, Bombay and Madras by February 1856" }
 ---
 The Great Indian Peninsula Railway's first train, fourteen carriages behind three locomotives, left Bori Bunder in the afternoon of 16 April 1853 with about 400 passengers and ran 21 miles to Thane. The East Indian Railway opened its first line out of Howrah the next year. Dalhousie's railway minute of 1853 laid out the trunk routes, built by private companies on a guaranteed return of five per cent paid from Indian revenues.
 

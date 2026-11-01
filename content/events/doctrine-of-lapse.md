@@ -14,6 +14,6 @@ sources:
 ---
 Hindu law let a ruler without sons adopt an heir. Dalhousie, Governor-General from 1848, held that a dependent state whose ruler died without a natural heir lapsed to the paramount power, and refused to recognise such adoptions: Satara in 1848, Jaitpur and Sambalpur in 1849, Udaipur in Chhattisgarh in 1852, and in 1854 Jhansi and the large Bhonsle kingdom of Nagpur, whose lands became the core of the Central Provinces. He also ended the pension of the last Peshwa's adopted son, Nana Sahib, and the title of the Nawab of the Carnatic.
 
-Awadh was taken in February 1856 on a different ground, misgovernment, and Wajid Ali Shah was sent to Calcutta. The annexations filled in the Company's map, and each one left a dispossessed court: Jhansi, Nana Sahib's Bithur and Lucknow all became centres of the rising a year later.
+Awadh was taken in February 1856 on a different ground, misgovernment, and the deposed Wajid Ali Shah moved to Calcutta, where he spent the rest of his life. The annexations filled in the Company's map, and each one left a dispossessed court: Jhansi, Nana Sahib's Bithur and Lucknow all became centres of the rising a year later.
 
 The principle did not begin with Dalhousie; earlier governments had applied it to small states. What was new was its systematic use. The Crown abandoned it after 1858.

@@ -12,10 +12,10 @@ summary_hi: अप्रैल 1917 में गांधी ने चंप�
 image: champaran-1917
 sources:
   - { title: "Prasad, Satyagraha in Champaran (1928)", url: "https://archive.org/details/in.ernet.dli.2015.202317" }
-  - { title: "Gandhi, An Autobiography, or The Story of My Experiments with Truth, part V", url: "https://archive.org/details/autobiographysto02gand" }
+  - { title: "Gandhi, An Autobiography, or The Story of My Experiments with Truth (1948 ed.), part V", url: "https://archive.org/details/in.ernet.dli.2015.201918" }
 ---
 Under the tinkathia system, tenants on the European-run estates of Champaran had to grow indigo on three kathas of every twenty, and when synthetic dye ruined the indigo trade the planters made them pay to be released from it. Rajkumar Shukla, a tenant, followed Gandhi from the Lucknow Congress until he agreed to come. Gandhi reached Motihari on 15 April 1917, was served an order to leave the district, and told the magistrate he would disobey it and accept the penalty. The case was withdrawn.
 
 With Rajendra Prasad and other Bihar lawyers he took down statements from thousands of tenants. The government appointed an inquiry with Gandhi as a member, and the Champaran Agrarian Act of 1918 abolished tinkathia. In Kheda in Gujarat the crops failed in 1917, and from March to June 1918 Gandhi and Vallabhbhai Patel led a refusal to pay land revenue until the government quietly suspended collection from the poorer farmers.
 
-These were Gandhi's first satyagrahas in India, three years after his return from South Africa, and they brought Prasad and Patel into his circle.
+These were Gandhi's first satyagrahas in India, two years after his return from South Africa, and they brought Prasad and Patel into his circle.

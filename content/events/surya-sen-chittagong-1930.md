@@ -8,7 +8,7 @@ date: { start: 1930, end: 1934 }
 location: { lat: 22.335, lng: 91.8325, name: "Chittagong" }
 tags: [political, colonial]
 summary: Surya Sen's Indian Republican Army seizes Chittagong's armouries on 18 April 1930; Sen is caught in 1933 and hanged in January 1934.
-summary_hi: 18 अप्रैल 1930 को सूर्य सेन की इंडियन रिपब्लिकन आर्मी ने चटगाँव के शस्त्रागारों पर कब्ज़ा किया; 1933 में सेन पकड़े गए और जनवरी 1934 में उन्हें फाँसी दी गई।
+summary_hi: 18 अप्रैल 1930 को सूर्य सेन की इंडियन रिपब्लिकन आर्मी ने चटगाँव के शस्त्रागारों पर क़ब्ज़ा किया; 1933 में सेन पकड़े गए और जनवरी 1934 में उन्हें फाँसी दी गई।
 image: surya-sen
 sources:
   - { title: "Kalpana Dutt, Chittagong Armoury Raiders: Reminiscences (1945)", url: "https://archive.org/details/in.ernet.dli.2015.59007" }
@@ -17,4 +17,4 @@ On the night of 18 April 1930 about 65 young men led by Surya Sen, a schoolteach
 
 The survivors carried on a guerrilla campaign from the villages for three years. On 24 September 1932 Pritilata Waddedar led an attack on the Pahartali European Club and took poison rather than be caught; Kalpana Dutta was arrested and later wrote the account cited here. Surya Sen was betrayed and captured in February 1933, and was hanged in Chittagong jail with Tarakeswar Dastidar on 12 January 1934.
 
-Chittagong is now in Bangladesh. The raid was the most ambitious armed action of the Bengal revolutionaries, and its women fighters, Pritilata and Kalpana among them, became as famous as its leader.
+Chittagong went to East Pakistan in 1947 and has been in Bangladesh since 1971. The raid was among the most ambitious armed actions of the Bengal revolutionaries, and its women fighters, Pritilata and Kalpana among them, became as famous as its leader.

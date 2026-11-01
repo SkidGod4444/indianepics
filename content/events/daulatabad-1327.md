@@ -1,7 +1,7 @@
 ---
 id: daulatabad-1327
 title: The move to Daulatabad
-title_hi: दौलताबाद को राजधानी
+title_hi: राजधानी दिल्ली से दौलताबाद
 track: evidence
 chapter: medieval
 date: { start: 1327, end: 1335, uncertainty: 1 }
@@ -11,7 +11,7 @@ summary: In 1327 Muhammad bin Tughluq makes Devagiri, renamed Daulatabad, a seco
 summary_hi: 1327 में मुहम्मद बिन तुग़लक़ ने देवगिरि को दौलताबाद नाम देकर दूसरी राजधानी बनाया और दिल्ली के अभिजात वर्ग को दक्षिण भेजा; लगभग 1335 तक दरबार लौट आया।
 image: daulatabad-fort
 sources:
-  - { title: "Elliot and Dowson, The History of India as Told by Its Own Historians, vol. III (1871)", url: "https://archive.org/details/in.ernet.dli.2015.458719", note: "Barani's Tarikh-i Firoz Shahi" }
+  - { title: "Elliot and Dowson, The History of India as Told by Its Own Historians, vol. III (1871)", url: "https://archive.org/details/in.ernet.dli.2015.458719", note: "Barani's Tarikh-i Firoz Shahi on the transfer to Daulatabad" }
   - { title: "Ibn Battuta, Travels in Asia and Africa 1325–1354, tr. Gibb (1929)", url: "https://archive.org/details/the-travels-of-ibn-battuta-1929" }
   - { title: "Jackson, The Delhi Sultanate: A Political and Military History (1999)" }
 ---

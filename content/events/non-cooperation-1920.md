@@ -11,6 +11,7 @@ summary: Congress and the Khilafat committees launch non-cooperation in 1920; af
 summary_hi: 1920 में कांग्रेस और ख़िलाफ़त समितियों ने असहयोग आंदोलन शुरू किया; 1922 में चौरी चौरा थाने को भीड़ द्वारा जलाए जाने के बाद गांधी ने उसे वापस ले लिया।
 image: chauri-chaura
 sources:
+  - { title: "Gandhi, 'The Crime of Chauri Chaura', Young India, 16 February 1922, in Collected Works of Mahatma Gandhi, vol. 22", url: "https://archive.org/details/in.ernet.dli.2015.162031" }
   - { title: "Amin, Event, Metaphor, Memory: Chauri Chaura, 1922–1992 (1995)" }
   - { title: "Tara Chand, History of the Freedom Movement in India, vol. 4 (1972)" }
 ---

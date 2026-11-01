@@ -17,4 +17,4 @@ Curzon's partition, announced in July and in force from 16 October 1905, created
 
 On 7 August 1905 a meeting at the Calcutta Town Hall resolved to boycott British goods. On 16 October Rabindranath Tagore led processions in which Hindus and Muslims tied rakhis on one another's wrists, and "Amar Sonar Bangla" dates from that year. Swadeshi brought national schools, Indian-owned mills and chemical works, bonfires of Manchester cloth, and a sharper politics: the Congress split between moderates and extremists at Surat in 1907, and some young men turned to bombs.
 
-Many Muslims of eastern Bengal welcomed the new province and its capital at Dacca, where the Muslim League was founded in 1906. The partition was annulled at the Delhi Durbar on 12 December 1911, and they took the reversal as a betrayal; a university for Dacca was promised the next year in compensation.
+Many Muslims of eastern Bengal welcomed the new province and its capital at Dacca, where the Muslim League was founded in 1906. Its reversal was announced at the Delhi Durbar on 12 December 1911, and they took it as a betrayal; a university for Dacca was promised the next year in compensation.
