@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import { ogFonts } from "@/lib/og-fonts";
+import { MARK_COLS, MARK_ROWS, markDots } from "@/lib/logo";
 
 export const dynamic = "force-static";
 export const alt = "indianepics: a history of the Indian subcontinent, on one map";
@@ -23,8 +24,18 @@ export default async function Image() {
         }}
       >
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 28 }}>
-          <span>
-            indian<span style={{ color: "#c2561a" }}>epics</span>
+          <span style={{ display: "flex", alignItems: "center", gap: 14 }}>
+            <span style={{ position: "relative", display: "flex", width: (MARK_COLS / MARK_ROWS.length) * 34, height: 34 }}>
+              {markDots().map((d) => (
+                <span
+                  key={`${d.x}-${d.y}`}
+                  style={{ position: "absolute", left: d.x * 3.4 + 0.5, top: d.y * 3.4 + 0.5, width: 2.4, height: 2.4, borderRadius: 999, background: "#c2561a" }}
+                />
+              ))}
+            </span>
+            <span style={{ display: "flex" }}>
+              indian<span style={{ color: "#c2561a" }}>epics</span>
+            </span>
           </span>
           <span style={{ fontSize: 22, color: "#8a8275" }}>indianepics.online</span>
         </div>

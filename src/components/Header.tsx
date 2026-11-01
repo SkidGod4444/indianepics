@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { GitPullRequestArrow } from "lucide-react";
 import { useLang } from "@/lib/i18n";
+import { Logo } from "./Logo";
 import { type Lang } from "@/lib/text";
 import { Button } from "@/components/ui/button";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
@@ -11,9 +11,7 @@ export function Header() {
   const { lang, setLang } = useLang();
   return (
     <header className="pointer-events-none fixed inset-x-0 top-0 z-30 flex items-center justify-between px-4 py-3 lg:px-6">
-      <Link href="/" className="pointer-events-auto font-display text-[20px] tracking-tight text-ink">
-        indian<span className="text-evidence">epics</span>
-      </Link>
+      <Logo className="pointer-events-auto" />
       <div className="pointer-events-auto flex items-center gap-2">
         <ToggleGroup
           type="single"
