@@ -5,6 +5,7 @@ import { LangProvider } from "@/lib/i18n";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/seo";
+import { Analytics } from "@vercel/analytics/next";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <LangProvider>
           <TooltipProvider delayDuration={200}>{children}</TooltipProvider>
         </LangProvider>
+        <Analytics />
       </body>
     </html>
   );
