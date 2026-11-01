@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { X } from "lucide-react";
 import type { EpicEvent } from "@/content/schema";
@@ -20,6 +20,12 @@ export function DetailOverlay({ ev, onClose }: { ev: EpicEvent; onClose: () => v
   const { lang } = useLang();
   const img = getImage(ev.image);
   const tradition = ev.track === "tradition";
+  const closeRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    // Keyboard and screen-reader users land inside the dialog, on its close button.
+    closeRef.current?.focus({ preventScroll: true });
+  }, []);
 
   useEffect(() => {
     const prev = document.body.style.overflow;
@@ -45,13 +51,16 @@ export function DetailOverlay({ ev, onClose }: { ev: EpicEvent; onClose: () => v
         transition={{ type: "spring", stiffness: 300, damping: 32 }}
         className="relative w-full max-w-[760px] overflow-hidden bg-paper text-ink shadow-[0_40px_120px_-40px_rgba(0,0,0,0.6)] sm:rounded-2xl"
         onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={`detail-${ev.id}`}
       >
         <div className="sticky top-0 z-10 flex items-center justify-between border-b border-hair bg-paper/90 px-5 py-3 backdrop-blur-sm sm:px-8">
           <span className={`flex items-center gap-2 text-[12px] ${tradition ? "text-tradition" : "text-evidence"}`}>
             <DotGlyph name={glyphFor(ev)} size={22} />
             {tradition ? "Tradition" : "Evidence"} · {ev.location.name}
           </span>
-          <Button size="icon-sm" variant="ghost" onClick={onClose} aria-label="Close">
+          <Button ref={closeRef} size="icon-sm" variant="ghost" onClick={onClose} aria-label="Close">
             <X />
           </Button>
         </div>
@@ -81,7 +90,7 @@ export function DetailOverlay({ ev, onClose }: { ev: EpicEvent; onClose: () => v
           </figure>
         ) : null}
         <div className="px-5 pb-12 pt-6 sm:px-8">
-          <motion.h1 layoutId={`title-${ev.id}`} className={`${langClass(lang)} mb-6 text-[clamp(1.9rem,4vw,2.8rem)] leading-[1.05] text-ink`}>
+          <motion.h1 id={`detail-${ev.id}`} layoutId={`title-${ev.id}`} className={`${langClass(lang)} mb-6 text-[clamp(1.9rem,4vw,2.8rem)] leading-[1.05] text-ink`}>
             {pick(ev, "title", lang)}
           </motion.h1>
           <EventBody ev={ev} lang={lang} showTitle={false} showImage={false} />

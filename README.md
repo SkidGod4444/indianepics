@@ -65,3 +65,17 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Good first issues: trace the six approxi
 ## Licences
 
 Code MIT. Content (everything under `content/`) CC BY-SA 4.0. Images carry their own licences; see the manifest.
+
+## For search engines and agents
+
+Every page is static HTML with a canonical URL, Open Graph and Twitter cards, a generated OG image (`/opengraph-image`, `/event/<id>/opengraph-image`) and JSON-LD (`Article` + `Event` with coordinates and dates for events, `CollectionPage` for chapters, `WebSite` on the home page). `/sitemap.xml` and `/robots.txt` are generated at build time.
+
+Every page also has a Markdown twin for agents and offline readers, built by `scripts/build-llms.ts` into `public/`:
+
+| Page | Markdown |
+| --- | --- |
+| `/` | `/llms.txt` (index) and `/llms-full.txt` (the whole corpus) |
+| `/chapter/<id>/` | `/chapter/<id>.md` |
+| `/event/<id>/` | `/event/<id>.md` |
+
+Each HTML page links its twin with `<link rel="alternate" type="text/markdown">`, and the index at the foot of the home page lists every `.md`. Set `NEXT_PUBLIC_SITE_URL` (see `.env.example`) so canonical URLs, the sitemap and the Markdown links point at your deployment.

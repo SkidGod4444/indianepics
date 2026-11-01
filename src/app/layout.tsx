@@ -4,6 +4,7 @@ import "./globals.css";
 import { LangProvider } from "@/lib/i18n";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/seo";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -26,9 +27,17 @@ const devanagari = Noto_Serif_Devanagari({
 });
 
 export const metadata: Metadata = {
-  title: "indianepics",
-  description:
-    "A scroll-driven map of the Indian subcontinent from the Itihasa to today. Two tracks: tradition and evidence. Open data, open source.",
+  metadataBase: new URL(SITE_URL),
+  title: { default: "indianepics · a scroll-driven atlas of the Indian subcontinent", template: "%s · indianepics" },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  keywords: ["Indian history", "historical atlas", "map", "timeline", "Itihasa", "Maurya", "Mughal", "British Raj", "freedom struggle", "Republic of India", "open data"],
+  authors: [{ name: "indianepics contributors", url: "https://github.com/SkidGod4444/indianepics" }],
+  alternates: { canonical: "/", types: { "text/markdown": "/llms-full.txt", "text/plain": "/llms.txt" } },
+  openGraph: { type: "website", siteName: SITE_NAME, locale: "en_IN", alternateLocale: ["hi_IN"], url: "/", title: "indianepics", description: SITE_DESCRIPTION },
+  twitter: { card: "summary_large_image", title: "indianepics", description: SITE_DESCRIPTION },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
+  category: "education",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

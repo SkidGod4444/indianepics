@@ -1,20 +1,26 @@
+"use client";
+
 import type { EpicEvent } from "@/content/schema";
 import { formatRange, paragraphs } from "@/lib/content";
 import { pick, langClass, type Lang } from "@/lib/text";
+import { useLang } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ImageStage } from "./ImageStage";
 
 type Props = {
   ev: EpicEvent;
-  lang: Lang;
+  /** Defaults to the header's language toggle, so the static /event/<id>/ page follows it too. */
+  lang?: Lang;
   heading?: "h1" | "h2";
   showTitle?: boolean;
   showImage?: boolean;
 };
 
-/** Shared by the in-page detail overlay and the static /event/[slug] page. No hooks, renders on the server too. */
-export function EventBody({ ev, lang, heading = "h2", showTitle = true, showImage = true }: Props) {
+/** Shared by the in-page detail overlay and the static /event/[slug] page (prerendered in English, then follows the toggle). */
+export function EventBody({ ev, lang: langProp, heading = "h2", showTitle = true, showImage = true }: Props) {
+  const ctx = useLang();
+  const lang = langProp ?? ctx.lang;
   const H = heading;
   const tradition = ev.track === "tradition";
   return (

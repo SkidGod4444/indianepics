@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "bun scripts/build-content.ts && next dev",
-    "build": "bun scripts/build-content.ts && next build",
+    "dev": "bun scripts/build-content.ts && bun scripts/build-llms.ts && next dev",
+    "build": "bun scripts/build-content.ts && bun scripts/build-llms.ts && next build",
     "start": "bunx serve out",
     "lint": "eslint",
-    "content": "bun scripts/build-content.ts",
+    "content": "bun scripts/build-content.ts && bun scripts/build-llms.ts",
     "images": "bun scripts/fetch-images.ts",
     "typecheck": "tsc --noEmit",
     "icons": "bun scripts/gen-icons.ts"

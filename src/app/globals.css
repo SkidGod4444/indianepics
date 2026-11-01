@@ -170,6 +170,9 @@ body,
 svg .era-fill {
   transition: fill 700ms ease, stroke 700ms ease;
 }
+svg .era-stop {
+  transition: stop-color 700ms ease;
+}
 
 /* Per-era texture laid over the stage. */
 .era-pattern::after {
@@ -185,9 +188,15 @@ svg .era-fill {
 .font-hi {
   font-family: var(--font-hi);
 }
+/* Devanagari carries matras above and below the line: display leading tuned for Fraunces clips them. */
+:is(h1, h2, h3).font-hi {
+  line-height: 1.22;
+}
 
 /* The browser's own scroll bar: thin, on the paper, in the era's accent. */
 html {
+  /* Keep the gutter when the detail view locks scrolling, so the page never jumps sideways on classic scroll bars. */
+  scrollbar-gutter: stable;
   scrollbar-width: thin;
   scrollbar-color: var(--ink-3) var(--paper-2);
 }

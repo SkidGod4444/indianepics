@@ -28,7 +28,7 @@ export function Header() {
           <ToggleGroupItem value="en" aria-label="English" className="text-[12px] data-[state=on]:bg-ink data-[state=on]:text-paper">
             EN
           </ToggleGroupItem>
-          <ToggleGroupItem value="hi" aria-label="Hindi" className="font-hi text-[12px] data-[state=on]:bg-ink data-[state=on]:text-paper">
+          <ToggleGroupItem value="hi" aria-label="Hindi" className="font-hi pt-0.5 text-[12px] data-[state=on]:bg-ink data-[state=on]:text-paper">
             हिं
           </ToggleGroupItem>
         </ToggleGroup>

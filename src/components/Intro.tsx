@@ -1,11 +1,13 @@
 "use client";
 
+import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { Play, ArrowDown } from "lucide-react";
 import type { Chapter } from "@/content/schema";
 import { useLang } from "@/lib/i18n";
 import { pick } from "@/lib/text";
 import { glyphForChapter } from "@/lib/timeline";
+import { BASE_ERA } from "@/lib/eras";
 import { Button } from "@/components/ui/button";
 import { DotGlyph } from "./DotGlyph";
 import { DotIndia } from "./DotIndia";
@@ -21,23 +23,35 @@ type Props = {
 export function Intro({ chapters, eventCount, onPlay, onSeek }: Props) {
   const { lang } = useLang();
   const hi = lang === "hi";
-  const { scrollY } = useScroll();
-  const fade = useTransform(scrollY, [0, 420], [1, 0]);
-  const lift = useTransform(scrollY, [0, 420], [0, -40]);
+  // Fade with the hero's own bottom edge: fully read while it is on screen, gone exactly when the stage
+  // fades in (first chapter at 55% of the viewport). A fixed pixel window left phones on a blank screen.
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["end end", "end 0.55"] });
+  const fade = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const lift = useTransform(scrollYProgress, [0, 1], [0, -40]);
   const rise = { initial: { opacity: 0, y: 14 }, animate: { opacity: 1, y: 0 } };
 
   return (
-    <section className="relative z-[2] overflow-hidden px-5 pb-10 pt-20 lg:px-10 lg:pt-24">
+    <section ref={ref} className="relative z-[2] overflow-hidden px-5 pb-10 pt-20 lg:px-10 lg:pt-24">
       <motion.div style={{ opacity: fade, y: lift }} className="mx-auto flex min-h-[calc(100svh-7.5rem)] max-w-[1280px] flex-col">
         <div className="grid flex-1 items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-4">
           <div className="relative z-10">
-            <motion.p {...rise} transition={{ duration: 0.5 }} className="mb-5 text-[11px] font-medium uppercase tracking-[0.2em] text-ink-3">
+            <motion.p {...rise} transition={{ duration: 0.5 }} className={`mb-5 font-medium text-ink-3 ${hi ? "font-hi text-[12.5px]" : "text-[11px] uppercase tracking-[0.2em]"}`}>
               {hi ? "एक स्क्रॉल-चालित एटलस" : "A scroll-driven atlas"} · {chapters.length} {hi ? "अध्याय" : "chapters"} · {eventCount} {hi ? "पिन" : "pins"} ·{" "}
               {hi ? "खुला डेटा" : "open data"}
             </motion.p>
             <motion.h1
               {...rise}
               transition={{ duration: 0.6, delay: 0.08 }}
+              // Pinned to the base type setting: when an era sets a heavier face the headline would rewrap,
+              // the hero would grow, and every seek computed before that (chips, Start, Play) would land short.
+              style={
+                {
+                  "--display-opsz": BASE_ERA.display.opsz,
+                  "--display-soft": BASE_ERA.display.soft,
+                  "--display-weight": BASE_ERA.display.weight,
+                } as React.CSSProperties
+              }
               className={`${hi ? "font-hi" : "font-display"} text-[clamp(2.8rem,6.4vw,6rem)] leading-[0.95] tracking-[-0.02em] text-ink [text-wrap:balance]`}
             >
               {hi ? (
@@ -86,7 +100,7 @@ export function Intro({ chapters, eventCount, onPlay, onSeek }: Props) {
           >
             <div className="pointer-events-none absolute inset-[-12%] -z-10 rounded-full bg-[radial-gradient(closest-side,var(--evidence-soft),transparent_72%)] opacity-60" />
             <DotIndia className="mx-auto block h-[min(560px,56vh)] w-auto max-w-full" />
-            <p className="mt-2 text-center text-[10.5px] uppercase tracking-[0.18em] text-ink-3">
+            <p className={`mt-2 text-center text-ink-3 ${hi ? "font-hi text-[12px]" : "text-[10.5px] uppercase tracking-[0.18em]"}`}>
               {hi ? "नैचुरल अर्थ, भारतीय दृष्टिकोण संस्करण" : "Natural Earth, India point-of-view edition"}
             </p>
           </motion.div>
@@ -107,7 +121,7 @@ export function Intro({ chapters, eventCount, onPlay, onSeek }: Props) {
                 hi ? "font-hi" : ""
               }`}
             >
-              <span className={`rounded-full p-1 ${c.track === "tradition" ? "text-tradition" : "text-evidence"}`}>
+              <span aria-hidden className={`rounded-full p-1 ${c.track === "tradition" ? "text-tradition" : "text-evidence"}`}>
                 <DotGlyph name={glyphForChapter(c)} size={18} />
               </span>
               <span className="text-[10px] tabular-nums text-ink-3">{String(i + 1).padStart(2, "0")}</span>

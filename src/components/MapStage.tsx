@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { interpolate } from "flubber";
 import type { GeoProjection } from "d3-geo";
 import type { Chapter, EpicEvent, Polity } from "@/content/schema";
@@ -28,12 +28,19 @@ const MORPH_WINDOW = 0.22;
 
 export function MapStage({ size, projection, chapters, polities, visible, pos, frac, activeEventId, onPick }: Props) {
   const { lang } = useLang();
+  const reduce = useReducedMotion();
   const path = useMemo(() => pathFor(projection), [projection]);
 
   const countryPaths = useMemo(
     () => countries.features.map((f) => ({ name: f.properties.name, d: path(f) ?? "" })),
     [path],
   );
+  // The geometry is cut to a box (55–105°E, up to ~42.6°N). Feather its west, east and north edges
+  // into the water so the land never ends in a ruled line on wide screens.
+  const edge = useMemo(() => {
+    const [[x0, y0], [x1, y1]] = path.bounds(countries);
+    return { x0, y0, x1, y1, f: Math.max(40, Math.min(120, (x1 - x0) * 0.1)) };
+  }, [path]);
 
   const polityPath = useMemo(() => {
     const m = new Map<string, string>();
@@ -81,9 +88,21 @@ export function MapStage({ size, projection, chapters, polities, visible, pos, f
           <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
             <line x1="0" y1="0" x2="0" y2="6" stroke={trackColor} strokeWidth="0.8" opacity="0.35" />
           </pattern>
+          <linearGradient id="fade-w" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" stopColor="var(--water)" stopOpacity="1" className="era-stop" />
+            <stop offset="1" stopColor="var(--water)" stopOpacity="0" className="era-stop" />
+          </linearGradient>
+          <linearGradient id="fade-e" x1="1" x2="0" y1="0" y2="0">
+            <stop offset="0" stopColor="var(--water)" stopOpacity="1" className="era-stop" />
+            <stop offset="1" stopColor="var(--water)" stopOpacity="0" className="era-stop" />
+          </linearGradient>
+          <linearGradient id="fade-n" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stopColor="var(--water)" stopOpacity="1" className="era-stop" />
+            <stop offset="1" stopColor="var(--water)" stopOpacity="0" className="era-stop" />
+          </linearGradient>
           <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
-            <stop offset="60%" stopColor="var(--paper)" stopOpacity="0" />
-            <stop offset="100%" stopColor="var(--paper)" stopOpacity="0.9" />
+            <stop offset="60%" stopColor="var(--paper)" stopOpacity="0" className="era-stop" />
+            <stop offset="100%" stopColor="var(--paper)" stopOpacity="0.9" className="era-stop" />
           </radialGradient>
         </defs>
         <rect width={size.w} height={size.h} fill="var(--water)" className="era-fill" />
@@ -99,6 +118,11 @@ export function MapStage({ size, projection, chapters, polities, visible, pos, f
               strokeLinejoin="round"
             />
           ))}
+        </g>
+        <g pointerEvents="none">
+          <rect x={edge.x0 - 1} y={edge.y0 - 1} width={edge.f} height={edge.y1 - edge.y0 + 2} fill="url(#fade-w)" />
+          <rect x={edge.x1 - edge.f + 1} y={edge.y0 - 1} width={edge.f} height={edge.y1 - edge.y0 + 2} fill="url(#fade-e)" />
+          <rect x={edge.x0 - 1} y={edge.y0 - 1} width={edge.x1 - edge.x0 + 2} height={edge.f} fill="url(#fade-n)" />
         </g>
         {d ? (
           <g style={{ opacity: polityOpacity, transition: "opacity 300ms" }}>
@@ -117,6 +141,8 @@ export function MapStage({ size, projection, chapters, polities, visible, pos, f
               const active = e.id === activeEventId;
               // Dense chapters: only the active pin and the last few visited keep their labels.
               const labelled = active || i >= visible.length - 4;
+              // Wide screens put the active card to the right of a pin left of centre: name that pin on its left.
+              const flip = active && size.w >= 1024 && x < size.w / 2;
               const color = e.track === "tradition" ? "var(--tradition)" : "var(--evidence)";
               return (
                 <motion.g
@@ -128,7 +154,8 @@ export function MapStage({ size, projection, chapters, polities, visible, pos, f
                   style={{ transformOrigin: `${x}px ${y}px`, cursor: "pointer" }}
                   onClick={() => onPick(e)}
                 >
-                  {active ? (
+                  {active && reduce ? <circle cx={x} cy={y} r={14} fill="none" stroke={color} strokeWidth={1} opacity={0.5} /> : null}
+                  {active && !reduce ? (
                     <>
                       <motion.circle
                         cx={x}
@@ -160,8 +187,9 @@ export function MapStage({ size, projection, chapters, polities, visible, pos, f
                   )}
                   {labelled ? (
                     <text
-                      x={x + 10}
+                      x={flip ? x - 12 : x + 10}
                       y={y + 4}
+                      textAnchor={flip ? "end" : "start"}
                       fontSize={11}
                       fill="var(--ink)"
                       stroke="var(--paper)"
