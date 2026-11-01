@@ -16,7 +16,7 @@ voice: >-
 voice_hi: >-
   18 मई 1974 को पोखरण के पास थार रेगिस्तान के नीचे भारत एक धमाका करता है, जिसे वह शांतिपूर्ण परमाणु विस्फोट कहता है। उसका कूट नाम है स्माइलिंग बुद्धा।
   मई 1998 में पाँच और धमाके होते हैं, और भारत ख़ुद को परमाणु हथियार संपन्न देश घोषित करता है।
-  दो हफ़्ते के भीतर पाकिस्तान भी परीक्षण करता है। प्रतिबंध लगते हैं।
+  कुछ ही हफ़्तों में पाकिस्तान भी परीक्षण करता है। प्रतिबंध लगते हैं।
 sources:
   - { title: "Evolution of India's Nuclear Policy, paper laid in Parliament on 27 May 1998 (Conference on Disarmament document CD/1524)", url: "https://digitallibrary.un.org/record/258962" }
   - { title: "Perkovich, India's Nuclear Bomb (1999)" }

@@ -10,11 +10,11 @@ tags: [science]
 summary: At twenty-three, Aryabhata completes a compact Sanskrit treatise on mathematics and astronomy, with a value of pi and a rotating Earth.
 summary_hi: तेईस वर्ष की आयु में आर्यभट ने गणित और खगोल पर एक संक्षिप्त संस्कृत ग्रंथ पूरा किया, जिसमें पाई का मान और घूमती पृथ्वी की बात है।
 voice: >-
-  Aryabhata writes that he is twenty-three, and that 3,600 years of the Kali age have passed. That makes it 499 CE.
+  Aryabhata writes that he is twenty-three, and that 3,600 years of the Kali age have passed. That makes it the year 499.
   In 121 verses he gives pi as 3.1416, and says that it is the Earth that turns, while the stars stand still.
   In Kerala, astronomers will carry his methods for a thousand years.
 voice_hi: >-
-  आर्यभट लिखते हैं कि वे तेईस वर्ष के हैं, और कलियुग के 3,600 वर्ष बीत चुके हैं। यानी 499 ईसवी।
+  आर्यभट लिखते हैं कि वे तेईस वर्ष के हैं, और कलियुग के 3,600 वर्ष बीत चुके हैं। यानी सन 499।
   121 श्लोकों में वे पाई का मान 3.1416 बताते हैं, और कहते हैं कि घूमती पृथ्वी है, तारे स्थिर हैं।
   केरल के खगोलविद हज़ार वर्ष तक उनकी विधियों को आगे ले जाएँगे।
 image: aryabhata-statue

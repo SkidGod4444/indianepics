@@ -10,11 +10,13 @@ tags: [science, political]
 summary: On the night of 2-3 December 1984 methyl isocyanate leaks from Union Carbide's pesticide plant; thousands die in the crowded settlements around it.
 summary_hi: 2-3 दिसंबर 1984 की रात यूनियन कार्बाइड के कीटनाशक संयंत्र से मिथाइल आइसोसाइनेट गैस रिसी; आसपास की घनी बस्तियों में हज़ारों लोग मारे गए।
 voice: >-
-  On the night of 2 December 1984, about forty tonnes of methyl isocyanate leak from Union Carbide's plant over the crowded settlements of Bhopal.
+  On the night of 2 December 1984, Union Carbide's Bhopal plant leaks about forty tonnes of methyl isocyanate.
+  It drifts over crowded settlements.
   The state counts 3,787 dead. Independent estimates run far higher. Hundreds of thousands are hurt.
   In 2025 the stored waste is taken away. The poisoned soil and water are not.
 voice_hi: >-
-  2 दिसंबर 1984 की रात भोपाल में यूनियन कार्बाइड के कारख़ाने से लगभग चालीस टन मिथाइल आइसोसाइनेट रिसकर आसपास की बस्तियों पर फैल जाती है।
+  2 दिसंबर 1984 की रात भोपाल में यूनियन कार्बाइड के कारख़ाने से लगभग चालीस टन मिथाइल आइसोसाइनेट रिसती है।
+  गैस आसपास की घनी बस्तियों पर फैल जाती है।
   राज्य सरकार 3,787 मौतें गिनती है। स्वतंत्र अनुमान कहीं ज़्यादा हैं, और लाखों लोग घायल होते हैं।
   2025 में जाकर जमा कचरा हटाया जाता है। ज़हरीली मिट्टी और पानी वहीं के वहीं हैं।
 image: bhopal-carbide

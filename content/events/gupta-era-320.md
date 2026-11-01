@@ -10,11 +10,11 @@ tags: [political, state-formation]
 summary: The Gupta era begins in 319-320 CE, most likely with Chandragupta I's accession; coins show his marriage to a Licchavi princess.
 summary_hi: गुप्त संवत 319-320 ई. में आरंभ होता है, संभवतः चंद्रगुप्त प्रथम के राज्यारोहण से; सिक्कों पर लिच्छवि राजकुमारी से उसका विवाह अंकित है।
 voice: >-
-  In 319 CE a new count of years begins, and the Guptas will date their inscriptions by it.
+  In 319 a new count of years begins, and the Guptas will date their inscriptions by it.
   Chandragupta the First takes a title no one in his family has held, king of great kings.
   On his gold coins he stands beside his queen, Kumaradevi, of the old Licchavi clan of Vaishali. Their son will boast of his mother's people.
 voice_hi: >-
-  319 ईसवी में वर्षों की एक नई गिनती शुरू होती है, और गुप्त अपने अभिलेखों की तिथियाँ इसी से देंगे।
+  सन 319 में वर्षों की एक नई गिनती शुरू होती है, और गुप्त अपने अभिलेखों की तिथियाँ इसी से देंगे।
   चंद्रगुप्त प्रथम एक ऐसी उपाधि लेते हैं, जो उनके कुल में पहले किसी ने नहीं ली थी, महाराजाधिराज।
   अपने सोने के सिक्कों पर वे रानी कुमारदेवी के साथ खड़े हैं, जो वैशाली के पुराने लिच्छवि कुल की हैं। उनका बेटा अपनी माँ के कुल पर गर्व करेगा।
 image: gupta-coin-kumaradevi

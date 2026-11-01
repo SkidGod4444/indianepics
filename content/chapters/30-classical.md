@@ -7,13 +7,13 @@ kicker: c. 180 BCE to 750 CE
 voice: >-
   After the Mauryas, no one holds the whole.
   The Satavahanas rule the Deccan. Greeks, Shakas and then Kushans come through the north-west. In the Tamil country reign the Chera, the Chola and the Pandya.
-  From about 320 CE the Guptas build the largest state of their time on the Ganga plain.
+  From about the year 320 the Guptas build the largest state of their time on the Ganga plain.
   These are the centuries of Aryabhata, of Nalanda, of the painted caves at Ajanta.
   By the seventh century Harsha rules from Kannauj, and in the south the Chalukyas and the Pallavas go to war.
 voice_hi: >-
   मौर्यों के बाद पूरा उपमहाद्वीप किसी एक के हाथ में नहीं रहता।
   दक्कन में सातवाहन हैं। उत्तर-पश्चिम से यूनानी, शक और फिर कुषाण आते हैं। तमिल देश में चेर, चोल और पांड्य राजा हैं।
-  लगभग 320 ईसवी से गुप्त गंगा के मैदान में अपने समय का सबसे बड़ा राज्य खड़ा करते हैं।
+  लगभग सन 320 से गुप्त गंगा के मैदान में अपने समय का सबसे बड़ा राज्य खड़ा करते हैं।
   यही सदियाँ हैं आर्यभट की, नालंदा की, अजंता की चित्रित गुफाओं की।
   सातवीं सदी तक हर्ष कन्नौज से राज करते हैं, और दक्षिण में चालुक्य और पल्लव आपस में टकराते हैं।
 track: evidence

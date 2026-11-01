@@ -11,11 +11,13 @@ summary: At the Pallava port east of Kanchipuram, granite is cut into cave shrin
 summary_hi: कांचीपुरम के पूर्व में पल्लव बंदरगाह पर ग्रेनाइट को काटकर गुफा-मंदिर, एकाश्म रथ और विशाल शिला-उत्कीर्णन बने, और समुद्र तट पर तट मंदिर उठा।
 voice: >-
   The town is named for Mamalla, the Pallava king who took the Chalukya capital, Vatapi, in 642.
-  By the sea, granite becomes shrines, chariots of single rock, and a vast relief read as Arjuna's penance, or the Ganga's descent.
+  By the sea, granite becomes shrines and chariots of single rock.
+  A vast relief is read as Arjuna's penance, or the Ganga's descent.
   From this port Pallava letters sail east, to become Khmer, Thai and Javanese script.
 voice_hi: >-
   इस नगर का नाम मामल्ल से है, उस पल्लव राजा से जिसने 642 में चालुक्यों की राजधानी वातापी ले ली।
-  समुद्र किनारे ग्रेनाइट को मंदिरों में, एक ही चट्टान से कटे रथों में, और एक विशाल उकेरी हुई कथा में बदला जाता है, जिसे कोई अर्जुन की तपस्या पढ़ता है, कोई गंगा का अवतरण।
+  समुद्र किनारे ग्रेनाइट मंदिरों में और एक ही चट्टान से कटे रथों में बदल जाता है।
+  एक विशाल उकेरी हुई कथा को कोई अर्जुन की तपस्या पढ़ता है, कोई गंगा का अवतरण।
   इसी बंदरगाह से पल्लव अक्षर पूरब की ओर जाते हैं, और ख्मेर, थाई और जावा की लिपियाँ बन जाते हैं।
 image: shore-temple
 sources:

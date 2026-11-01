@@ -10,11 +10,13 @@ tags: [state-formation, science]
 summary: On an island in the Rann of Kutch, a walled Harappan city stores monsoon water in rock-cut reservoirs and leaves ten large signs by its north gate.
 summary_hi: कच्छ के रण के एक द्वीप पर परकोटे वाला हड़प्पा नगर, जो चट्टान काटकर बने जलाशयों में बरसाती पानी सँजोता था और उत्तरी द्वार पर दस बड़े चिह्न छोड़ गया।
 voice: >-
-  On an island in the Rann of Kutch, one of the driest corners of the Harappan world, a city cuts its reservoirs into the rock and waits for the monsoon.
+  An island in the Rann of Kutch, one of the driest corners of the Harappan world.
+  Here a city cuts its reservoirs into the rock and waits for the monsoon.
   By the north gate lies a fallen signboard, ten signs in white gypsum, the largest of the Indus script.
   No one has ever read it.
 voice_hi: >-
-  कच्छ के रण में एक द्वीप पर, हड़प्पा संसार के सबसे सूखे कोनों में से एक में, एक नगर चट्टान काटकर जलाशय बनाता है और मानसून की राह देखता है।
+  कच्छ के रण में एक द्वीप, हड़प्पा संसार के सबसे सूखे कोनों में से एक।
+  यहाँ एक नगर चट्टान काटकर जलाशय बनाता है और मानसून की राह देखता है।
   उत्तरी द्वार के पास एक गिरा हुआ नामपट्ट पड़ा है, सफ़ेद जिप्सम के दस चिह्न, सिंधु लिपि के सबसे बड़े।
   उसे आज तक कोई पढ़ नहीं पाया।
 image: dholavira
