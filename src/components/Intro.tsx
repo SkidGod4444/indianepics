@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import { Play, ArrowDown } from "lucide-react";
+import { Play, ArrowDown, Pause } from "lucide-react";
 import type { Chapter } from "@/content/schema";
 import { useLang } from "@/lib/i18n";
 import { pick } from "@/lib/text";
@@ -15,11 +15,13 @@ import { DotIndia } from "./DotIndia";
 type Props = {
   chapters: Chapter[];
   onPlay: () => void;
+  /** True while the story (or its prologue) is running, so the button reads Pause. */
+  playing?: boolean;
   onSeek: (chapter: number) => void;
 };
 
 /** The hero: the subcontinent in breathing dots, the promise in one line, and two ways in. */
-export function Intro({ chapters, onPlay, onSeek }: Props) {
+export function Intro({ chapters, onPlay, onSeek, playing = false }: Props) {
   const { lang } = useLang();
   const hi = lang === "hi";
   // Fade with the hero's own bottom edge: fully read while it is on screen, gone exactly when the stage
@@ -70,9 +72,9 @@ export function Intro({ chapters, onPlay, onSeek }: Props) {
                 : "One map, two tracks. The Itihasa-Purana tradition and the archaeological record share a scroll, never a scale. Every chapter brings its own paper, its own light and its own drawings; the pins, the empires and the year follow as you go."}
             </motion.p>
             <motion.div {...rise} transition={{ duration: 0.5, delay: 0.3 }} className="mt-8 flex flex-wrap items-center gap-3">
-              <Button size="lg" onClick={onPlay} className="rounded-full px-6">
-                <Play data-icon="inline-start" />
-                {hi ? "कहानी चलाएँ" : "Play the story"}
+              <Button size="lg" onClick={onPlay} aria-pressed={playing} className="rounded-full px-6">
+                {playing ? <Pause data-icon="inline-start" /> : <Play data-icon="inline-start" />}
+                {playing ? (hi ? "रोकें" : "Pause") : hi ? "कहानी चलाएँ" : "Play the story"}
               </Button>
               <Button size="lg" variant="outline" onClick={() => onSeek(0)} className="rounded-full bg-paper/70 px-6 backdrop-blur-sm">
                 <ArrowDown data-icon="inline-start" />

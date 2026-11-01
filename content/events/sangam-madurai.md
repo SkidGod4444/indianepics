@@ -9,6 +9,14 @@ location: { lat: 9.92, lng: 78.12, name: "Madurai, Tamil Nadu" }
 tags: [language, art, trade]
 summary: Tamil poets of love and war compose the Sangam anthologies under the Chera, Chola and Pandya kings, while Roman ships trade at Muziris and Arikamedu.
 summary_hi: चेर, चोल और पांड्य राजाओं के समय तमिल कवियों ने प्रेम और युद्ध के संगम काव्य रचे, जब रोमन जहाज़ मुज़िरिस और अरिकमेडु में व्यापार करते थे।
+voice: >-
+  In the Tamil country, poets divide the world in two. Akam, the inner world of love. Puram, the outer world of kings and war.
+  Their poems name the Chera, Chola and Pandya kings, and the Yavana ships that bring gold and wine for pepper.
+  At Arikamedu, the wine jars of Rome come out of the ground.
+voice_hi: >-
+  तमिल देश में कवि संसार को दो हिस्सों में बाँटते हैं। अकम, प्रेम का भीतरी संसार। पुरम, राजाओं और युद्ध का बाहरी संसार।
+  उनकी कविताओं में चेर, चोल और पांड्य राजाओं के नाम हैं, और उन यवन जहाज़ों के, जो काली मिर्च के बदले सोना और शराब लाते हैं।
+  अरिकमेडु की मिट्टी से रोम के शराब के घड़े निकलते हैं।
 image: sangam-keeladi
 sources:
   - { title: "Hart, G. L., The Poems of Ancient Tamil: Their Milieu and Their Sanskrit Counterparts (1975)" }

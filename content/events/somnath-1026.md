@@ -9,6 +9,14 @@ location: { lat: 20.888, lng: 70.401, name: "Somnath, Prabhas Patan, Gujarat" }
 tags: [war, religion]
 summary: In January 1026 Mahmud of Ghazni sacks the Somanatha temple on the Saurashtra coast, the most remembered of his raids into India.
 summary_hi: जनवरी 1026 में महमूद ग़ज़नवी ने सौराष्ट्र तट पर सोमनाथ मंदिर को लूटा; भारत पर उसके हमलों में यह सबसे अधिक याद किया जाता है।
+voice: >-
+  In January 1026 Mahmud of Ghazni reaches Somnath on the Saurashtra coast, and sacks the temple.
+  Ibn al-Athir counts more than fifty thousand dead, and a treasure of over two million dinars.
+  Mahmud holds no land here. He goes home, the Chaulukya king returns, and the temple will rise again.
+voice_hi: >-
+  जनवरी 1026 में ग़ज़नी के महमूद सौराष्ट्र तट पर सोमनाथ पहुँचते हैं, और मंदिर को लूटते हैं।
+  इब्न अल-असीर पचास हज़ार से ज़्यादा मृतकों और बीस लाख दीनार से अधिक के ख़ज़ाने का ज़िक्र करते हैं।
+  महमूद यहाँ कोई ज़मीन नहीं रखते। वे लौट जाते हैं, चौलुक्य राजा लौट आते हैं, और मंदिर फिर से खड़ा होगा।
 image: somnath-temple
 sources:
   - { title: "Thapar, Somanatha: The Many Voices of a History (2004)" }

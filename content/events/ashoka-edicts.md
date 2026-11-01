@@ -9,6 +9,14 @@ location: { lat: 21.525, lng: 70.480, name: "Girnar rock edict, Junagadh, Gujara
 tags: [political, language, religion]
 summary: Rock and pillar edicts in Prakrit, Greek and Aramaic, from Kandahar to Karnataka; the oldest deciphered, datable writing from India.
 summary_hi: प्राकृत, यूनानी और अरामी में कंधार से कर्नाटक तक शिलालेख और स्तंभलेख; भारत का सबसे पुराना पढ़ा जा चुका, तिथि-निर्धारित लेखन।
+voice: >-
+  From Kandahar to Karnataka, in Prakrit, Greek and Aramaic, the emperor speaks from the rock.
+  In 1837 James Prinsep reads the Brahmi script, and the voice returns.
+  But the edicts call him by a title, Devanampiya Piyadasi. His own name, Ashoka, is found on a rock at Maski only in 1915.
+voice_hi: >-
+  कंधार से कर्नाटक तक, प्राकृत, यूनानी और अरामी में, सम्राट चट्टानों से बोलते हैं।
+  1837 में जेम्स प्रिंसेप ब्राह्मी लिपि पढ़ लेते हैं, और वह आवाज़ लौट आती है।
+  पर अभिलेख उन्हें एक उपाधि से पुकारते हैं, देवानंपिय पियदसि। उनका अपना नाम, अशोक, 1915 में जाकर मास्की के एक अभिलेख पर मिलता है।
 image: girnar-edict
 sources:
   - { title: "Hultzsch, Inscriptions of Asoka (Corpus Inscriptionum Indicarum I, 1925)", url: "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch" }

@@ -9,6 +9,14 @@ location: { lat: 25.431, lng: 81.875, name: "Allahabad Fort, Prayagraj, Uttar Pr
 tags: [political, war, language]
 summary: Harishena's Sanskrit eulogy on an Ashokan pillar lists the kings Samudragupta uprooted, the southern kings he freed, and the tributaries beyond.
 summary_hi: अशोक के स्तंभ पर हरिषेण की संस्कृत प्रशस्ति उन राजाओं की सूची देती है जिन्हें समुद्रगुप्त ने उखाड़ा, जिन दक्षिणी राजाओं को छोड़ा, और सीमांत करदाता।
+voice: >-
+  On a pillar that already carries Ashoka's words, Harishena cuts a eulogy for Samudragupta.
+  Kings of the north uprooted. Twelve kings of the south captured, then set free. Rulers as far as Simhala sending gifts.
+  It is praise, not a survey. Twelve centuries on, Jahangir adds his lineage to it.
+voice_hi: >-
+  जिस स्तंभ पर पहले से अशोक के शब्द हैं, उसी पर समुद्रगुप्त के मंत्री हरिषेण अपने राजा की प्रशस्ति खुदवाते हैं।
+  उत्तर के राजा उखाड़ फेंके गए। दक्षिण के बारह राजा बंदी बने, फिर छोड़ दिए गए। सिंहल तक के राजा उपहार भेजते हैं।
+  यह प्रशस्ति है, सर्वेक्षण नहीं। बारह सदियों बाद जहाँगीर इसी पत्थर पर अपनी वंशावली जोड़ते हैं।
 image: allahabad-pillar
 sources:
   - { title: "Fleet, J. F., Corpus Inscriptionum Indicarum, vol. 3 (1888), no. 1", url: "https://archive.org/details/india.history.resource.498" }

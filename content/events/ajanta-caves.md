@@ -9,6 +9,14 @@ location: { lat: 20.552, lng: 75.703, name: "Ajanta caves, Maharashtra" }
 tags: [art, religion]
 summary: Under the Vakataka king Harishena, monks and courtiers cut new caves above the Waghora and paint them with the Jataka stories.
 summary_hi: वाकाटक राजा हरिषेण के समय भिक्षुओं और दरबारियों ने वाघोरा नदी के ऊपर नई गुफाएँ कटवाईं और उन्हें जातक कथाओं से चित्रित किया।
+voice: >-
+  Above the Waghora river, in a horseshoe of cliff, monks and courtiers of the Vakataka king Harishena cut caves and paint them with the Jataka tales.
+  On one reading, the work stops within a few decades, when Vakataka power collapses.
+  In 1819, a British officer out hunting comes upon them.
+voice_hi: >-
+  वाघोरा नदी के ऊपर, घोड़े की नाल जैसी चट्टान में, वाकाटक राजा हरिषेण के भिक्षु और दरबारी गुफाएँ काटते हैं, और उन्हें जातक कथाओं से रंग देते हैं।
+  एक मत के अनुसार, कुछ ही दशकों में, वाकाटक शक्ति के ढहते ही, यह काम रुक जाता है।
+  1819 में शिकार पर निकला एक ब्रिटिश अफ़सर अचानक इन गुफाओं तक आ पहुँचता है।
 image: ajanta-caves
 sources:
   - { title: "UNESCO World Heritage List: Ajanta Caves", url: "https://whc.unesco.org/en/list/242/" }

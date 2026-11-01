@@ -1,13 +1,15 @@
 import chaptersJson from "@/data/chapters.json";
 import eventsJson from "@/data/events.json";
 import politiesJson from "@/data/polities.json";
+import prologueJson from "@/data/prologue.json";
 import manifestJson from "../../public/images/commons/manifest.json";
-import type { Chapter, EpicEvent, Polity, ImageManifest } from "@/content/schema";
+import type { Chapter, EpicEvent, Polity, ImageManifest, Prologue } from "@/content/schema";
 
 export const chapters = chaptersJson as Chapter[];
 export const events = eventsJson as EpicEvent[];
 export const polities = politiesJson as Polity[];
 export const images = manifestJson as ImageManifest;
+export const prologue = prologueJson as Prologue | null;
 
 export function getEvent(id: string) {
   return events.find((e) => e.id === id);

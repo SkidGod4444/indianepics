@@ -9,6 +9,14 @@ location: { lat: 23.80, lng: 88.25, name: "Plassey battlefield, near Palashi, We
 tags: [war, colonial, political]
 summary: Clive's Company army defeats Siraj ud-Daulah when Mir Jafar's troops stand aside; the Company becomes the power behind Bengal's throne.
 summary_hi: मीर जाफ़र की सेना के अलग खड़े रहने से क्लाइव की कंपनी सेना ने सिराजुद्दौला को हराया; कंपनी बंगाल की गद्दी के पीछे की असली ताक़त बनी।
+voice: >-
+  23 June 1757, a mango grove on the Bhagirathi. Robert Clive has about three thousand men. Siraj ud-Daulah has many times that.
+  But Mir Jafar, promised the throne, keeps his troops out of the fight.
+  A small battle, decided by defection as much as by fire. It makes a trading company the power behind Bengal's throne.
+voice_hi: >-
+  23 जून 1757, भागीरथी के किनारे आम का एक बाग़। रॉबर्ट क्लाइव के पास लगभग तीन हज़ार सैनिक हैं। सिराजुद्दौला के पास उससे कई गुना।
+  पर मीर जाफ़र, जिन्हें गद्दी का वादा मिला है, अपनी सेना को लड़ाई से अलग रखते हैं।
+  एक छोटी-सी लड़ाई, जिसका फ़ैसला जितना गोलियों से, उतना ही दल बदलने से होता है। इसके बाद एक व्यापारिक कंपनी बंगाल की गद्दी के पीछे की ताक़त बन जाती है।
 image: plassey
 sources:
   - { title: "Marshall, Bengal: The British Bridgehead (1987)" }

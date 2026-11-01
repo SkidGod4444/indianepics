@@ -9,6 +9,14 @@ location: { lat: 18.23, lng: 73.44, name: "Raigad Fort, Maharashtra" }
 tags: [political, war]
 summary: Shivaji is crowned Chhatrapati at Raigad, making his Maratha state a sovereign kingdom outside the Mughal order.
 summary_hi: रायगढ़ में शिवाजी का छत्रपति के रूप में राज्याभिषेक; मराठा राज्य मुग़ल व्यवस्था से बाहर एक संप्रभु राज्य बना।
+voice: >-
+  On 6 June 1674, at Raigad, Shivaji is crowned Chhatrapati.
+  The son of a Bijapur jagirdar becomes a king who can treat with the Mughals as an equal. He begins his own era, and strikes coins in his own name.
+  Twelve days later his mother, Jijabai, dies.
+voice_hi: >-
+  6 जून 1674 को रायगढ़ में शिवाजी का छत्रपति के रूप में राज्याभिषेक होता है।
+  बीजापुर के एक जागीरदार के बेटे अब ऐसे राजा हैं, जो मुग़लों से बराबरी पर बात कर सकते हैं। वे अपना संवत् शुरू करते हैं, और अपने नाम के सिक्के ढलवाते हैं।
+  बारह दिन बाद उनकी माँ, जीजाबाई, का देहांत हो जाता है।
 image: raigad-fort
 sources:
   - { title: "Sabhasad Bakhar (c. 1697)", note: "Krishnaji Anant Sabhasad's chronicle, written for Rajaram" }

@@ -9,6 +9,14 @@ location: { lat: 15.335, lng: 76.46, name: "Virupaksha temple, Hampi, Karnataka"
 tags: [state-formation, political]
 summary: Tradition dates to 1336 the kingdom the brothers Harihara and Bukka founded on the Tungabhadra; it would dominate the south for two centuries.
 summary_hi: परंपरा के अनुसार 1336 में हरिहर और बुक्का भाइयों ने तुंगभद्रा तट पर राज्य की नींव रखी, जो दो सदियों तक दक्षिण पर छाया रहा।
+voice: >-
+  Tradition gives the year as 1336. On the Tungabhadra two brothers, Harihara and Bukka, found a kingdom.
+  Within ten years an inscription has them celebrating a conquest from the eastern ocean to the western.
+  Around the temple at Hampi grows one of the largest cities in India, until Talikota, in 1565.
+voice_hi: >-
+  परंपरा के अनुसार वर्ष 1336 है। तुंगभद्रा के किनारे दो भाई, हरिहर और बुक्का, एक राज्य की नींव रखते हैं।
+  दस वर्ष के भीतर एक अभिलेख में वे पूर्वी सागर से पश्चिमी सागर तक की विजय का उत्सव मना रहे हैं।
+  हम्पी के मंदिर के चारों ओर भारत के सबसे बड़े नगरों में से एक बसता है, जो 1565 में तालीकोटा तक टिका रहता है।
 image: hampi-virupaksha
 sources:
   - { title: "UNESCO World Heritage Centre, Group of Monuments at Hampi", url: "https://whc.unesco.org/en/list/241/" }

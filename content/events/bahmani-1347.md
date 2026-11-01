@@ -9,6 +9,14 @@ location: { lat: 17.336, lng: 76.832, name: "Gulbarga (Kalaburagi) fort, Karnata
 tags: [state-formation, political]
 summary: On 3 August 1347 rebel Deccan amirs proclaim Alauddin Hasan Bahman Shah sultan; ruling from Gulbarga, he ends Delhi's hold on the Deccan.
 summary_hi: 3 अगस्त 1347 को विद्रोही दक्कनी अमीरों ने अलाउद्दीन हसन बहमन शाह को सुल्तान घोषित किया; गुलबर्गा से शासन कर उसने दक्कन पर दिल्ली की पकड़ तोड़ दी।
+voice: >-
+  Threatened with punishment by Muhammad bin Tughluq, the officers of the Deccan rise and seize Daulatabad.
+  On 3 August 1347 they proclaim one of their commanders, Hasan, sultan. He rules from Gulbarga.
+  North of the Krishna, the Bahmanis. South of it, Vijayanagara. For two centuries they fight over the land between.
+voice_hi: >-
+  मुहम्मद बिन तुग़लक़ ने दक्कन के अमीरों को सज़ा की धमकी दी थी। वे विद्रोह करते हैं और दौलताबाद पर कब्ज़ा कर लेते हैं।
+  3 अगस्त 1347 को वे अपने एक सेनापति, हसन, को सुल्तान घोषित करते हैं। हसन गुलबर्गा से राज करते हैं।
+  कृष्णा के उत्तर में बहमनी, दक्षिण में विजयनगर। दो सदियों तक दोनों बीच की ज़मीन के लिए लड़ते रहते हैं।
 image: gulbarga-fort-mosque
 sources:
   - { title: "Firishta, tr. Briggs, History of the Rise of the Mahomedan Power in India, vol. II", url: "https://archive.org/details/in.ernet.dli.2015.57894", note: "Hasan crowned on Friday 24 Rabi' al-Akhir 748; Briggs's margin prints 12 August, but the Hijri date and the weekday both give 3 August 1347. Also the Gangu story" }

@@ -9,6 +9,14 @@ location: { lat: 28.5507, lng: 77.2196, name: "Siri, Delhi" }
 tags: [war, political]
 summary: Timur routs the Tughluq army outside Delhi on 17 December 1398 and sacks Siri, Jahanpanah and Old Delhi; the Sultanate never regains its reach.
 summary_hi: 17 दिसंबर 1398 को तैमूर ने दिल्ली के बाहर तुग़लक़ सेना को हराया और सीरी, जहाँपनाह व पुरानी दिल्ली को लूटा; सल्तनत फिर कभी पहले जैसी विस्तृत न हो सकी।
+voice: >-
+  Before the battle for Delhi, Timur has his prisoners killed. His historians say a hundred thousand. No one else counted.
+  On 17 December 1398 he routs the Sultan's army, and for days his men plunder Delhi.
+  His chronicler says he kept the stonemasons for his mosque at Samarkand. Babur, his descendant, will come back.
+voice_hi: >-
+  दिल्ली की लड़ाई से पहले तैमूर अपने बंदियों को मरवा देते हैं। उनके अपने इतिहासकार यह संख्या एक लाख बताते हैं, और किसी और ने गिनती नहीं की।
+  17 दिसंबर 1398 को वे सुल्तान की सेना को कुचल देते हैं, और कई दिनों तक उनके सैनिक दिल्ली को लूटते हैं।
+  उनका इतिहासकार लिखता है कि संगतराशों को वे समरकंद की अपनी मस्जिद के लिए ले गए। उनके वंशज बाबर एक दिन लौटेंगे।
 image: timur-zafarnama
 sources:
   - { title: "Elliot and Dowson, The History of India as Told by Its Own Historians, vol. III (1871)", url: "https://archive.org/details/in.ernet.dli.2015.458719", note: "Extracts from Sharaf al-Din Yazdi's Zafarnama and the Malfuzat-i Timuri, the memoirs attributed to Timur, which most modern scholars regard as a later compilation" }

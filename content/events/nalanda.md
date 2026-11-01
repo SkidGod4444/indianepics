@@ -9,6 +9,14 @@ location: { lat: 25.136, lng: 85.443, name: "Nalanda, Bihar" }
 tags: [religion, science]
 summary: A monastery founded under Kumaragupta I grows into a Buddhist university that draws scholars from China, Korea and Tibet until the 13th century.
 summary_hi: कुमारगुप्त प्रथम के समय स्थापित विहार एक बौद्ध विश्वविद्यालय बना, जहाँ 13वीं शताब्दी तक चीन, कोरिया और तिब्बत से विद्वान आते रहे।
+voice: >-
+  Under Kumaragupta the First a monastery is founded at Nalanda, and for centuries kings keep adding to it.
+  Scholars come from China, Korea and Tibet. Around 1200 it is sacked.
+  A generation later, a Tibetan pilgrim finds the abbot, past ninety, still teaching some seventy monks among the ruins.
+voice_hi: >-
+  कुमारगुप्त प्रथम के समय नालंदा में एक विहार की नींव पड़ती है, और सदियों तक राजा इसमें जोड़ते रहते हैं।
+  चीन, कोरिया और तिब्बत से विद्वान आते हैं। लगभग 1200 में इसे लूट लिया जाता है।
+  एक पीढ़ी बाद एक तिब्बती यात्री देखता है कि नब्बे पार के आचार्य खंडहरों के बीच अब भी लगभग सत्तर भिक्षुओं को पढ़ा रहे हैं।
 image: nalanda-ruins
 sources:
   - { title: "UNESCO World Heritage List: Archaeological Site of Nalanda Mahavihara at Nalanda, Bihar (inscribed 2016)", url: "https://whc.unesco.org/en/list/1502/" }

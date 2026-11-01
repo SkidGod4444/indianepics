@@ -10,6 +10,14 @@ tags: [war, political]
 image: tarain-1192
 summary: Prithviraj Chauhan beats Muhammad of Ghur at Tarain in 1191 and loses to him on the same field in 1192, opening the Ganga plain to the Ghurids.
 summary_hi: 1191 में पृथ्वीराज चौहान ने तराइन में ग़ोर के मुहम्मद को हराया, पर 1192 में उसी मैदान पर हार गए; इससे ग़ोरियों के लिए गंगा का मैदान खुल गया।
+voice: >-
+  In 1191, on the field of Tarain north of Delhi, Prithviraj Chauhan defeats Muhammad of Ghur.
+  A year later Muhammad returns with mounted archers, on the same field, and wins.
+  The chroniclers disagree on how Prithviraj died. Within two years, Ghurid commanders hold Delhi.
+voice_hi: >-
+  1191 में, दिल्ली के उत्तर में तराइन के मैदान पर, पृथ्वीराज चौहान मुहम्मद ग़ोरी को हरा देते हैं।
+  एक साल बाद मुहम्मद घुड़सवार तीरंदाज़ों के साथ उसी मैदान पर लौटते हैं, और जीत जाते हैं।
+  पृथ्वीराज का अंत कैसे हुआ, इस पर उस दौर के लेखक एकमत नहीं हैं। दो वर्ष के भीतर दिल्ली ग़ोरी सेनापतियों के हाथ में है।
 sources:
   - { title: "Elliot and Dowson, The History of India as Told by Its Own Historians, vol. II (1869)", url: "https://archive.org/details/india.history.resource.629", note: "Extracts from Minhaj's Tabakat-i Nasiri and Hasan Nizami's Taj al-Ma'athir" }
   - { title: "Talbot, The Last Hindu Emperor: Prithviraj Cauhan and the Indian Past, 1200–2000 (2016)" }

@@ -10,6 +10,14 @@ tags: [political, war]
 image: seleucid-treaty
 summary: Seleucus Nicator gives Chandragupta lands along the Indus under a marriage pact and receives five hundred war elephants.
 summary_hi: सेल्यूकस निकेटर ने वैवाहिक संधि के तहत सिंधु के किनारे के प्रदेश चंद्रगुप्त को दिए और बदले में पाँच सौ युद्ध-हाथी पाए।
+voice: >-
+  Seleucus Nicator and Chandragupta fight, then come to terms.
+  Lands along the Indus pass to the Maurya under a marriage contract, though how much land is still argued.
+  Seleucus takes five hundred war elephants west. At Ipsus in 301 BCE, they help him win.
+voice_hi: >-
+  सेल्यूकस निकेटर और चंद्रगुप्त लड़ते हैं, फिर संधि कर लेते हैं।
+  एक वैवाहिक समझौते के तहत सिंधु के किनारे के प्रदेश मौर्य को मिलते हैं। कितनी ज़मीन, इस पर आज भी बहस है।
+  सेल्यूकस पाँच सौ युद्ध-हाथी लेकर पश्चिम लौटते हैं। 301 ईसा पूर्व में इप्सस की लड़ाई में यही हाथी उन्हें जीत दिलाने में मदद करते हैं।
 sources:
   - { title: "Strabo, Geography 15.2.9", url: "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0239:book=15:chapter=2:section=9" }
   - { title: "Appian, Syriaca 55", url: "https://www.livius.org/sources/content/appian/appian-the-syrian-wars/appian-the-syrian-wars-11/" }

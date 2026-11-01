@@ -1,8 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { AnimatePresence, LayoutGroup, MotionConfig } from "motion/react";
-import type { Chapter, EpicEvent, Polity, Track } from "@/content/schema";
+import { AnimatePresence, LayoutGroup, MotionConfig, motion } from "motion/react";
+import type { Chapter, EpicEvent, Polity, Prologue, Track } from "@/content/schema";
 import { useLang } from "@/lib/i18n";
 import { pick } from "@/lib/text";
 import { geoMercator } from "d3-geo";
@@ -21,7 +21,7 @@ import { Pause, Play, SkipBack, SkipForward } from "lucide-react";
 import { Narrator, VOICE_PREF_KEY, loadVoiceManifest, type VoicePref } from "@/lib/narration";
 import { VoiceMenu } from "./VoiceMenu";
 
-type Props = { chapters: Chapter[]; events: EpicEvent[]; polities: Polity[] };
+type Props = { chapters: Chapter[]; events: EpicEvent[]; polities: Polity[]; prologue?: Prologue | null };
 type TrackFilter = "both" | Track;
 
 /** The point in the viewport that "is now". */
@@ -35,7 +35,7 @@ const TAIL_MS = 900;
 /** Narrated slots never scroll faster than this, so a short line still lets the card open. */
 const MIN_SLOT_MS = 3800;
 
-export function Stage({ chapters: allChapters, events, polities }: Props) {
+export function Stage({ chapters: allChapters, events, polities, prologue }: Props) {
   const { lang } = useLang();
   const [trackFilter, setTrackFilter] = useState<TrackFilter>("both");
   const [pos, setPos] = useState<Position>({ chapter: 0, progress: 0 });
@@ -60,6 +60,9 @@ export function Stage({ chapters: allChapters, events, polities }: Props) {
   }, [voiceLang, voiceOn, lang]);
   /** True while the prologue is being read over the hero; the scroll waits for it. */
   const prologueRef = useRef(false);
+  const [prologueOn, setPrologueOn] = useState(false);
+  /** Set when the prologue ends and the smooth scroll to chapter one is under way: the tick must not fight it. */
+  const seekingRef = useRef(false);
 
   // The narrator: clips from public/audio, if `bun run voice` has been run. Silent otherwise.
   useEffect(() => {
@@ -204,7 +207,17 @@ export function Stage({ chapters: allChapters, events, polities }: Props) {
       const here = locate();
       const slotPx = (window.innerHeight * SLOT_VH) / 100;
       let dy = 0;
-      if (here && voice) {
+      if (!here) {
+        // Still on the hero: the smooth seek to chapter one is running (or about to). Nudging would cancel it.
+        if (!seekingRef.current) {
+          seekingRef.current = true;
+          seek({ chapter: 0, progress: 0 }, true);
+        }
+        raf = requestAnimationFrame(tick);
+        return;
+      }
+      seekingRef.current = false;
+      if (voice) {
         const slots = slotsOf(here.i);
         const slot = Math.min(slots - 1, Math.floor(here.progress * slots));
         const key = keyAt(here.i, slot);
@@ -266,8 +279,10 @@ export function Stage({ chapters: allChapters, events, polities }: Props) {
       document.removeEventListener("visibilitychange", onHide);
       n?.pause();
       prologueRef.current = false;
+      seekingRef.current = false;
+      setPrologueOn(false);
     };
-  }, [playing, chapters, eventsByChapter, locate]);
+  }, [playing, chapters, eventsByChapter, locate, seek]);
 
   // Space toggles play when nothing else has focus.
   useEffect(() => {
@@ -329,9 +344,12 @@ export function Stage({ chapters: allChapters, events, polities }: Props) {
       // From the hero: the prologue is read over the breathing map; the scroll starts when it ends.
       if (voiceOn && n?.has("prologue", voiceLang)) {
         prologueRef.current = true;
+        setPrologueOn(true);
         n.onEnded = (k) => {
           if (k !== "prologue") return;
           prologueRef.current = false;
+          setPrologueOn(false);
+          seekingRef.current = true;
           seek({ chapter: 0, progress: 0 }, true);
         };
         n.play("prologue", voiceLang);
@@ -471,6 +489,24 @@ export function Stage({ chapters: allChapters, events, polities }: Props) {
         </AnimatePresence>
         <AnimatePresence>{open ? <DetailOverlay key={`d-${open.id}`} ev={open} onClose={closeEvent} /> : null}</AnimatePresence>
 
+        {/* The prologue's words, as a caption while it is read over the hero. */}
+        <AnimatePresence>
+          {prologueOn && prologue ? (
+            <motion.p
+              key="prologue"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -6 }}
+              transition={{ duration: 0.6 }}
+              className={`pointer-events-none fixed inset-x-4 bottom-6 z-[4] mx-auto max-w-[58ch] rounded-2xl border border-hair bg-paper/92 px-6 py-3.5 text-center text-[clamp(15px,1.6vw,19px)] leading-snug text-ink-2 shadow-md backdrop-blur-md ${
+                (voiceLang ?? lang) === "hi" ? "font-hi" : "font-display italic"
+              }`}
+            >
+              {(voiceLang ?? lang) === "hi" ? prologue.voice_hi ?? prologue.voice : prologue.voice}
+            </motion.p>
+          ) : null}
+        </AnimatePresence>
+
         {/* On the hero, text scrolls up under the transparent header: fade it out beneath the logo. */}
         <div
           aria-hidden
@@ -478,7 +514,7 @@ export function Stage({ chapters: allChapters, events, polities }: Props) {
         />
 
         {/* The hero sits in the flow above the clock. */}
-        <Intro chapters={chapters} onPlay={togglePlay} onSeek={(c) => seek({ chapter: c, progress: 0.001 }, true)} />
+        <Intro chapters={chapters} playing={playing} onPlay={togglePlay} onSeek={(c) => seek({ chapter: c, progress: 0.001 }, true)} />
 
         {/* Invisible spacers: one slot of scroll per title and per event. They are the clock. */}
         <div className="relative z-[1]" aria-hidden>

@@ -9,6 +9,14 @@ location: { lat: 27.49, lng: 77.67, name: "Mathura, Uttar Pradesh" }
 tags: [political, art, religion]
 summary: Kanishka's Kushan empire joins Bactria to the Ganga plain; at Mathura and in Gandhara sculptors make some of the earliest images of the Buddha.
 summary_hi: कनिष्क का कुषाण साम्राज्य बैक्ट्रिया को गंगा के मैदान से जोड़ता है; मथुरा और गांधार में मूर्तिकार बुद्ध की आरंभिक प्रतिमाएँ गढ़ते हैं।
+voice: >-
+  Kanishka's coins carry Greek, Iranian and Indian gods side by side, and among them, the Buddha.
+  At Mathura in red sandstone, and in Gandhara in grey schist, sculptors give the Buddha a human form, in some of his earliest images.
+  Of Kanishka, a statue survives in a long Central Asian coat. Its head is gone.
+voice_hi: >-
+  कनिष्क के सिक्कों पर यूनानी, ईरानी और भारतीय देवता साथ-साथ हैं, और उनके बीच बुद्ध भी।
+  मथुरा में लाल बलुआ पत्थर में, और गांधार में स्लेटी पत्थर में, शिल्पी बुद्ध को मनुष्य का रूप देते हैं, उनकी सबसे शुरुआती मूर्तियों में से कुछ।
+  कनिष्क की अपनी एक प्रतिमा बची है, लंबे मध्य एशियाई कोट में। उसका सिर नहीं है।
 image: kanishka-statue
 sources:
   - { title: "Sims-Williams, N. and Cribb, J., 'A new Bactrian inscription of Kanishka the Great', Silk Road Art and Archaeology 4 (1995-96)" }

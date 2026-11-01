@@ -9,6 +9,14 @@ location: { lat: 19.941, lng: 73.748, name: "Pandavleni caves, Nashik, Maharasht
 tags: [political, state-formation]
 summary: A queen mother's inscription at Nashik praises her son Gautamiputra Satakarni for crushing the Shakas and restoring Satavahana power.
 summary_hi: नासिक में राजमाता गौतमी बलश्री का अभिलेख अपने पुत्र गौतमीपुत्र सातकर्णि की प्रशंसा करता है, जिसने शकों को हराकर सातवाहन सत्ता लौटाई।
+voice: >-
+  In a cave at Nashik, a mother has her son's deeds cut into the rock.
+  Gautami Balashri calls Gautamiputra Satakarni the destroyer of Shakas, Yavanas and Pahlavas.
+  The proof lies in a buried hoard. He took the silver of the Shaka king Nahapana and struck it again, in his own name.
+voice_hi: >-
+  नासिक की एक गुफा में एक माँ अपने बेटे की उपलब्धियाँ चट्टान पर खुदवाती है।
+  गौतमी बलश्री, गौतमीपुत्र सातकर्णि को शकों, यवनों और पह्लवों का नाश करने वाला कहती हैं।
+  सबूत ज़मीन में दबे एक ख़ज़ाने में मिला। उन्होंने शक राजा नहपान के चाँदी के सिक्के लिए, और उन पर फिर से अपने नाम का ठप्पा लगवाया।
 image: nashik-pandavleni
 sources:
   - { title: "Senart, E., 'The inscriptions in the caves at Nasik', Epigraphia Indica 8 (1905-06)", url: "https://archive.org/details/in.ernet.dli.2015.69971" }

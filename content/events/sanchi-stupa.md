@@ -9,6 +9,14 @@ location: { lat: 23.48, lng: 77.74, name: "Sanchi, Madhya Pradesh" }
 tags: [religion, art]
 summary: Ashoka's brick stupa, doubled in size and cased in stone in the 2nd century BCE, and given carved gateways around the turn of the era.
 summary_hi: अशोक का ईंटों का स्तूप, जिसे दूसरी सदी ई.पू. में दोगुना कर पत्थर से मढ़ा गया और ईसवी सन् के आरंभ के आसपास नक़्क़ाशीदार तोरण मिले।
+voice: >-
+  At Sanchi, Ashoka builds a stupa of brick, and beside it a pillar that warns the monks against schism.
+  Later centuries double the mound, case it in stone and give it four carved gateways.
+  One records the gift of Ananda, foreman of the artisans of King Satakarni. Of all a visitor sees, only the hidden core is Ashoka's.
+voice_hi: >-
+  साँची में अशोक ईंटों का एक स्तूप बनवाते हैं, और उसके पास एक स्तंभ, जो संघ को फूट से सावधान करता है।
+  बाद की सदियाँ इस टीले को दोगुना करती हैं, पत्थर से मढ़ती हैं, और चार नक़्क़ाशीदार तोरण जोड़ती हैं।
+  एक तोरण पर राजा सातकर्णि के शिल्पियों के मुखिया आनंद का दान दर्ज है। आज जो दिखता है, उसमें अशोक का केवल भीतर छिपा हुआ भाग है।
 image: sanchi-stupa
 sources:
   - { title: "Marshall and Foucher, The Monuments of Sanchi (1940)", url: "https://archive.org/details/monumentsofsanch01john" }

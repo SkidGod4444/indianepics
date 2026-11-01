@@ -10,6 +10,14 @@ tags: [trade, colonial]
 image: surat-factory
 summary: After an English victory over the Portuguese off Swally, Jahangir confirms the East India Company's right to trade at Surat.
 summary_hi: स्वाली के पास पुर्तगालियों पर अंग्रेज़ों की जीत के बाद जहाँगीर ने ईस्ट इंडिया कंपनी को सूरत में व्यापार का अधिकार दिया।
+voice: >-
+  Off Surat in 1612, English ships beat off a Portuguese squadron. In January 1613 a farman from Jahangir lets the East India Company trade.
+  Thomas Aldworth stays on to run the factory. It is a trading house, not a fort.
+  For most of its first century the Company is one merchant among many.
+voice_hi: >-
+  1612 में सूरत के पास अंग्रेज़ी जहाज़ एक पुर्तगाली बेड़े को पीछे धकेल देते हैं। जनवरी 1613 में जहाँगीर का फ़रमान ईस्ट इंडिया कंपनी को व्यापार की इजाज़त देता है।
+  थॉमस एल्डवर्थ कोठी चलाने के लिए रुक जाते हैं। यह व्यापार की कोठी है, किला नहीं।
+  अपनी पहली सदी के ज़्यादातर समय कंपनी कई व्यापारियों में से बस एक है।
 sources:
   - { title: "Foster (ed.), The Voyage of Thomas Best to the East Indies, 1612-14 (Hakluyt Society, 1934)", url: "https://archive.org/details/in.ernet.dli.2015.505027" }
   - { title: "Letters Received by the East India Company from its Servants in the East, vol. 1 (1602-13)", url: "https://archive.org/details/in.ernet.dli.2015.38607" }

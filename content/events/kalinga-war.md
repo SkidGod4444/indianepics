@@ -9,6 +9,14 @@ location: { lat: 20.19, lng: 85.84, name: "Dhauli, Odisha" }
 tags: [war, political]
 summary: Ashoka conquers Kalinga; his Rock Edict XIII counts the dead and deported and records his remorse and turn to dhamma.
 summary_hi: अशोक ने कलिंग जीता; तेरहवाँ शिलालेख मृतकों और बंदियों की गिनती के साथ उसका पश्चाताप और धम्म की ओर मुड़ना दर्ज करता है।
+voice: >-
+  Eight years after his consecration, Ashoka conquers Kalinga.
+  His own edict keeps the count. A hundred and fifty thousand carried away. A hundred thousand killed. Many times that number dead.
+  It is a conqueror's confession, cut in stone across the empire. In Kalinga itself, at Dhauli, he leaves it out.
+voice_hi: >-
+  अपने अभिषेक के आठ वर्ष बाद अशोक कलिंग को जीतते हैं।
+  उनका अपना शिलालेख गिनती रखता है। डेढ़ लाख लोग बंदी बनाकर ले जाए गए। एक लाख मारे गए। उससे कई गुना और मरे।
+  यह एक विजेता का पश्चाताप है, पूरे साम्राज्य में पत्थर पर खुदा हुआ। पर कलिंग में ही, धौली की चट्टान पर, वह इसे छोड़ देते हैं।
 image: dhauli-edict
 sources:
   - { title: "Rock Edict XIII (Shahbazgarhi, Mansehra, Kalsi) and the Kalinga Separate Edicts, in Hultzsch, Inscriptions of Asoka (1925)", url: "https://archive.org/details/InscriptionsOfAsoka.NewEditionByE.Hultzsch" }
