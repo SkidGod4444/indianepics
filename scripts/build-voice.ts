@@ -154,12 +154,19 @@ if (scan) {
   // Trust the files: whatever mp3 exists for a key becomes the clip, hashed against the current text.
   let found = 0;
   const stale: string[] = [];
+  const wrongVoice: string[] = [];
   const clips: Manifest["clips"] = {};
   for (const item of items) {
     for (const lang of ["en", "hi"] as Lang[]) {
       const text = (lang === "hi" ? item.voice_hi : item.voice)?.trim();
       const file = `${lang}/${item.key}.mp3`;
       if (!text || !existsSync(join(out, file))) continue;
+      // The synthesiser falls back to a free voice when Sarvam times out, and says so in its .json. Never ship that.
+      const report = join(out, `${lang}/${item.key}.json`);
+      if (existsSync(report) && JSON.parse(readFileSync(report, "utf8")).provider_used !== "sarvam") {
+        wrongVoice.push(`${lang}/${item.key}`);
+        continue;
+      }
       // A sidecar .txt holds the words that were actually spoken; if the line has changed since, the clip is stale.
       const side = join(out, `${lang}/${item.key}.txt`);
       if (existsSync(side) && readFileSync(side, "utf8").trim() !== text) {
@@ -176,6 +183,7 @@ if (scan) {
   const missing = items.flatMap((i) => (["en", "hi"] as Lang[]).filter((l) => (l === "hi" ? i.voice_hi : i.voice) && !clips[i.key]?.[l]).map((l) => `${l}/${i.key}`));
   console.log(`✓ manifest: ${found} clips on disk, ${missing.length} lines still without audio${missing.length ? `: ${missing.slice(0, 8).join(", ")}${missing.length > 8 ? "…" : ""}` : ""}`);
   if (stale.length) console.log(`  ${stale.length} stale (text changed since spoken): ${stale.join(", ")}`);
+  if (wrongVoice.length) console.log(`  ${wrongVoice.length} in the fallback voice, left out: ${wrongVoice.join(", ")}`);
   // A local review page: every clip with its words and a player, so a human can listen for names the lint cannot check.
   const esc = (t: string) => t.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
   const rows = items
