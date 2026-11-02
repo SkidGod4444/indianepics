@@ -4,6 +4,7 @@ title: Chandragupta takes Magadha
 title_hi: चंद्रगुप्त ने मगध जीता
 track: evidence
 chapter: maurya
+basis: textual
 date: { start: -321, end: -321, uncertainty: 5 }
 location: { lat: 25.61, lng: 85.14, name: "Pataliputra (Patna), Bihar" }
 tags: [political]

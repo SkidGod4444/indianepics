@@ -4,6 +4,7 @@ title: The Great Stupa at Sanchi
 title_hi: साँची का महास्तूप
 track: evidence
 chapter: maurya
+basis: archaeological
 date: { start: -268, end: -232, uncertainty: 10 }
 location: { lat: 23.48, lng: 77.74, name: "Sanchi, Madhya Pradesh" }
 tags: [religion, art]

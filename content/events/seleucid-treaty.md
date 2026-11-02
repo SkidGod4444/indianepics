@@ -4,6 +4,7 @@ title: Treaty with Seleucus
 title_hi: सेल्यूकस से संधि
 track: evidence
 chapter: maurya
+basis: textual
 date: { start: -305, end: -303, uncertainty: 2 }
 location: { lat: 34.52, lng: 69.18, name: "Kabul valley (Paropamisadae)" }
 tags: [political, war]

@@ -4,6 +4,7 @@ title: The Emergency
 title_hi: आपातकाल
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 1975, end: 1977 }
 location: { lat: 28.6143, lng: 77.1994, name: "Rashtrapati Bhavan, New Delhi" }
 tags: [political]

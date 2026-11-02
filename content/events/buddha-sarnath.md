@@ -4,6 +4,7 @@ title: The Buddha's first sermon at Sarnath
 title_hi: सारनाथ में बुद्ध का पहला उपदेश
 track: evidence
 chapter: indus-vedic
+basis: textual
 date: { start: -530, end: -440, uncertainty: 20 }
 location: { lat: 25.381, lng: 83.024, name: "Sarnath, near Varanasi, Uttar Pradesh" }
 tags: [religion]

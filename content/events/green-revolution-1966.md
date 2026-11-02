@@ -4,6 +4,7 @@ title: The Green Revolution begins
 title_hi: हरित क्रांति का आरंभ
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 1966, end: 1972 }
 location: { lat: 30.90, lng: 75.80, name: "Punjab Agricultural University, Ludhiana" }
 tags: [science, trade]

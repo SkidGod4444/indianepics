@@ -4,6 +4,7 @@ title: Rani Lakshmibai and Tatya Tope
 title_hi: रानी लक्ष्मीबाई और तात्या टोपे
 track: evidence
 chapter: company
+basis: documentary
 date: { start: 1858, month: 6, end: 1859 }
 location: { lat: 25.458, lng: 78.575, name: "Jhansi Fort, Uttar Pradesh" }
 tags: [war, colonial]

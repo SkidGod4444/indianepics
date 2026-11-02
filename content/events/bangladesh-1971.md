@@ -4,6 +4,7 @@ title: The 1971 war and Bangladesh
 title_hi: 1971 का युद्ध और बांग्लादेश
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 1971, end: 1971 }
 location: { lat: 23.733, lng: 90.398, name: "Suhrawardy Udyan (Ramna Race Course), Dhaka" }
 tags: [war, state-formation]

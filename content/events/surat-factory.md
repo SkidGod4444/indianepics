@@ -4,6 +4,7 @@ title: The English factory at Surat
 title_hi: सूरत में अंग्रेज़ी कोठी
 track: evidence
 chapter: mughal
+basis: documentary
 date: { start: 1613, end: 1613 }
 location: { lat: 21.17, lng: 72.83, name: "Surat, Gujarat" }
 tags: [trade, colonial]

@@ -4,6 +4,7 @@ title: Non-cooperation, Khilafat and Chauri Chaura
 title_hi: असहयोग, ख़िलाफ़त और चौरी चौरा
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1920, end: 1922 }
 location: { lat: 26.651, lng: 83.581, name: "Chauri Chaura, Gorakhpur" }
 tags: [political, religion]

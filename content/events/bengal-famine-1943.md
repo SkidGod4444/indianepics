@@ -4,6 +4,7 @@ title: The Bengal famine
 title_hi: बंगाल का अकाल
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1943, month: 3, end: 1944 }
 location: { lat: 22.5726, lng: 88.3639, name: "Calcutta" }
 tags: [colonial, war]

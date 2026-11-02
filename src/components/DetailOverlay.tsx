@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { X } from "lucide-react";
-import type { EpicEvent } from "@/content/schema";
-import { getImage, imageSrc } from "@/lib/content";
+import type { BookEvent, FullEvent } from "@/content/schema";
+import { loadEvent } from "@/lib/eventData";
+import { imagePath, pageImagePath } from "@/lib/format";
 import { useLang } from "@/lib/i18n";
 import { pick, langClass } from "@/lib/text";
 import { glyphFor } from "@/lib/timeline";
@@ -16,9 +17,21 @@ import { DotGlyph } from "./DotGlyph";
  * The detail "page", opened in place. The card grows into it (shared layoutId),
  * the URL becomes /event/<id>/ via pushState, and Back closes it. No reload.
  */
-export function DetailOverlay({ ev, onClose }: { ev: EpicEvent; onClose: () => void }) {
+export function DetailOverlay({ ev, onClose }: { ev: BookEvent; onClose: () => void }) {
   const { lang } = useLang();
-  const img = getImage(ev.image);
+  const [full, setFull] = useState<FullEvent | null>(null);
+  const [failed, setFailed] = useState(false);
+  useEffect(() => {
+    let alive = true;
+    loadEvent(ev.id).then(
+      (e) => alive && setFull(e),
+      () => alive && setFailed(true),
+    );
+    return () => {
+      alive = false;
+    };
+  }, [ev.id]);
+  const img = full?.imageEntry;
   const tradition = ev.track === "tradition";
   const closeRef = useRef<HTMLButtonElement>(null);
 
@@ -40,7 +53,7 @@ export function DetailOverlay({ ev, onClose }: { ev: EpicEvent; onClose: () => v
 
   return (
     <motion.div
-      className="fixed inset-0 z-40 flex items-start justify-center overflow-y-auto bg-ink/30 px-0 py-0 backdrop-blur-sm sm:px-6 sm:py-10"
+      className="fixed inset-0 z-40 flex items-start justify-center overflow-y-auto bg-ink/45 px-0 py-0 sm:px-6 sm:py-10"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.2 } }}
@@ -55,23 +68,26 @@ export function DetailOverlay({ ev, onClose }: { ev: EpicEvent; onClose: () => v
         aria-modal="true"
         aria-labelledby={`detail-${ev.id}`}
       >
-        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-hair bg-paper/90 px-5 py-3 backdrop-blur-sm sm:px-8">
+        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-hair bg-paper/95 px-5 py-3 sm:px-8">
           <span className={`flex items-center gap-2 text-[12px] ${tradition ? "text-tradition" : "text-evidence"}`}>
             <DotGlyph name={glyphFor(ev)} size={22} />
-            {tradition ? "Tradition" : "Evidence"} · {ev.location.name}
+            <span className={lang === "hi" ? "font-hi" : ""}>{lang === "hi" ? (tradition ? "परंपरा" : "साक्ष्य") : tradition ? "Tradition" : "Evidence"}</span> · {ev.location.name}
           </span>
           <Button ref={closeRef} size="icon-sm" variant="ghost" onClick={onClose} aria-label="Close">
             <X />
           </Button>
         </div>
-        {img ? (
+        {ev.image ? (
           <figure>
             <motion.img
               layoutId={`img-${ev.id}`}
-              src={imageSrc(img.key)}
-              alt={img.title}
+              src={img ? imagePath(img) : pageImagePath(ev.image)}
+              alt={img?.title ?? ""}
+              // The page-sized copy is already loaded: it shows until the full photo arrives.
+              style={{ background: `center / cover url(${pageImagePath(ev.image)})` }}
               className="aspect-[16/9] w-full object-cover"
             />
+            {img ? (
             <figcaption className="px-5 pt-2 text-[11px] leading-tight text-ink-3 sm:px-8">
               {img.title}. {img.author},{" "}
               {img.licenseUrl ? (
@@ -87,13 +103,28 @@ export function DetailOverlay({ ev, onClose }: { ev: EpicEvent; onClose: () => v
               </a>
               .
             </figcaption>
+            ) : null}
           </figure>
         ) : null}
         <div className="px-5 pb-12 pt-6 sm:px-8">
           <motion.h1 id={`detail-${ev.id}`} layoutId={`title-${ev.id}`} className={`${langClass(lang)} mb-6 text-[clamp(1.9rem,4vw,2.8rem)] leading-[1.05] text-ink`}>
             {pick(ev, "title", lang)}
           </motion.h1>
-          <EventBody ev={ev} lang={lang} showTitle={false} showImage={false} />
+          {full ? (
+            <EventBody ev={full} lang={lang} showTitle={false} showImage={false} />
+          ) : (
+            // What the page already showed, while the rest arrives.
+            <div className={`space-y-3 text-[15px] leading-relaxed text-ink-2 ${lang === "hi" ? "font-hi" : ""}`}>
+              <p>{pick(ev, "summary", lang)}</p>
+              {failed ? (
+                <p>
+                  <a href={`/event/${ev.id}/`} className="underline decoration-hair underline-offset-2 hover:text-ink">
+                    {lang === "hi" ? "पूरा पृष्ठ खोलें" : "Open the full page"}
+                  </a>
+                </p>
+              ) : null}
+            </div>
+          )}
         </div>
       </motion.article>
     </motion.div>

@@ -4,6 +4,7 @@ title: Alauddin Khalji takes Chittor
 title_hi: अलाउद्दीन ख़िलजी का चित्तौड़ पर अधिकार
 track: evidence
 chapter: medieval
+basis: textual
 date: { start: 1303, end: 1303 }
 location: { lat: 24.8863, lng: 74.647, name: "Chittorgarh fort, Rajasthan" }
 tags: [war, political]

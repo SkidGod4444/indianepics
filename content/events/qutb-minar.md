@@ -4,6 +4,7 @@ title: The Qutb Minar and the Delhi Sultanate
 title_hi: क़ुतुब मीनार और दिल्ली सल्तनत
 track: evidence
 chapter: medieval
+basis: epigraphic
 date: { start: 1199, end: 1220, uncertainty: 5 }
 location: { lat: 28.5245, lng: 77.1855, name: "Qutb Minar, Mehrauli, Delhi" }
 tags: [state-formation, art, religion]

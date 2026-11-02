@@ -4,6 +4,7 @@ title: Taxila, crossroads of the north-west
 title_hi: तक्षशिला, उत्तर-पश्चिम का संगम
 track: evidence
 chapter: maurya
+basis: archaeological
 date: { start: -326, end: -316, uncertainty: 5 }
 location: { lat: 33.74, lng: 72.79, name: "Taxila, Punjab (Pakistan)" }
 tags: [trade, language, science]

@@ -4,6 +4,7 @@ title: Khudiram Bose and Tilak's trial
 title_hi: खुदीराम बोस और तिलक का मुक़दमा
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1908, end: 1908 }
 location: { lat: 26.1225, lng: 85.3906, name: "Muzaffarpur, Bihar" }
 tags: [political, colonial]

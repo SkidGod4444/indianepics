@@ -4,6 +4,7 @@ title: Pallava Mamallapuram
 title_hi: पल्लवों का मामल्लपुरम
 track: evidence
 chapter: classical
+basis: archaeological
 date: { start: 630, end: 728, uncertainty: 10 }
 location: { lat: 12.617, lng: 80.199, name: "Shore Temple, Mamallapuram, Tamil Nadu" }
 tags: [art, religion, trade]

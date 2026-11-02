@@ -4,6 +4,7 @@ title: Ayodhya, 1992 to 2024
 title_hi: अयोध्या, 1992 से 2024
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 1992, end: 2024 }
 location: { lat: 26.7956, lng: 82.1943, name: "Ram Janmabhoomi and Babri Masjid site, Ayodhya" }
 tags: [religion, political]

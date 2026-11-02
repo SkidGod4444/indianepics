@@ -3,7 +3,7 @@ id: maurya
 order: 20
 title: The Mauryan Empire
 title_hi: मौर्य साम्राज्य
-kicker: c. 321 to 185 BCE
+kicker: c. 326 to 185 BCE
 voice: >-
   Alexander turns back from the Punjab, and within a generation a new power rises on the Ganga.
   Chandragupta Maurya takes Magadha and the north-west, and builds the first state to span most of the subcontinent.
@@ -17,7 +17,7 @@ voice_hi: >-
   और उनके पोते अशोक भारत का सबसे पुराना ऐसा लेखन छोड़ जाते हैं, जिसे पढ़ा भी जा सकता है और जिसकी तिथि भी बताई जा सकती है।
   चट्टानों पर खुदा हुआ, सम्राट की अपनी आवाज़ में।
 track: evidence
-years: { start: -340, end: -180 }
+years: { start: -326, end: -180 }
 polity: maurya-260bce
 image: sanchi-stupa
 ---

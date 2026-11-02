@@ -4,6 +4,7 @@ title: Kanishka and the first Buddha images
 title_hi: कनिष्क और बुद्ध की आरंभिक प्रतिमाएँ
 track: evidence
 chapter: classical
+basis: epigraphic
 date: { start: 127, end: 150, uncertainty: 5 }
 location: { lat: 27.49, lng: 77.67, name: "Mathura, Uttar Pradesh" }
 tags: [political, art, religion]

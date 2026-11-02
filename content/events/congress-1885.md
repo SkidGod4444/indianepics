@@ -4,6 +4,7 @@ title: The Ilbert Bill and the first Congress
 title_hi: इल्बर्ट बिल और पहली कांग्रेस
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1883, end: 1885 }
 location: { lat: 18.9618, lng: 72.8112, name: "Gokuldas Tejpal Sanskrit College, Gowalia Tank, Bombay" }
 tags: [political, colonial]

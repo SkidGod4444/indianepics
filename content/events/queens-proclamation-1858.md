@@ -4,6 +4,7 @@ title: The Crown takes over
 title_hi: कंपनी से ताज तक
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1858, month: 11, end: 1858 }
 location: { lat: 25.4321, lng: 81.8618, name: "Minto Park, Allahabad" }
 tags: [political, colonial]

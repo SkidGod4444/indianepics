@@ -4,6 +4,7 @@ title: Mangal Pandey at Barrackpore
 title_hi: बैरकपुर में मंगल पांडे
 track: evidence
 chapter: company
+basis: documentary
 date: { start: 1857, month: 3, end: 1857 }
 location: { lat: 22.760, lng: 88.370, name: "Barrackpore, West Bengal" }
 tags: [war, colonial]

@@ -4,6 +4,7 @@ title: Bombay State becomes Maharashtra and Gujarat
 title_hi: बंबई राज्य से महाराष्ट्र और गुजरात
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 1960, end: 1960 }
 location: { lat: 18.922, lng: 72.834, name: "Mumbai, Maharashtra" }
 tags: [state-formation, language]

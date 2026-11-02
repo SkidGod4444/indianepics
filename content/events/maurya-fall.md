@@ -4,6 +4,7 @@ title: Pushyamitra ends the dynasty
 title_hi: पुष्यमित्र ने मौर्य वंश का अंत किया
 track: evidence
 chapter: maurya
+basis: textual
 date: { start: -185, end: -185, uncertainty: 5 }
 location: { lat: 25.61, lng: 85.14, name: "Pataliputra (Patna), Bihar" }
 tags: [political]

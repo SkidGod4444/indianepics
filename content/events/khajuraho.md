@@ -4,6 +4,7 @@ title: The temples of Khajuraho
 title_hi: खजुराहो के मंदिर
 track: evidence
 chapter: medieval
+basis: archaeological
 date: { start: 950, end: 1050, uncertainty: 10 }
 location: { lat: 24.8525, lng: 79.9199, name: "Kandariya Mahadeva temple, Khajuraho, Madhya Pradesh" }
 tags: [art, religion]

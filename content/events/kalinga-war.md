@@ -4,6 +4,7 @@ title: The Kalinga war
 title_hi: कलिंग युद्ध
 track: evidence
 chapter: maurya
+basis: epigraphic
 date: { start: -261, end: -261, uncertainty: 4 }
 location: { lat: 20.19, lng: 85.84, name: "Dhauli, Odisha" }
 tags: [war, political]

@@ -3,12 +3,12 @@
  * Fails loudly on any invalid file so a bad PR never ships.
  *   bun scripts/build-content.ts [contentDir] [outDir]
  */
-import { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { readdirSync, readFileSync, rmSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { join, resolve } from "node:path";
 import matter from "gray-matter";
 import { feature } from "topojson-client";
 import type { Topology, GeometryCollection } from "topojson-specification";
-import { ChapterSchema, EventSchema, PolitySchema, PrologueSchema, type Chapter, type EpicEvent, type Polity } from "../src/content/schema";
+import { ChapterSchema, EventSchema, LedgerSchema, PolitySchema, PrologueSchema, type Chapter, type Ledger, type EpicEvent, type Polity } from "../src/content/schema";
 
 const root = resolve(import.meta.dirname, "..");
 const contentDir = resolve(process.argv[2] ?? join(root, "content"));
@@ -82,7 +82,41 @@ if (existsSync(polDir)) {
   }
 }
 
-// Modern India outline from Natural Earth (India point-of-view edition): largest ring, used for the Republic chapter.
+/** Keeps a ring's shape to within `tol` degrees (Douglas-Peucker). The land layer still draws the full outline. */
+function thinRing(ring: [number, number][], tol: number): [number, number][] {
+  const keep = new Uint8Array(ring.length);
+  const far = ring.reduce((best, p, i) => (Math.hypot(p[0] - ring[0][0], p[1] - ring[0][1]) > Math.hypot(ring[best][0] - ring[0][0], ring[best][1] - ring[0][1]) ? i : best), 0);
+  keep[0] = keep[far] = keep[ring.length - 1] = 1;
+  const stack: [number, number][] = [
+    [0, far],
+    [far, ring.length - 1],
+  ];
+  while (stack.length) {
+    const [a, b] = stack.pop()!;
+    const [ax, ay] = ring[a];
+    const [bx, by] = ring[b];
+    const len = Math.hypot(bx - ax, by - ay) || 1;
+    let worst = -1;
+    let dist = tol;
+    for (let i = a + 1; i < b; i++) {
+      const d = Math.abs((bx - ax) * (ay - ring[i][1]) - (ax - ring[i][0]) * (by - ay)) / len;
+      if (d > dist) {
+        dist = d;
+        worst = i;
+      }
+    }
+    if (worst >= 0) {
+      keep[worst] = 1;
+      stack.push([a, worst], [worst, b]);
+    }
+  }
+  return ring.filter((_, i) => keep[i]);
+}
+
+/** The Republic's ring carries the hatch and the border morph, and a morph slows with the square of its points. */
+const RING_TOLERANCE_DEG = 0.05;
+
+// Modern India outline, following the Survey of India (scripts/india-outline.py): largest ring, used for the Republic chapter.
 if (existsSync(geoFile)) {
   const topo = JSON.parse(readFileSync(geoFile, "utf8")) as Topology;
   const objName = Object.keys(topo.objects)[0];
@@ -103,8 +137,8 @@ if (existsSync(geoFile)) {
         name_hi: "भारत गणराज्य",
         year: 1950,
         approximate: false,
-        source: "Natural Earth 10m admin-0 countries, India point-of-view edition, simplified 4%",
-        ring: largest,
+        source: "DataMeet india-soi.geojson (CC BY 4.0), following the Survey of India outline, simplified",
+        ring: thinRing(largest, RING_TOLERANCE_DEG),
       });
     }
   }
@@ -125,6 +159,30 @@ mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, "chapters.json"), JSON.stringify(chapters, null, 2));
 writeFileSync(join(outDir, "events.json"), JSON.stringify(events, null, 2));
 writeFileSync(join(outDir, "polities.json"), JSON.stringify(polities, null, 2));
+
+// One small file per event: the book fetches its long text, sources and picture credit when the page is opened.
+const eventDataDir = join(root, "public/data/event");
+rmSync(eventDataDir, { recursive: true, force: true });
+mkdirSync(eventDataDir, { recursive: true });
+const imageManifest = JSON.parse(readFileSync(join(root, "public/images/commons/manifest.json"), "utf8"));
+for (const e of events) {
+  const imageEntry = e.image ? imageManifest[e.image] : undefined;
+  writeFileSync(join(eventDataDir, `${e.id}.json`), JSON.stringify({ ...e, imageEntry }));
+}
+
+// The ledger is optional while it is being written: the page simply leaves it out.
+const ledgerFile = join(root, "content/ledger.md");
+let ledger: Ledger | null = null;
+if (existsSync(ledgerFile)) {
+  const r = LedgerSchema.safeParse(matter(readFileSync(ledgerFile, "utf8")).data);
+  if (!r.success) {
+    console.error(`content/ledger.md\n  ${r.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`).join("\n  ")}`);
+    process.exit(1);
+  }
+  ledger = r.data;
+}
+writeFileSync(join(outDir, "ledger.json"), JSON.stringify(ledger, null, 2));
+writeFileSync(join(root, "public/data/ledger.json"), JSON.stringify(ledger));
 
 // Prologue: spoken over the hero when Play is pressed. Optional file; the build never fails on it.
 {

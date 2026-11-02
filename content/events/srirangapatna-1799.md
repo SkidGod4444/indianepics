@@ -4,6 +4,7 @@ title: Fall of Srirangapatna
 title_hi: श्रीरंगपट्टण का पतन
 track: evidence
 chapter: company
+basis: documentary
 date: { start: 1799, end: 1799 }
 location: { lat: 12.422, lng: 76.693, name: "Srirangapatna, Karnataka" }
 tags: [war, colonial, political]

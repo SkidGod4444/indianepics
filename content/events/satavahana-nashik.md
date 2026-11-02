@@ -4,6 +4,7 @@ title: Gautamiputra Satakarni and the Nashik caves
 title_hi: गौतमीपुत्र सातकर्णि और नासिक की गुफाएँ
 track: evidence
 chapter: classical
+basis: epigraphic
 date: { start: 106, end: 130, uncertainty: 50 }
 location: { lat: 19.941, lng: 73.748, name: "Pandavleni caves, Nashik, Maharashtra" }
 tags: [political, state-formation]

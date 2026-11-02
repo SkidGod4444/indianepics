@@ -4,6 +4,7 @@ title: The Round Tables and the Poona Pact
 title_hi: गोलमेज़ सम्मेलन और पूना समझौता
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1932, end: 1932 }
 location: { lat: 18.5646, lng: 73.8897, name: "Yerwada Central Jail, Pune" }
 tags: [political, religion]

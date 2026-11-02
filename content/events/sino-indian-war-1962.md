@@ -4,6 +4,7 @@ title: The war with China
 title_hi: चीन के साथ युद्ध
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 1962, end: 1962 }
 location: { lat: 27.586, lng: 91.866, name: "Tawang, Arunachal Pradesh" }
 tags: [war, political]

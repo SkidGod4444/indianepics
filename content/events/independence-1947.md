@@ -4,6 +4,7 @@ title: Independence
 title_hi: स्वतंत्रता
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 1947, month: 8, end: 1947 }
 location: { lat: 28.656, lng: 77.241, name: "Red Fort, Delhi" }
 tags: [political, colonial]

@@ -4,6 +4,7 @@ title: Shivaji crowned at Raigad
 title_hi: रायगढ़ में शिवाजी का राज्याभिषेक
 track: evidence
 chapter: mughal
+basis: documentary
 date: { start: 1674, end: 1674 }
 location: { lat: 18.23, lng: 73.44, name: "Raigad Fort, Maharashtra" }
 tags: [political, war]

@@ -4,6 +4,7 @@ title: Economic liberalisation
 title_hi: आर्थिक उदारीकरण
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 1991, end: 1991 }
 location: { lat: 28.614, lng: 77.212, name: "North Block, New Delhi" }
 tags: [trade, political]

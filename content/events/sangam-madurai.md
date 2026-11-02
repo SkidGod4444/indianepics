@@ -4,6 +4,7 @@ title: Sangam poetry and the Tamil kings
 title_hi: संगम काव्य और तमिल राजा
 track: evidence
 chapter: classical
+basis: textual
 date: { start: -100, end: 250, uncertainty: 100 }
 location: { lat: 9.92, lng: 78.12, name: "Madurai, Tamil Nadu" }
 tags: [language, art, trade]

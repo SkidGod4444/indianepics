@@ -4,6 +4,7 @@ title: Home Rule and the Lucknow Pact
 title_hi: होम रूल और लखनऊ समझौता
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1916, end: 1917 }
 location: { lat: 26.85, lng: 80.95, name: "Lucknow" }
 tags: [political]

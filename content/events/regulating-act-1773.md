@@ -4,6 +4,7 @@ title: The Regulating Act and Warren Hastings
 title_hi: रेग्युलेटिंग एक्ट और वॉरेन हेस्टिंग्स
 track: evidence
 chapter: company
+basis: documentary
 date: { start: 1773, end: 1774 }
 location: { lat: 22.5565, lng: 88.3383, name: "Fort William, Calcutta" }
 tags: [colonial, political]

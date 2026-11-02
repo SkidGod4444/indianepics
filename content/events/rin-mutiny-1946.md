@@ -4,6 +4,7 @@ title: The INA trials and the naval mutiny
 title_hi: आज़ाद हिंद फ़ौज के मुक़दमे और नौसेना विद्रोह
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1945, month: 11, end: 1946 }
 location: { lat: 18.905, lng: 72.812, name: "HMIS Talwar, Colaba, Bombay" }
 tags: [political, war]

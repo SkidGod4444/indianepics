@@ -4,6 +4,7 @@ title: The Kargil war
 title_hi: कारगिल युद्ध
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 1999, end: 1999 }
 location: { lat: 34.557, lng: 76.126, name: "Kargil, Ladakh" }
 tags: [war]

@@ -4,6 +4,7 @@ title: Lapse and annexation
 title_hi: हड़प नीति और विलय
 track: evidence
 chapter: company
+basis: documentary
 date: { start: 1848, end: 1856 }
 location: { lat: 21.146, lng: 79.088, name: "Nagpur, Maharashtra" }
 tags: [colonial, political]

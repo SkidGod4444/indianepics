@@ -4,6 +4,7 @@ title: Mountbatten's 3 June plan
 title_hi: माउंटबेटन की 3 जून योजना
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1947, month: 6, end: 1947 }
 location: { lat: 28.6144, lng: 77.1997, name: "Viceroy's House (Rashtrapati Bhavan), New Delhi" }
 tags: [political, colonial]

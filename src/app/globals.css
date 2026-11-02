@@ -6,20 +6,20 @@
 
 /* Warm paper, deep ink, one accent per track. shadcn tokens are mapped onto these below. */
 :root {
-  --paper: #f4efe5;
-  --paper-2: #ebe4d4;
-  --paper-3: #dfd5bf;
-  --ink: #1c1915;
-  --ink-2: #57514a;
-  --ink-3: #8a8275;
-  --hair: #d6cdb8;
-  --evidence: #c2561a;
-  --evidence-soft: #efc9b2;
+  --paper: #ebe1cd;
+  --paper-2: #e0d5bc;
+  --paper-3: #d3c6a7;
+  --ink: #27190f;
+  --ink-2: #4a3c2f;
+  --ink-3: #6b6050;
+  --hair: #cdc0a1;
+  --evidence: #a8460f;
+  --evidence-soft: #e9c5a4;
   --tradition: #2f416d;
   --tradition-soft: #c6cde3;
-  --water: #e3e6e0;
-  --land: #ece6d8;
-  --land-stroke: #cfc5ad;
+  --water: #dad7cb;
+  --land: #e4dcc6;
+  --land-stroke: #c8bb9c;
   color-scheme: light;
 
   /* shadcn/ui semantic tokens → paper palette */
@@ -195,6 +195,8 @@ svg .era-stop {
 
 /* The browser's own scroll bar: thin, on the paper, in the era's accent. */
 html {
+  /* A sideways swipe turns a page here. It must not trigger the browser's back gesture. */
+  overscroll-behavior-x: none;
   /* Keep the gutter when the detail view locks scrolling, so the page never jumps sideways on classic scroll bars. */
   scrollbar-gutter: stable;
   scrollbar-width: thin;
@@ -220,23 +222,475 @@ html {
   border-color: var(--hair);
 }
 
-/* Three little bars that breathe while the narrator speaks. */
-.voice-bar {
-  display: block;
-  width: 2px;
-  height: 100%;
-  border-radius: 1px;
-  background: var(--evidence);
-  transform-origin: bottom;
-  animation: voice-bar 700ms ease-in-out infinite alternate;
+/*
+ * The book. Every page is one sheet of old paper: the era's colour, one shared tile of grain and foxing, a darkened
+ * edge, and a water stain that differs from page to page. --sheet carries the era's material and --frame its border.
+ * No pattern ever imitates writing. The type is an old printed face, set larger because its letters are small.
+ */
+:root {
+  --grain: url("/paper/grain.webp");
+  --age: radial-gradient(ellipse 74% 80% at 50% 48%, transparent 60%, rgb(104 66 24 / 0.11) 84%, rgb(84 50 16 / 0.3) 100%);
+  --fold-right: linear-gradient(to right, rgb(40 24 8 / 0.46), rgb(40 24 8 / 0.18) 2.5%, rgb(40 24 8 / 0.05) 7%, transparent 15%);
+  --fold-left: linear-gradient(to left, rgb(40 24 8 / 0.46), rgb(40 24 8 / 0.18) 2.5%, rgb(40 24 8 / 0.05) 7%, transparent 15%);
+  --rubric: #97281b;
+  --deckle: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='240'%3E%3Cpath d='M0 0L3.5 0L4.5 8.7L2.4 13.1L2.6 19.5L2.9 23.6L6.2 31.0L4.2 36.0L3.5 43.9L2.3 48.5L2.2 52.0L5.6 57.1L1.6 64.0L5.8 68.1L5.5 73.2L5.2 79.8L1.9 86.2L3.4 93.5L1.9 98.8L2.3 101.8L3.4 110.3L5.2 116.9L2.6 121.1L5.3 126.2L1.7 131.8L3.2 136.4L2.4 145.3L5.9 152.0L3.0 157.5L4.6 162.7L5.1 169.8L3.9 174.9L4.0 179.0L1.3 186.9L5.3 190.3L5.6 196.9L4.6 202.7L1.3 211.6L2.3 217.0L5.5 222.8L3.5 230.5L3.5 240L0 240Z'/%3E%3C/svg%3E");
 }
-@keyframes voice-bar {
-  from {
-    transform: scaleY(0.3);
+.book {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  perspective: 2600px;
+  perspective-origin: 50% 46%;
+}
+.book-phone {
+  perspective: 1100px;
+  perspective-origin: 50% 60%;
+}
+.page {
+  --sheet: none;
+  --sheet-size: auto;
+  --frame: none;
+  --stain: none;
+  background-color: var(--paper);
+  background-image: var(--stain), var(--age), var(--grain), var(--sheet);
+  background-size: 100% 100%, 100% 100%, 512px 512px, var(--sheet-size);
+}
+/* Water stains, each a pale tide with a darker edge, in a different corner from page to page. */
+[data-stain="0"] {
+  --stain: radial-gradient(ellipse 30% 21% at 84% 90%, rgb(122 80 30 / 0.05), rgb(122 80 30 / 0.07) 74%, rgb(112 70 24 / 0.17) 82%, transparent 87%);
+}
+[data-stain="1"] {
+  --stain: radial-gradient(ellipse 22% 32% at 9% 10%, rgb(122 80 30 / 0.06), rgb(122 80 30 / 0.05) 72%, rgb(112 70 24 / 0.15) 81%, transparent 86%);
+}
+[data-stain="2"] {
+  --stain: radial-gradient(ellipse 40% 15% at 66% 3%, rgb(122 80 30 / 0.07), rgb(122 80 30 / 0.05) 70%, rgb(112 70 24 / 0.14) 80%, transparent 85%);
+}
+/* The book's own hand, for everything printed on a sheet. Its small letters are scaled up to read at the same size. */
+.page,
+.book-phone .event-page {
+  --font-fraunces: var(--font-fell);
+  --font-devanagari: var(--font-tiro);
+  font-family: var(--font-fell), Georgia, serif;
+  font-size-adjust: 0.46;
+}
+.page .font-display {
+  font-family: var(--font-fell), Georgia, serif;
+}
+/* A rubricated initial, in red as a scribe would leave it. */
+@media (min-width: 1024px) {
+  .page-initial::first-letter {
+    float: left;
+    margin: 0.06em 0.09em 0 0;
+    font-size: 3.2em;
+    line-height: 0.82;
+    color: var(--rubric);
   }
-  to {
-    transform: scaleY(1);
+}
+.page-left,
+.page-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+}
+.page-left {
+  left: 0;
+  pointer-events: auto;
+}
+.page-right {
+  left: 50%;
+  pointer-events: auto;
+}
+.page-single {
+  position: fixed;
+  inset: 0;
+  pointer-events: auto;
+}
+/* The fold: each page sinks into the gutter. */
+.page-left::after,
+.page-right::after,
+.leaf-face::after,
+.spine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: var(--fold-right);
+}
+.page-left::after,
+.spine::after,
+.leaf-verso::after {
+  background: var(--fold-left);
+}
+/* The era's printed frame. */
+.page-left::before,
+.page-right::before,
+.page-single::before,
+.leaf-face::before {
+  content: "";
+  position: absolute;
+  inset: 62px 26px 92px;
+  pointer-events: none;
+  background: var(--frame);
+}
+.page-single::before {
+  inset: 46px 8px 88px;
+}
+.page-body {
+  position: relative;
+  height: 100%;
+  padding: 156px clamp(40px, 5.5vw, 96px) 154px;
+}
+.page-body-single {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 170px 24px 104px;
+}
+/* The map is drawn on a page too: the same age and grain, and on a wide screen the same fold. */
+.spine,
+.map-age {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  pointer-events: none;
+  background-image: var(--age), var(--grain);
+  background-size: 100% 100%, 512px 512px;
+}
+.map-age {
+  width: 100%;
+}
+/* The block of pages at each side, and the board of the binding outside it. */
+.page-stack {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  background: repeating-linear-gradient(90deg, rgb(70 44 20 / 0.42) 0 1px, var(--paper-2) 1px 3px);
+}
+.page-stack::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: linear-gradient(90deg, #2c1a0e, #4a2f1b);
+}
+.page-stack i {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 7px;
+  background: var(--paper);
+  mask: var(--deckle) 0 0 / 7px 240px repeat-y;
+}
+.page-stack-left {
+  left: 0;
+  box-shadow: 3px 0 7px rgb(40 24 8 / 0.28);
+}
+.page-stack-left::after {
+  left: 0;
+}
+.page-stack-left i {
+  right: -6px;
+}
+.page-stack-right {
+  right: 0;
+  box-shadow: -3px 0 7px rgb(40 24 8 / 0.28);
+}
+.page-stack-right::after {
+  right: 0;
+  transform: scaleX(-1);
+}
+.page-stack-right i {
+  left: -6px;
+  transform: scaleX(-1);
+}
+
+/* A sheet of paper turning, cut into upright strips that each take their own angle. */
+.sheet {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+.sheet-leaf {
+  left: 50%;
+  width: 50%;
+}
+.sheet-full {
+  left: 0;
+  right: 0;
+}
+.sheet-card {
+  position: fixed;
+  top: auto;
+  left: 12px;
+  right: 12px;
+  bottom: 104px;
+}
+.sheet-card .event-page {
+  position: relative;
+  left: auto;
+  right: auto;
+  bottom: auto;
+}
+/* The real page, laid out unseen. Its copies are what the reader sees. */
+.sheet-master {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+}
+.sheet-cut {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  transform-origin: left center;
+  will-change: transform;
+}
+.sheet-side {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.sheet-shade {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: linear-gradient(to right, #24140a, transparent);
+  will-change: opacity;
+}
+.sheet-shade-far {
+  background: linear-gradient(to left, #24140a, transparent);
+}
+.sheet-cast {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform-origin: left center;
+  background: linear-gradient(to right, rgb(30 18 8 / 0.62), rgb(30 18 8 / 0.3) 55%, transparent);
+  will-change: transform, opacity;
+}
+.leaf-face {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.event-page {
+  height: 100%;
+}
+.book-phone .event-page {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 104px;
+  height: auto;
+  padding: 14px;
+  pointer-events: auto;
+  background-color: var(--paper);
+  background-image: var(--age), var(--grain), var(--sheet);
+  background-size: 100% 100%, 512px 512px, var(--sheet-size);
+  border: 1px solid var(--hair);
+  border-radius: 3px;
+}
+
+.book-over {
+  z-index: 7;
+}
+
+/* The title page. A phone's is one sheet that swings away. A wide screen's is a spread whose right page turns over. */
+.hero-sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  padding: 64px 20px 16px;
+}
+.hero-text {
+  order: 2;
+}
+.hero-art {
+  order: 1;
+  margin-bottom: 6px;
+}
+.hero-text::after {
+  display: none;
+}
+.hero-nav {
+  order: 3;
+}
+@media (min-width: 1024px) {
+  .hero-sheet {
+    display: block;
+    padding: 0;
+    background: none;
+    perspective: 2600px;
+    perspective-origin: 50% 46%;
   }
+  .hero-text {
+    position: absolute;
+    inset: 0 50% 0 0;
+    justify-content: center;
+    padding: 72px clamp(36px, 5vw, 88px) 104px;
+  }
+  .hero-text::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: var(--fold-left);
+  }
+  .hero-art {
+    position: absolute;
+    inset: 0 0 0 50%;
+    margin: 0;
+  }
+  .hero-front {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 72px clamp(36px, 5vw, 88px) 104px;
+  }
+  .hero-front::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: var(--fold-right);
+  }
+  .hero-nav {
+    position: absolute;
+    inset: auto 40px 14px;
+    margin: 0;
+    z-index: 1;
+  }
+}
+
+/* The map's three layers: land, the state's shape, the pins. Each is composited alone, so a pin never repaints the land. */
+.map-layer {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+/* Text the server prints in both languages. The page shows one, with no JavaScript shipped for the text itself. */
+.lang-hi,
+html[data-lang="hi"] .lang-en {
+  display: none;
+}
+html[data-lang="hi"] .lang-hi {
+  display: block;
+}
+
+/* Long sections below the book: the browser skips laying them out until they come near the screen. */
+.far-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 2400px;
+}
+
+/* The reckoning: a ledger's red double margin. */
+@media (min-width: 1024px) {
+  .ledger::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 26px;
+    width: 5px;
+    border-inline: 1px solid rgb(170 40 30 / 0.45);
+  }
+}
+
+/* Birch bark: pale, with the short dark lenticels that run across the grain. */
+[data-folio="itihasa"] {
+  --sheet: radial-gradient(ellipse 15px 1.2px at 30% 35%, rgb(110 80 45 / 0.2), transparent), radial-gradient(ellipse 8px 1px at 72% 78%, rgb(110 80 45 / 0.16), transparent);
+  --sheet-size: 173px 71px, 131px 53px;
+}
+/* Fired clay: a seal's square frame. */
+[data-folio="indus-vedic"] {
+  --sheet: radial-gradient(circle at 20% 30%, rgb(156 59 30 / 0.05), transparent 45%), radial-gradient(circle at 80% 75%, rgb(120 60 30 / 0.06), transparent 40%);
+  --frame: linear-gradient(var(--evidence), var(--evidence)) top / 100% 1.5px no-repeat, linear-gradient(var(--evidence), var(--evidence)) bottom / 100% 1.5px no-repeat, linear-gradient(var(--evidence), var(--evidence)) left / 1.5px 100% no-repeat, linear-gradient(var(--evidence), var(--evidence)) right / 1.5px 100% no-repeat;
+}
+/* Sandstone: fine speckle, a mason's double line at the head and foot. */
+[data-folio="maurya"] {
+  --sheet: radial-gradient(rgb(90 60 30 / 0.07) 0.7px, transparent 0.8px);
+  --sheet-size: 9px 9px;
+  --frame: linear-gradient(var(--ink-3), var(--ink-3)) top / 100% 1px no-repeat, linear-gradient(var(--ink-3), var(--ink-3)) 0 5px / 100% 1px no-repeat, linear-gradient(var(--ink-3), var(--ink-3)) bottom / 100% 1px no-repeat, linear-gradient(var(--ink-3), var(--ink-3)) 0 calc(100% - 5px) / 100% 1px no-repeat;
+}
+/* Palm leaf: warm, ruled across, with the string holes that bound the leaves. */
+[data-folio="classical"],
+[data-folio="medieval"] {
+  --sheet: repeating-linear-gradient(0deg, transparent 0 27px, rgb(110 75 30 / 0.07) 27px 28px);
+  --frame: radial-gradient(circle, var(--paper-3) 5px, var(--ink-3) 5.5px, transparent 6.5px) left 4px center / 14px 14px no-repeat, radial-gradient(circle, var(--paper-3) 5px, var(--ink-3) 5.5px, transparent 6.5px) right 4px center / 14px 14px no-repeat;
+}
+[data-folio="medieval"] {
+  --sheet: repeating-linear-gradient(0deg, transparent 0 23px, rgb(80 50 25 / 0.1) 23px 24px);
+}
+/* A Mughal album page: gold margin, flecked paper. */
+[data-folio="mughal"] {
+  --sheet: radial-gradient(rgb(170 130 40 / 0.1) 0.8px, transparent 1px);
+  --sheet-size: 23px 23px;
+  --frame: linear-gradient(#b08d3a, #b08d3a) top / 100% 3px no-repeat, linear-gradient(#b08d3a, #b08d3a) bottom / 100% 3px no-repeat, linear-gradient(#b08d3a, #b08d3a) left / 3px 100% no-repeat, linear-gradient(#b08d3a, #b08d3a) right / 3px 100% no-repeat, linear-gradient(rgb(176 141 58 / 0.5), rgb(176 141 58 / 0.5)) 0 9px / 100% 1px no-repeat, linear-gradient(rgb(176 141 58 / 0.5), rgb(176 141 58 / 0.5)) 0 calc(100% - 9px) / 100% 1px no-repeat;
+}
+/* A Company ledger: laid paper, a red margin rule. */
+[data-folio="company"] {
+  --sheet: repeating-linear-gradient(90deg, transparent 0 7px, rgb(90 70 50 / 0.035) 7px 8px);
+  --frame: linear-gradient(rgb(170 40 30 / 0.5), rgb(170 40 30 / 0.5)) 14px 0 / 1px 100% no-repeat, linear-gradient(rgb(170 40 30 / 0.5), rgb(170 40 30 / 0.5)) 18px 0 / 1px 100% no-repeat;
+}
+/* A gazetteer: plain paper under a thick and thin rule. */
+[data-folio="raj"] {
+  --frame: linear-gradient(var(--ink), var(--ink)) top / 100% 3px no-repeat, linear-gradient(var(--ink), var(--ink)) 0 6px / 100% 1px no-repeat, linear-gradient(var(--ink), var(--ink)) bottom / 100% 1px no-repeat, linear-gradient(var(--ink), var(--ink)) 0 calc(100% - 3px) / 100% 3px no-repeat;
+}
+/* The handmade paper of the Constitution: a saffron and green edge. */
+[data-folio="republic"] {
+  --frame: linear-gradient(#c8701e, #c8701e) top / 100% 2px no-repeat, linear-gradient(#3f7d4e, #3f7d4e) bottom / 100% 2px no-repeat, linear-gradient(rgb(200 112 30 / 0.5), rgb(63 125 78 / 0.5)) left / 1px 100% no-repeat, linear-gradient(rgb(200 112 30 / 0.5), rgb(63 125 78 / 0.5)) right / 1px 100% no-repeat;
+}
+
+/* The speaker's two waves, lit in turn from the cone outwards while the narrator speaks. */
+.speaker-live .wave {
+  animation: speaker-wave 1400ms ease-in-out infinite;
+}
+.speaker-live .wave-far {
+  animation-delay: 220ms;
+}
+@keyframes speaker-wave {
+  0%,
+  100% {
+    opacity: 0.22;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+/* The player can be picked up anywhere and put down anywhere. */
+.player {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+}
+.player[data-dragging] {
+  cursor: grabbing;
+  box-shadow: 0 8px 22px rgb(40 24 8 / 0.28);
 }
 
 /* Fine paper grain, so flat colour never reads as a screen. */
@@ -246,7 +700,6 @@ html {
   inset: 0;
   pointer-events: none;
   opacity: 0.35;
-  mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.3 0 0 0 0 0.26 0 0 0 0 0.2 0 0 0 0.12 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
 

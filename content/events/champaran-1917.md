@@ -4,6 +4,7 @@ title: Champaran and Kheda
 title_hi: चंपारण और खेड़ा
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1917, end: 1918 }
 location: { lat: 26.65, lng: 84.917, name: "Motihari, Champaran" }
 tags: [political, colonial]

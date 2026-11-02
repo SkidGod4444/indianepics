@@ -4,6 +4,7 @@ title: The battles of Tarain
 title_hi: तराइन के युद्ध
 track: evidence
 chapter: medieval
+basis: textual
 date: { start: 1191, end: 1192 }
 location: { lat: 29.78, lng: 76.94, name: "Taraori, Karnal, Haryana" }
 tags: [war, political]

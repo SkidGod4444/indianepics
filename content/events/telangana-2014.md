@@ -4,6 +4,7 @@ title: Telangana becomes the 29th state
 title_hi: तेलंगाना उनतीसवाँ राज्य बना
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 2014, end: 2014 }
 location: { lat: 17.385, lng: 78.487, name: "Hyderabad, Telangana" }
 tags: [state-formation, political]

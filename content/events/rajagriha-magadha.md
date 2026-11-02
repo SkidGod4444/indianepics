@@ -4,6 +4,7 @@ title: Rajagriha and the sixteen great realms
 title_hi: राजगृह और सोलह महाजनपद
 track: evidence
 chapter: indus-vedic
+basis: archaeological
 date: { start: -600, end: -400, uncertainty: 50 }
 location: { lat: 25.03, lng: 85.42, name: "Rajgir (Rajagriha), Nalanda district, Bihar" }
 tags: [state-formation, political, religion]

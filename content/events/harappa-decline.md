@@ -4,6 +4,7 @@ title: Harappa and the end of the cities
 title_hi: हड़प्पा और नगरों का अंत
 track: evidence
 chapter: indus-vedic
+basis: archaeological
 date: { start: -1900, end: -1300, uncertainty: 100 }
 location: { lat: 30.629, lng: 72.864, name: "Harappa, Sahiwal district, Punjab (Pakistan)" }
 tags: [state-formation, trade]

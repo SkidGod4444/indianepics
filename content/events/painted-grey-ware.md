@@ -4,6 +4,7 @@ title: Painted Grey Ware villages of the doab
 title_hi: दोआब के चित्रित धूसर मृद्भांड वाले गाँव
 track: evidence
 chapter: indus-vedic
+basis: archaeological
 date: { start: -1200, end: -600, uncertainty: 100 }
 location: { lat: 29.16, lng: 78.01, name: "Hastinapur, Meerut district, Uttar Pradesh" }
 tags: [state-formation]

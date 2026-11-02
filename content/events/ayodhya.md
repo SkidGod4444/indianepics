@@ -4,6 +4,7 @@ title: Ayodhya, city of Rama
 title_hi: अयोध्या, राम की नगरी
 track: tradition
 chapter: itihasa
+basis: traditional
 tradition_date: Treta Yuga (Ramayana)
 era: Treta Yuga
 location: { lat: 26.80, lng: 82.20, name: "Ayodhya, Uttar Pradesh" }

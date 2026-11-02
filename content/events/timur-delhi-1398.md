@@ -4,6 +4,7 @@ title: Timur sacks Delhi
 title_hi: तैमूर द्वारा दिल्ली की लूट
 track: evidence
 chapter: medieval
+basis: textual
 date: { start: 1398, end: 1399 }
 location: { lat: 28.5507, lng: 77.2196, name: "Siri, Delhi" }
 tags: [war, political]

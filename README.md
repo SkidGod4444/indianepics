@@ -28,34 +28,54 @@ content/
   chapters/   one file per chapter: track, years or yuga stops, polity, opening image
   events/     one file per pin: track, date ± uncertainty, lat/lng, tags, sources, body
   polities/   one JSON ring per boundary slice, flagged approximate or traced
+  ledger.md   the reckoning: every figure sourced, disputed figures as ranges
 scripts/
-  build-content.ts   content → src/data/*.json, fails on any invalid file
+  build-content.ts   content → src/data/*.json and public/data/event/*.json, fails on any invalid file
+  build-sketches.ts  traces the ink drawings into public/sketch
+  build-paper.py     the shared paper grain tile, public/paper/grain.webp
   fetch-images.ts    Wikimedia Commons → public/images/commons + manifest.json
   gen-icons.ts       glyphs → public/icons/*.svg
 src/
   content/schema.ts  the Zod schema; the contract for contributors
+  lib/content.ts     every word of the history: server only, a browser import fails the build
+  lib/format.ts      dates and paths, safe in the browser
+  lib/story.ts       the film: every line laid end to end on one clock
   lib/glyphs.ts      the dot-matrix glyph set (one source for inline + SVG files)
-  lib/scenes.ts      the scroll-drawn chapter scenes, same dot language, 24x14
   lib/eras.ts        one palette, texture and type setting per chapter
-  components/        Stage (scroll clock + layout), MapStage, ChapterTitle, EventCallout, DetailOverlay, Scrubber, DotGlyph, ImageStage
-  app/               / and /event/[slug]
+  components/        Stage (scroll clock + layout), Book, MapStage, EventCallout, DetailOverlay, Ledger, Scrubber, Sketch, DotGlyph, ImageStage
+  app/               /, /chapter/[slug], /event/[slug], /reckoning
 public/icons/        generated glyph SVGs (bun run icons)
-public/geo/          Natural Earth 10m countries, India point-of-view edition, simplified
+public/geo/          Natural Earth 10m neighbours; India from DataMeet india-soi (CC BY 4.0), Survey of India outline
 ```
+
+A source that was not read at first hand carries `second_hand: true` and a note saying how it was read. The site tags it on the page, so a figure resting on a citation, an abstract or a press report never looks confirmed. Leave out anything you cannot source at all.
 
 ## How it reads
 
-The map is the stage: centred, full-screen, fixed. Scrolling is the clock. Each chapter gets one scroll "slot" for its title and one per event; as you pass a slot the chapter opener fades, a pin drops, a dotted thread runs on from the last pin, and a card pops up beside it and unfolds as you keep going. Clicking a card grows it in place into the detail view (shared-element transition, `pushState` to `/event/<id>/`, Back closes it). The same `/event/<id>/` is also a prerendered static page for direct links and search.
+The site is a book. Scrolling down is the clock, and every chapter gets one slot for its title and one per event. Inside each slot the page turn is worked out from the scroll position, so scrolling back un-turns it. A sideways trackpad scroll, the arrow keys and a sideways swipe turn pages too.
 
-Every chapter sets its own room. `src/lib/eras.ts` holds a palette, a texture and a type setting per chapter (night indigo for the Itihasa, fired brick for the Indus, sandstone for the Mauryas, Gupta gold, granite and bronze, marble and jaali, ledger paper, survey grid, newsprint); crossing a chapter boundary glides the whole page into it. Each opener is a dot-matrix scene from `src/lib/scenes.ts` that draws itself dot by dot as the title slot scrolls.
+Wide screens show a spread: the map is the left page and the event is the right page. Phones show one page, hinged at its left edge, with the map above a card.
 
-The story can run itself: **Play** (bottom right, or the space bar) scrolls at a steady pace, about five seconds per event, and any wheel, touch or key hands control back. Skip back and forward jump one event at a time.
+Every chapter has its own page material, in CSS under `data-folio`: birch bark, a fired-clay seal frame, sandstone, palm leaf with string holes, a gold Mughal margin, a Company ledger, a gazetteer and the bordered paper of the Constitution. `src/lib/eras.ts` holds the palette for each.
+
+The story can run itself. **Play** drives the book from one clock, the narrator's, so the pages, map and voice stay in step. Any wheel, touch or key hands control back to the reader.
+
+In Play the narrator's clock is the only clock. The page turns over the first third of a slot in 1.3 seconds, whatever the length of the line, and the rest of the slot lasts as long as the voice. A chapter's sketch finishes with its last word and stops when Play stops. The year stands on the date of the page and moves only while the page turns, and the new border spreads while the chapter's first event is read. With the voice off, a page stays up as long as its text takes to read. A scroll too fast to see a turn skips the bend.
+
+A paper sound plays on each turn, quieter under the voice. Browsers keep sound off until the reader clicks, taps or presses a key, so the player shows a small "Tap for sound" until then. Clips are cut from Turning a page by planish and Book paper pages assorted by stephan, from pdsounds.org through Wikimedia Commons, and sit in `public/audio/sfx`.
+
+The book ends with **the reckoning**: the economic record, the drain debate, famines as ranges, what was taken and how the states were drawn. Its data is `content/ledger.md`.
+
+## What the browser receives
+
+The home page carries only what the book shows. An event's long text, sources and picture credit load from `public/data/event/<id>.json` when its page is opened, the reckoning loads from `public/data/ledger.json` as the reader nears it, and the map's code loads once the title page is on screen. `/reckoning/` and every `/event/` and `/chapter/` page stay complete, static HTML for search engines and agents.
 
 ## Images and animation
 
-Two kinds of image:
+Three kinds of image:
 
-- **Dot-matrix scenes and glyphs** (`src/lib/scenes.ts`, `src/lib/glyphs.ts`): procedural 56×56 dot grids whose lit dots breathe on a staggered schedule, in the style of an animated icon set. Shapes (stupa, pillar, dome, fort, flag, chakra, rocket, diamond, river, scroll) and schedules (wave, ripple, rise, scan, spin, fall) combine freely. `<DotGlyph name="stupa" />` renders one inline in `currentColor`; `bun run icons` writes them all to `public/icons/*.svg` with an `index.html` gallery.
+- **Ink drawings** (`public/sketch/`): one per chapter, drawn stroke by stroke on a canvas. Each is traced from a real painting, object or photograph, so what it shows rests on that work. `scripts/build-sketches.ts` holds each source and its settings, `scripts/art-lines.py` finds the ink lines, `scripts/sketch-trace.py` turns them into ordered strokes, and `src/lib/sketches.ts` holds the credits shown on the page. Traces of CC BY and CC BY-SA works carry the same terms.
+- **Dot-matrix glyphs** (`src/lib/glyphs.ts`): the small mark beside each event.
 - **Photographs** from Wikimedia Commons, author and licence recorded in `public/images/commons/manifest.json`. Flat images get a scroll-linked push-in, drift and reveal in `ImageStage`, which also accepts `layers` (back to front, each with a depth) for parallax when layered art exists.
 
 ## Contributing

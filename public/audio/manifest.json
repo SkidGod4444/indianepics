@@ -44,19 +44,19 @@
     "indus-vedic": {
       "en": {
         "file": "en/indus-vedic.mp3",
-        "hash": "51cd4e1d4cd1",
-        "chars": 437,
+        "hash": "edc5766258ef",
+        "chars": 545,
         "voice": "varun_en_suspense",
         "model": "bulbul:v4-flash",
-        "seconds": 32.38
+        "seconds": 36.5
       },
       "hi": {
         "file": "hi/indus-vedic.mp3",
-        "hash": "b9560892174a",
-        "chars": 442,
+        "hash": "a7265b66703d",
+        "chars": 551,
         "voice": "h_narrator",
         "model": "bulbul:v4-flash",
-        "seconds": 29.52
+        "seconds": 40.68
       }
     },
     "maurya": {
@@ -237,6 +237,42 @@
         "voice": "h_narrator",
         "model": "bulbul:v4-flash",
         "seconds": 20.11
+      }
+    },
+    "bhimbetka": {
+      "en": {
+        "file": "en/bhimbetka.mp3",
+        "hash": "d5ec512c2e8b",
+        "chars": 329,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 20.69
+      },
+      "hi": {
+        "file": "hi/bhimbetka.mp3",
+        "hash": "10eb5ea824a0",
+        "chars": 331,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.48
+      }
+    },
+    "mehrgarh": {
+      "en": {
+        "file": "en/mehrgarh.mp3",
+        "hash": "f3b89adcd14c",
+        "chars": 320,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 24.58
+      },
+      "hi": {
+        "file": "hi/mehrgarh.mp3",
+        "hash": "e5c901ba00e3",
+        "chars": 352,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 24.41
       }
     },
     "dholavira": {
@@ -1049,6 +1085,24 @@
         "seconds": 17.62
       }
     },
+    "bengal-famine-1770": {
+      "en": {
+        "file": "en/bengal-famine-1770.mp3",
+        "hash": "4e49aebe6fe4",
+        "chars": 341,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 22.51
+      },
+      "hi": {
+        "file": "hi/bengal-famine-1770.mp3",
+        "hash": "71bd520fb6eb",
+        "chars": 299,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 20.76
+      }
+    },
     "regulating-act-1773": {
       "en": {
         "file": "en/regulating-act-1773.mp3",
@@ -1101,6 +1155,24 @@
         "voice": "h_narrator",
         "model": "bulbul:v4-flash",
         "seconds": 24.46
+      }
+    },
+    "deindustrialisation-1800": {
+      "en": {
+        "file": "en/deindustrialisation-1800.mp3",
+        "hash": "8a5ab009dfdf",
+        "chars": 336,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.91
+      },
+      "hi": {
+        "file": "hi/deindustrialisation-1800.mp3",
+        "hash": "16e347905dc0",
+        "chars": 351,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 20.76
       }
     },
     "great-arc-1802": {
@@ -1157,6 +1229,24 @@
         "seconds": 22.94
       }
     },
+    "ryotwari-mahalwari": {
+      "en": {
+        "file": "en/ryotwari-mahalwari.mp3",
+        "hash": "667c88f7eca5",
+        "chars": 289,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 19.85
+      },
+      "hi": {
+        "file": "hi/ryotwari-mahalwari.mp3",
+        "hash": "336cd7ef6d7f",
+        "chars": 270,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 20.04
+      }
+    },
     "bentinck-reforms-1829": {
       "en": {
         "file": "en/bentinck-reforms-1829.mp3",
@@ -1173,6 +1263,24 @@
         "voice": "h_narrator",
         "model": "bulbul:v4-flash",
         "seconds": 23.28
+      }
+    },
+    "macaulay-adam-1835": {
+      "en": {
+        "file": "en/macaulay-adam-1835.mp3",
+        "hash": "3cbcd94a892a",
+        "chars": 382,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 24.84
+      },
+      "hi": {
+        "file": "hi/macaulay-adam-1835.mp3",
+        "hash": "953241017626",
+        "chars": 368,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 25.1
       }
     },
     "sindh-1843": {
@@ -1229,6 +1337,24 @@
         "seconds": 21.22
       }
     },
+    "koh-i-noor-1849": {
+      "en": {
+        "file": "en/koh-i-noor-1849.mp3",
+        "hash": "20a728695629",
+        "chars": 347,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 23.16
+      },
+      "hi": {
+        "file": "hi/koh-i-noor-1849.mp3",
+        "hash": "2560d9731022",
+        "chars": 324,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 25.03
+      }
+    },
     "railway-1853": {
       "en": {
         "file": "en/railway-1853.mp3",
@@ -1245,6 +1371,24 @@
         "voice": "h_narrator",
         "model": "bulbul:v4-flash",
         "seconds": 18.58
+      }
+    },
+    "universities-1857": {
+      "en": {
+        "file": "en/universities-1857.mp3",
+        "hash": "4e48325f2993",
+        "chars": 330,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 23.33
+      },
+      "hi": {
+        "file": "hi/universities-1857.mp3",
+        "hash": "f36d8643c94c",
+        "chars": 318,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 22.3
       }
     },
     "barrackpore-1857": {
@@ -1373,6 +1517,60 @@
         "seconds": 21.05
       }
     },
+    "indian-penal-code-1860": {
+      "en": {
+        "file": "en/indian-penal-code-1860.mp3",
+        "hash": "cda8a1ea5d78",
+        "chars": 320,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 25.56
+      },
+      "hi": {
+        "file": "hi/indian-penal-code-1860.mp3",
+        "hash": "e7bfc211f124",
+        "chars": 307,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 23.57
+      }
+    },
+    "asi-1861": {
+      "en": {
+        "file": "en/asi-1861.mp3",
+        "hash": "ce955a5059c2",
+        "chars": 318,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 20.5
+      },
+      "hi": {
+        "file": "hi/asi-1861.mp3",
+        "hash": "549055bc8e27",
+        "chars": 307,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 19.92
+      }
+    },
+    "sultanganj-buddha-1862": {
+      "en": {
+        "file": "en/sultanganj-buddha-1862.mp3",
+        "hash": "4ea9aeab6444",
+        "chars": 303,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 22.39
+      },
+      "hi": {
+        "file": "hi/sultanganj-buddha-1862.mp3",
+        "hash": "ebe92aa554a6",
+        "chars": 307,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.19
+      }
+    },
     "famine-1876": {
       "en": {
         "file": "en/famine-1876.mp3",
@@ -1409,6 +1607,24 @@
         "seconds": 23.47
       }
     },
+    "amaravati-1880": {
+      "en": {
+        "file": "en/amaravati-1880.mp3",
+        "hash": "b72773ee982c",
+        "chars": 295,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 20.35
+      },
+      "hi": {
+        "file": "hi/amaravati-1880.mp3",
+        "hash": "4b9b6d14fc21",
+        "chars": 268,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 18.02
+      }
+    },
     "congress-1885": {
       "en": {
         "file": "en/congress-1885.mp3",
@@ -1427,6 +1643,42 @@
         "seconds": 25.7
       }
     },
+    "canal-colonies-1885": {
+      "en": {
+        "file": "en/canal-colonies-1885.mp3",
+        "hash": "0a734538981c",
+        "chars": 394,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 27.17
+      },
+      "hi": {
+        "file": "hi/canal-colonies-1885.mp3",
+        "hash": "a921b4738282",
+        "chars": 398,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 27.17
+      }
+    },
+    "famine-1896": {
+      "en": {
+        "file": "en/famine-1896.mp3",
+        "hash": "97390f497d67",
+        "chars": 364,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 24
+      },
+      "hi": {
+        "file": "hi/famine-1896.mp3",
+        "hash": "cda69b0b189e",
+        "chars": 315,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 23.62
+      }
+    },
     "birsa-ulgulan": {
       "en": {
         "file": "en/birsa-ulgulan.mp3",
@@ -1443,6 +1695,42 @@
         "voice": "h_narrator",
         "model": "bulbul:v4-flash",
         "seconds": 24.74
+      }
+    },
+    "naoroji-drain-1901": {
+      "en": {
+        "file": "en/naoroji-drain-1901.mp3",
+        "hash": "a84e03734c00",
+        "chars": 300,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.6
+      },
+      "hi": {
+        "file": "hi/naoroji-drain-1901.mp3",
+        "hash": "dc99e063d631",
+        "chars": 319,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 22.01
+      }
+    },
+    "linguistic-survey-1903": {
+      "en": {
+        "file": "en/linguistic-survey-1903.mp3",
+        "hash": "2bfd3c3c5314",
+        "chars": 377,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 24.02
+      },
+      "hi": {
+        "file": "hi/linguistic-survey-1903.mp3",
+        "hash": "d1eb2a737cf6",
+        "chars": 306,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 22.8
       }
     },
     "bengal-partition-1905": {
@@ -2075,6 +2363,24 @@
         "seconds": 21.38
       }
     },
+    "punjab-haryana-1966": {
+      "en": {
+        "file": "en/punjab-haryana-1966.mp3",
+        "hash": "b8b041fb0cd6",
+        "chars": 347,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.89
+      },
+      "hi": {
+        "file": "hi/punjab-haryana-1966.mp3",
+        "hash": "614919aebc2f",
+        "chars": 320,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.65
+      }
+    },
     "bangladesh-1971": {
       "en": {
         "file": "en/bangladesh-1971.mp3",
@@ -2201,6 +2507,24 @@
         "seconds": 23.35
       }
     },
+    "new-states-2000": {
+      "en": {
+        "file": "en/new-states-2000.mp3",
+        "hash": "3cf00814299b",
+        "chars": 346,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 21.53
+      },
+      "hi": {
+        "file": "hi/new-states-2000.mp3",
+        "hash": "c4416e7bcc3e",
+        "chars": 296,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 19.63
+      }
+    },
     "aadhaar-2010": {
       "en": {
         "file": "en/aadhaar-2010.mp3",
@@ -2217,6 +2541,24 @@
         "voice": "h_narrator",
         "model": "bulbul:v4-flash",
         "seconds": 22.94
+      }
+    },
+    "census-languages-2011": {
+      "en": {
+        "file": "en/census-languages-2011.mp3",
+        "hash": "e82af98e87e9",
+        "chars": 248,
+        "voice": "varun_en_suspense",
+        "model": "bulbul:v4-flash",
+        "seconds": 17.54
+      },
+      "hi": {
+        "file": "hi/census-languages-2011.mp3",
+        "hash": "15d1e3e26e93",
+        "chars": 215,
+        "voice": "h_narrator",
+        "model": "bulbul:v4-flash",
+        "seconds": 15.46
       }
     },
     "telangana-2014": {

@@ -4,6 +4,7 @@ title: Simon go back, and Bhagat Singh
 title_hi: "'साइमन वापस जाओ' और भगत सिंह"
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1928, month: 12, end: 1931 }
 location: { lat: 31.540, lng: 74.329, name: "Shadman Chowk, Lahore" }
 tags: [political, colonial]

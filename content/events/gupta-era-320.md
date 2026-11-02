@@ -4,6 +4,7 @@ title: Chandragupta I and the Gupta era
 title_hi: चंद्रगुप्त प्रथम और गुप्त संवत
 track: evidence
 chapter: classical
+basis: epigraphic
 date: { start: 319, end: 320, uncertainty: 0 }
 location: { lat: 25.61, lng: 85.14, name: "Pataliputra (Patna), Bihar" }
 tags: [political, state-formation]

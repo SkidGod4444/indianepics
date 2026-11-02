@@ -4,6 +4,7 @@ title: Sati abolished, English adopted
 title_hi: सती प्रथा का अंत, अंग्रेज़ी शिक्षा का आरंभ
 track: evidence
 chapter: company
+basis: documentary
 date: { start: 1829, end: 1835 }
 location: { lat: 22.5697, lng: 88.3487, name: "Government House, Calcutta" }
 tags: [colonial, religion, language]

@@ -4,6 +4,7 @@ title: Jammu and Kashmir reorganised; Ladakh a union territory
 title_hi: जम्मू-कश्मीर पुनर्गठन; लद्दाख केंद्र शासित प्रदेश
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 2019, end: 2019 }
 location: { lat: 34.152, lng: 77.577, name: "Leh, Ladakh" }
 tags: [state-formation, political]

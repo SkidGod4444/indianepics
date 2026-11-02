@@ -4,6 +4,7 @@ title: Lothal and the dock debate
 title_hi: लोथल और गोदी पर बहस
 track: evidence
 chapter: indus-vedic
+basis: archaeological
 date: { start: -2400, end: -1900, uncertainty: 100 }
 location: { lat: 22.521, lng: 72.249, name: "Lothal, Ahmedabad district, Gujarat" }
 tags: [trade, science]

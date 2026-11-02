@@ -4,6 +4,7 @@ title: Birsa Munda's ulgulan
 title_hi: बिरसा मुंडा का उलगुलान
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1899, end: 1900 }
 location: { lat: 22.975, lng: 85.491, name: "Ulihatu, Khunti" }
 tags: [political, colonial, religion]

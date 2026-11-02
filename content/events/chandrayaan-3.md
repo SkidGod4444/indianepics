@@ -4,6 +4,7 @@ title: Chandrayaan-3 lands near the lunar south pole
 title_hi: चंद्रयान-3 चंद्रमा के दक्षिणी ध्रुव के पास उतरा
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 2023, end: 2023 }
 location: { lat: 13.72, lng: 80.23, name: "Satish Dhawan Space Centre, Sriharikota, Andhra Pradesh" }
 tags: [science]

@@ -4,6 +4,7 @@ title: The Great Trigonometrical Survey begins
 title_hi: महान त्रिकोणमितीय सर्वेक्षण का आरंभ
 track: evidence
 chapter: company
+basis: documentary
 date: { start: 1802, end: 1802 }
 location: { lat: 13.005, lng: 80.194, name: "St Thomas Mount, Chennai" }
 tags: [science, colonial]

@@ -1,25 +1,20 @@
+import { preload } from "react-dom";
 import { Header } from "@/components/Header";
 import { Stage } from "@/components/Stage";
+import { Ledger } from "@/components/Ledger";
 import { SiteIndex } from "@/components/SiteIndex";
 import { JsonLd, siteJsonLd } from "@/lib/seo";
-import { chapters, events, getImage, thumbSrc, polities, prologue } from "@/lib/content";
-import { eraFor } from "@/lib/eras";
-import type { Plate } from "@/components/DotPlate";
+import { bookChapters, bookEvents, chapters, polities, prologue } from "@/lib/content";
 
 export default function Home() {
-  // The hero's plates: each chapter's picture, told in dots in that era's accent.
-  const plates: Plate[] = chapters.flatMap((c) => {
-    const img = getImage(c.image);
-    const src = thumbSrc(c.image);
-    if (!img || !src) return [];
-    const era = eraFor(c);
-    return [{ id: c.id, src, title: img.title.replace(/\.[a-z]+$/i, ""), credit: /\.(jpe?g|png|tiff?)\b|_/i.test(img.author) ? img.license : `${img.author}, ${img.license}`, accent: c.track === "tradition" ? era.vars["--tradition"] : era.vars["--evidence"] }];
-  });
+  // The hero's sketch starts arriving with the page, so it begins drawing the moment the code runs.
+  preload("/sketch/hero.txt", { as: "fetch", crossOrigin: "anonymous" });
   return (
     <main className="relative">
       <Header />
       <JsonLd data={siteJsonLd(chapters)} />
-      <Stage chapters={chapters} events={events} polities={polities} prologue={prologue} plates={plates} />
+      <Stage chapters={bookChapters()} events={bookEvents()} polities={polities} prologue={prologue} />
+      <Ledger />
       <SiteIndex />
     </main>
   );

@@ -4,6 +4,7 @@ title: Guru Gobind Singh founds the Khalsa
 title_hi: गुरु गोबिंद सिंह ने ख़ालसा की स्थापना की
 track: evidence
 chapter: mughal
+basis: documentary
 date: { start: 1699, end: 1699 }
 location: { lat: 31.24, lng: 76.50, name: "Anandpur Sahib, Punjab" }
 tags: [religion, political]

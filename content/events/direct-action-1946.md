@@ -4,6 +4,7 @@ title: Direct Action Day
 title_hi: प्रत्यक्ष कार्रवाई दिवस
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1946, end: 1946 }
 location: { lat: 22.5629, lng: 88.3492, name: "Ochterlony Monument (Shaheed Minar), Calcutta" }
 tags: [political, religion]

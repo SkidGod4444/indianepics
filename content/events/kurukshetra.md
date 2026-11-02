@@ -4,6 +4,7 @@ title: Kurukshetra, field of the Mahabharata war
 title_hi: कुरुक्षेत्र, महाभारत युद्धभूमि
 track: tradition
 chapter: itihasa
+basis: traditional
 tradition_date: End of the Dvapara Yuga (Mahabharata)
 era: Dvapara Yuga
 location: { lat: 29.97, lng: 76.88, name: "Kurukshetra, Haryana" }

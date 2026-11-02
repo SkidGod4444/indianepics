@@ -4,6 +4,7 @@ title: Dholavira and its reservoirs
 title_hi: धोलावीरा और उसके जलाशय
 track: evidence
 chapter: indus-vedic
+basis: archaeological
 date: { start: -2600, end: -1900, uncertainty: 100 }
 location: { lat: 23.887, lng: 70.213, name: "Dholavira, Khadir island, Kutch, Gujarat" }
 tags: [state-formation, science]

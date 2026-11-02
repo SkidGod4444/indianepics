@@ -4,6 +4,7 @@ title: The Bhopal gas disaster
 title_hi: भोपाल गैस त्रासदी
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 1984, end: 1984 }
 location: { lat: 23.281, lng: 77.411, name: "Union Carbide plant, Bhopal, Madhya Pradesh" }
 tags: [science, political]

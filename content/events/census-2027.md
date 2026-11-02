@@ -4,6 +4,7 @@ title: Census 2027 begins
 title_hi: जनगणना 2027 का आरंभ
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 2026, end: 2027 }
 location: { lat: 28.605, lng: 77.222, name: "Office of the Registrar General, Mansingh Road, New Delhi" }
 tags: [political, state-formation]

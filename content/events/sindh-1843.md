@@ -4,6 +4,7 @@ title: Conquest of Sindh
 title_hi: सिंध की विजय
 track: evidence
 chapter: company
+basis: documentary
 date: { start: 1843, end: 1843 }
 location: { lat: 25.483, lng: 68.395, name: "Miani, north of Hyderabad, Sindh (Pakistan)" }
 tags: [war, colonial]

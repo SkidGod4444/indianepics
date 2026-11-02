@@ -4,6 +4,7 @@ title: The Permanent Settlement
 title_hi: स्थायी बंदोबस्त
 track: evidence
 chapter: company
+basis: documentary
 date: { start: 1793, end: 1793 }
 location: { lat: 22.572, lng: 88.364, name: "Calcutta, Bengal" }
 tags: [colonial, political]

@@ -4,6 +4,7 @@ title: Aryabhata writes the Aryabhatiya
 title_hi: आर्यभट और आर्यभटीय
 track: evidence
 chapter: classical
+basis: textual
 date: { start: 499, end: 499, uncertainty: 0 }
 location: { lat: 25.597, lng: 85.18, name: "Kusumapura, identified with Pataliputra (Patna), Bihar" }
 tags: [science]

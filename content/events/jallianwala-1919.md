@@ -4,6 +4,7 @@ title: The Rowlatt Act and Jallianwala Bagh
 title_hi: रॉलेट एक्ट और जलियाँवाला बाग़
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1919, end: 1919 }
 location: { lat: 31.6205, lng: 74.8806, name: "Jallianwala Bagh, Amritsar" }
 tags: [political, colonial]

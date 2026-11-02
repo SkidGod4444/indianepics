@@ -4,6 +4,7 @@ title: The move to Daulatabad
 title_hi: राजधानी दिल्ली से दौलताबाद
 track: evidence
 chapter: medieval
+basis: textual
 date: { start: 1327, end: 1335, uncertainty: 1 }
 location: { lat: 19.9428, lng: 75.2133, name: "Daulatabad fort, Maharashtra" }
 tags: [political, state-formation]

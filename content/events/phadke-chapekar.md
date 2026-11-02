@@ -4,6 +4,7 @@ title: Phadke's rising and the Chapekar brothers
 title_hi: फड़के का विद्रोह और चापेकर बंधु
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1879, end: 1899 }
 location: { lat: 18.540, lng: 73.836, name: "Ganeshkhind Road, Pune" }
 tags: [political, colonial]

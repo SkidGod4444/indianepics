@@ -4,6 +4,7 @@ title: Alluri Sitarama Raju and the Rampa rising
 title_hi: अल्लूरी सीताराम राजू और रंपा विद्रोह
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1922, end: 1924 }
 location: { lat: 17.6727, lng: 82.3789, name: "Krishnadevipeta, Visakhapatnam Agency" }
 tags: [political, colonial]

@@ -4,6 +4,7 @@ title: The Great Famine of 1876 to 1878
 title_hi: 1876–78 का महाअकाल
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1876, end: 1878 }
 location: { lat: 15.14, lng: 76.92, name: "Bellary, Madras Presidency" }
 tags: [colonial, political]

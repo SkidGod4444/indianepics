@@ -4,6 +4,7 @@ title: Mahmud of Ghazni at Somnath
 title_hi: सोमनाथ पर महमूद ग़ज़नवी
 track: evidence
 chapter: medieval
+basis: textual
 date: { start: 1026, end: 1026 }
 location: { lat: 20.888, lng: 70.401, name: "Somnath, Prabhas Patan, Gujarat" }
 tags: [war, religion]

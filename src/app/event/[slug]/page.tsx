@@ -46,7 +46,7 @@ export default async function EventPage({ params }: PageProps<"/event/[slug]">) 
   const next = siblings[i + 1];
   return (
     <main className="min-h-screen">
-      <Header />
+      <Header backed />
       <JsonLd data={eventJsonLd(ev, ch)} />
       <div className="mx-auto max-w-[680px] px-5 pb-24 pt-24 lg:px-0">
         <nav aria-label="Breadcrumb" className="mb-8 flex flex-wrap items-center gap-x-2 text-[12px] text-ink-3">
@@ -67,7 +67,7 @@ export default async function EventPage({ params }: PageProps<"/event/[slug]">) 
             </a>
           </span>
         </nav>
-        <EventBody ev={ev} heading="h1" />
+        <EventBody ev={{ ...ev, imageEntry: getImage(ev.image) }} heading="h1" />
         <nav className="mt-12 flex justify-between gap-4 border-t border-hair pt-6 text-[13px]">
           {prev ? (
             <Link href={eventPath(prev.id)} className="text-ink-2 hover:text-ink">

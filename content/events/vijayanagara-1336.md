@@ -4,6 +4,7 @@ title: Vijayanagara is founded
 title_hi: विजयनगर की स्थापना
 track: evidence
 chapter: medieval
+basis: textual
 date: { start: 1336, end: 1346 }
 location: { lat: 15.335, lng: 76.46, name: "Virupaksha temple, Hampi, Karnataka" }
 tags: [state-formation, political]

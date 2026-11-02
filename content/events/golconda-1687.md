@@ -4,6 +4,7 @@ title: Aurangzeb takes Golconda
 title_hi: औरंगज़ेब ने गोलकुंडा जीता
 track: evidence
 chapter: mughal
+basis: documentary
 date: { start: 1687, end: 1687 }
 location: { lat: 17.38, lng: 78.40, name: "Golconda Fort, Hyderabad, Telangana" }
 tags: [war, political]

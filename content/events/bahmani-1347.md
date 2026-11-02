@@ -4,6 +4,7 @@ title: The Bahmani sultanate
 title_hi: बहमनी सल्तनत
 track: evidence
 chapter: medieval
+basis: textual
 date: { start: 1347, end: 1347 }
 location: { lat: 17.336, lng: 76.832, name: "Gulbarga (Kalaburagi) fort, Karnataka" }
 tags: [state-formation, political]

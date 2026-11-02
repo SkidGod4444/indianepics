@@ -4,6 +4,7 @@ title: Clash in the Galwan valley
 title_hi: गलवान घाटी में झड़प
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 2020, end: 2020 }
 location: { lat: 34.767, lng: 78.217, name: "Galwan valley, near Patrolling Point 14, Ladakh" }
 tags: [war, political]

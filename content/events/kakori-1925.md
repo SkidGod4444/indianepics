@@ -4,6 +4,7 @@ title: The Kakori train action
 title_hi: काकोरी ट्रेन एक्शन
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1925, end: 1927 }
 location: { lat: 26.884, lng: 80.800, name: "Kakori, near Lucknow" }
 tags: [political, colonial]

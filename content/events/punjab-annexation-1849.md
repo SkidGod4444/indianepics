@@ -4,6 +4,7 @@ title: Annexation of the Punjab
 title_hi: पंजाब का विलय
 track: evidence
 chapter: company
+basis: documentary
 date: { start: 1849, end: 1849 }
 location: { lat: 31.588, lng: 74.315, name: "Lahore Fort, Punjab (Pakistan)" }
 tags: [war, colonial, political]

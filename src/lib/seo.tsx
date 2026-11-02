@@ -1,10 +1,12 @@
 import type { Chapter, EpicEvent } from "@/content/schema";
 import type { ImageManifest } from "@/content/schema";
-import { formatRange, formatYear, getImage } from "./content";
+import { getImage } from "./content";
+import { formatRange, formatYear } from "./format";
 
 /** Set NEXT_PUBLIC_SITE_URL at build time; canonical URLs, the sitemap and llms.txt all derive from it. */
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://indianepics.online").replace(/\/$/, "");
 export const SITE_NAME = "indianepics";
+const AUTHOR = { "@type": "Person", name: "Saidev Dhal", url: "https://saidev.codes" };
 export const SITE_DESCRIPTION =
   "The history of the Indian subcontinent on one map, from the Itihasa to the present day. Every event is dated, placed and sourced, and told in English and Hindi.";
 
@@ -40,7 +42,8 @@ export function eventJsonLd(ev: EpicEvent, chapter: Chapter | undefined) {
     isPartOf: chapter ? { "@type": "CreativeWorkSeries", name: chapter.title, url: abs(chapterPath(chapter.id)) } : undefined,
     keywords: [...ev.tags, ev.track, ev.location.name].join(", "),
     image: img ? absImage(img) : undefined,
-    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+    author: AUTHOR,
+    publisher: AUTHOR,
     license: "https://creativecommons.org/licenses/by-sa/4.0/",
     citation: ev.sources.map((s) => ({ "@type": "CreativeWork", name: s.title, url: s.url })),
     spatialCoverage: {
@@ -89,7 +92,7 @@ export function siteJsonLd(chapters: Chapter[]) {
   return {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "WebSite", "@id": `${SITE_URL}/#website`, name: SITE_NAME, url: SITE_URL, description: SITE_DESCRIPTION, inLanguage: ["en", "hi"] },
+      { "@type": "WebSite", "@id": `${SITE_URL}/#website`, name: SITE_NAME, url: SITE_URL, creator: AUTHOR, publisher: AUTHOR, description: SITE_DESCRIPTION, inLanguage: ["en", "hi"] },
       {
         "@type": "ItemList",
         name: "Chapters",

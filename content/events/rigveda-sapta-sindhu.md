@@ -4,6 +4,7 @@ title: The Rigveda and the land of seven rivers
 title_hi: ऋग्वेद और सप्त सिंधु
 track: evidence
 chapter: indus-vedic
+basis: textual
 date: { start: -1500, end: -1200, uncertainty: 200 }
 location: { lat: 31.6, lng: 74.28, name: "Ravi (Parushni) river near Lahore, Punjab (Pakistan)" }
 tags: [language, religion]

@@ -4,6 +4,7 @@ title: The Vaikom satyagraha
 title_hi: वैकोम सत्याग्रह
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1924, end: 1925 }
 location: { lat: 9.7499, lng: 76.3960, name: "Vaikom Mahadeva temple, Travancore" }
 tags: [religion, political]

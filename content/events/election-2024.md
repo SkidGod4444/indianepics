@@ -4,6 +4,7 @@ title: The 2024 general election
 title_hi: 2024 का आम चुनाव
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 2024, end: 2024 }
 location: { lat: 28.6175, lng: 77.2085, name: "Parliament House, New Delhi" }
 tags: [political]

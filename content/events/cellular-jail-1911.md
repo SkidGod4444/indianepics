@@ -4,6 +4,7 @@ title: Savarkar and the Cellular Jail
 title_hi: सावरकर और सेल्युलर जेल
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1911, month: 7, end: 1921 }
 location: { lat: 11.675, lng: 92.748, name: "Cellular Jail, Port Blair" }
 tags: [political, colonial]

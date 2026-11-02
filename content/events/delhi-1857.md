@@ -4,6 +4,7 @@ title: Meerut to Delhi
 title_hi: मेरठ से दिल्ली
 track: evidence
 chapter: company
+basis: documentary
 date: { start: 1857, month: 5, end: 1858 }
 location: { lat: 28.990, lng: 77.700, name: "Meerut Cantonment, Uttar Pradesh" }
 tags: [war, colonial, political]

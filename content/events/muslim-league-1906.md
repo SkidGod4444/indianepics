@@ -4,6 +4,7 @@ title: The Muslim League and separate electorates
 title_hi: मुस्लिम लीग और पृथक निर्वाचन
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1906, end: 1909 }
 location: { lat: 23.725, lng: 90.400, name: "Dhaka" }
 tags: [political, religion]

@@ -4,6 +4,7 @@ title: The painted caves of Ajanta
 title_hi: अजंता की चित्रित गुफाएँ
 track: evidence
 chapter: classical
+basis: archaeological
 date: { start: 460, end: 480, uncertainty: 20 }
 location: { lat: 20.552, lng: 75.703, name: "Ajanta caves, Maharashtra" }
 tags: [art, religion]

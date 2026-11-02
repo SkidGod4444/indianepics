@@ -4,6 +4,7 @@ title: Dwarka, Krishna's western city
 title_hi: द्वारका, कृष्ण की नगरी
 track: tradition
 chapter: itihasa
+basis: traditional
 tradition_date: Dvapara Yuga (Harivamsa, Mahabharata)
 era: Dvapara Yuga
 location: { lat: 22.24, lng: 68.97, name: "Dwarka, Gujarat" }

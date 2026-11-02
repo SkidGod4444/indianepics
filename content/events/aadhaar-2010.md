@@ -4,6 +4,7 @@ title: Aadhaar and the digital state
 title_hi: आधार और डिजिटल राज्य
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 2010, end: 2018 }
 location: { lat: 21.567, lng: 74.500, name: "Tembhli, Nandurbar, Maharashtra" }
 tags: [science, political]

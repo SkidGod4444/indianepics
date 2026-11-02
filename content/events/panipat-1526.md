@@ -4,6 +4,7 @@ title: First Battle of Panipat
 title_hi: पानीपत का पहला युद्ध
 track: evidence
 chapter: mughal
+basis: documentary
 date: { start: 1526, end: 1526 }
 location: { lat: 29.39, lng: 76.97, name: "Panipat, Haryana" }
 tags: [war, political]

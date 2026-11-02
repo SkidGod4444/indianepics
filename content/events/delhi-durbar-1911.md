@@ -4,6 +4,7 @@ title: The Delhi Durbar and a new capital
 title_hi: दिल्ली दरबार और नई राजधानी
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1911, month: 12, end: 1931 }
 location: { lat: 28.7231, lng: 77.1969, name: "Coronation Park, Delhi" }
 tags: [political, colonial]

@@ -4,6 +4,7 @@ title: Simla and the Cabinet Mission
 title_hi: शिमला सम्मेलन और कैबिनेट मिशन
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1945, month: 6, end: 1946 }
 location: { lat: 31.1037, lng: 77.1418, name: "Viceregal Lodge, Shimla" }
 tags: [political]

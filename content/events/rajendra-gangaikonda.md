@@ -4,6 +4,7 @@ title: Rajendra's Gangaikonda Cholapuram
 title_hi: राजेंद्र का गंगैकोंड चोलपुरम
 track: evidence
 chapter: medieval
+basis: epigraphic
 date: { start: 1022, end: 1035, uncertainty: 2 }
 location: { lat: 11.2063, lng: 79.4486, name: "Gangaikonda Cholapuram, Tamil Nadu" }
 tags: [war, trade, state-formation]

@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Badge } from "@/components/ui/badge";
-import { chapters, eventsForChapter, formatYear, getImage, imageSrc, paragraphs } from "@/lib/content";
+import { chapters, eventsForChapter, getImage, imageSrc } from "@/lib/content";
+import { formatYear, paragraphs } from "@/lib/format";
 import { JsonLd, abs, absImage, chapterJsonLd, chapterMarkdown, chapterPath, eventDateLabel, eventPath } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -39,7 +40,7 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
   const img = getImage(ch.image);
   return (
     <main className="min-h-screen">
-      <Header />
+      <Header backed />
       <JsonLd data={chapterJsonLd(ch, evs)} />
       <article className="mx-auto max-w-[760px] px-5 pb-24 pt-24 lg:px-0">
         <Link href={`/#${ch.id}`} className="mb-8 inline-block text-[12px] text-ink-3 underline decoration-hair underline-offset-2 hover:text-ink">

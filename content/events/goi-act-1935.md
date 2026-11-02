@@ -4,6 +4,7 @@ title: The Government of India Act 1935
 title_hi: भारत शासन अधिनियम 1935
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1935, end: 1940 }
 location: { lat: 28.6172, lng: 77.2081, name: "Council House (Samvidhan Sadan), New Delhi" }
 tags: [political, colonial]

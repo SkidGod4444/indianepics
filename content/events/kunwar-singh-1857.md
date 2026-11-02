@@ -4,6 +4,7 @@ title: Kunwar Singh of Jagdishpur
 title_hi: जगदीशपुर के कुँवर सिंह
 track: evidence
 chapter: company
+basis: documentary
 date: { start: 1857, month: 8, end: 1858 }
 location: { lat: 25.468, lng: 84.420, name: "Jagdishpur, Bhojpur, Bihar" }
 tags: [war, colonial]

@@ -4,6 +4,7 @@ title: The first general election
 title_hi: पहला आम चुनाव
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 1951, end: 1952 }
 location: { lat: 31.537, lng: 78.254, name: "Kalpa (Chini), Kinnaur, Himachal Pradesh" }
 tags: [political]

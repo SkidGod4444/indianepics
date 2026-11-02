@@ -4,6 +4,7 @@ title: The edicts of Ashoka
 title_hi: अशोक के अभिलेख
 track: evidence
 chapter: maurya
+basis: epigraphic
 date: { start: -258, end: -242, uncertainty: 3 }
 location: { lat: 21.525, lng: 70.480, name: "Girnar rock edict, Junagadh, Gujarat" }
 tags: [political, language, religion]

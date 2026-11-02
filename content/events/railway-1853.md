@@ -4,6 +4,7 @@ title: The first train, and the telegraph
 title_hi: पहली रेलगाड़ी और तार
 track: evidence
 chapter: company
+basis: documentary
 date: { start: 1853, end: 1856 }
 location: { lat: 18.940, lng: 72.835, name: "Bori Bunder, Bombay" }
 tags: [science, trade, colonial]

@@ -4,6 +4,7 @@ title: Shah Jahan builds the Taj Mahal
 title_hi: शाहजहाँ ने ताजमहल बनवाया
 track: evidence
 chapter: mughal
+basis: documentary
 date: { start: 1632, end: 1653 }
 location: { lat: 27.175, lng: 78.042, name: "Taj Mahal, Agra, Uttar Pradesh" }
 tags: [art, religion]

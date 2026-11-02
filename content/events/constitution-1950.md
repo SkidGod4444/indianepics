@@ -4,6 +4,7 @@ title: The Constitution comes into force
 title_hi: संविधान लागू
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 1950, end: 1950 }
 location: { lat: 28.617, lng: 77.208, name: "Parliament House, New Delhi" }
 tags: [political]

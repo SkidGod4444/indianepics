@@ -4,6 +4,7 @@ title: Quit India
 title_hi: भारत छोड़ो
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1942, end: 1944 }
 location: { lat: 18.9624, lng: 72.8102, name: "August Kranti Maidan (Gowalia Tank), Bombay" }
 tags: [political, colonial]

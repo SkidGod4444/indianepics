@@ -1,15 +1,15 @@
 "use client";
 
-import { useRef, useState } from "react";
-import type { Chapter, EpicEvent } from "@/content/schema";
+import { memo, useCallback, useEffect, useRef, useState } from "react";
+import type { BookChapter, BookEvent } from "@/content/schema";
 import { useLang } from "@/lib/i18n";
 import { pick } from "@/lib/text";
 import { eraFor } from "@/lib/eras";
 import { fractionToPosition, positionToFraction, readoutAt, slotAt, type Position } from "@/lib/timeline";
 
 type Props = {
-  chapters: Chapter[];
-  eventsByChapter: Record<string, EpicEvent[]>;
+  chapters: BookChapter[];
+  eventsByChapter: Record<string, BookEvent[]>;
   pos: Position;
   onSeek: (p: Position) => void;
 };
@@ -17,7 +17,7 @@ type Props = {
 const TICKS = 24;
 
 /** Accent of a chapter's era: the strip reads as the palette of the whole book. */
-function accentOf(c: Chapter) {
+function accentOf(c: BookChapter) {
   const era = eraFor(c);
   return c.track === "tradition" ? era.vars["--tradition"] : era.vars["--evidence"];
 }
@@ -41,7 +41,7 @@ function mix(a: string, b: string, t: number) {
   return `#${c.map((v) => v.toString(16).padStart(2, "0")).join("")}`;
 }
 /** The year pill: the era accent, deepened toward the ink just enough for its paper-coloured text to reach 4.5:1. */
-function pillOf(c: Chapter) {
+function pillOf(c: BookChapter) {
   const era = eraFor(c);
   const paper = era.vars["--paper"];
   const accent = accentOf(c);
@@ -54,6 +54,57 @@ function pillOf(c: Chapter) {
  * The scroll bar: one segment per chapter in its era colour, a tick per slot,
  * a dot per event, and a thumb that carries the year. Drag, click, or arrow keys.
  */
+const NO_EVENTS: BookEvent[] = [];
+
+type TrackProps = { c: BookChapter; ci: number; evs: BookEvent[]; ticksDone: number; dotsDone: number; activeDot: number; onJump: (chapter: number, progress: number) => void };
+
+/** One chapter's ticks and dots. Re-renders only when a tick or dot is passed, which keeps a plain scroll frame cheap. */
+const ChapterTrack = memo(function ChapterTrack({ c, ci, evs, ticksDone, dotsDone, activeDot, onJump }: TrackProps) {
+  const { lang } = useLang();
+  const slots = evs.length + 1;
+  const color = accentOf(c);
+  return (
+    <div className="relative flex h-full flex-1 items-end justify-between px-px">
+      {Array.from({ length: TICKS }).map((_, i) => {
+        const done = i < ticksDone;
+        return <span key={i} className="w-px transition-colors duration-200" style={{ height: i === 0 ? 14 : i % 6 === 0 ? 9 : 5, background: done ? color : "var(--hair)", opacity: done ? 0.9 : 1 }} />;
+      })}
+      {evs.map((e, i) => {
+        const passed = i < dotsDone;
+        const isActive = i === activeDot;
+        return (
+          <button
+            key={e.id}
+            type="button"
+            tabIndex={-1}
+            aria-label={pick(e, "title", lang)}
+            title={pick(e, "title", lang)}
+            onPointerDown={(ev) => ev.stopPropagation()}
+            onClick={(ev) => {
+              ev.stopPropagation();
+              onJump(ci, (i + 1.5) / slots);
+            }}
+            className="absolute -top-1.5 flex h-5 -translate-x-1/2 items-center justify-center rounded-full"
+            // Never wider than the gap to the next dot, or dense chapters (Raj, Company) hit the neighbour.
+            style={{ left: `${((i + 1) / slots) * 100}%`, width: `min(1.25rem, ${100 / slots}%)` }}
+          >
+            <span
+              className={`block rounded-full transition-all duration-200 ${isActive ? "h-3 w-3 ring-2 ring-paper" : "h-1.5 w-1.5"}`}
+              style={{
+                background: e.track === "tradition" ? "var(--tradition)" : color,
+                opacity: passed || isActive ? 1 : 0.35,
+                transform: e.track === "tradition" ? "rotate(45deg)" : undefined,
+                borderRadius: e.track === "tradition" ? 1 : undefined,
+                boxShadow: isActive ? `0 0 0 4px color-mix(in srgb, ${color} 25%, transparent)` : undefined,
+              }}
+            />
+          </button>
+        );
+      })}
+    </div>
+  );
+});
+
 export function Scrubber({ chapters, eventsByChapter, pos, onSeek }: Props) {
   const rail = useRef<HTMLDivElement>(null);
   const { lang } = useLang();
@@ -66,6 +117,12 @@ export function Scrubber({ chapters, eventsByChapter, pos, onSeek }: Props) {
   const activeIdx = ch ? slotAt(pos.progress, chEvents.length).slot - 1 : -1;
   const accent = ch ? accentOf(ch) : "var(--evidence)";
   const pill = ch ? pillOf(ch) : { bg: "var(--evidence)", fg: "var(--paper)" };
+  // A stable callback, so the chapter tracks stay memoised while Stage re-renders on every scroll frame.
+  const seekRef = useRef(onSeek);
+  useEffect(() => {
+    seekRef.current = onSeek;
+  });
+  const jump = useCallback((chapter: number, progress: number) => seekRef.current({ chapter, progress }), []);
 
   function fractionFromPointer(clientX: number) {
     const r = rail.current?.getBoundingClientRect();
@@ -79,7 +136,7 @@ export function Scrubber({ chapters, eventsByChapter, pos, onSeek }: Props) {
   }
 
   return (
-    <div className="mx-auto max-w-[960px] select-none">
+    <div data-no-swipe className="mx-auto max-w-[960px] select-none">
       <div
         ref={rail}
         role="slider"
@@ -130,55 +187,20 @@ export function Scrubber({ chapters, eventsByChapter, pos, onSeek }: Props) {
         {/* Ticks and event dots per chapter */}
         <div className="absolute inset-x-0 bottom-[24px] flex h-6 items-end">
           {chapters.map((c, ci) => {
-            const evs = eventsByChapter[c.id] ?? [];
+            const evs = eventsByChapter[c.id] ?? NO_EVENTS;
             const slots = evs.length + 1;
-            const color = accentOf(c);
+            const within = f * n - ci;
             return (
-              <div key={c.id} className="relative flex h-full flex-1 items-end justify-between px-px">
-                {Array.from({ length: TICKS }).map((_, i) => {
-                  const tf = (ci + i / TICKS) / n;
-                  return (
-                    <span
-                      key={i}
-                      className="w-px transition-colors duration-200"
-                      style={{ height: i === 0 ? 14 : i % 6 === 0 ? 9 : 5, background: tf <= f ? color : "var(--hair)", opacity: tf <= f ? 0.9 : 1 }}
-                    />
-                  );
-                })}
-                {evs.map((e, i) => {
-                  const ef = (ci + (i + 1) / slots) / n;
-                  const passed = ef <= f;
-                  const isActive = ci === pos.chapter && i === activeIdx;
-                  return (
-                    <button
-                      key={e.id}
-                      type="button"
-                      tabIndex={-1}
-                      aria-label={pick(e, "title", lang)}
-                      title={pick(e, "title", lang)}
-                      onPointerDown={(ev) => ev.stopPropagation()}
-                      onClick={(ev) => {
-                        ev.stopPropagation();
-                        onSeek({ chapter: ci, progress: (i + 1.5) / slots });
-                      }}
-                      className="absolute -top-1.5 flex h-5 -translate-x-1/2 items-center justify-center rounded-full"
-                      // Never wider than the gap to the next dot, or dense chapters (Raj, Company) hit the neighbour.
-                      style={{ left: `${((i + 1) / slots) * 100}%`, width: `min(1.25rem, ${100 / slots}%)` }}
-                    >
-                      <span
-                        className={`block rounded-full transition-all duration-200 ${isActive ? "h-3 w-3 ring-2 ring-paper" : "h-1.5 w-1.5"}`}
-                        style={{
-                          background: e.track === "tradition" ? "var(--tradition)" : color,
-                          opacity: passed || isActive ? 1 : 0.35,
-                          transform: e.track === "tradition" ? "rotate(45deg)" : undefined,
-                          borderRadius: e.track === "tradition" ? 1 : undefined,
-                          boxShadow: isActive ? `0 0 0 4px color-mix(in srgb, ${color} 25%, transparent)` : undefined,
-                        }}
-                      />
-                    </button>
-                  );
-                })}
-              </div>
+              <ChapterTrack
+                key={c.id}
+                c={c}
+                ci={ci}
+                evs={evs}
+                ticksDone={within < 0 ? 0 : Math.min(TICKS, Math.floor(within * TICKS) + 1)}
+                dotsDone={within < 0 ? 0 : Math.min(evs.length, Math.floor(within * slots + 1e-9))}
+                activeDot={ci === pos.chapter ? activeIdx : -1}
+                onJump={jump}
+              />
             );
           })}
         </div>
@@ -189,7 +211,7 @@ export function Scrubber({ chapters, eventsByChapter, pos, onSeek }: Props) {
             <div className="pointer-events-none absolute bottom-[14px] h-4 w-px -translate-x-1/2 bg-ink-3/60" style={{ left: `${hover.fr * 100}%` }} />
             {/* The label slides from left-aligned at the start to right-aligned at the end, so it never leaves the rail. */}
             <div
-              className="pointer-events-none absolute bottom-[32px] whitespace-nowrap rounded-full border border-hair bg-paper/95 px-2 py-0.5 text-[10.5px] text-ink-2 backdrop-blur-sm"
+              className="pointer-events-none absolute bottom-[32px] whitespace-nowrap rounded-full border border-hair bg-paper/95 px-2 py-0.5 text-[10.5px] text-ink-2"
               style={{ left: `${hover.fr * 100}%`, transform: `translateX(-${hover.fr * 100}%)` }}
             >
               {hover.label}

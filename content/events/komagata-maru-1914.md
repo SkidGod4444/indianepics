@@ -4,6 +4,7 @@ title: The Komagata Maru and the Ghadar rising
 title_hi: कोमागाटा मारू और ग़दर
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1914, end: 1915 }
 location: { lat: 22.4737, lng: 88.1739, name: "Budge Budge, Bengal" }
 tags: [political, colonial]

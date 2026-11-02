@@ -4,6 +4,7 @@ title: The Chittagong armoury raid
 title_hi: चटगाँव शस्त्रागार छापा
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1930, month: 4, end: 1934 }
 location: { lat: 22.335, lng: 91.8325, name: "Chittagong" }
 tags: [political, colonial]

@@ -4,6 +4,7 @@ title: Rajaraja's temple at Thanjavur
 title_hi: तंजावुर में राजराज का मंदिर
 track: evidence
 chapter: medieval
+basis: epigraphic
 date: { start: 1003, end: 1010, uncertainty: 1 }
 location: { lat: 10.7828, lng: 79.1318, name: "Brihadisvara temple, Thanjavur, Tamil Nadu" }
 tags: [art, religion, state-formation]

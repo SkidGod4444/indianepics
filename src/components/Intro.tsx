@@ -1,67 +1,97 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
-import { Play, ArrowDown, Pause } from "lucide-react";
-import type { Chapter } from "@/content/schema";
+import { memo, useEffect, useMemo, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import { ArrowDown, Pause, Play } from "lucide-react";
+import type { BookChapter } from "@/content/schema";
 import { useLang } from "@/lib/i18n";
 import { pick } from "@/lib/text";
-import { glyphForChapter } from "@/lib/timeline";
 import { BASE_ERA } from "@/lib/eras";
 import { Button } from "@/components/ui/button";
-import { DotGlyph } from "./DotGlyph";
-import { DotPlate, type Plate } from "./DotPlate";
 import { Logo } from "./Logo";
+import { SketchCredit } from "./Book";
+import { TurningSheet } from "./TurningSheet";
+import { LAND, PHONE_SWEEP, STRIPS } from "@/lib/turn";
+import { Sketch, loadSketch } from "./Sketch";
 
 type Props = {
-  chapters: Chapter[];
-  plates?: Plate[];
+  chapters: BookChapter[];
   onPlay: () => void;
-  /** True while the story (or its prologue) is running, so the button reads Pause. */
+  onSeek: (chapterIndex: number) => void;
   playing?: boolean;
-  onSeek: (chapter: number) => void;
+  /** How far this page has turned, 0 to 1. */
+  turn: number;
+  wide: boolean;
+  reduce: boolean;
+  /** The story's clock for the opening sketch, while the prologue is read. */
+  pen?: () => number | null;
 };
 
-/** The hero: the subcontinent in breathing dots, the promise in one line, and two ways in. */
-export function Intro({ chapters, plates = [], onPlay, onSeek, playing = false }: Props) {
-  const reduce = useReducedMotion();
-  // Which plate the hero shows: the chip under the pointer, else a slow walk through the chapters.
-  const [hovered, setHovered] = useState<number | null>(null);
-  const [auto, setAuto] = useState(() => Math.min(3, Math.max(0, plates.length - 1)));
-  useEffect(() => {
-    if (reduce || hovered !== null || plates.length < 2) return;
-    const id = window.setInterval(() => setAuto((a) => (a + 1) % plates.length), 6500);
-    return () => window.clearInterval(id);
-  }, [reduce, hovered, plates.length]);
-  const plateIdx = hovered ?? auto;
-  const plate = plates[plateIdx];
-  const plateChapter = plate ? chapters.find((c) => c.id === plate.id) : undefined;
+/** How long the hero holds each sketch, drawing included, before walking on to the next era. */
+const HOLD_MS = 9500;
+const DRAW_MS = 7000;
+
+/**
+ * The title page. It stays where it is and turns: the wide spread swings its right page over the spine, a phone's single
+ * page swings away at its left edge. The section's own height in the flow is the stretch of scroll that does it.
+ */
+export const Intro = memo(function Intro({ chapters, onPlay, onSeek, playing = false, turn, wide, reduce, pen }: Props) {
   const { lang } = useLang();
   const hi = lang === "hi";
-  // Fade with the hero's own bottom edge: fully read while it is on screen, gone exactly when the stage
-  // fades in (first chapter at 55% of the viewport). A fixed pixel window left phones on a blank screen.
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["end end", "end 0.55"] });
-  const fade = useTransform(scrollYProgress, [0, 1], [1, 0]);
-  const lift = useTransform(scrollYProgress, [0, 1], [0, -40]);
-  const rise = { initial: { opacity: 0, y: 14 }, animate: { opacity: 1, y: 0 } };
+  const onScreen = turn < 1;
+
+  // The opening sketch, then one for each chapter. A chapter under the pointer takes over.
+  const scenes = useMemo(() => ["hero", ...chapters.map((c) => c.id)], [chapters]);
+  const [hovered, setHovered] = useState<number | null>(null);
+  const [auto, setAuto] = useState(0);
+  // Play opens on the first sketch, and a pause stays on it.
+  const [wasPlaying, setWasPlaying] = useState(playing);
+  if (playing !== wasPlaying) {
+    setWasPlaying(playing);
+    if (playing) setAuto(0);
+  }
+  useEffect(() => {
+    if (reduce || hovered !== null || !onScreen || playing) return;
+    const id = window.setInterval(() => setAuto((a) => (a + 1) % scenes.length), HOLD_MS);
+    return () => window.clearInterval(id);
+  }, [reduce, hovered, onScreen, playing, scenes.length]);
+  const index = playing ? 0 : hovered !== null ? hovered + 1 : auto;
+  const scene = scenes[index] ?? "hero";
+  useEffect(() => {
+    void loadSketch(scenes[(index + 1) % scenes.length]).catch(() => {});
+  }, [scenes, index]);
+
+  const turning = !reduce && turn > 0 && turn < 1;
+  const landed = turn >= LAND;
+  // The sheet that turns is a copy of what was on the page: the sketch side on a wide screen, all of it on a phone.
+  const [artPage, setArtPage] = useState<HTMLElement | null>(null);
+  const [wholePage, setWholePage] = useState<HTMLElement | null>(null);
+  const rise = { initial: { opacity: 0, y: 16 }, animate: { opacity: 1, y: 0 } };
 
   return (
-    <section ref={ref} className="relative z-[2] overflow-hidden px-5 pb-10 pt-20 lg:px-10 lg:pt-24">
-      <motion.div style={{ opacity: fade, y: lift }} className="mx-auto flex min-h-[calc(100svh-7.5rem)] max-w-[1280px] flex-col">
-        <div className="grid flex-1 items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-4">
-          <div className="relative z-10">
-            <motion.div {...rise} transition={{ duration: 0.5 }} className="mb-7">
+    <>
+    <section className="relative h-svh" style={{ visibility: turning && !wide ? "hidden" : undefined }}>
+      <div
+        ref={setWholePage}
+        className="hero-sheet page"
+        data-stain="1"
+        inert={turn > 0.02}
+        style={{
+          visibility: turn >= 1 ? "hidden" : undefined,
+          opacity: reduce ? 1 - turn : undefined,
+        }}
+      >
+          <div className="hero-text page flex flex-col" data-stain="0" style={{ visibility: wide && landed && !reduce ? "hidden" : undefined }}>
+            <motion.div {...rise} transition={{ duration: 0.6 }} className="mb-3 lg:mb-6">
               <Logo href="" domain mark={false} size="lg" />
-              <p className={`mt-2 text-ink-3 ${hi ? "font-hi text-[12.5px]" : "text-[11px] uppercase tracking-[0.18em]"}`}>
+              <p className={`mt-2 hidden text-ink-2 lg:block ${hi ? "font-hi text-[13px]" : "text-[11px] uppercase tracking-[0.2em]"}`}>
                 {hi ? "भारत का इतिहास, एक नक़्शे पर" : "The history of India, on one map"}
               </p>
             </motion.div>
             <motion.h1
               {...rise}
-              transition={{ duration: 0.6, delay: 0.08 }}
-              // Pinned to the base type setting: when an era sets a heavier face the headline would rewrap,
-              // the hero would grow, and every seek computed before that (chips, Start, Play) would land short.
+              transition={{ duration: 0.7, delay: 0.1 }}
+              // Pinned to the base type setting: an era's heavier face would rewrap the headline and shift every seek.
               style={
                 {
                   "--display-opsz": BASE_ERA.display.opsz,
@@ -69,7 +99,7 @@ export function Intro({ chapters, plates = [], onPlay, onSeek, playing = false }
                   "--display-weight": BASE_ERA.display.weight,
                 } as React.CSSProperties
               }
-              className={`${hi ? "font-hi" : "font-display"} text-[clamp(2.8rem,6.4vw,6rem)] leading-[0.95] tracking-[-0.02em] text-ink [text-wrap:balance]`}
+              className={`${hi ? "font-hi" : "font-display"} text-[clamp(2.4rem,5.4vw,5.4rem)] leading-[0.98] tracking-[-0.02em] text-ink [text-wrap:balance]`}
             >
               {hi ? (
                 <>
@@ -81,96 +111,76 @@ export function Intro({ chapters, plates = [], onPlay, onSeek, playing = false }
                 </>
               )}
             </motion.h1>
-            <motion.p
-              {...rise}
-              transition={{ duration: 0.6, delay: 0.18 }}
-              className={`mt-6 max-w-[52ch] text-[16px] leading-relaxed text-ink-2 lg:text-[17px] ${hi ? "font-hi" : ""}`}
-            >
+            <motion.p {...rise} transition={{ duration: 0.7, delay: 0.2 }} className={`order-1 mt-4 line-clamp-3 max-w-[50ch] text-[15px] leading-relaxed text-ink-2 [@media(max-height:690px)]:hidden lg:order-none lg:mt-5 lg:line-clamp-none lg:text-[17px] lg:[@media(max-height:690px)]:block ${hi ? "font-hi" : ""}`}>
               {hi
-                ? "सतयुग से आज की सुबह तक, एक ही नक़्शे पर। रामायण और महाभारत का कहा हुआ समय, और मुहरों, शिलालेखों, संधियों और चुनावों का दिनांकित इतिहास, साथ-साथ। हर अध्याय में काग़ज़ बदलता है, रोशनी बदलती है, और एक आवाज़ कहानी सुनाती है।"
-                : "From the Satya Yuga to this morning, on a single map. The told time of the Ramayana and the Mahabharata runs beside the dated record of seals, edicts, treaties and elections. Each chapter changes the paper and the light, and a voice tells the story as the map moves."}
+                ? "सतयुग से आज की सुबह तक, एक ही नक़्शे पर। रामायण और महाभारत का कहा हुआ समय, और मुहरों, शिलालेखों और संधियों का दिनांकित इतिहास, साथ-साथ। एक आवाज़ कहानी सुनाती है।"
+                : "From the Satya Yuga to this morning, on a single map. The told time of the Ramayana and the Mahabharata runs beside the dated record of seals, edicts and treaties, and a voice carries you through it."}
             </motion.p>
-            <motion.div {...rise} transition={{ duration: 0.5, delay: 0.3 }} className="mt-8 flex flex-wrap items-center gap-3">
-              <Button size="lg" onClick={onPlay} aria-pressed={playing} className="group h-12 rounded-full pl-5 pr-6 text-[15px]">
-                <span className="relative mr-1 grid h-6 w-6 place-items-center rounded-full bg-paper/15">
+            <motion.div {...rise} transition={{ duration: 0.6, delay: 0.32 }} className="mt-5 flex flex-wrap items-center gap-3 lg:mt-7">
+              <Button size="lg" onClick={onPlay} aria-pressed={playing} className="h-12 rounded-full pl-5 pr-6 text-[15px]">
+                <span className="mr-1 grid h-6 w-6 place-items-center rounded-full bg-paper/15">
                   {playing ? <Pause className="size-3.5" /> : <Play className="size-3.5 translate-x-px" />}
                 </span>
                 <span className="flex flex-col items-start leading-none">
                   <span>{playing ? (hi ? "रोकें" : "Pause") : hi ? "कहानी सुनें" : "Play the story"}</span>
-                  <span className={`mt-1 text-[10.5px] font-normal text-paper/70 ${hi ? "font-hi" : "uppercase tracking-[0.14em]"}`}>
-                    {hi ? "कथन के साथ" : "Narrated"}
-                  </span>
+                  <span className={`mt-1 text-[10.5px] font-normal text-paper/70 ${hi ? "font-hi" : "uppercase tracking-[0.14em]"}`}>{hi ? "कथन के साथ" : "Narrated"}</span>
                 </span>
               </Button>
-              <Button size="lg" variant="outline" onClick={() => onSeek(0)} className="h-12 rounded-full bg-paper/70 px-6 text-[15px] backdrop-blur-sm">
+              <Button size="lg" variant="outline" onClick={() => onSeek(0)} className="h-12 rounded-full bg-transparent px-6 text-[15px]">
                 <ArrowDown data-icon="inline-start" />
                 {hi ? "अपनी गति से पढ़ें" : "Read at your own pace"}
               </Button>
             </motion.div>
-            <motion.div {...rise} transition={{ duration: 0.5, delay: 0.42 }} className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[12.5px] text-ink-2">
-              <span className="inline-flex items-center gap-2">
-                <span className="inline-block h-2.5 w-2.5 rounded-full bg-evidence ring-2 ring-paper" />
-                {hi ? "प्रमाण: पुरातत्व और दस्तावेज़ों से दिनांकित" : "Evidence: dated by archaeology and documents"}
-              </span>
-              <span className="inline-flex items-center gap-2">
-                <span className="inline-block h-2.5 w-2.5 rotate-45 bg-tradition ring-2 ring-paper" />
-                {hi ? "परंपरा: इतिहास-पुराण का कहा हुआ समय" : "Tradition: the told time of the Itihasa and Puranas"}
-              </span>
-            </motion.div>
           </div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.15 }}
-            className="relative mx-auto w-full max-w-[520px] text-evidence"
-          >
-            <div className="pointer-events-none absolute inset-[-12%] -z-10 rounded-full bg-[radial-gradient(closest-side,var(--evidence-soft),transparent_72%)] opacity-60" />
-            {plate ? (
-              <figure className="mx-auto w-[min(440px,100%,calc(56vh*0.8))]">
-                <div className="relative rounded-[4px] border border-hair/70 bg-paper-2/40 p-3 shadow-[0_1px_0_var(--hair),0_24px_60px_-30px_rgba(28,25,21,0.35)]">
-                  <DotPlate plates={plates} active={plateIdx} className="block w-full" />
-                </div>
-                <figcaption className="mt-3 flex items-baseline justify-between gap-3 text-ink-3">
-                  <span className={`min-w-0 truncate ${hi ? "font-hi text-[12.5px]" : "text-[11px] uppercase tracking-[0.16em]"}`}>
-                    {plateChapter ? `${String(chapters.indexOf(plateChapter) + 1).padStart(2, "0")} · ${pick(plateChapter, "title", lang)}` : ""}
-                  </span>
-                  <span className="shrink-0 text-[10.5px]" title={`${plate.title}. ${plate.credit}`}>
-                    {plate.credit.split(",")[0]}
-                  </span>
-                </figcaption>
-              </figure>
-            ) : null}
-          </motion.div>
-        </div>
 
-        {/* Table of contents: one chip per chapter, each a seek. */}
-        <motion.nav
-          {...rise}
-          transition={{ duration: 0.5, delay: 0.55 }}
+          <div className="hero-art" style={{ visibility: turning && wide ? "hidden" : undefined }}>
+            <figure ref={setArtPage} className="hero-front page" data-stain="2">
+              <div className="relative h-[30svh] lg:h-[64svh] lg:w-full">
+                <AnimatePresence mode="wait">
+                  <motion.div key={scene} exit={{ opacity: 0, transition: { duration: 0.35 } }} className="absolute inset-0">
+                    <Sketch id={scene} durationMs={DRAW_MS} pen={scene === "hero" ? pen : undefined} />
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+            <figcaption className="mt-1 text-right lg:mt-2">
+              <SketchCredit id={scene} />
+            </figcaption>
+            </figure>
+          </div>
+          {turning && wide ? <TurningSheet t={turn} strips={STRIPS.wide} copy={artPage} folio="itihasa" className="sheet-leaf" /> : null}
+
+        {/* One column per chapter. Hovering shows its sketch, a click goes there. */}
+        <nav
           aria-label="Chapters"
-          className="-mx-5 mt-8 flex gap-2 overflow-x-auto px-5 pb-2 lg:mx-0 lg:flex-wrap lg:px-0 [scrollbar-width:none]"
+          data-no-swipe
+          style={{ opacity: Math.max(0, 1 - turn * 4) }}
+          className="hero-nav -mx-5 mt-auto flex gap-4 overflow-x-auto px-5 pb-1 lg:mx-0 lg:grid lg:grid-cols-9 lg:gap-3 lg:overflow-visible lg:px-0 [scrollbar-width:none]"
         >
-          {chapters.map((c, i) => (
-            <button
-              key={c.id}
-              onClick={() => onSeek(i)}
-              onPointerEnter={() => setHovered(plates.findIndex((p) => p.id === c.id) >= 0 ? plates.findIndex((p) => p.id === c.id) : null)}
-              onPointerLeave={() => setHovered(null)}
-              onFocus={() => setHovered(plates.findIndex((p) => p.id === c.id) >= 0 ? plates.findIndex((p) => p.id === c.id) : null)}
-              onBlur={() => setHovered(null)}
-              className={`group flex shrink-0 items-center gap-2 rounded-full border border-hair bg-paper/80 py-1.5 pl-1.5 pr-3 text-left text-[12px] text-ink-2 backdrop-blur-sm transition-colors hover:border-ink hover:text-ink ${
-                hi ? "font-hi" : ""
-              }`}
-            >
-              <span aria-hidden className={`rounded-full p-1 ${c.track === "tradition" ? "text-tradition" : "text-evidence"}`}>
-                <DotGlyph name={glyphForChapter(c)} size={18} />
-              </span>
-              <span className="text-[10px] tabular-nums text-ink-3">{String(i + 1).padStart(2, "0")}</span>
-              <span className="truncate">{pick(c, "title", lang)}</span>
-            </button>
-          ))}
-        </motion.nav>
-      </motion.div>
+          {chapters.map((c, i) => {
+            const on = index === i + 1;
+            return (
+              <button
+                key={c.id}
+                onClick={() => onSeek(i)}
+                onPointerEnter={() => setHovered(i)}
+                onPointerLeave={() => setHovered(null)}
+                onFocus={() => setHovered(i)}
+                onBlur={() => setHovered(null)}
+                className={`group relative w-[136px] shrink-0 border-t pt-2.5 text-left transition-colors lg:w-auto ${on ? "border-ink text-ink" : "border-hair text-ink-2 hover:border-ink hover:text-ink"} ${hi ? "font-hi" : ""}`}
+              >
+                <span className="block text-[10.5px] tabular-nums text-ink-3">{String(i + 1).padStart(2, "0")}</span>
+                <span className="mt-0.5 block text-[12.5px] leading-snug">{pick(c, "title", lang)}</span>
+              </button>
+            );
+          })}
+        </nav>
+      </div>
     </section>
+    {turning && !wide ? (
+      <div className="book book-phone book-over">
+        <TurningSheet t={turn} strips={STRIPS.phone} sweep={PHONE_SWEEP} copy={wholePage} folio="itihasa" className="sheet-full" />
+      </div>
+    ) : null}
+    </>
   );
-}
+});

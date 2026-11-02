@@ -4,6 +4,7 @@ title: The Bardoli satyagraha
 title_hi: बारडोली सत्याग्रह
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1928, month: 2, end: 1928 }
 location: { lat: 21.12, lng: 73.12, name: "Bardoli, Surat district" }
 tags: [political, colonial]

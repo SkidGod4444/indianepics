@@ -4,6 +4,7 @@ title: Battle of Buxar
 title_hi: बक्सर का युद्ध
 track: evidence
 chapter: company
+basis: documentary
 date: { start: 1764, end: 1765 }
 location: { lat: 25.564, lng: 83.978, name: "Buxar, Bihar" }
 tags: [war, colonial, political]

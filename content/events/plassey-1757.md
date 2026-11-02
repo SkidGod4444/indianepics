@@ -4,6 +4,7 @@ title: Battle of Plassey
 title_hi: प्लासी का युद्ध
 track: evidence
 chapter: mughal
+basis: documentary
 date: { start: 1757, end: 1757 }
 location: { lat: 23.80, lng: 88.25, name: "Plassey battlefield, near Palashi, West Bengal" }
 tags: [war, colonial, political]

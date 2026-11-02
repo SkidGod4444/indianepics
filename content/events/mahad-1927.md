@@ -4,6 +4,7 @@ title: The Mahad satyagraha
 title_hi: महाड सत्याग्रह
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1927, end: 1927 }
 location: { lat: 18.083, lng: 73.417, name: "Chavdar Tale, Mahad" }
 tags: [political, religion]

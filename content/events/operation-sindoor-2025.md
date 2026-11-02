@@ -4,6 +4,7 @@ title: Pahalgam and Operation Sindoor
 title_hi: पहलगाम और ऑपरेशन सिंदूर
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 2025, end: 2025 }
 location: { lat: 34.003, lng: 75.334, name: "Baisaran meadow, Pahalgam, Jammu and Kashmir" }
 tags: [war, political]

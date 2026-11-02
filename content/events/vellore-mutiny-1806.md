@@ -4,6 +4,7 @@ title: The Vellore mutiny
 title_hi: वेल्लोर विद्रोह
 track: evidence
 chapter: company
+basis: documentary
 date: { start: 1806, end: 1806 }
 location: { lat: 12.921, lng: 79.129, name: "Vellore Fort, Tamil Nadu" }
 tags: [war, colonial, religion]

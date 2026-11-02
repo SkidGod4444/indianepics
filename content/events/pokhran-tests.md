@@ -4,6 +4,7 @@ title: Nuclear tests at Pokhran
 title_hi: पोखरण में परमाणु परीक्षण
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 1974, end: 1998 }
 location: { lat: 27.08, lng: 71.73, name: "Pokhran Test Range, Rajasthan" }
 tags: [science, political]

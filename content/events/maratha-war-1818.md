@@ -4,6 +4,7 @@ title: The end of the Peshwa
 title_hi: पेशवाई का अंत
 track: evidence
 chapter: company
+basis: documentary
 date: { start: 1817, end: 1818 }
 location: { lat: 18.5195, lng: 73.8553, name: "Shaniwar Wada, Pune" }
 tags: [war, colonial, political]

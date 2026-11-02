@@ -1,5 +1,6 @@
-import type { Chapter, EpicEvent } from "@/content/schema";
-import { formatYear } from "./content";
+import type { BookChapter, BookEvent } from "@/content/schema";
+import { formatYear } from "./format";
+import { clampUnit, smooth, TURN_SHARE } from "./turn";
 
 /** Where the reader is: chapter index plus progress 0..1 through that chapter. */
 export type Position = { chapter: number; progress: number };
@@ -28,15 +29,27 @@ export function activeIndexAt(progress: number, eventCount: number) {
   return slotAt(progress, eventCount).slot - 1;
 }
 
-/** Year readout that follows the events: the clock runs between consecutive event dates, slot by slot. */
-export function yearAt(ch: Chapter, events: EpicEvent[], progress: number): number | null {
-  if (!ch.years) return null;
-  const anchors = [ch.years.start, ...events.map((e) => e.date?.start ?? ch.years!.start), ch.years.end];
+/** While the year is moving, very old dates step by this much, so the counter never shows a false precision. */
+const OLD_YEAR = 10000;
+const OLD_YEAR_STEP = 500;
+
+/**
+ * The year on the clock. It stands on the date of the page being read, and moves to the next date only while the page
+ * turns, so it can never disagree with the page or the voice.
+ */
+export function yearAt(ch: BookChapter, events: BookEvent[], progress: number): number | null {
+  const years = ch.years;
+  if (!years) return null;
   const { slot, frac } = slotAt(progress, events.length);
-  return Math.round(lerp(anchors[slot], anchors[slot + 1], frac));
+  const dateOf = (s: number) => (s > 0 ? events[s - 1]?.date?.start : undefined) ?? years.start;
+  const turned = clampUnit(frac / TURN_SHARE);
+  if (slot === 0 || turned >= 1) return dateOf(slot);
+  const y = lerp(dateOf(slot - 1), dateOf(slot), smooth(turned));
+  // There is no year 0 in this calendar.
+  return Math.abs(y) >= OLD_YEAR ? Math.round(y / OLD_YEAR_STEP) * OLD_YEAR_STEP : Math.round(y) || 1;
 }
 
-export function readoutAt(ch: Chapter, events: EpicEvent[], progress: number): string {
+export function readoutAt(ch: BookChapter, events: BookEvent[], progress: number): string {
   const y = yearAt(ch, events, progress);
   if (y !== null) return formatYear(y);
   // Tradition chapters: the clock reads the active pin's own era, not an even split of the stops.
@@ -57,7 +70,7 @@ export function fractionToPosition(f: number, chapterCount: number): Position {
 }
 
 /** Glyph for an event, from its tags. */
-export function glyphFor(ev: EpicEvent): string {
+export function glyphFor(ev: BookEvent): string {
   if (ev.track === "tradition") return "diamond";
   const t = new Set(ev.tags);
   if (t.has("science")) return "rocket";
@@ -69,7 +82,7 @@ export function glyphFor(ev: EpicEvent): string {
   return "pillar";
 }
 
-export function glyphForChapter(ch: Chapter): string {
+export function glyphForChapter(ch: BookChapter): string {
   return (
     (
       {

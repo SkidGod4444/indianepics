@@ -4,6 +4,7 @@ title: Samudragupta's Allahabad pillar
 title_hi: समुद्रगुप्त का प्रयाग स्तंभ-लेख
 track: evidence
 chapter: classical
+basis: epigraphic
 date: { start: 350, end: 375, uncertainty: 15 }
 location: { lat: 25.431, lng: 81.875, name: "Allahabad Fort, Prayagraj, Uttar Pradesh" }
 tags: [political, war, language]

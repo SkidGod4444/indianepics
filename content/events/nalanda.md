@@ -4,6 +4,7 @@ title: Nalanda mahavihara
 title_hi: नालंदा महाविहार
 track: evidence
 chapter: classical
+basis: archaeological
 date: { start: 415, end: 455, uncertainty: 10 }
 location: { lat: 25.136, lng: 85.443, name: "Nalanda, Bihar" }
 tags: [religion, science]

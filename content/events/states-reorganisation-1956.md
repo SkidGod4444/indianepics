@@ -4,6 +4,7 @@ title: States Reorganisation Act
 title_hi: राज्य पुनर्गठन अधिनियम
 track: evidence
 chapter: republic
+basis: documentary
 date: { start: 1956, end: 1956 }
 location: { lat: 15.83, lng: 78.04, name: "Kurnool, Andhra Pradesh" }
 tags: [state-formation, language, political]

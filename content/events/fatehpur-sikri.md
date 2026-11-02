@@ -4,6 +4,7 @@ title: Akbar's city at Fatehpur Sikri
 title_hi: अकबर की फ़तेहपुर सीकरी
 track: evidence
 chapter: mughal
+basis: documentary
 date: { start: 1571, end: 1585 }
 location: { lat: 27.09, lng: 77.66, name: "Fatehpur Sikri, Uttar Pradesh" }
 tags: [political, religion, art]

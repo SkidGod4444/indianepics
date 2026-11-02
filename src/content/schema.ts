@@ -43,7 +43,22 @@ export const Source = z.object({
   title: z.string().min(1),
   url: z.url().optional(),
   note: z.string().optional(),
+  /** Not read at first hand: known through another work, an abstract, a summary or a press report. Tagged on the page. */
+  second_hand: z.boolean().optional(),
 });
+
+/** What a date or claim rests on. Shown on the event page, so a reader can tell a dated inscription from a tradition. */
+export const Basis = z.enum(["archaeological", "epigraphic", "textual", "documentary", "traditional"]);
+export type Basis = z.infer<typeof Basis>;
+
+/** One claim that needs its own sources. `contested` claims show as a short debate box, as a range, never one number. */
+export const Claim = z.object({
+  text: z.string().min(1),
+  text_hi: z.string().optional(),
+  sources: z.array(Source).min(1, "every claim needs a source"),
+  contested: z.boolean().default(false),
+});
+export type Claim = z.infer<typeof Claim>;
 
 export const EventSchema = z.object({
   id: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "kebab-case id"),
@@ -63,6 +78,8 @@ export const EventSchema = z.object({
   /** Key into public/images/commons/manifest.json */
   image: z.string().optional(),
   sources: z.array(Source).min(1, "every event needs at least one source"),
+  basis: Basis.optional(),
+  claims: z.array(Claim).optional(),
   /** Narration read aloud in Play mode: a short cinematic voice-over, English. Plain prose, no markup. */
   voice: z.string().optional(),
   /** The same in Hindi, Devanagari script only. */
@@ -123,6 +140,18 @@ export const PolitySchema = z.object({
 });
 export type Polity = z.infer<typeof PolitySchema>;
 
+/** An event as the book carries it in the browser. The long text and sources load when its page is opened. */
+export type BookEvent = Pick<
+  EpicEvent,
+  "id" | "title" | "title_hi" | "track" | "chapter" | "date" | "tradition_date" | "era" | "location" | "tags" | "summary" | "summary_hi" | "image"
+> & { lead?: string };
+
+/** A chapter as the book carries it in the browser. */
+export type BookChapter = Pick<Chapter, "id" | "order" | "title" | "title_hi" | "kicker" | "track" | "years" | "stops" | "polity"> & {
+  lead?: string;
+  lead_hi?: string;
+};
+
 export const ImageEntry = z.object({
   key: z.string(),
   file: z.string(),
@@ -134,8 +163,83 @@ export const ImageEntry = z.object({
   width: z.number().optional(),
   height: z.number().optional(),
 });
+export type ImageEntry = z.infer<typeof ImageEntry>;
 export const ImageManifest = z.record(z.string(), ImageEntry);
 export type ImageManifest = z.infer<typeof ImageManifest>;
+
+/** An event in full, with its picture's credit: public/data/event/<id>.json. */
+export type FullEvent = EpicEvent & { imageEntry?: ImageEntry };
+
+const Cited = { sources: z.array(Source).min(1, "every entry needs a source") };
+const En = z.string().min(1);
+
+/**
+ * The reckoning at the end of the book: what India had, what was lost and what was introduced.
+ * Disputed figures are ranges with their authors named. Figures that change carry the date they were true on.
+ */
+export const LedgerSchema = z.object({
+  updated: z.string(),
+  economy: z.object({
+    intro: En,
+    intro_hi: En,
+    /** Maddison: India's share of world GDP and of world population, in percent. 1990 international dollars only. */
+    share: z.array(z.object({ year: z.number().int(), gdp: z.number(), population: z.number().optional() })).min(3),
+    /** Broadberry, Custodis and Gupta: India's GDP per head as a percentage of Britain's. */
+    per_capita: z.array(z.object({ year: z.number().int(), percent_of_britain: z.number(), approximate: z.boolean().default(false) })).min(2),
+    ...Cited,
+  }),
+  drain: z.object({
+    intro: En,
+    intro_hi: En,
+    positions: z
+      .array(
+        z.object({
+          who: En,
+          work: En,
+          stance: En,
+          stance_hi: En,
+          /** True for an op-ed or an advocacy site, so the page can say so. */
+          opinion: z.boolean().default(false),
+          ...Cited,
+        }),
+      )
+      .min(3),
+  }),
+  famines: z
+    .array(
+      z.object({
+        name: En,
+        name_hi: En,
+        years: En,
+        region: En,
+        region_hi: En,
+        /** Excess deaths in millions. */
+        low: z.number(),
+        high: z.number(),
+        central: z.number().optional(),
+        central_by: z.string().optional(),
+        note: En,
+        note_hi: En,
+        ...Cited,
+      }),
+    )
+    .min(4),
+  artefacts: z
+    .array(z.object({ name: En, name_hi: En, taken: En, taken_hi: En, held: En, held_hi: En, note: En, note_hi: En, ...Cited }))
+    .min(4),
+  repatriation: z.array(z.object({ as_of: En, text: En, text_hi: En, ...Cited })).min(1),
+  ledger: z
+    .array(z.object({ side: z.enum(["lost", "introduced"]), title: En, title_hi: En, body: En, body_hi: En, ...Cited }))
+    .min(6),
+  languages: z.object({
+    intro: En,
+    intro_hi: En,
+    facts: z.array(z.object({ label: En, label_hi: En, value: En, value_hi: z.string().optional(), ...Cited })).min(3),
+  }),
+  /** How today's states and union territories were made, 1947 to the present. */
+  states: z.array(z.object({ year: z.number().int(), change: En, change_hi: En, ...Cited })).min(6),
+});
+export type Ledger = z.infer<typeof LedgerSchema>;
 
 /** The spoken prologue that plays over the hero when the reader presses Play. */
 export const PrologueSchema = z.object({

@@ -4,6 +4,7 @@ title: Mohenjo-daro, the planned city
 title_hi: मोहनजोदड़ो, एक नियोजित नगर
 track: evidence
 chapter: indus-vedic
+basis: archaeological
 date: { start: -2500, end: -1900, uncertainty: 100 }
 location: { lat: 27.329, lng: 68.138, name: "Mohenjo-daro, Larkana, Sindh (Pakistan)" }
 tags: [state-formation, trade]

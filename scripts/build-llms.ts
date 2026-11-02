@@ -5,6 +5,7 @@
  */
 import { mkdirSync, readFileSync, writeFileSync, rmSync } from "node:fs";
 import { join, resolve } from "node:path";
+import type { Ledger } from "../src/content/schema";
 
 const root = resolve(import.meta.dirname, "..");
 const data = join(root, "src/data");
@@ -16,13 +17,14 @@ type Ev = {
   id: string; title: string; title_hi?: string; track: string; chapter: string;
   date?: { start: number; end: number; uncertainty?: number; month?: number }; tradition_date?: string; era?: string;
   location: { lat: number; lng: number; name: string }; tags: string[]; summary: string; summary_hi?: string; image?: string;
-  sources: { title: string; url?: string; note?: string }[]; body: string;
+  sources: { title: string; url?: string; note?: string; second_hand?: boolean }[]; body: string;
 };
 type Img = { title: string; author: string; license: string; licenseUrl?: string; source: string };
 
 const chapters: Ch[] = JSON.parse(readFileSync(join(data, "chapters.json"), "utf8"));
 const events: Ev[] = JSON.parse(readFileSync(join(data, "events.json"), "utf8"));
 const images: Record<string, Img> = JSON.parse(readFileSync(join(pub, "images/commons/manifest.json"), "utf8"));
+const ledger: Ledger | null = JSON.parse(readFileSync(join(data, "ledger.json"), "utf8"));
 
 const year = (y: number) => (y < 0 ? `${-y} BCE` : `${y} CE`);
 const range = (d: NonNullable<Ev["date"]>) => (d.start === d.end ? year(d.start) : `${year(d.start)} – ${year(d.end)}`) + (d.uncertainty ? ` (± ${d.uncertainty} years)` : "");
@@ -53,7 +55,7 @@ function eventMd(e: Ev) {
     "",
     `## Sources`,
     "",
-    ...e.sources.map((s) => `- ${s.title}${s.url ? ` — ${s.url}` : ""}${s.note ? ` (${s.note})` : ""}`),
+    ...e.sources.map((s) => `- ${s.title}${s.url ? ` — ${s.url}` : ""}${s.second_hand ? " [second-hand]" : ""}${s.note ? ` (${s.note})` : ""}`),
     img ? `\n## Image\n\n${img.title}. ${img.author}, ${img.license}${img.licenseUrl ? ` (${img.licenseUrl})` : ""}, via Wikimedia Commons: ${img.source}` : "",
     "",
     `---`,
@@ -94,8 +96,11 @@ const index = [
   "",
   `> A scroll-driven historical atlas of the Indian subcontinent from the Itihasa to 2026: ${chapters.length} chapters, ${events.length} dated and sourced events, two tracks (tradition and evidence), English and Hindi, open data (CC BY-SA 4.0).`,
   "",
+  `Developed and maintained by Saidev Dhal (https://saidev.codes).`,
+  "",
   `Every page has a Markdown twin at the same path with \`.md\` instead of a trailing slash. The whole corpus is in [llms-full.txt](${SITE}/llms-full.txt). Negative years are BCE. Tradition events carry told time (yugas), never a calendar date; evidence events carry a year range with an honest uncertainty.`,
   "",
+  ...(ledger ? [`[The reckoning](${SITE}/ledger.md) sets out the economic record, famines, the drain debate, artefacts and how the states were drawn, with sources.`, ""] : []),
   `## Chapters`,
   "",
   ...chapters.map((c) => `- [${c.title}](${SITE}/chapter/${c.id}.md): ${c.kicker ?? ""} (${events.filter((e) => e.chapter === c.id).length} events)`),
@@ -112,12 +117,69 @@ const index = [
 ].join("\n");
 writeFileSync(join(pub, "llms.txt"), index);
 
+const cite = (x: { sources: { title: string; url?: string; second_hand?: boolean }[] }) =>
+  `Sources: ${x.sources.map((s) => `${s.url ? `${s.title} (${s.url})` : s.title}${s.second_hand ? " [second-hand]" : ""}`).join("; ")}.`;
+const ledgerMd = ledger
+  ? [
+      `# The reckoning`,
+      "",
+      `What the subcontinent held, what it lost and what arrived. Figures checked ${ledger.updated}. Disputed figures stay ranges with their authors named.`,
+      "",
+      `## Share of world output and people`,
+      "",
+      ledger.economy.intro,
+      "",
+      `| Year | Output % | People % |`,
+      `|---|---|---|`,
+      ...ledger.economy.share.map((s) => `| ${s.year} | ${s.gdp} | ${s.population ?? ""} |`),
+      "",
+      `## Output per person, percent of Britain`,
+      "",
+      `| Year | Percent |`,
+      `|---|---|`,
+      ...ledger.economy.per_capita.map((p) => `| ${p.year} | ${p.approximate ? "c. " : ""}${p.percent_of_britain} |`),
+      "",
+      cite(ledger.economy),
+      "",
+      `## The drain debate`,
+      "",
+      ledger.drain.intro,
+      "",
+      ...ledger.drain.positions.flatMap((p) => [`### ${p.who}, ${p.work}${p.opinion ? " (opinion piece)" : ""}`, "", p.stance, "", cite(p), ""]),
+      `## Famines (excess deaths, millions)`,
+      "",
+      ...ledger.famines.flatMap((f) => [`### ${f.name}, ${f.years}, ${f.region}`, "", `${f.low} to ${f.high}${f.central !== undefined ? `; central ${f.central}${f.central_by ? ` (${f.central_by})` : ""}` : ""}.`, "", f.note, "", cite(f), ""]),
+      `## What was taken`,
+      "",
+      ...ledger.artefacts.flatMap((a) => [`### ${a.name}`, "", `Taken: ${a.taken}. Now: ${a.held}.`, "", a.note, "", cite(a), ""]),
+      ...ledger.repatriation.flatMap((r) => [`As of ${r.as_of}: ${r.text}`, "", cite(r), ""]),
+      `## Lost and introduced`,
+      "",
+      ...ledger.ledger.flatMap((e) => [`### ${e.side === "lost" ? "Lost" : "Introduced"}: ${e.title}`, "", e.body, "", cite(e), ""]),
+      `## Languages`,
+      "",
+      ledger.languages.intro,
+      "",
+      ...ledger.languages.facts.flatMap((f) => [`- ${f.label}: ${f.value}. ${cite(f)}`]),
+      "",
+      `## How today's states were drawn`,
+      "",
+      ...ledger.states.map((s) => `- ${s.year}: ${s.change} ${cite(s)}`),
+      "",
+      `---`,
+      `Content licence: CC BY-SA 4.0. Source repository: https://github.com/SkidGod4444/indianepics`,
+      "",
+    ].join("\n")
+  : "";
+if (ledger) writeFileSync(join(pub, "ledger.md"), ledgerMd);
+
 const full = [
   index,
   "",
   "---",
   "",
   ...chapters.flatMap((c) => [chapterMd(c), "", ...events.filter((e) => e.chapter === c.id).map(eventMd)]),
+  ledgerMd,
 ].join("\n");
 writeFileSync(join(pub, "llms-full.txt"), full);
 

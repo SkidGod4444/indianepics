@@ -4,6 +4,7 @@ title: Harsha's Kannauj
 title_hi: हर्षवर्धन का कन्नौज
 track: evidence
 chapter: classical
+basis: textual
 date: { start: 606, end: 647, uncertainty: 0 }
 location: { lat: 27.055, lng: 79.918, name: "Kannauj, Uttar Pradesh" }
 tags: [political, religion]

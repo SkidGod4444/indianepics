@@ -4,6 +4,7 @@ title: The partition of Bengal and Swadeshi
 title_hi: बंग-भंग और स्वदेशी
 track: evidence
 chapter: raj
+basis: documentary
 date: { start: 1905, end: 1911 }
 location: { lat: 22.5681, lng: 88.345, name: "Town Hall, Calcutta" }
 tags: [political, colonial]
