@@ -5,10 +5,22 @@ import { Header } from "@/components/Header";
 import { Badge } from "@/components/ui/badge";
 import { chapters, eventsForChapter, getImage, imageSrc } from "@/lib/content";
 import { formatYear, paragraphs } from "@/lib/format";
-import { JsonLd, abs, absImage, chapterJsonLd, chapterMarkdown, chapterPath, eventDateLabel, eventPath } from "@/lib/seo";
+import { JsonLd, SITE_NAME, abs, breadcrumbJsonLd, cardUrl, chapterJsonLd, chapterMarkdown, chapterPath, eventDateLabel, eventPath, shareTags } from "@/lib/seo";
 
 export function generateStaticParams() {
   return chapters.map((c) => ({ slug: c.id }));
+}
+
+/** The span, the count, and as many event names as a results page will show. */
+function describeChapter(kicker: string | undefined, titles: string[]) {
+  const LIMIT = 158;
+  const start = `${kicker ? `${kicker}. ` : ""}${titles.length} dated and sourced events, among them `;
+  let list = titles[0];
+  for (const title of titles.slice(1)) {
+    if (`${start}${list}, ${title}.`.length > LIMIT) break;
+    list = `${list}, ${title}`;
+  }
+  return `${start}${list}.`;
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -16,16 +28,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const ch = chapters.find((c) => c.id === slug);
   if (!ch) return {};
   const evs = eventsForChapter(ch.id);
-  const description = `${ch.kicker ?? ""}${ch.kicker ? ". " : ""}${evs.length} dated and sourced events: ${evs
-    .slice(0, 4)
-    .map((e) => e.title)
-    .join(", ")}${evs.length > 4 ? " and more" : ""}.`;
-  const img = getImage(ch.image);
+  const description = describeChapter(ch.kicker, evs.map((e) => e.title));
   return {
     title: ch.title,
     description,
     alternates: { canonical: abs(chapterPath(ch.id)), types: { "text/markdown": abs(chapterMarkdown(ch.id)) } },
-    openGraph: { type: "website", title: ch.title, description, url: abs(chapterPath(ch.id)), images: img ? [absImage(img)] : undefined },
+    ...shareTags({
+      title: ch.title,
+      description,
+      path: chapterPath(ch.id),
+      image: cardUrl(`chapter/${ch.id}`),
+      alt: `${ch.title}, ${ch.kicker ?? "a chapter of indianepics"}, on a manuscript page with an ink drawing`,
+    }),
   };
 }
 
@@ -42,6 +56,12 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
     <main className="min-h-screen">
       <Header backed />
       <JsonLd data={chapterJsonLd(ch, evs)} />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: SITE_NAME, path: "/" },
+          { name: ch.title, path: chapterPath(ch.id) },
+        ])}
+      />
       <article className="mx-auto max-w-[760px] px-5 pb-24 pt-24 lg:px-0">
         <Link href={`/#${ch.id}`} className="mb-8 inline-block text-[12px] text-ink-3 underline decoration-hair underline-offset-2 hover:text-ink">
           ← Open this chapter on the map

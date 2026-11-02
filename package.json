@@ -8,6 +8,7 @@
     "start": "bunx serve out",
     "lint": "eslint",
     "content": "bun scripts/build-content.ts && bun scripts/build-llms.ts",
+    "og": "bun scripts/build-og.ts",
     "images": "bun scripts/fetch-images.ts && bun scripts/build-page-images.ts",
     "typecheck": "tsc --noEmit",
     "icons": "bun scripts/gen-icons.ts",

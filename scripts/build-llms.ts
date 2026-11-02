@@ -6,11 +6,11 @@
 import { mkdirSync, readFileSync, writeFileSync, rmSync } from "node:fs";
 import { join, resolve } from "node:path";
 import type { Ledger } from "../src/content/schema";
+import { SITE_URL } from "../src/lib/site";
 
 const root = resolve(import.meta.dirname, "..");
 const data = join(root, "src/data");
 const pub = join(root, "public");
-const SITE = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://indianepics.online").replace(/\/$/, "");
 
 type Ch = { id: string; title: string; title_hi?: string; kicker?: string; track: string; years?: { start: number; end: number }; stops?: string[]; polity?: string; body: string };
 type Ev = {
@@ -37,8 +37,8 @@ function eventMd(e: Ev) {
     `# ${e.title}`,
     e.title_hi ? `**${e.title_hi}**` : "",
     "",
-    `- Canonical page: ${SITE}/event/${e.id}/`,
-    `- Chapter: [${ch?.title ?? e.chapter}](${SITE}/chapter/${e.chapter}.md)`,
+    `- Canonical page: ${SITE_URL}/event/${e.id}/`,
+    `- Chapter: [${ch?.title ?? e.chapter}](${SITE_URL}/chapter/${e.chapter}.md)`,
     `- Track: ${e.track}${e.track === "tradition" ? " (Itihasa-Purana; told time, not a calendar date)" : " (archaeology and documents)"}`,
     `- When: ${when(e)}`,
     `- Where: ${e.location.name} (${e.location.lat}, ${e.location.lng})`,
@@ -70,7 +70,7 @@ function chapterMd(c: Ch) {
     `# ${c.title}`,
     c.title_hi ? `**${c.title_hi}**` : "",
     "",
-    `- Canonical page: ${SITE}/chapter/${c.id}/`,
+    `- Canonical page: ${SITE_URL}/chapter/${c.id}/`,
     `- Track: ${c.track}`,
     c.years ? `- Span: ${year(c.years.start)} to ${year(c.years.end)}` : `- Stops: ${(c.stops ?? []).join(", ")}`,
     c.polity ? `- Boundary shown: ${c.polity} (approximate unless marked traced)` : "",
@@ -79,7 +79,7 @@ function chapterMd(c: Ch) {
     "",
     `## Events (${evs.length})`,
     "",
-    ...evs.map((e) => `- ${when(e)} — [${e.title}](${SITE}/event/${e.id}.md): ${e.summary}`),
+    ...evs.map((e) => `- ${when(e)} — [${e.title}](${SITE_URL}/event/${e.id}.md): ${e.summary}`),
     "",
   ].join("\n");
 }
@@ -98,21 +98,21 @@ const index = [
   "",
   `Developed and maintained by Saidev Dhal (https://saidev.codes).`,
   "",
-  `Every page has a Markdown twin at the same path with \`.md\` instead of a trailing slash. The whole corpus is in [llms-full.txt](${SITE}/llms-full.txt). Negative years are BCE. Tradition events carry told time (yugas), never a calendar date; evidence events carry a year range with an honest uncertainty.`,
+  `Every page has a Markdown twin at the same path with \`.md\` instead of a trailing slash. The whole corpus is in [llms-full.txt](${SITE_URL}/llms-full.txt). Negative years are BCE. Tradition events carry told time (yugas), never a calendar date; evidence events carry a year range with an honest uncertainty.`,
   "",
-  ...(ledger ? [`[The reckoning](${SITE}/ledger.md) sets out the economic record, famines, the drain debate, artefacts and how the states were drawn, with sources.`, ""] : []),
+  ...(ledger ? [`[The reckoning](${SITE_URL}/ledger.md) sets out the economic record, famines, the drain debate, artefacts and how the states were drawn, with sources.`, ""] : []),
   `## Chapters`,
   "",
-  ...chapters.map((c) => `- [${c.title}](${SITE}/chapter/${c.id}.md): ${c.kicker ?? ""} (${events.filter((e) => e.chapter === c.id).length} events)`),
+  ...chapters.map((c) => `- [${c.title}](${SITE_URL}/chapter/${c.id}.md): ${c.kicker ?? ""} (${events.filter((e) => e.chapter === c.id).length} events)`),
   "",
   `## Events`,
   "",
-  ...chapters.flatMap((c) => [`### ${c.title}`, "", ...events.filter((e) => e.chapter === c.id).map((e) => `- [${e.title}](${SITE}/event/${e.id}.md): ${e.summary}`), ""]),
+  ...chapters.flatMap((c) => [`### ${c.title}`, "", ...events.filter((e) => e.chapter === c.id).map((e) => `- [${e.title}](${SITE_URL}/event/${e.id}.md): ${e.summary}`), ""]),
   `## Optional`,
   "",
   `- [Source repository](https://github.com/SkidGod4444/indianepics)`,
   `- [Verification log](https://github.com/SkidGod4444/indianepics/blob/main/content/VERIFICATION.md): what was checked, against which sources, and what remains open`,
-  `- [Sitemap](${SITE}/sitemap.xml)`,
+  `- [Sitemap](${SITE_URL}/sitemap.xml)`,
   "",
 ].join("\n");
 writeFileSync(join(pub, "llms.txt"), index);

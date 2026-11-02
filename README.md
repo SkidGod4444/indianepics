@@ -88,7 +88,7 @@ Code MIT. Content (everything under `content/`) CC BY-SA 4.0. Images carry their
 
 ## For search engines and agents
 
-Every page is static HTML with a canonical URL, Open Graph and Twitter cards, a generated OG image (`/opengraph-image`, `/event/<id>/opengraph-image`) and JSON-LD (`Article` + `Event` with coordinates and dates for events, `CollectionPage` for chapters, `WebSite` on the home page). `/sitemap.xml` and `/robots.txt` are generated at build time.
+Every page is static HTML with a canonical URL, Open Graph and Twitter cards, a share card (`public/og/`, drawn by `bun run og` and committed, because Vercel has no Chrome) and JSON-LD (`Article` + `Event` with coordinates and dates for events, `CollectionPage` for chapters, `WebSite` on the home page). `/sitemap.xml` and `/robots.txt` are generated at build time.
 
 Every page also has a Markdown twin for agents and offline readers, built by `scripts/build-llms.ts` into `public/`:
 
@@ -98,7 +98,7 @@ Every page also has a Markdown twin for agents and offline readers, built by `sc
 | `/chapter/<id>/` | `/chapter/<id>.md` |
 | `/event/<id>/` | `/event/<id>.md` |
 
-Each HTML page links its twin with `<link rel="alternate" type="text/markdown">`, and the index at the foot of the home page lists every `.md`. Set `NEXT_PUBLIC_SITE_URL` (see `.env.example`) so canonical URLs, the sitemap and the Markdown links point at your deployment.
+Each HTML page links its twin with `<link rel="alternate" type="text/markdown">`, and the index at the foot of the home page lists every `.md`. `SITE_URL` in `src/lib/site.ts` is the one address that canonical URLs, the sitemap, share cards and the Markdown links all use.
 
 ## Narration
 

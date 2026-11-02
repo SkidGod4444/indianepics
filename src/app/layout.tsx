@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fraunces, IM_Fell_English, Inter, Noto_Serif_Devanagari, Tiro_Devanagari_Hindi } from "next/font/google";
 import "./globals.css";
 import { LangProvider } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/seo";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, cardUrl, shareTags } from "@/lib/seo";
 import { Analytics } from "@vercel/analytics/next";
 
 const fraunces = Fraunces({
@@ -48,7 +48,7 @@ const tiro = Tiro_Devanagari_Hindi({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: "indianepics · The history of the Indian subcontinent on one map", template: "%s · indianepics" },
+  title: { default: "The history of India on one map · indianepics", template: "%s · indianepics" },
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
   keywords: ["Indian history", "historical atlas", "map", "timeline", "Itihasa", "Maurya", "Mughal", "British Raj", "freedom struggle", "Republic of India", "open data"],
@@ -56,11 +56,18 @@ export const metadata: Metadata = {
   creator: "Saidev Dhal",
   publisher: "Saidev Dhal",
   alternates: { canonical: "/", types: { "text/markdown": "/llms-full.txt", "text/plain": "/llms.txt" } },
-  openGraph: { type: "website", siteName: SITE_NAME, locale: "en_IN", alternateLocale: ["hi_IN"], url: "/", title: "indianepics", description: SITE_DESCRIPTION },
-  twitter: { card: "summary_large_image", title: "indianepics", description: SITE_DESCRIPTION },
+  ...shareTags({
+    title: "The history of India, on one map",
+    description: SITE_DESCRIPTION,
+    path: "/",
+    image: cardUrl("home"),
+    alt: "The history of India, on one map: an open manuscript with an ink drawing of Krishna and Arjuna on the chariot",
+  }),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
   category: "education",
 };
+
+export const viewport: Viewport = { themeColor: "#ebe1cd" };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (

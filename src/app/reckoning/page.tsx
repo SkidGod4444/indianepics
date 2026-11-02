@@ -3,15 +3,23 @@ import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Reckoning } from "@/components/Reckoning";
 import { ledger } from "@/lib/content";
-import { abs } from "@/lib/seo";
+import { JsonLd, SITE_NAME, abs, breadcrumbJsonLd, cardUrl, reckoningJsonLd, shareTags } from "@/lib/seo";
 
-const description = "What the subcontinent held, what it lost and what arrived: output, famines, the drain debate, artefacts, languages and how the states were drawn, in the historians' own figures.";
+const description =
+  "What the subcontinent held, what it lost and what arrived: output, famines, the drain debate, artefacts and languages, in the historians' own figures.";
 
 export const metadata: Metadata = {
   title: "The reckoning",
   description,
   alternates: { canonical: abs("/reckoning/"), types: { "text/markdown": abs("/ledger.md") } },
-  openGraph: { type: "article", title: "The reckoning", description, url: abs("/reckoning/") },
+  ...shareTags({
+    title: "The reckoning",
+    description,
+    path: "/reckoning/",
+    image: cardUrl("reckoning"),
+    alt: "The reckoning: an open ledger page charting India's share of the world's output from 1 CE to 2008",
+    article: { section: "The last pages" },
+  }),
 };
 
 /** Printed in both languages, with no JavaScript for the text: `.lang-en` in globals.css shows the reader's one. */
@@ -20,6 +28,13 @@ export default function ReckoningPage() {
   return (
     <main className="min-h-screen">
       <Header backed />
+      <JsonLd data={reckoningJsonLd(ledger.updated, description)} />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: SITE_NAME, path: "/" },
+          { name: "The reckoning", path: "/reckoning/" },
+        ])}
+      />
       <section className="ledger relative bg-paper px-5 pb-16 pt-20 lg:px-10">
         <div className="lang-en">
           <Reckoning record={ledger} lang="en" heading="h1" />

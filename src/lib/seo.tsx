@@ -1,10 +1,13 @@
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+import type { Metadata } from "next";
 import type { Chapter, EpicEvent } from "@/content/schema";
 import type { ImageManifest } from "@/content/schema";
 import { getImage } from "./content";
 import { formatRange, formatYear } from "./format";
+import { SITE_URL } from "./site";
 
-/** Set NEXT_PUBLIC_SITE_URL at build time; canonical URLs, the sitemap and llms.txt all derive from it. */
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://indianepics.online").replace(/\/$/, "");
+export { SITE_URL };
 export const SITE_NAME = "indianepics";
 const AUTHOR = { "@type": "Person", name: "Saidev Dhal", url: "https://saidev.codes" };
 export const SITE_DESCRIPTION =
@@ -28,6 +31,58 @@ export function eventDateLabel(ev: EpicEvent) {
   return ev.date ? formatRange(ev.date) : ev.tradition_date ?? "";
 }
 
+/** The first of these cards that exists in public/og. An event added since the last `bun run og` borrows its chapter's. */
+export function cardUrl(...cards: string[]) {
+  const card = cards.find((c) => existsSync(join(process.cwd(), "public/og", `${c}.jpg`))) ?? "home";
+  return abs(`/og/${card}.jpg`);
+}
+
+type Share = {
+  title: string;
+  description: string;
+  path: string;
+  image: string;
+  alt: string;
+  article?: { section?: string; tags?: string[] };
+};
+
+/** The preview a link shows when it is shared, on every kind of page. */
+export function shareTags({ title, description, path, image, alt, article }: Share): Pick<Metadata, "openGraph" | "twitter"> {
+  const images = [{ url: image, width: 1200, height: 630, type: "image/jpeg", alt }];
+  const kind = article ? { type: "article" as const, ...article } : { type: "website" as const };
+  return {
+    openGraph: { ...kind, siteName: SITE_NAME, locale: "en_IN", alternateLocale: ["hi_IN"], title, description, url: abs(path), images },
+    twitter: { card: "summary_large_image", title, description, images },
+  };
+}
+
+export function breadcrumbJsonLd(trail: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: trail.map((t, i) => ({ "@type": "ListItem", position: i + 1, name: t.name, item: abs(t.path) })),
+  };
+}
+
+export function reckoningJsonLd(updated: string, description: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": abs("/reckoning/"),
+    headline: "The reckoning",
+    alternativeHeadline: "हिसाब",
+    description,
+    inLanguage: ["en", "hi"],
+    url: abs("/reckoning/"),
+    image: abs("/og/reckoning.jpg"),
+    dateModified: updated,
+    author: AUTHOR,
+    publisher: AUTHOR,
+    license: "https://creativecommons.org/licenses/by-sa/4.0/",
+    isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_URL },
+  };
+}
+
 export function eventJsonLd(ev: EpicEvent, chapter: Chapter | undefined) {
   const img = getImage(ev.image);
   const article: Record<string, unknown> = {
@@ -41,7 +96,7 @@ export function eventJsonLd(ev: EpicEvent, chapter: Chapter | undefined) {
     url: abs(eventPath(ev.id)),
     isPartOf: chapter ? { "@type": "CreativeWorkSeries", name: chapter.title, url: abs(chapterPath(chapter.id)) } : undefined,
     keywords: [...ev.tags, ev.track, ev.location.name].join(", "),
-    image: img ? absImage(img) : undefined,
+    image: img ? absImage(img) : cardUrl(`event/${ev.id}`, `chapter/${ev.chapter}`),
     author: AUTHOR,
     publisher: AUTHOR,
     license: "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -103,5 +158,5 @@ export function siteJsonLd(chapters: Chapter[]) {
 }
 
 export function JsonLd({ data }: { data: unknown }) {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }} />;
 }
