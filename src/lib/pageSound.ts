@@ -7,7 +7,7 @@
  */
 const CLIPS = ["/audio/sfx/page-1.mp3", "/audio/sfx/page-2.mp3", "/audio/sfx/page-3.mp3"];
 /** Beside the narrator a page sits well under the voice. */
-const LEVEL = { alone: 0.34, underVoice: 0.13 };
+const LEVEL = { alone: 0.17, underVoice: 0.065 };
 const COOLDOWN_MS = 250;
 const MAX_PER_SECOND = 3;
 const RATE_SPREAD = 0.06;
