@@ -54,3 +54,5 @@ next-env.d.ts
 /public/audio/**/*.txt
 /public/audio/**/*.raw.mp3
 /public/audio/review.html
+/public/audio/**/*.json
+!/public/audio/manifest.json

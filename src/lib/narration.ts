@@ -16,7 +16,9 @@ const BASE = "/audio/";
 
 let manifestPromise: Promise<VoiceManifest | null> | undefined;
 export function loadVoiceManifest(): Promise<VoiceManifest | null> {
-  manifestPromise ??= fetch(`${BASE}manifest.json`, { cache: "force-cache" })
+  // Revalidate: force-cache would hold a returning reader on the manifest of their first visit, and every clip
+  // added since would stay silent for them.
+  manifestPromise ??= fetch(`${BASE}manifest.json`, { cache: "no-cache" })
     .then((r) => (r.ok ? (r.json() as Promise<VoiceManifest>) : null))
     .catch(() => null);
   return manifestPromise;

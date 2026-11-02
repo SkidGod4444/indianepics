@@ -32,6 +32,11 @@ export function imageSrc(key: string | undefined) {
   return img ? `/images/commons/${img.file}` : undefined;
 }
 
+/** The hero's small greyscale plate for a chapter image (scripts/build-thumbs.ts). */
+export function thumbSrc(key: string | undefined) {
+  return getImage(key) ? `/images/commons/thumbs/${key}.jpg` : undefined;
+}
+
 /** -261 → "261 BCE", 1526 → "1526". */
 export function formatYear(y: number) {
   return y < 0 ? `${-y} BCE` : y < 1000 ? `${y} CE` : `${y}`;

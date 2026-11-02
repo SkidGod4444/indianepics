@@ -8,11 +8,11 @@
     "start": "bunx serve out",
     "lint": "eslint",
     "content": "bun scripts/build-content.ts && bun scripts/build-llms.ts",
-    "images": "bun scripts/fetch-images.ts",
+    "images": "bun scripts/fetch-images.ts && bun scripts/build-thumbs.ts",
     "typecheck": "tsc --noEmit",
     "icons": "bun scripts/gen-icons.ts",
     "voice": "bun scripts/build-content.ts && bun scripts/build-voice.ts",
-    "voice:scan": "bun scripts/build-voice.ts --scan"
+    "voice:scan": "SARVAM_VOICE_HI=h_narrator bun scripts/build-voice.ts --scan"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
@@ -43,6 +43,7 @@
     "@types/topojson-specification": "^1.0.5",
     "eslint": "^9",
     "eslint-config-next": "16.4.3",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
