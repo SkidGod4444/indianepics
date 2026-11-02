@@ -14,14 +14,14 @@ export function Mark({ size = 22, className = "" }: { size?: number; className?:
   );
 }
 
-type Props = { href?: string; domain?: boolean; size?: "sm" | "lg"; className?: string };
+type Props = { href?: string; domain?: boolean; mark?: boolean; size?: "sm" | "lg"; className?: string };
 
-/** Mark plus wordmark. `domain` appends .online, for the hero. */
-export function Logo({ href = "/", domain = false, size = "sm", className = "" }: Props) {
+/** Mark plus wordmark. `domain` appends .online and `mark={false}` drops the dots: the hero, under the nav logo. */
+export function Logo({ href = "/", domain = false, mark = true, size = "sm", className = "" }: Props) {
   const lg = size === "lg";
   const inner = (
     <>
-      <Mark size={lg ? 30 : 20} className="shrink-0 text-evidence" />
+      {mark ? <Mark size={lg ? 30 : 20} className="shrink-0 text-evidence" /> : null}
       <span className={`font-display tracking-tight text-ink ${lg ? "text-[26px]" : "text-[20px]"}`}>
         indian<span className="text-evidence">epics</span>
         {domain ? <span className="text-ink-3">.online</span> : null}

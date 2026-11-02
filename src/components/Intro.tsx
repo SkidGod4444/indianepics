@@ -52,7 +52,7 @@ export function Intro({ chapters, plates = [], onPlay, onSeek, playing = false }
         <div className="grid flex-1 items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-4">
           <div className="relative z-10">
             <motion.div {...rise} transition={{ duration: 0.5 }} className="mb-7">
-              <Logo href="" domain size="lg" />
+              <Logo href="" domain mark={false} size="lg" />
               <p className={`mt-2 text-ink-3 ${hi ? "font-hi text-[12.5px]" : "text-[11px] uppercase tracking-[0.18em]"}`}>
                 {hi ? "भारत का इतिहास, एक नक़्शे पर" : "The history of India, on one map"}
               </p>
