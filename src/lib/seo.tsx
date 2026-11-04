@@ -83,6 +83,10 @@ export function reckoningJsonLd(updated: string, description: string) {
   };
 }
 
+/**
+ * An article about a moment in history, with its place and years. Not a schema.org Event: Google reads that as a
+ * ticketed event the public can book, and asks for prices, performers and an organiser that history does not have.
+ */
 export function eventJsonLd(ev: EpicEvent, chapter: Chapter | undefined) {
   const img = getImage(ev.image);
   const article: Record<string, unknown> = {
@@ -107,20 +111,6 @@ export function eventJsonLd(ev: EpicEvent, chapter: Chapter | undefined) {
       geo: { "@type": "GeoCoordinates", latitude: ev.location.lat, longitude: ev.location.lng },
     },
     temporalCoverage: ev.date ? (ev.date.start === ev.date.end ? isoYear(ev.date.start) : `${isoYear(ev.date.start)}/${isoYear(ev.date.end)}`) : ev.tradition_date,
-    mainEntity: ev.date
-      ? {
-          "@type": "Event",
-          name: ev.title,
-          description: ev.summary,
-          startDate: isoYear(ev.date.start),
-          endDate: isoYear(ev.date.end),
-          location: {
-            "@type": "Place",
-            name: ev.location.name,
-            geo: { "@type": "GeoCoordinates", latitude: ev.location.lat, longitude: ev.location.lng },
-          },
-        }
-      : undefined,
   };
   return article;
 }
